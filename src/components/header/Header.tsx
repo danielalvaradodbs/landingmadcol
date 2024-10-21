@@ -48,17 +48,40 @@ export const Header = () => {
                 </defs>
             </svg>
           </div>
-          <div className="col-6 menu-items">
+
+          <div className="col-6 menu-items" data-animation="to-top">
             <div className='menu-servicios'>
-              <a href="">Servicios</a>
+              <a href="">
+              <label>Servicios</label>
+              <label>Servicios</label>
+              </a>
             </div>
+              <span></span>
             <div className='menu-nosotros'>
-              <a href="">Nosotros</a>
+              <a href="">
+                <label>Nosotros</label>
+                <label>Nosotros</label>
+              </a>
             </div>
+              <span></span>
             <div className='menu-contactos'>
-              <a href="">Contactos</a>
+              <a href="">
+                <label>Contactos</label>
+                <label>Contactos</label>
+              </a>
             </div>
           </div>
+
+          {/* <div className="col-6 menu-items" data-animation="to-top">
+            <div className='menu-servicios'>
+              <a href="">
+                <label>Servicios</label>
+                <label>Servicios</label>
+              </a>
+            </div>
+              <span></span>
+          </div> */}
+          
         </div>
     </>
   )
