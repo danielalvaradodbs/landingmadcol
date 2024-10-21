@@ -1,0 +1,59 @@
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    background: transparent;
+    display: flex;
+    padding: 46px 40px 0 40px;
+    align-items:  center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.header.dark {
+    color: #000;
+}
+
+.header .menu-items {
+    display: inline-flex;
+    padding: 10px 15px;
+    align-items: center;
+    gap: 13px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(10px);
+}
+
+.header .menu-items div {
+    display: flex;
+    align-items: center;
+}
+.header .menu-items .menu-servicios:not(:last-child)::after,
+
+.header.dark .menu-items a {
+    color: #fff;
+}
+
+.header .menu-items a {
+
+    color: black;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.header .menu-items .menu-servicios:not(:last-child)::after,
+.header .menu-items .menu-nosotros:not(:last-child)::after,
+.header .menu-items .menu-contactos:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.30);
+    margin-left: 10px;
+
+}

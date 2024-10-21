@@ -1,0 +1,35 @@
+@import './fonts.css';
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    margin: 0;
+    background-color: black;
+}
+
+body, html {
+    font-family: 'Safiro', sans-serif;
+    margin: 0;
+}
+
+  
+h4 {
+    font-family: 'Safiro';
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Safiro';
+    font-weight: 400;
+}
+
+.small-text {
+    font-family: 'Safiro';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+  
+  
