@@ -1,5 +1,8 @@
 .section-with-background {
     height: 100vh;
+    background: url(../../.././../assets/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #000;
     display: flex;
     align-items: center;

@@ -26,7 +26,7 @@ export const Header = () => {
   return (
     <>
         <div className={ `header ${isDark ? 'dark' : ''}` }>
-          <div className="col-6 logo">
+          <div className="col-6 logo animate__animated animate__fadeInRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="127" height="18" viewBox="0 0 127 18" fill="none">
                 <g clipPath="url(#clip0_1_99)">
                   <path d="M122.601 2.51634C122.601 1.30685 123.552 0.366974 124.8 0.366974C126.049 0.366974 127 1.30685 127 2.51634C127 3.72583 126.049 4.6657 124.8 4.6657C123.552 4.6657 122.601 3.72583 122.601 2.51634ZM126.477 2.51634C126.477 1.6008 125.763 0.848147 124.8 0.848147C123.838 0.848147 123.124 1.59893 123.124 2.51634C123.124 3.43375 123.838 4.18453 124.8 4.18453C125.763 4.18453 126.477 3.43375 126.477 2.51634ZM124.764 1.42293C125.359 1.42293 125.691 1.68131 125.691 2.03329C125.691 2.36281 125.418 2.57438 125.156 2.59685V2.60808C125.347 2.63242 125.453 2.73727 125.549 2.92449L125.859 3.606H125.241L125.002 3.06491C124.92 2.87769 124.849 2.83088 124.635 2.83088H124.481V3.606H123.898V1.42293H124.766H124.764ZM124.479 1.8573V2.40962H124.704C124.954 2.40962 125.108 2.29167 125.108 2.11567C125.108 1.92845 124.977 1.8573 124.704 1.8573H124.479Z" fill="white"/>
@@ -49,7 +49,7 @@ export const Header = () => {
             </svg>
           </div>
 
-          <div className="col-6 menu-items" data-animation="to-top">
+          <div className="col-6 menu-items animate__animated animate__fadeIn" data-animation="to-top">
             <div className='menu-servicios'>
               <a href="">
               <label>Servicios</label>
