@@ -1,11 +1,11 @@
 
-import { Branding } from './components/brandings/Branding';
+import { Brandings } from './components/brandings/Brandings';
 import './home.css';
 
 export const Home = () => {
   return (
     <>
-      <Branding />
+      <Brandings />
     </>
   )
 }

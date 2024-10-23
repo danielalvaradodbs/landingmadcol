@@ -2,7 +2,7 @@
 
 import './branding.css';
 
-export const Branding = () => {
+export const Brandings = () => {
   return (
     <>
         <div className="section-with-background">

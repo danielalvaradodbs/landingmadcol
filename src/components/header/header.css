@@ -62,7 +62,7 @@
     overflow: hidden;
 }
 .header .menu-items a label {
-    transition: transform 0.2s ease-out;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;;
     cursor: pointer;
 }
 
@@ -80,17 +80,21 @@
     align-items: center;
     justify-content: center;
     transform: translateY(-100%);
+    opacity: 0;
 }
 
 .header .menu-items a:hover label:last-child,
 .header .menu-items[data-animation] a:hover label:last-child {
     transform: none;
+    opacity: 1;
 }
 
 .header .menu-items[data-animation="to-top"] a label:last-child {
     transform: translateY(100%);
+    opacity: 0;
 }
   
 .header .menu-items[data-animation="to-top"] a:hover label:first-child {
     transform: translateY(-100%);
+    opacity: 0;
 }
