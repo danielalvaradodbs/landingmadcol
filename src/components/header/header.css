@@ -11,7 +11,12 @@
 }
 
 .header.dark {
-    color: #000;
+    color: #101820;
+    font-family: Safiro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;;
 }
 
 .header .menu-items {
@@ -38,7 +43,7 @@
 }
 
 .header .menu-items a {
-    color: black;
+    color: #101820;
     font-family: 'Safiro';
     font-size: 14px;
     font-style: normal;
@@ -61,6 +66,7 @@
     display: block;
     overflow: hidden;
 }
+
 .header .menu-items a label {
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;;
     cursor: pointer;

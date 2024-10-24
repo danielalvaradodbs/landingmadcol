@@ -1,35 +1,28 @@
 
-import { useEffect, useState } from 'react';
 import './header.css';
 
 import { logosMadcritter } from '../../shared';
+import { useDarkMode } from '../../hooks/DarkModeContext';
+import { useEffect } from 'react';
+
 export const Header = () => {
 
-  const [isDark, setIsDark] = useState(false);
-
-  const handleScroll = () => {
-    const section = document.querySelector('.section-with-background');
-    const sectionRect = section!.getBoundingClientRect();
-    if (sectionRect.top < window.innerHeight && sectionRect.bottom >= 0) {
-      console.log('hi');
-      setIsDark(true);
-    } else {
-      console.log('false');
-      setIsDark(false);
-    }
-  };
+  const { isDark } = useDarkMode();
 
   useEffect(() => {
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    console.log(isDark);
+  
+    
+  }, [])
+  
 
   return (
     <>
         <div className={ `header ${isDark ? 'dark' : ''}` }>
           <div className="col-6 logo animate__animated animate__fadeInRight">
-           <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
+            <a href="#">
+              <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
+            </a>
           </div>
 
           <div className="col-6 menu-items animate__animated animate__fadeIn" data-animation="to-top">
@@ -54,16 +47,6 @@ export const Header = () => {
               </a>
             </div>
           </div>
-
-          {/* <div className="col-6 menu-items" data-animation="to-top">
-            <div className='menu-servicios'>
-              <a href="">
-                <label>Servicios</label>
-                <label>Servicios</label>
-              </a>
-            </div>
-              <span></span>
-          </div> */}
           
         </div>
     </>
