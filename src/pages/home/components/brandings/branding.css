@@ -7,10 +7,11 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  justify-content: space-between;
   flex-shrink: 0;
   overflow: hidden;
   align-items: flex-end;
-  padding: 0 0 45px 40px;
+  padding: 0 40px 45px 40px;
 }
 
 .brandings .info {
@@ -88,4 +89,33 @@
 .animated-button:hover label:first-child {
   transform: translateY(-100%);
   opacity: 0;
+}
+
+.scroll-down-button {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 12px;
+  align-items: center;
+  gap: 13px;
+
+  border-radius: 10px;
+  background: rgba(117, 149, 182, 0.40);
+  backdrop-filter: blur(10px);
+  
+}
+
+.scroll-down-button:hover {
+  border-radius: 10px;
+  background: rgb(96 0 18 / 77%);
+  backdrop-filter: blur(10px);
+}
+
+.scroll-down-button a {
+  color: #FFF;
+  font-family: 'Safiro';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }

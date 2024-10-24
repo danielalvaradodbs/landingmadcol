@@ -1,29 +1,20 @@
 
-import { useEffect, useState } from 'react';
 import './header.css';
 
 import { logosMadcritter } from '../../shared';
+import { useDarkMode } from '../../hooks/DarkModeContext';
+import { useEffect } from 'react';
+
 export const Header = () => {
 
-  const [isDark, setIsDark] = useState(false);
-
-  const handleScroll = () => {
-    const section = document.querySelector('.brandings');
-    const sectionRect = section!.getBoundingClientRect();
-    if (sectionRect.top < window.innerHeight && sectionRect.bottom >= 0) {
-      console.log('hi');
-      setIsDark(true);
-    } else {
-      console.log('false');
-      setIsDark(false);
-    }
-  };
+  const { isDark } = useDarkMode();
 
   useEffect(() => {
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    console.log(isDark);
+  
+    
+  }, [])
+  
 
   return (
     <>

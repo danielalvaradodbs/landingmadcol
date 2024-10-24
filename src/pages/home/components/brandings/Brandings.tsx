@@ -1,17 +1,20 @@
 
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './branding.css';
-import { brandings } from '../../../../shared';
-import IconPlus from '../../../../assets/fi-rs-plus.svg';
+import { brandings, IconPlus, ScrollDownIcon } from '../../../../shared';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useDarkMode } from '../../../../hooks/DarkModeContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Brandings = () => {
 
+  const { setIsDark } = useDarkMode();
+
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -30,6 +33,10 @@ export const Brandings = () => {
           snapTo: 1 / (panels.length - 1),
           duration: { min: 0.2, max: 0.5 },
           ease: "power1.inOut"
+        },
+        onUpdate: ( self ) => {
+          const index = Math.round(self.progress * (panels.length - 1));
+          setIsDark(brandings[index].isDark);
         }
       },
     });
@@ -45,17 +52,26 @@ export const Brandings = () => {
     window.open(link, '_blank');
   }
 
+  const handleMouseEnter = (index: number) => {
+    setHoveredPanel(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredPanel(null);
+  };
+
   return (
     <>
       <section className="brandings" ref={containerRef} >
         { brandings.map((item: any, index: any) => (
           <section className="panel" key={ index } style={{ 
-            backgroundImage: `url(${ item.image })`,
+            backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
             backgroundSize: 'cover',
+            transition: 'background 0.3s ease-in-out',
             backgroundPosition: 'center',
            }}
           >
-            <div className="info">
+            <div className="info animate__animated animate__fadeInTopRight">
               <span>{ item.info }</span>
               <span>-</span>
               <h4>{ item.title }</h4>
@@ -63,11 +79,17 @@ export const Brandings = () => {
               <button 
                 onClick={ () => sendToLink(item.linkButton) }
                 className='animated-button'
+                onMouseEnter={ () => handleMouseEnter(index) }
+                onMouseLeave={ handleMouseLeave }
               >
                 <label>Ver proyecto</label>
                 <label className="hover-label">Ver proyecto</label>
                 <img src={ IconPlus } />
               </button>
+            </div>
+
+            <div className="scroll-down-button">
+              <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
             </div>
 
           </section>
