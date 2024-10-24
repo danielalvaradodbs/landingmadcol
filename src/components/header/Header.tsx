@@ -8,7 +8,7 @@ export const Header = () => {
   const [isDark, setIsDark] = useState(false);
 
   const handleScroll = () => {
-    const section = document.querySelector('.section-with-background');
+    const section = document.querySelector('.brandings');
     const sectionRect = section!.getBoundingClientRect();
     if (sectionRect.top < window.innerHeight && sectionRect.bottom >= 0) {
       console.log('hi');
@@ -54,16 +54,6 @@ export const Header = () => {
               </a>
             </div>
           </div>
-
-          {/* <div className="col-6 menu-items" data-animation="to-top">
-            <div className='menu-servicios'>
-              <a href="">
-                <label>Servicios</label>
-                <label>Servicios</label>
-              </a>
-            </div>
-              <span></span>
-          </div> */}
           
         </div>
     </>
