@@ -1,8 +1,6 @@
 .brandings {
   display: flex; 
   width: 100vw !important; 
-  /* overflow: visible; */
-
 }
 
 .brandings .panel {
@@ -12,7 +10,6 @@
   flex-shrink: 0;
   overflow: hidden;
   align-items: flex-end;
-
   padding: 0 0 45px 40px;
 }
 
@@ -54,4 +51,41 @@
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 22px;
+}
+
+.animated-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-button label {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  cursor: pointer;
+}
+
+.animated-button label:first-child {
+  display: inline-block;
+}
+
+.animated-button .hover-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.animated-button:hover .hover-label {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animated-button:hover label:first-child {
+  transform: translateY(-100%);
+  opacity: 0;
 }

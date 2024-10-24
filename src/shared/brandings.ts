@@ -9,7 +9,7 @@ export const brandings = [
         info: 'IDENTIDAD DE MARCA',
         title: 'Remó Lab',
         description: 'Diseño consistente que refuerza la identidad de marca en cada empaque.',
-        linkButton: ''
+        linkButton: 'https://www.google.com'
     },
     {
         image: VaxTrials,
@@ -17,7 +17,7 @@ export const brandings = [
         info: 'IDENTIDAD DE MARCA',
         title: 'Vax TRIALS',
         description: 'Ciencia + estrategia: <br/> Crecimiento B2B y atracción de talento científico.',
-        linkButton: ''
+        linkButton: 'https://www.google.com'
     },
     {
         image: HeroMotoCorp,
@@ -25,6 +25,6 @@ export const brandings = [
         info: 'POSICIONAMIENTO DE MARCA',
         title: 'Hero Motocorp',
         description: 'Optimización digital, impulsada por una experiencia web intuitiva y funcional.',
-        linkButton: ''
+        linkButton: 'https://www.google.com'
     },
 ]

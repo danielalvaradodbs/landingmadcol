@@ -29,7 +29,9 @@ export const Header = () => {
     <>
         <div className={ `header ${isDark ? 'dark' : ''}` }>
           <div className="col-6 logo animate__animated animate__fadeInRight">
-           <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
+            <a href="#">
+              <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
+            </a>
           </div>
 
           <div className="col-6 menu-items animate__animated animate__fadeIn" data-animation="to-top">

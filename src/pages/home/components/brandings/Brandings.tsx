@@ -40,6 +40,11 @@ export const Brandings = () => {
 
   }, []);
 
+
+  const sendToLink = ( link: string ) => {
+    window.open(link, '_blank');
+  }
+
   return (
     <>
       <section className="brandings" ref={containerRef} >
@@ -48,17 +53,22 @@ export const Brandings = () => {
             backgroundImage: `url(${ item.image })`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-          }} >
-            {/* <img src={item.image} alt={ item.altImage } /> */}
+           }}
+          >
             <div className="info">
               <span>{ item.info }</span>
               <span>-</span>
               <h4>{ item.title }</h4>
               <p dangerouslySetInnerHTML={{ __html: item.description || <></> }}></p>
-              <button>Ver proyecto <img src={ IconPlus } alt="" /></button>
+              <button 
+                onClick={ () => sendToLink(item.linkButton) }
+                className='animated-button'
+              >
+                <label>Ver proyecto</label>
+                <label className="hover-label">Ver proyecto</label>
+                <img src={ IconPlus } />
+              </button>
             </div>
-
-
 
           </section>
         ))}
