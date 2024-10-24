@@ -19,16 +19,16 @@ export const Brandings = () => {
   useEffect(() => {
     if (!containerRef.current) return;
     const panels = document.querySelectorAll(".panel");
-    const totalPanelsWidth = (panels.length - 1) * 100;
+    const totalPanelsHeight = (panels.length - 1) * 100;
 
     gsap.to(containerRef.current, {
-      xPercent: -totalPanelsWidth,
+      yPercent: -totalPanelsHeight,
       ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
         pin: true,
         scrub: 1,
-        end: () => `+=${panels.length * 100}%`,
+        end: () => `+=${panels.length * 100}vh`,
         snap: {
           snapTo: 1 / (panels.length - 1),
           duration: { min: 0.2, max: 0.5 },
@@ -66,16 +66,28 @@ export const Brandings = () => {
         { brandings.map((item: any, index: any) => (
           <section className="panel" key={ index } style={{ 
             backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
+            backgroundColor: '#000',
             backgroundSize: 'cover',
             transition: 'background 0.3s ease-in-out',
             backgroundPosition: 'center',
            }}
           >
-            <div className="info animate__animated animate__fadeInTopRight">
+
+           <div className="mask">
+            <div className="info">
+            <div className="mask">
               <span>{ item.info }</span>
+            </div>
+            <div className="mask">
               <span>-</span>
-              <h4>{ item.title }</h4>
+            </div>
+            <div className="mask title">
+              <h4 className='animation-title'>{ item.title }</h4>
+            </div>
+            <div className="mask description">
               <p dangerouslySetInnerHTML={{ __html: item.description || <></> }}></p>
+            </div>
+            <div className="mask">
               <button 
                 onClick={ () => sendToLink(item.linkButton) }
                 className='animated-button'
@@ -86,7 +98,12 @@ export const Brandings = () => {
                 <label className="hover-label">Ver proyecto</label>
                 <img src={ IconPlus } />
               </button>
+
             </div>
+            </div>
+
+           </div>
+
 
             <div className="scroll-down-button">
               <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
