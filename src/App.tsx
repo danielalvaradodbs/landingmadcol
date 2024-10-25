@@ -9,8 +9,8 @@ function App() {
   return (
     <>
     <DarkModeProvider>
-     <Header />
-     <Home />
+      <Header />
+      <Home />
     </DarkModeProvider>
     </>
   )
