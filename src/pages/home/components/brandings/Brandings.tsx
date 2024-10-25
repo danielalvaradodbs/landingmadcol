@@ -17,7 +17,9 @@ export const Brandings = () => {
   const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
 
   useEffect(() => {
+    
     if (!containerRef.current) return;
+
     const panels = document.querySelectorAll(".panel");
     const totalPanelsHeight = (panels.length - 1) * 100;
 
@@ -46,6 +48,32 @@ export const Brandings = () => {
     };
 
   }, []);
+
+  // useEffect(() => {
+  //   if (!containerRef.current) return;
+
+  //   const panels = document.querySelectorAll(".panel");
+  //   const totalPanelsHeight = panels.length * 100; // Cada panel ocupa el 100% de la altura de la ventana
+
+  //   gsap.to(containerRef.current, {
+  //     yPercent: -totalPanelsHeight + 100, // Ajusta para que el último panel quede visible
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: containerRef.current,
+  //       pin: true,
+  //       scrub: 1,
+  //       end: () => `+=${totalPanelsHeight}vh`, // Finaliza el desplazamiento al final de todos los paneles
+  //       onUpdate: (self) => {
+  //         const index = Math.round(self.progress * (panels.length - 1));
+  //         setIsDark(brandings[index].isDark);
+  //       },
+  //     },
+  //   });
+
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
 
   const sendToLink = ( link: string ) => {

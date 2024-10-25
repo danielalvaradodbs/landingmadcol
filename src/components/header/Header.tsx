@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <>
         <div className={ `header ${isDark ? 'dark' : ''}` }>
-          <div className="col-6 logo animate__animated animate__fadeInRight">
+          <div className="col-6 logo animate__animated animate__fadeInUp">
             <a href="#">
               <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
             </a>
