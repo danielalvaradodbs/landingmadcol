@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './button.css';
+// import { IconPlus } from '../../shared';
 
 export const Button = () => {
 
@@ -88,7 +89,8 @@ export const Button = () => {
     <button ref={buttonRef} className="button button--stroke" data-block="button">
       <span ref={flairRef} className="button__flair"></span>
       <span className="button__label">Get GSAP</span>
-      {/*<span className="button__label hover-label">Get GSAP</span>*/}
+      <span className="button__label hover-label">Get GSAP</span>
+      {/* <img src={ IconPlus} /> */}
     </button>
     </>
   )
