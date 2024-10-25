@@ -86,6 +86,7 @@ export const Brandings = () => {
                 <label className="hover-label">Ver proyecto</label>
                 <img src={ IconPlus } />
               </button>
+
             </div>
 
             <div className="scroll-down-button">
