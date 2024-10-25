@@ -169,16 +169,12 @@
   
 .mask span {
   display: block;
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
   
 .mask h4,
 .mask p,
+.mask span,
 .mask button {
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
-}
-
-.mask.reveal {
   animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
@@ -192,12 +188,25 @@
   display: block;
 }
 
+.animationOut div {
+  animation: fade-out-div 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+
 .animationOut h4, 
 .animationOut p,
 .animationOut span,
 .animationOut button {
   animation: fade-out 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
+
+.mask div:first-child {
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+/* .animation {
+  animation: reveal 1s  cubic-bezier(0.77, 0, 0.175, 1) 0s;
+} */
 
 .fixed-info {
     position: fixed;
@@ -221,8 +230,6 @@
   }
 }
 
-
-
 @keyframes fade-out {
   0% {
     opacity: 1;
@@ -231,6 +238,17 @@
   100% {
     opacity: 0;
     transform: translate(0, -100%);
+  }
+}
+
+@keyframes fade-out-div {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 100%);
   }
 }
 

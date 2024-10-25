@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './button.css';
+
+import PropTypes from 'prop-types';
 // import { IconPlus } from '../../shared';
 
-export const Button = () => {
+export const Button = ({ texto, onMouseEnter, onMouseLeave, onClick }: any ) => {
 
   const buttonRef = useRef(null);
   const flairRef = useRef(null);
@@ -86,12 +88,27 @@ export const Button = () => {
   
   return (
     <>     
-    <button ref={buttonRef} className="button button--stroke" data-block="button">
-      <span ref={flairRef} className="button__flair"></span>
-      <span className="button__label">Get GSAP</span>
-      <span className="button__label hover-label">Get GSAP</span>
+    <button 
+      ref={ buttonRef } 
+      className="button button--stroke" 
+      data-block="button"
+      onClick={ onClick }
+      onMouseEnter={ onMouseEnter }
+      onMouseLeave={ onMouseLeave }
+    >
+      <label ref={flairRef} className="button__flair"></label>
+      <label className="button__label">{ texto }</label>
+      <label className="button__label hover-label">{ texto }</label>
       {/* <img src={ IconPlus} /> */}
     </button>
     </>
   )
 }
+
+Button.propTypes = {
+  texto: PropTypes.string.isRequired, // Haciendo la prop 'texto' obligatoria
+  sendToLink: PropTypes.func,
+  onClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
+};

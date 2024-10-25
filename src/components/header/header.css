@@ -8,11 +8,13 @@
     align-items:  center;
     justify-content: space-between;
     width: 100%;
+    
 }
 
 .header.dark {
     color: #101820;
-    font-family: Safiro;
+    transition: ease-in .4s;
+    font-family: 'Safiro';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -40,9 +42,11 @@
 .header .menu-items .menu-servicios:not(:last-child)::after,
 .header.dark .menu-items a {
     color: #fff;
+    transition: ease-in .4s;
 }
 
 .header .menu-items a {
+    transition: ease-in .4s;
     color: #101820;
     font-family: 'Safiro';
     font-size: 14px;
