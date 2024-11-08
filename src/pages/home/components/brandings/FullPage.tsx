@@ -27,14 +27,13 @@ export const FullPage = () => {
       };
 
       const resetAnimations = (isScrollingUp: any) => {
-        // Selecciona todos los elementos con la clase '.mask'
         const sectionElements = document.querySelectorAll('.mask, .animationInUp');
     
         sectionElements.forEach((el) => {
-            // Elimina las clases previas de animación para evitar conflictos
+            
             el.classList.remove('animationInUp', 'animationOut', 'animationUp', 'mask');
     
-            // Si se está desplazando hacia arriba
+            
             if (isScrollingUp) {
                 el.classList.add('animationOut');
                 setTimeout(() => {
@@ -45,7 +44,7 @@ export const FullPage = () => {
                 el.classList.add('animationOut');
                 setTimeout(() => {
                     el.classList.remove('animationOut', 'animationUp');
-                    el.classList.add('mask'); // Asegura que 'mask' esté siempre presente después de la animación
+                    el.classList.add('mask');
                 }, 700);
             }
         });
