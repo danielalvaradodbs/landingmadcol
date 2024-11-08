@@ -175,7 +175,7 @@
 .mask p,
 .mask span,
 .mask button {
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .animationOut {

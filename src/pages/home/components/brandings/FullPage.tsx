@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
-import { brandings } from '../../../../shared';
+import { brandings, ScrollDownIcon } from '../../../../shared';
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
@@ -27,15 +27,18 @@ export const FullPage = () => {
 
       const resetAnimations = () => {
         const sectionElements = document.querySelectorAll('.mask');
-        sectionElements.forEach((el: any, i: any) => {
+        sectionElements.forEach((el: any, _i: any) => {
            
             el.classList.remove('mask');
             el.classList.add('animationOut');
 
             setTimeout(() => {
                 el.classList.remove('animationOut');
-            }, 500);
-            el.classList.add('mask');
+            }, 700);
+
+            setTimeout(() => {
+                el.classList.add('mask');
+            }, 700);
             
         });
     };
@@ -52,13 +55,13 @@ export const FullPage = () => {
                 css3={ false }
                 onLeave={() => {
                 }}
-                beforeLeave={(anchorLink, index, slideAnchor, slideIndex) => {
+                beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
                     resetAnimations();
                     setTimeout(() => {
                         setCurrentIndex(index.index);
                     }, 500);
                 }}
-                afterLoad={(anchorLink, index, slideAnchor, slideIndex) => {
+                afterLoad={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
                     setIsDark(brandings[index.index].isDark);
                 }}
                 render={({  }) => {
@@ -107,8 +110,8 @@ export const FullPage = () => {
                             ))}
                             </section>
 
-                              {/* <div className="brandings">
-                                <div className="">
+                              <div className="brandings">
+                                {/* <div className="">
                                     <div className="fixed-info info animation">
                                         <div className="mask">
                                             <span>{brandings[currentIndex]?.info}</span>
@@ -133,7 +136,7 @@ export const FullPage = () => {
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
 
                                 <div className="scroll-down-button">
@@ -141,7 +144,7 @@ export const FullPage = () => {
                                 </div>
 
 
-                              </div> */}
+                              </div>
 
                         </ReactFullpage.Wrapper>
                     );
