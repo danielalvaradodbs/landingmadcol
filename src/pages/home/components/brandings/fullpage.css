@@ -152,21 +152,20 @@
   overflow: hidden;
   line-height: 1;
 }
-  
+
+.animationInUp.title,
 .animationOut.title,
 .mask.title {
   margin: 8px 0;
 }
   
+.animationInUp.description,
 .animationOut.description,
 .mask.description {
   margin-bottom: 22px;
 }
-
-.maskDiv div:first-child {
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-}
   
+.animationInUp span,
 .mask span {
   display: block;
 }
@@ -178,20 +177,40 @@
   animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
+.mask div:first-child {
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.animationInUp h4,
+.animationInUp p,
+.animationInUp span,
+.animationInUp button {
+  animation: reveal-up 2s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.animationInUp div:first-child {
+  animation: reveal-up 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.animationInUp,
 .animationOut {
   margin: 0;
   overflow: hidden;
   line-height: 1;
 }
 
+.animationInUp span,
 .animationOut span {
   display: block;
+}
+
+.animationInUp div {
+  animation: fade-in-div 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 .animationOut div {
   animation: fade-out-div 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
-
 
 .animationOut h4, 
 .animationOut p,
@@ -199,14 +218,6 @@
 .animationOut button {
   animation: fade-out 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
-
-.mask div:first-child {
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-}
-
-/* .animation {
-  animation: reveal 1s  cubic-bezier(0.77, 0, 0.175, 1) 0s;
-} */
 
 .fixed-info {
     position: fixed;
@@ -217,7 +228,27 @@
     color: white;
 }
   
-  
+@keyframes reveal-up {
+  0% {
+    opacity: 0;
+    transform: translate(0,-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes fade-in-div {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
   
 @keyframes reveal {
   0% {

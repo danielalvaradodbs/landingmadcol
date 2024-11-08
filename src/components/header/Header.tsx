@@ -3,17 +3,10 @@ import './header.css';
 
 import { logosMadcritter } from '../../shared';
 import { useDarkMode } from '../../hooks/DarkModeContext';
-import { useEffect } from 'react';
 
 export const Header = () => {
 
   const { isDark } = useDarkMode();
-
-  useEffect(() => {
-    console.log(isDark);
-  
-    
-  }, [])
   
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
 import { brandings, ScrollDownIcon } from '../../../../shared';
 import './fullpage.css';
@@ -10,6 +10,7 @@ export const FullPage = () => {
     const { setIsDark } = useDarkMode();
     const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const previousIndexRef = useRef(0);
 
     // const [fadeOut, setFadeOut] = useState(false);
 
@@ -25,22 +26,37 @@ export const FullPage = () => {
         setHoveredPanel(null);
       };
 
-      const resetAnimations = () => {
-        const sectionElements = document.querySelectorAll('.mask');
-        sectionElements.forEach((el: any, _i: any) => {
-           
-            el.classList.remove('mask');
-            el.classList.add('animationOut');
-
-            setTimeout(() => {
-                el.classList.remove('animationOut');
-            }, 700);
-
-            setTimeout(() => {
-                el.classList.add('mask');
-            }, 700);
-            
+      const resetAnimations = (isScrollingUp: any) => {
+        // Selecciona todos los elementos con la clase '.mask'
+        const sectionElements = document.querySelectorAll('.mask, .animationInUp');
+    
+        sectionElements.forEach((el) => {
+            // Elimina las clases previas de animación para evitar conflictos
+            el.classList.remove('animationInUp', 'animationOut', 'animationUp', 'mask');
+    
+            // Si se está desplazando hacia arriba
+            if (isScrollingUp) {
+                el.classList.add('animationOut');
+                setTimeout(() => {
+                    el.classList.remove('mask', 'animationOut');
+                    el.classList.add('animationInUp');
+                }, 700);
+            } else {
+                el.classList.add('animationOut');
+                setTimeout(() => {
+                    el.classList.remove('animationOut', 'animationUp');
+                    el.classList.add('mask'); // Asegura que 'mask' esté siempre presente después de la animación
+                }, 700);
+            }
         });
+    };
+    
+    
+
+    const handleScroll = (index: any) => {
+        const isScrollingUp = index.index < previousIndexRef.current;
+        resetAnimations(isScrollingUp);
+        previousIndexRef.current = index.index;
     };
 
 
@@ -56,7 +72,7 @@ export const FullPage = () => {
                 onLeave={() => {
                 }}
                 beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
-                    resetAnimations();
+                    handleScroll(index);
                     setTimeout(() => {
                         setCurrentIndex(index.index);
                     }, 500);
