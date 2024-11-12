@@ -90,6 +90,7 @@ export const FullPage = () => {
                                     backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
                                     backgroundColor: '#000',
                                     backgroundSize: 'cover',
+                                    transition: 'background 0.3s ease-in-out',
                                     backgroundPosition: 'center',
                                         
                                     }}

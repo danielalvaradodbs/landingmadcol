@@ -1,9 +1,9 @@
-import RemoLab from '../assets/images/brandings/RemoLab.jpg';
-import RemoLabHover from '../assets/images/brandings/Remo_Lab_Packaging_Brand_Design_Hover.jpg';
-import VaxTrials from '../assets/images/brandings/VaxTrials.png';
-import VaxTrialsHover from '../assets/images/brandings/VaxTrials_Brand_Design_Hover.jpg';
-import HeroMotoCorp from '../assets/images/brandings/Hero_MotoCorp.jpg';
-import HeroMotoCorpHover from '../assets/images/brandings/hero_motocorp_website_Hover.jpg';
+import RemoLab from '../assets/images/brandings/Remo1.avif';
+import RemoLabHover from '../assets/images/brandings/Remo2.avif';
+import VaxTrials from '../assets/images/brandings/VaxTrials1.avif';
+import VaxTrialsHover from '../assets/images/brandings/VaxTrials2.avif';
+import HeroMotoCorp from '../assets/images/brandings/HeroMotoCorp1.avif';
+import HeroMotoCorpHover from '../assets/images/brandings/HeroMotoCorp2.avif';
 
 export const brandings = [
     {
