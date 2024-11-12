@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
 import { brandings, ScrollDownIcon } from '../../../../shared';
 import './fullpage.css';
@@ -11,6 +11,10 @@ export const FullPage = () => {
     const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const previousIndexRef = useRef(0);
+
+    useEffect(() => {
+        preloadImages(brandings.map(item => item.imageHover));
+    }, []);
 
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
@@ -52,6 +56,13 @@ export const FullPage = () => {
         const isScrollingUp = index.index < previousIndexRef.current;
         resetAnimations(isScrollingUp);
         previousIndexRef.current = index.index;
+    };
+
+    const preloadImages = (images: any) => {
+        images.forEach((src: any) => {
+            const img = new Image();
+            img.src = src;
+        });
     };
 
 
