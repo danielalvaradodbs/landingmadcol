@@ -12,9 +12,11 @@ export const FullPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const previousIndexRef = useRef(0);
 
+    const imagesRef = useRef<{ [key: string]: HTMLImageElement }>({});
+
     useEffect(() => {
         preloadImages(brandings.map(item => item.imageHover));
-    }, [currentIndex]);
+    }, []);
 
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
@@ -62,6 +64,9 @@ export const FullPage = () => {
         images.forEach((src: any) => {
             const img = new Image();
             img.src = src;
+            img.onload = () => {
+                imagesRef.current[src] = img;
+            }
         });
     };
 
