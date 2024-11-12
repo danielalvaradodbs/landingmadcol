@@ -14,7 +14,7 @@ export const FullPage = () => {
 
     useEffect(() => {
         preloadImages(brandings.map(item => item.imageHover));
-    }, []);
+    }, [currentIndex]);
 
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
