@@ -62,7 +62,6 @@ export const FullPage = () => {
                 
                 scrollingSpeed={1500} 
                 navigation={ false }
-                sectionsColor={['#1abc9c', '#3498db', '#e74c3c', '#9b59b6']}
                 credits={{ enabled: false }}
                 css3={ false }
                 onLeave={() => {
