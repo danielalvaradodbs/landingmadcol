@@ -74,10 +74,14 @@ export const FullPage = () => {
                     handleScroll(index);
                     setTimeout(() => {
                         setCurrentIndex(index.index);
+                        
                     }, 500);
+                    setTimeout(() => {
+                        setIsDark(brandings[index.index].isDark);
+                    }, 900);
                 }}
-                afterLoad={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
-                    setIsDark(brandings[index.index].isDark);
+                afterLoad={(_anchorLink: any, _index, _slideAnchor: any, _slideIndex: any) => {
+                    // setIsDark(brandings[index.index].isDark);
                 }}
                 render={({  }) => {
                     return (
@@ -154,7 +158,7 @@ export const FullPage = () => {
                                 </div> */}
 
 
-                                <div className="scroll-down-button">
+                                <div className="scroll-down-button animate__animated animate__fadeInRight">
                                 <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
                                 </div>
 

@@ -35,8 +35,8 @@ export const Header = () => {
               <span></span>
             <div className='menu-contactos'>
               <a href="">
-                <label>Contactos</label>
-                <label>Contactos</label>
+                <label>Contacto</label>
+                <label>Contacto</label>
               </a>
             </div>
           </div>
