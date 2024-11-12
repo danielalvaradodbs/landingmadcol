@@ -12,13 +12,13 @@ export const Header = () => {
   return (
     <>
         <div className={ `header ${isDark ? 'dark' : ''}` }>
-          <div className="col-6 logo animate__animated animate__fadeInUp">
+          <div className="col-6 logo animate__animated animate__fadeInUp animate__slow">
             <a href="#">
               <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
             </a>
           </div>
 
-          <div className="col-6 menu-items animate__animated animate__fadeIn" data-animation="to-top">
+          <div className="col-6 menu-items animate__animated animate__fadeIn animate__slow" data-animation="to-top">
             <div className='menu-servicios'>
               <a href="">
               <label>Servicios</label>

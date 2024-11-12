@@ -12,8 +12,6 @@ export const FullPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const previousIndexRef = useRef(0);
 
-    // const [fadeOut, setFadeOut] = useState(false);
-
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
       }
@@ -48,9 +46,7 @@ export const FullPage = () => {
                 }, 700);
             }
         });
-    };
-    
-    
+    };    
 
     const handleScroll = (index: any) => {
         const isScrollingUp = index.index < previousIndexRef.current;
@@ -61,6 +57,7 @@ export const FullPage = () => {
 
     return (
         <>
+            <div className={`black-screen`} />
             <ReactFullpage
                 
                 scrollingSpeed={1500} 
@@ -93,7 +90,6 @@ export const FullPage = () => {
                                     backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
                                     backgroundColor: '#000',
                                     backgroundSize: 'cover',
-                                    transition: 'background 0.3s ease-in-out',
                                     backgroundPosition: 'center',
                                         
                                     }}
@@ -130,35 +126,7 @@ export const FullPage = () => {
                             </section>
 
                               <div className="brandings">
-                                {/* <div className="">
-                                    <div className="fixed-info info animation">
-                                        <div className="mask">
-                                            <span>{brandings[currentIndex]?.info}</span>
-                                        </div>
-                                        <div className="mask">
-                                            <span>-</span>
-                                        </div>
-                                        <div className="mask title">
-                                            <h4 className='animation-title'>{brandings[currentIndex]?.title}</h4>
-                                        </div>
-                                        <div className="mask description">
-                                            <p dangerouslySetInnerHTML={{ __html: brandings[currentIndex]?.description || <></> }}></p>
-                                        </div>
-                                        <div className="mask">
-                                            <Button 
-                                                texto='Ver proyecto'
-                                                onClick= { () => sendToLink(brandings[currentIndex].linkButton) } 
-                                                onMouseEnter={ () => handleMouseEnter(currentIndex) }
-                                                onMouseLeave={ handleMouseLeave }
-                                            />
-
-
-                                        </div>
-                                    </div>
-                                </div> */}
-
-
-                                <div className="scroll-down-button animate__animated animate__fadeInRight">
+                               <div className="scroll-down-button animate__animated animate__fadeInRight">
                                 <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
                                 </div>
 
