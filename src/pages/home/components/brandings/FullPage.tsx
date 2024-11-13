@@ -13,7 +13,6 @@ export const FullPage = () => {
     const previousIndexRef = useRef(0);
 
     const imagesRef = useRef<{ [key: string]: HTMLImageElement }>({});
-     const fullpageRef = useRef<any>(null); // Referencia a fullpage.js
 
     useEffect(() => {
         preloadImages(brandings.map(item => item.imageHover));
