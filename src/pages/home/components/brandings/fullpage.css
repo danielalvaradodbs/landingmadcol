@@ -29,7 +29,7 @@
     height: 100vh;
   }
   
-  .brandings .panel .fp-overflow{
+  .brandings .panel .fp-overflow {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -114,7 +114,14 @@
     transform: translateY(-100%);
     opacity: 0;
   }
-  
+
+  .scroll-down-button-mobile {
+    border-radius: 10px;
+    background: rgba(117, 149, 182, 0.40);
+    backdrop-filter: blur(10px);
+    display: none;
+  }
+
   .scroll-down-button {
     position: fixed;
     top: 92%;
@@ -131,6 +138,7 @@
     
   }
   
+  .scroll-down-button-mobile:hover,
   .scroll-down-button:hover {
     border-radius: 10px;
     background: rgb(96 0 18 / 77%);
@@ -305,4 +313,34 @@
   }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 475px) {
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    gap: 8;
+  }
+
+  .brandings .panel .fp-overflow {
+    padding: 0 16px 75px 16px;
+    justify-content: center;
+  }
+
+  .brandings .scroll-down-button {
+    display: none;
+  }
+
+  .scroll-down-button-mobile {
+    display: inline-flex;
+    position: fixed;
+    top: 93%;
+    left: 45%;
+    cursor: pointer;
+    justify-content: center;
+    padding: 10px 15px;
+    align-items: center;
+    gap: 13px;
+    margin-top: 1px;
+  }
+}
 

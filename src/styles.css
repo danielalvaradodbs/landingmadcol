@@ -25,11 +25,20 @@ body, html {
     margin: 0;
 }
 
+h1 {
+    color: #000;
+    font-family: 'Safiro';
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150px;
+    letter-spacing: -7.5px;
+}
   
 h4 {
     font-family: 'Safiro';
-    font-weight: 700;
-    line-height: 38.4px;
+    font-weight: 500;
+    line-height: 32px;
     letter-spacing: 0;
     margin: 0;
 }
@@ -38,6 +47,8 @@ p {
     font-family: 'Safiro';
     font-weight: 400;
     margin: 0;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .small-text {
@@ -80,4 +91,33 @@ button:disabled {
     border: 1px solid rgba(255, 255, 255, 0.20);
 }
   
-  
+
+@media only screen and (min-width: 280px) and (max-width: 834px) {
+    h1 {
+        color: #000;
+        font-family: 'Safiro';
+        font-size: 109px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 109px;
+        letter-spacing: -5.45px;
+        margin: 0;
+    }
+
+    h4 {
+        font-family: 'Safiro';
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0;
+        margin: 0;
+    }
+    
+    p {
+        font-family: 'Safiro';
+        font-weight: 400;
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

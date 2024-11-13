@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
-import { brandings, ScrollDownIcon } from '../../../../shared';
+import { brandings, ScrollDownIcon, ScrollDownIconMobile } from '../../../../shared';
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
@@ -76,7 +76,7 @@ export const FullPage = () => {
             <div className={`black-screen`} />
             <ReactFullpage
                 
-                scrollingSpeed={1500} 
+                scrollingSpeed={1000} 
                 navigation={ false }
                 credits={{ enabled: false }}
                 css3={ false }
@@ -145,8 +145,12 @@ export const FullPage = () => {
                                <div className="scroll-down-button animate__animated animate__fadeInRight">
                                 <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
                                 </div>
+                              </div>
 
-
+                              <div className="brandings">
+                               <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
+                                <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
+                                </div>
                               </div>
 
                         </ReactFullpage.Wrapper>

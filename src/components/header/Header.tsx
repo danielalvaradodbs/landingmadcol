@@ -3,10 +3,17 @@ import './header.css';
 
 import { logosMadcritter } from '../../shared';
 import { useDarkMode } from '../../hooks/DarkModeContext';
+import { useState } from 'react';
 
 export const Header = () => {
 
   const { isDark } = useDarkMode();
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   
 
   return (
@@ -40,6 +47,34 @@ export const Header = () => {
               </a>
             </div>
           </div>
+
+          <div className="menu-toggle animate__animated animate__fadeIn" onClick={ toggleMenu }>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+
+          {menuOpen && (
+          <div className="menu-items-mobile animate__animated animate__fadeIn">
+            <div className="close"><a onClick={ toggleMenu }>Cerrar</a></div>
+
+            <div className="submenu">
+              <div className="logo">
+                <img src={ logosMadcritter.logoMad.logo } alt="" />
+              </div>
+              <div className="items">
+                <ul>
+                  <li><a href="">Servicios</a></li>
+                  <li><a href="">Nosotros</a></li>
+                  <li><a href="">Contacto</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+        )}
           
         </div>
     </>
