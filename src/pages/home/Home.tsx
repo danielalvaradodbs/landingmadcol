@@ -1,6 +1,7 @@
 
 // import { Brandings } from './components/brandings/Brandings';
 import { FullPage } from './components/brandings/FullPage';
+import { Concept } from './components/concept/Concept';
 import './home.css';
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
     <>
       {/* <Brandings /> */}
       <FullPage/>
+      <Concept />
     </>
   )
 }

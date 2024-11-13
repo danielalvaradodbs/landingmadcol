@@ -13,6 +13,7 @@ export const FullPage = () => {
     const previousIndexRef = useRef(0);
 
     const imagesRef = useRef<{ [key: string]: HTMLImageElement }>({});
+     const fullpageRef = useRef<any>(null); // Referencia a fullpage.js
 
     useEffect(() => {
         preloadImages(brandings.map(item => item.imageHover));
@@ -80,6 +81,7 @@ export const FullPage = () => {
                 navigation={ false }
                 credits={{ enabled: false }}
                 css3={ false }
+                scrollOverflow={true}
                 onLeave={() => {
                 }}
                 beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
@@ -92,8 +94,12 @@ export const FullPage = () => {
                         setIsDark(brandings[index.index].isDark);
                     }, 900);
                 }}
-                afterLoad={(_anchorLink: any, _index, _slideAnchor: any, _slideIndex: any) => {
-                    // setIsDark(brandings[index.index].isDark);
+                afterLoad={(_anchorLink: any, index: any, _slideAnchor: any, _slideIndex: any) => {
+                    if (index.index === brandings.length - 1) {
+                        document.body.style.overflowY = 'auto'; 
+                      } else {
+                        document.body.style.overflowY = 'hidden'; 
+                      }
                 }}
                 render={({  }) => {
                     return (
