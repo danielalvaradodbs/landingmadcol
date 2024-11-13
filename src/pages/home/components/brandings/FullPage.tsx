@@ -82,6 +82,7 @@ export const FullPage = () => {
                 credits={{ enabled: false }}
                 css3={ false }
                 scrollOverflow={true}
+                scrollBar={true}
                 onLeave={() => {
                 }}
                 beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
