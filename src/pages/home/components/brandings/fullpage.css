@@ -31,13 +31,11 @@
   
   .brandings .panel .fp-overflow {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: space-between;
-    flex-shrink: 0;
-    overflow: hidden;
     align-items: flex-end;
-    padding: 0 40px 45px 40px;
+    /* padding: 0 40px 45px 40px; */
   }
   
   .brandings .info {
@@ -321,8 +319,21 @@
     gap: 8;
   }
 
+  .brandings .fp-section {
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 100%;
+    display: block;
+  }
+
   .brandings .panel .fp-overflow {
-    padding: 0 16px 75px 16px;
+    /* position: fixed;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* padding: 0 16px 75px 16px; */
     justify-content: center;
   }
 

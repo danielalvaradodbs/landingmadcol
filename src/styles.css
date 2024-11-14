@@ -35,6 +35,16 @@ h1 {
     letter-spacing: -7.5px;
     margin: 0;
 }
+
+ h1 {
+    color: #000;
+    font-family: 'Safiro';
+    font-size: 250px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 250px;
+    letter-spacing: -12.5px;
+}
   
 h4 {
     font-family: 'Safiro';
@@ -93,7 +103,7 @@ button:disabled {
 }
   
 
-@media only screen and (min-width: 280px) and (max-width: 834px) {
+@media only screen and (min-width: 280px) and (max-width: 1440px) {
     h1 {
         color: #000;
         font-family: 'Safiro';

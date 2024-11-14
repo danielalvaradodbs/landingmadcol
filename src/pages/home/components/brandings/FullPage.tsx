@@ -109,10 +109,11 @@ export const FullPage = () => {
                                 { brandings.map((item: any, index: any) => (
                                 <section className="panel section" key={ index } style={{ 
                                     backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
-                                    backgroundColor: '#000',
+                                    backgroundColor: '#fff',
+                                    backgroundRepeat: 'no-repeat',
                                     backgroundSize: 'cover',
                                     transition: 'background 0.3s ease-in-out',
-                                    backgroundPosition: 'center',
+                                    backgroundPosition: 'center center',
                                         
                                     }}
                                     >
@@ -143,6 +144,7 @@ export const FullPage = () => {
                                         </div>
 
                                     </div>
+                                    {/* <div></div> */}
                                 </section>
                             ))}
                             </section>
