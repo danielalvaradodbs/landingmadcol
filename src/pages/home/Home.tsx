@@ -9,7 +9,7 @@ export const Home = () => {
     <>
       {/* <Brandings /> */}
       <FullPage/>
-      {/* <Concept /> */}
+      <Concept />
     </>
   )
 }

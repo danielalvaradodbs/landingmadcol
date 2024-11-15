@@ -70,6 +70,25 @@ export const FullPage = () => {
         });
     };
 
+    const observer = new IntersectionObserver((entries) => {
+        const targets  = document.querySelectorAll('.fp-overflow') as NodeListOf<HTMLElement>;
+
+        if(!entries) return;
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                console.log('El elemento es visible');
+                targets.forEach((target) => {
+                    target.style.setProperty('display', 'none', 'important');
+                });
+            } else {
+                console.log('El elemento no es visible');
+                targets.forEach((target) => {
+                    target.style.setProperty('display', 'flex', 'important');
+                });
+            }
+        });
+    });
+
 
     return (
         <>
@@ -96,10 +115,15 @@ export const FullPage = () => {
                 }}
                 afterLoad={(_anchorLink: any, index: any, _slideAnchor: any, _slideIndex: any) => {
                     if (index.index === brandings.length - 1) {
-                        document.body.style.overflowY = 'auto'; 
+                        document.body.style.overflowY = 'auto';
+
                       } else {
                         document.body.style.overflowY = 'hidden'; 
                       }
+
+                      const concept = document.querySelector('.concept');
+                      if( !concept ) return;
+                      observer.observe(concept!);
                 }}
                 render={({  }) => {
                     return (
@@ -114,7 +138,6 @@ export const FullPage = () => {
                                     backgroundSize: 'cover',
                                     transition: 'background 0.3s ease-in-out',
                                     backgroundPosition: 'center center',
-                                        
                                     }}
                                     >
 

@@ -13,6 +13,7 @@
 .concept .human {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 39px;
     justify-content: center;
 }
@@ -23,6 +24,8 @@
 
 .concept .human .video {
     width: 555px;
+    max-width: 555px;
+    max-height: 165px;
     height: 165px;
     flex-shrink: 0;
 }
