@@ -99,8 +99,9 @@ export const FullPage = () => {
                 navigation={ false }
                 credits={{ enabled: false }}
                 css3={ false }
-                scrollOverflow={true}
-                scrollBar={true}
+                autoScrolling={ true }
+                scrollOverflow={ true }
+                scrollBar={ true }
                 onLeave={() => {
                 }}
                 beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
@@ -114,12 +115,12 @@ export const FullPage = () => {
                     }, 900);
                 }}
                 afterLoad={(_anchorLink: any, index: any, _slideAnchor: any, _slideIndex: any) => {
-                    if (index.index === brandings.length - 1) {
-                        document.body.style.overflowY = 'auto';
+                    // if (index.index === brandings.length - 1) {
+                    //     document.body.style.overflowY = 'auto';
 
-                      } else {
-                        document.body.style.overflowY = 'hidden'; 
-                      }
+                    //   } else {
+                    //     document.body.style.overflowY = 'hidden'; 
+                    //   }
 
                       const concept = document.querySelector('.concept');
                       if( !concept ) return;
