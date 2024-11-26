@@ -22,6 +22,19 @@
     transition: opacity 1s ease-in-out;
 }
 
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: white;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .brandings {
     display: flex; 
     flex-direction: column;

@@ -6,6 +6,8 @@ import { useEffect, useRef } from 'react';
 export const Concept = () => {
 
   const videoRef = useRef(null);
+  const contentVideo = useRef(null);
+  const contentVideo2 = useRef(null);
   const startTime = 4;
 
   useEffect(() => {
@@ -22,27 +24,49 @@ export const Concept = () => {
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
   };
   }, [startTime]);
+
+  useEffect(() => {
+
+    const video1: any = contentVideo.current;
+    const video2: any = contentVideo2.current;
+
+    setTimeout(() => {
+      video1.classList.add("show");
+      video2.classList.add("show");
+    }, 0);
+
+  }, [])
   
   return (
     <>
     <section className='concept' style={{ backgroundColor: 'white'}}>
 
-      <div className="human">
-        <h1>Human  <img src={ FiguraAsterisco } alt=""/></h1>
-        <div className="video">
+      <div className="human ">
+        <div className="text">
+          <h1 className='cssanimation leFadeInBottom sequence'>Human</h1>
+          <img className='animate__animated animate__fadeInUpBig' src={ FiguraAsterisco } alt=""/>
+        </div>
+        <div className="video animation-video" ref={contentVideo}>
           <video src={ VideoMad } autoPlay={ true } loop muted></video>
         </div>
       </div>
 
       <div className="centered">
-        <div className="video">
+        <div className="video animation-video" ref={contentVideo2} >
           <video src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
         </div>
-        <h1>Centered <img src={ PildoraAzul } alt="" /> <img src={ PildoraMagenta } alt="" /></h1>
+        <div className="text">
+          <h1 className='cssanimation leFadeInBottom sequence'>Centered</h1>
+          <img className='animate__animated animate__fadeInUpBig' src={ PildoraAzul } alt="" /> 
+          <img className='animate__animated animate__fadeInUpBig' src={ PildoraMagenta } alt="" />
+        </div>
       </div>
 
       <div className="branding">
-        <h1>Branding <img src={ Flecha } alt="" /></h1>
+        <div className="text">
+          <h1 className='cssanimation leFadeInBottom sequence'>Branding</h1>
+          <img className='animate__animated animate__fadeInUpBig' src={ Flecha } alt="" />
+        </div>
         <div className="video-mobile" style={{ display: 'none' }}>
           <video src={ VideoMad } autoPlay loop muted></video>
         </div>

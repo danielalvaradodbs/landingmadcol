@@ -1,0 +1,18 @@
+.text-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    overflow: hidden;
+  }
+  
+  .animated-text {
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+    color: white;
+  }
+  

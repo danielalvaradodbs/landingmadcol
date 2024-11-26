@@ -25,6 +25,19 @@ body, html {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul, li {
+  color: #FFF;
+  font-family: 'Safiro';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
 h1 {
     color: #000;
     font-family: 'Safiro';
@@ -39,11 +52,21 @@ h1 {
  h1 {
     color: #000;
     font-family: 'Safiro';
-    font-size: 200px;
+    font-size: 180px;
     font-style: normal;
     font-weight: 600;
     line-height: 250px;
     letter-spacing: -12.5px;
+}
+
+h2 {
+  color: #FFF;
+  font-family: 'Safiro';
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 96px;
+  letter-spacing: -4.8px;
 }
   
 h4 {
@@ -63,6 +86,15 @@ h5 {
     line-height: 36px;
     letter-spacing: -0.28px;
     margin: 0;
+}
+
+h6 {
+  color: #FFF;
+  font-family: 'Safiro';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 p {
@@ -112,6 +144,124 @@ button:disabled {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.20);
 }
+
+@keyframes leFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes leFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to { opacity: 1 }
+}
+
+@keyframes centerToBorder {
+	0% {
+		transform: scaleX(0);
+        opacity: 0;
+	}
+
+	100% {
+        opacity: 1;
+		transform: scaleX(1);
+	}
+}
+
+@keyframes reveal-up {
+    0% {
+      opacity: 0;
+      transform: translate(0,-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+  
+  @keyframes fade-in-div {
+    0% {
+      opacity: 0;
+      transform: translate(0, -100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+    
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translate(0,100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  @keyframes reveal-left {
+    0% {
+      opacity: 0;
+      transform: translate(100%,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+  @keyframes reveal-right {
+    0% {
+      opacity: 0;
+      transform: translate(-100%,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, -100%);
+    }
+  }
+  
+  @keyframes fade-out-div {
+    0% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, 100%);
+    }
+  }
+  
+  @keyframes fade-out-initial {
+    0% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, -100%);
+    }
+  }
   
 
 @media only screen and (min-width: 280px) and (max-width: 1440px) {

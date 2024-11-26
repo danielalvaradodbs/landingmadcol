@@ -5,6 +5,15 @@ import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
 
+declare global {
+    interface Window {
+        fullpage_api: {
+            setAutoScrolling: (value: boolean) => void;
+            setFitToSection: (value: boolean) => void;
+        };
+    }
+}
+
 export const FullPage = () => {
 
     const { setIsDark } = useDarkMode();
@@ -76,12 +85,10 @@ export const FullPage = () => {
         if(!entries) return;
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                console.log('El elemento es visible');
                 targets.forEach((target) => {
                     target.style.setProperty('display', 'none', 'important');
                 });
             } else {
-                console.log('El elemento no es visible');
                 targets.forEach((target) => {
                     target.style.setProperty('display', 'flex', 'important');
                 });
@@ -98,11 +105,30 @@ export const FullPage = () => {
                 scrollingSpeed={1000} 
                 navigation={ false }
                 credits={{ enabled: false }}
-                css3={ false }
+                css3={ true }
                 autoScrolling={ true }
                 scrollOverflow={ true }
                 scrollBar={ true }
-                onLeave={() => {
+                fitToSection={ true }
+                sectionsColor={['#fff', '#f0f0f0', '#000']}
+                onLeave={(_origin, destination, direction) => {
+                    const isLastSection = destination.index === brandings.length - 1;
+                    // console.log(direction);
+                    // console.log(isLastSection);                    
+                    // if(isLastSection && direction === 'up') {
+                    //     // Reactiva el scroll automático en otras secciones
+                    //     if (window.fullpage_api) {
+                    //         window.fullpage_api.setAutoScrolling(true);
+                    //         window.fullpage_api.setFitToSection(true);
+                    //         document.body.style.overflowY = 'hidden'; // Oculta el scroll normal
+                    //     }
+                    // } else {
+                    //     if (window.fullpage_api) {
+                    //         window.fullpage_api.setAutoScrolling(true);
+                    //         window.fullpage_api.setFitToSection(true);
+                    //         document.body.style.overflowY = 'auto';
+                    //     }
+                    // }
                 }}
                 beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
                     handleScroll(index);
@@ -114,7 +140,7 @@ export const FullPage = () => {
                         setIsDark(brandings[index.index].isDark);
                     }, 900);
                 }}
-                afterLoad={(_anchorLink: any, index: any, _slideAnchor: any, _slideIndex: any) => {
+                afterLoad={(_anchorLink: any, _index: any, _slideAnchor: any, _slideIndex: any) => {                
                     // if (index.index === brandings.length - 1) {
                     //     document.body.style.overflowY = 'auto';
 

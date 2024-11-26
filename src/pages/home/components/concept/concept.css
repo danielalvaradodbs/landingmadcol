@@ -29,12 +29,15 @@
     max-height: 165px;
     height: 165px;
     flex-shrink: 0;
+    overflow: hidden;
+
 }
 
 .concept .centered .video {
     width: 325px;
     height: 165px;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
 .concept .centered .video video,
@@ -45,10 +48,11 @@
     border-radius: 10px;
 }
 
-.concept .human h1, 
-.concept .centered h1,
-.concept .branding h1 {
+.concept .human .text, 
+.concept .centered .text,
+.concept .branding .text {
     position: relative;
+    overflow: hidden;
 }
 
 .concept h5 {
@@ -61,12 +65,12 @@
     top: 34%
 }
 
-.concept .centered img:first-child {
+.concept .centered .text img {
     position: absolute;
     bottom: 10%;
     right: 12%;
 }
-.concept .centered img:last-child {
+.concept .centered .text img:last-child {
     position: absolute;
     bottom: 13%;
     right: 6%;
@@ -77,6 +81,39 @@
     top: 34%;
     left: 26%;
 }
+
+.concept .human .animation-video video {
+    animation: reveal-left 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+
+}
+
+.concept .centered .animation-video video {
+    animation: reveal-right 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.concept .branding .centro {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.cssanimation {
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+
+.leFadeInBottom span {
+    animation: leFadeInBottom 300ms both;
+}
+
+/* .concept .centered .text .leFadeInBottom span {
+    animation: leFadeInBottom 0.8s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+.concept .branding .text .leFadeInBottom span {
+    animation: leFadeInBottom 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+} */
+
+
+/* .cssanimation span { display: inline-block } */
 
 @media only screen and (min-width: 280px) and (max-width: 1440px) {
     .concept .human img {
@@ -176,3 +213,4 @@
         border-radius: 10px;
     }
 }
+  
