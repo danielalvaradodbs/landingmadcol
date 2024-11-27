@@ -1,146 +1,111 @@
-
-
-import { useEffect, useRef, useState } from 'react';
 import './branding.css';
-import { brandings, IconPlus, ScrollDownIcon } from '../../../../shared';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useDarkMode } from '../../../../hooks/DarkModeContext';
+import ScrollMagic from 'scrollmagic';
+import { useEffect } from 'react';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { Concept } from '../concept/Concept';
 
+gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 export const Brandings = () => {
+    useEffect(() => {
+        const controller = new ScrollMagic.Controller();
+        const slides = document.querySelectorAll('section, footer');
 
-  const { setIsDark } = useDarkMode();
+        // Establecer la posición inicial para los elementos con la clase .delayed
+        const delayedElements = document.querySelectorAll('.delayed');
+        gsap.set(delayedElements, { y: '100%' });
 
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
+        slides.forEach((slide, index) => {
+            new ScrollMagic.Scene({
+                triggerElement: slide,
+                triggerHook: 'onLeave',
+                duration: "200%"
+            })
+            .setPin(slide, { pushFollowers: false })
+            .addTo(controller);
 
-  useEffect(() => {
-    
-    if (!containerRef.current) return;
+            // Up
+            new ScrollMagic.Scene({
+                triggerHook: 'onLeave',
+                triggerElement: slide,
+                offset: -10
+            })
+            .on('leave', function () {
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: window.innerHeight * (index - 1), autoKill: false },
+                    onComplete: function () {
+                        let delayed = document.querySelector(`.hero${index + 1} .delayed`);
+                        if (delayed) {
+                            gsap.set(delayed, { y: '100%' });
+                        }
+                    },
+                    ease: "power4.out"
+                });
+            })
+            .addTo(controller);
 
-    const panels = document.querySelectorAll(".panel");
-    const totalPanelsHeight = (panels.length - 1) * 100;
+            // Down
+            new ScrollMagic.Scene({
+                triggerElement: slide,
+                triggerHook: 'onEnter',
+                offset: 10
+            })
+            .on('enter', function () {
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: index === slides.length - 1 ? '#concept-section' : `.hero${index + 1}`, autoKill: false }, // Cambia esto
+                    onStart: function () {
+                        let delayed = document.querySelector(`.hero${index + 1} .delayed`);
+                        if (delayed) {
+                            gsap.to(delayed, { duration: 0.75, y: '0%', ease: "power1.out" });
+                        }
+                    },
+                    ease: "power4.out"
+                });
+            })
+            .addTo(controller);
+        });
+    }, []);
 
-    gsap.to(containerRef.current, {
-      yPercent: -totalPanelsHeight,
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        pin: true,
-        scrub: 1,
-        end: () => `+=${panels.length * 100}vh`,
-        snap: {
-          snapTo: 1 / (panels.length - 1),
-          duration: { min: 0.2, max: 0.5 },
-          ease: "power1.inOut"
-        },
-        onUpdate: ( self ) => {
-          const index = Math.round(self.progress * (panels.length - 1));
-          setIsDark(brandings[index].isDark);
-        }
-      },
-    });
+    return (
+        <>
+            <section id="landing-page" className="hero-story hero hero1 scrollMajicFix">
+                <div className="full-col width-100">
+                    <h1>Landing Screen</h1>
+                </div>
+            </section>
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+            <section id="rooms" className="hero-story hero second-hero hero2 scrollMajicFix">
+                <div className="left-col width-100">
+                    <h2>Des chambres pour vous</h2>
+                </div>
+            </section>
 
-  }, []);
+            <section id="you" className="hero-story hero second-hero hero3 scrollMajicFix">
+                <div className="left-col width-100 delayed">
+                    <h2>Contenu gauche pour proche de vous</h2>
+                </div>
+            </section>
 
-  // useEffect(() => {
-  //   if (!containerRef.current) return;
+            <section id="near" className="hero-story hero second-hero hero4 scrollMajicFix">
+                <div className="left-col width-100 delayed">
+                    <h2>Contenu pour proche de tout</h2>
+                </div>
+            </section>
 
-  //   const panels = document.querySelectorAll(".panel");
-  //   const totalPanelsHeight = panels.length * 100; // Cada panel ocupa el 100% de la altura de la ventana
+            <section className="hero-story hero second-hero hero5 scrollMajicFix" id="concept-section">
+                <div className="left-col width-100 delayed">
+                    <Concept />
+                </div>
+            </section>
 
-  //   gsap.to(containerRef.current, {
-  //     yPercent: -totalPanelsHeight + 100, // Ajusta para que el último panel quede visible
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: containerRef.current,
-  //       pin: true,
-  //       scrub: 1,
-  //       end: () => `+=${totalPanelsHeight}vh`, // Finaliza el desplazamiento al final de todos los paneles
-  //       onUpdate: (self) => {
-  //         const index = Math.round(self.progress * (panels.length - 1));
-  //         setIsDark(brandings[index].isDark);
-  //       },
-  //     },
-  //   });
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
-
-
-  const sendToLink = ( link: string ) => {
-    window.open(link, '_blank');
-  }
-
-  const handleMouseEnter = (index: number) => {
-    setHoveredPanel(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredPanel(null);
-  };
-
-  return (
-    <>
-      <section className="brandings" ref={containerRef} >
-        { brandings.map((item: any, index: any) => (
-          <section className="panel" key={ index } style={{ 
-            backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
-            backgroundColor: '#000',
-            backgroundSize: 'cover',
-            transition: 'background 0.3s ease-in-out',
-            backgroundPosition: 'center',
-           }}
-          >
-
-           <div className="mask">
-            <div className="info">
-            <div className="mask">
-              <span>{ item.info }</span>
-            </div>
-            <div className="mask">
-              <span>-</span>
-            </div>
-            <div className="mask title">
-              <h4 className='animation-title'>{ item.title }</h4>
-            </div>
-            <div className="mask description">
-              <p dangerouslySetInnerHTML={{ __html: item.description || <></> }}></p>
-            </div>
-            <div className="mask">
-              <button 
-                onClick={ () => sendToLink(item.linkButton) }
-                className='animated-button'
-                onMouseEnter={ () => handleMouseEnter(index) }
-                onMouseLeave={ handleMouseLeave }
-              >
-                <label>Ver proyecto</label>
-                <label className="hover-label">Ver proyecto</label>
-                <img src={ IconPlus } />
-              </button>
-
-            </div>
-            </div>
-
-           </div>
-
-
-            <div className="scroll-down-button">
-              <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
-            </div>
-
-          </section>
-        ))}
-      </section>
-
-    </>
-  )
-}
+            <footer className="hero-story hero second-hero hero6 scrollMajicFix">
+                <h2>Contenu du footer</h2>
+            </footer>
+        </>
+    );
+};

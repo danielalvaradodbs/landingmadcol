@@ -1,4 +1,5 @@
 
+import { useDarkMode } from '../../../../hooks/DarkModeContext';
 import { FiguraAsterisco, Flecha, PildoraAzul, PildoraMagenta, VideoMad } from '../../../../shared';
 import './concept.css';
 import { useEffect, useRef } from 'react';
@@ -35,7 +36,14 @@ export const Concept = () => {
       video2.classList.add("show");
     }, 0);
 
-  }, [])
+  }, []);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsDark(false);
+  // }, 600);
+  // }, []);
+  
   
   return (
     <>

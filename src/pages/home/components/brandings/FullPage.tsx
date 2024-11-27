@@ -138,7 +138,7 @@ export const FullPage = () => {
                     }, 500);
                     setTimeout(() => {
                         setIsDark(brandings[index.index].isDark);
-                    }, 900);
+                    }, 600);
                 }}
                 afterLoad={(_anchorLink: any, _index: any, _slideAnchor: any, _slideIndex: any) => {                
                     // if (index.index === brandings.length - 1) {

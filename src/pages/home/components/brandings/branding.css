@@ -1,161 +1,72 @@
-.brandings {
-  display: flex; 
-  flex-direction: column;
-  width: 100vw !important; 
-  height: 100vh;
+body {
+  overflow-x: hidden;
 }
 
-.brandings .panel {
+section,
+footer {
+  display: flex;
+  height: 100vh;
   width: 100%;
+}
+
+.scrollMajicFix {
+  top: 0 !important;
+}
+
+.left-col, 
+.middle-col, 
+.right-col, 
+.full-col {
   height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  flex-shrink: 0;
-  overflow: hidden;
-  align-items: flex-end;
-  padding: 0 40px 45px 40px;
+  margin: 0;
 }
 
-.brandings .info {
-  display: flex;
-  flex-direction: column;
+.width-0 {
+  width: 0;
+}
+
+.width-33 {
+  width: 33.33%;
+}
+
+.width-66 {
+  width: 66.66%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+#landing-page .full-col {
+  background-color: grey;
+}
+
+#rooms .left-col {
+  background-color: red;
+}
+
+#rooms .right-col {
+  background-color: pink;
+}
+
+#you .middle-col {
+  background-color: green;
+}
+
+#you .left-col,
+#you .right-col {
+  background-color: palegreen;
+}
+
+#near .right-col {
+  background-color: blue;
+}
+
+#near .left-col {
+  background-color: lightblue;
+}
+
+footer {
+  background-color: black;
   color: white;
-  max-width: 325px;
-
-  border-radius: 10px;
-  background: #101820;
-  padding: 39px 44px 40px 44px;
-}
-
-.brandings .info span {
-  color:#7595B6;
-  font-family: 'Safiro';
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-}
-
-.brandings .info h4 {
-  color: #FFF;
-  font-family: 'Safiro';
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.brandings .info p {
-  color: #FFF;
-  font-family: 'Safiro';
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.animated-button {
-  position: relative;
-  overflow: hidden;
-}
-
-.animated-button label {
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-  cursor: pointer;
-}
-
-.animated-button label:first-child {
-  display: inline-block;
-}
-
-.animated-button .hover-label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-.animated-button:hover .hover-label {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.animated-button:hover label:first-child {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.scroll-down-button {
-  cursor: pointer;
-  display: inline-flex;
-  padding: 12px;
-  align-items: center;
-  gap: 13px;
-
-  border-radius: 10px;
-  background: rgba(117, 149, 182, 0.40);
-  backdrop-filter: blur(10px);
-  
-}
-
-.scroll-down-button:hover {
-  border-radius: 10px;
-  background: rgb(96 0 18 / 77%);
-  backdrop-filter: blur(10px);
-}
-
-.scroll-down-button a {
-  color: #FFF;
-  font-family: 'Safiro';
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: none;
-}
-
-.mask {
-    margin: 0;
-    overflow: hidden;
-    line-height: 1;
-}
-
-.mask.title {
-  margin: 8px 0;
-}
-
-.mask.description {
-  margin-bottom: 22px;
-}
-
-.mask span {
-  display: block;
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-}
-
-.mask div {
-  animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-}
-
-.mask h4,
-.mask p,
-.mask button {
-  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-}
-
-
-
-@keyframes reveal {
-  0% {
-    transform: translate(0,100%);
-  }
-  100% {
-    transform: translate(0,0);
-  }
 }

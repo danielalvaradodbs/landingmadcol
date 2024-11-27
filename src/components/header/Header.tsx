@@ -26,6 +26,13 @@ export const Header = () => {
           </div>
 
           <div className="col-6 menu-items animate__animated animate__fadeIn animate__slow" data-animation="to-top">
+            <div className="menu-logo">
+              <a href="#">
+                <img style={{ display: 'none' }} src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }  />
+                <img style={{ display: 'none' }} src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }  />
+              </a>
+            </div>
+            <span style={{ display: 'none' }}></span>
             <div className='menu-servicios'>
               <a href="">
               <label>Servicios</label>
