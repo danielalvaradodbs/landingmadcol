@@ -39,7 +39,7 @@
     display: flex; 
     flex-direction: column;
     width: 100vw !important; 
-    height: 100vh;
+    /* height: 100vh; */
   }
   
   .brandings .panel .fp-overflow {
@@ -341,7 +341,7 @@
     justify-content: center;
   }
 
-  .brandings .scroll-down-button {
+  .brandings-button .scroll-down-button {
     display: none;
   }
 

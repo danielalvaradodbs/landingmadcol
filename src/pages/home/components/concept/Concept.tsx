@@ -6,6 +6,8 @@ import { useEffect, useRef } from 'react';
 
 export const Concept = () => {
 
+  const { setIsDark } = useDarkMode();
+
   const videoRef = useRef(null);
   const contentVideo = useRef(null);
   const contentVideo2 = useRef(null);
@@ -38,11 +40,27 @@ export const Concept = () => {
 
   }, []);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsDark(false);
-  // }, 600);
-  // }, []);
+
+
+  useEffect(() => {
+    const section = document.querySelector('.concept'); // Selecciona la sección
+    console.log(section);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsDark(false); // Establecer modo oscuro cuando la sección es visible
+        } else {
+          setIsDark(true); // Restablecer modo oscuro cuando no es visible
+        }
+      });
+    }, { threshold: 0.5 }); // Ajusta el umbral según sea necesario
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    
+  }, [setIsDark]);
   
   
   return (

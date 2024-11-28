@@ -3,36 +3,74 @@ import './header.css';
 
 import { logosMadcritter } from '../../shared';
 import { useDarkMode } from '../../hooks/DarkModeContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
 
   const { isDark } = useDarkMode();
-
+  const [scrollingDown, setScrollingDown] = useState(false);
+  const [isCentered, setIsCentered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        setScrollingDown(true);
+        setIsCentered(true);
+      } else if (scrollTop === 0) {
+        setScrollingDown(false);
+        setIsCentered(false);
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
 
   return (
     <>
-        <div className={ `header ${isDark ? 'dark' : ''}` }>
-          <div className="col-6 logo animate__animated animate__fadeInUp animate__slow">
-            <a href="#">
-              <img src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }  />
+        <div className={`header ${isDark ? 'dark' : ''}`}>
+        <div 
+          className={`col-6 logo animate__animated animate__fadeInUp animate__slow`}>
+            <a href="#" >
+              <img 
+                src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                className={`${ scrollingDown ? 'move-logo' : ''}`}
+              />
             </a>
+            
           </div>
 
-          <div className="col-6 menu-items animate__animated animate__fadeIn animate__slow" data-animation="to-top">
-            <div className="menu-logo">
-              <a href="#">
-                <img style={{ display: 'none' }} src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }  />
-                <img style={{ display: 'none' }} src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }  />
+          <div className={`col-6 menu-items animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
+          <div className="menu-logo">
+              <a href="#" style={{ display: isCentered ? 'inline' : 'none' }}>
+                <img 
+                  style={{ display: isDark ? 'inline' : 'none' }} 
+                  src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                  className={`col-6 animate__animated animate__fadeIn`}
+                />
+                  
+                <img 
+                  style={{ display: !isDark ? 'inline' : 'none' }} 
+                  src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }  
+                  className={`col-6 animate__animated animate__fadeIn`}
+                />
               </a>
+              <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
             </div>
-            <span style={{ display: 'none' }}></span>
             <div className='menu-servicios'>
               <a href="">
               <label>Servicios</label>

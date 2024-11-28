@@ -3,6 +3,7 @@
     padding: 70px 150px 83px 150px;
     background-color: #2A00FF;
     display: flex;
+    height: 100vh;
 }
 
 .services h1 {

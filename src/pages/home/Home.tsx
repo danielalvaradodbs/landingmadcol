@@ -7,6 +7,7 @@ import { Services } from './components/services/Services';
 import './home.css';
 
 export const Home = () => {
+  
   return (
     <>
       {/* <Brandings /> */}

@@ -199,13 +199,13 @@ export const FullPage = () => {
                             ))}
                             </section>
 
-                              <div className="brandings">
+                              <div className="brandings-button">
                                <div className="scroll-down-button animate__animated animate__fadeInRight">
                                 <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
                                 </div>
                               </div>
 
-                              <div className="brandings">
+                              <div className="brandings-button">
                                <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
                                 <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
                                 </div>
