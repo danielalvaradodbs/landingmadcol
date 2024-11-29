@@ -1,8 +1,9 @@
 
+import { SectionObserver } from '../../../../components/header/SectionObserver';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
 import { FiguraAsterisco, Flecha, PildoraAzul, PildoraMagenta, VideoMad } from '../../../../shared';
 import './concept.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const Concept = () => {
 
@@ -40,68 +41,76 @@ export const Concept = () => {
 
   }, []);
 
-
+   // Estado para controlar la visibilidad de los textos
+   const [showText, setShowText] = useState({
+    human: false,
+    centered: false,
+    branding: false,
+  });
 
   useEffect(() => {
-    const section = document.querySelector('.concept'); // Selecciona la sección
-    console.log(section);
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setIsDark(false); // Establecer modo oscuro cuando la sección es visible
-        } else {
-          setIsDark(true); // Restablecer modo oscuro cuando no es visible
-        }
-      });
-    }, { threshold: 0.5 }); // Ajusta el umbral según sea necesario
+    // Controlar la aparición de los textos secuencialmente
+    setTimeout(() => {
+      setShowText(prev => ({ ...prev, human: true }));
+      setTimeout(() => {
+        setShowText(prev => ({ ...prev, centered: true }));
+        setTimeout(() => {
+          setShowText(prev => ({ ...prev, branding: true }));
+        }, 400); // Tiempo de espera para Branding
+      }, 200); // Tiempo de espera para Centered
+    }, 0); // Iniciar con Human
 
-    if (section) {
-      observer.observe(section);
-    }
-
-    
-  }, [setIsDark]);
-  
+  }, []);  
   
   return (
     <>
-    <section className='concept' style={{ backgroundColor: 'white'}}>
+    <SectionObserver darkMode={ false }>
+      <section className='concept' style={{ backgroundColor: 'white'}}>
 
-      <div className="human ">
-        <div className="text">
-          <h1 className='cssanimation leFadeInBottom sequence'>Human</h1>
-          <img className='animate__animated animate__fadeInUpBig' src={ FiguraAsterisco } alt=""/>
+        <div className="human ">
+          <div className="text">
+          <h1 className={`cssanimation sequence ${showText.human ? 'leFadeInBottom' : ''}`}>
+                Human
+              </h1>
+            <img className='animate__animated animate__fadeInUpBig' src={ FiguraAsterisco } alt=""/>
+          </div>
+          <div className="video animation-video" ref={contentVideo}>
+            <video src={ VideoMad } autoPlay={ true } loop muted></video>
+          </div>
         </div>
-        <div className="video animation-video" ref={contentVideo}>
-          <video src={ VideoMad } autoPlay={ true } loop muted></video>
-        </div>
-      </div>
 
-      <div className="centered">
-        <div className="video animation-video" ref={contentVideo2} >
-          <video src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
+        <div className="centered">
+          <div className="video animation-video" ref={contentVideo2} >
+            <video src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
+          </div>
+          <div className="text">
+          <h1 className={`cssanimation sequence ${showText.centered ? 'leFadeInBottom' : ''}`}>
+                Centered
+              </h1>
+            <img className='animate__animated animate__fadeInUpBig animate__slow' src={ PildoraAzul } alt="" /> 
+            <img className='animate__animated animate__fadeInUpBig animate__slow' src={ PildoraMagenta } alt="" />
+          </div>
         </div>
-        <div className="text">
-          <h1 className='cssanimation leFadeInBottom sequence'>Centered</h1>
-          <img className='animate__animated animate__fadeInUpBig' src={ PildoraAzul } alt="" /> 
-          <img className='animate__animated animate__fadeInUpBig' src={ PildoraMagenta } alt="" />
-        </div>
-      </div>
 
-      <div className="branding">
-        <div className="text">
-          <h1 className='cssanimation leFadeInBottom sequence'>Branding</h1>
-          <img className='animate__animated animate__fadeInUpBig' src={ Flecha } alt="" />
+        <div className="branding">
+          <div className="text">
+          <h1 className={`cssanimation sequence ${showText.branding ? 'leFadeInBottom' : ''}`}>
+                Branding
+              </h1>
+            <img className='animate__animated animate__fadeInUpBig animate__slow' src={ Flecha } alt="" />
+          </div>
+          <div className="video-mobile" style={{ display: 'none' }}>
+            <video src={ VideoMad } autoPlay loop muted></video>
+          </div>
+          <div className="centro">
+            <h5 className='animate__animated animate__fadeInUp animate__delay-1s  animate__faster'>// La marca es el todo,</h5>
+            <h5 className='animate__animated animate__fadeInUp animate__delay-1s animate__fast'>el humano es el centro_</h5>
+          </div>
         </div>
-        <div className="video-mobile" style={{ display: 'none' }}>
-          <video src={ VideoMad } autoPlay loop muted></video>
-        </div>
-        <div className="centro">
-          <h5>// La marca es el todo, <br />el humano es el centro_</h5>
-        </div>
-      </div>
 
-    </section>
+      </section>
+
+    </SectionObserver>
     </>
   )
 }

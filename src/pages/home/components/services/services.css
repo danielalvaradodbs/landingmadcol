@@ -1,11 +1,42 @@
 
 .services {
+}
+
+.services .first-section {
     padding: 70px 150px 83px 150px;
     background-color: #2A00FF;
+}
+
+.services .header-sections {
     display: flex;
-    height: 100vh;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.services .second-section {
+    padding: 70px 150px 83px 150px;
+    background-color: #FF2951;
+}
+
+.services .third-section {
+    padding: 70px 150px 83px 150px;
+    background-color: #101820;
+    
 }
 
 .services h1 {
     color: white;
+}
+
+.services p {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.services .footer-section {
+    width: 80%;
 }

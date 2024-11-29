@@ -27,6 +27,23 @@ export const FullPage = () => {
         preloadImages(brandings.map(item => item.imageHover));
     }, []);
 
+    useEffect(() => {
+        // Configurar fullPage.js solo cuando se monta el componente
+        if (window.fullpage_api) {
+          window.fullpage_api.setAutoScrolling(true);
+          window.fullpage_api.setFitToSection(true);
+        }
+    
+        return () => {
+          // Limpiar al desmontar el componente
+          if (window.fullpage_api) {
+            window.fullpage_api.setAutoScrolling(false);
+            window.fullpage_api.setFitToSection(false);
+            document.body.classList.remove('fp-scrollable', 'fp-viewing-1', 'fp-scroll-mac');
+          }
+        };
+      }, []);
+
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
       }
