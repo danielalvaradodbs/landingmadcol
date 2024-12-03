@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <>
       {/* <Brandings /> */}
-      <FullPage/>
+      {/* <FullPage/> */}
       <Concept />
       <Services />
     </>

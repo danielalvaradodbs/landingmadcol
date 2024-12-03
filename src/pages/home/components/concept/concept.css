@@ -95,13 +95,14 @@
     animation: reveal .5s ease-in 0s;
 }
 
-.cssanimation {
-    animation-duration: 1s;
+.cssanimation, .cssanimation span {
+    animation-duration: 0.5s !important;
     animation-fill-mode: backwards;
+    display: flex;
 }
 
 .concept .leFadeInBottom span {
-    animation: leFadeInBottom 300ms both;
+    animation: leFadeInBottom 400ms both;
 }
 
 .concept .text h1 {
