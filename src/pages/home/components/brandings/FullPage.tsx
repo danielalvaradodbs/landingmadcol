@@ -92,22 +92,22 @@ export const FullPage = () => {
         });
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        const targets  = document.querySelectorAll('.fp-overflow') as NodeListOf<HTMLElement>;
+    // const observer = new IntersectionObserver((entries) => {
+    //     const targets  = document.querySelectorAll('.fp-overflow') as NodeListOf<HTMLElement>;
 
-        if(!entries) return;
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                targets.forEach((target) => {
-                    target.style.setProperty('display', 'none', 'important');
-                });
-            } else {
-                targets.forEach((target) => {
-                    target.style.setProperty('display', 'flex', 'important');
-                });
-            }
-        });
-    });
+    //     if(!entries) return;
+    //     entries.forEach((entry) => {
+    //         if (entry.isIntersecting) {
+    //             targets.forEach((target) => {
+    //                 target.style.setProperty('display', 'none', 'important');
+    //             });
+    //         } else {
+    //             targets.forEach((target) => {
+    //                 target.style.setProperty('display', 'flex', 'important');
+    //             });
+    //         }
+    //     });
+    // });
 
 
     return (
@@ -218,7 +218,7 @@ export const FullPage = () => {
                     );
                 }}
             />
-               {/* <div className="brandings-button">
+               <div className="brandings-button">
                     <div className="scroll-down-button animate__animated animate__fadeInRight">
                     <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
                     </div>
@@ -228,7 +228,7 @@ export const FullPage = () => {
                     <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
                     <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
                     </div>
-                </div> */}
+                </div>
         </>
     );
 };

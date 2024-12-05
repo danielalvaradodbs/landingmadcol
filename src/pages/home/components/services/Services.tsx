@@ -10,7 +10,7 @@ export const Services = () => {
   useEffect(() => {
     const sections = gsap.utils.toArray('.service-section');
     
-    sections.forEach((section: any, index) => {
+    sections.forEach((section: any, _index) => {
       const items = section.querySelector('.items');
       const textFooter = section.querySelector('.footer-section');
       gsap.timeline({
