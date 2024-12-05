@@ -7,10 +7,7 @@ import { Button } from '../../../../components/button/Button';
 
 declare global {
     interface Window {
-        fullpage_api: {
-            setAutoScrolling: (value: boolean) => void;
-            setFitToSection: (value: boolean) => void;
-        };
+        fullpage_api: any;
     }
 }
 
@@ -39,7 +36,6 @@ export const FullPage = () => {
           if (window.fullpage_api) {
             window.fullpage_api.setAutoScrolling(false);
             window.fullpage_api.setFitToSection(false);
-            document.body.classList.remove('fp-scrollable', 'fp-viewing-1', 'fp-scroll-mac');
           }
         };
       }, []);
@@ -126,10 +122,10 @@ export const FullPage = () => {
                 autoScrolling={ true }
                 scrollOverflow={ true }
                 scrollBar={ true }
-                fitToSection={ true }
-                sectionsColor={['#fff', '#f0f0f0', '#000']}
-                onLeave={(_origin, destination, direction) => {
-                    const isLastSection = destination.index === brandings.length - 1;
+                fitToSection={ false }
+                sectionsColor={['#fff', '#f0f0f0', '#000', '#fff']}
+                onLeave={(_origin, _destination, _direction) => {
+                    // const isLastSection = destination.index === brandings.length - 1;
                     // console.log(direction);
                     // console.log(isLastSection);                    
                     // if(isLastSection && direction === 'up') {
@@ -165,9 +161,9 @@ export const FullPage = () => {
                     //     document.body.style.overflowY = 'hidden'; 
                     //   }
 
-                      const concept = document.querySelector('.concept');
-                      if( !concept ) return;
-                      observer.observe(concept!);
+                    //   const concept = document.querySelector('.concept');
+                    //   if( !concept ) return;
+                    //   observer.observe(concept!);
                 }}
                 render={({  }) => {
                     return (
@@ -216,22 +212,23 @@ export const FullPage = () => {
                             ))}
                             </section>
 
-                              <div className="brandings-button">
-                               <div className="scroll-down-button animate__animated animate__fadeInRight">
-                                <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
-                                </div>
-                              </div>
-
-                              <div className="brandings-button">
-                               <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
-                                <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
-                                </div>
-                              </div>
+                           
 
                         </ReactFullpage.Wrapper>
                     );
                 }}
             />
+               {/* <div className="brandings-button">
+                    <div className="scroll-down-button animate__animated animate__fadeInRight">
+                    <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
+                    </div>
+                </div>
+
+                <div className="brandings-button">
+                    <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
+                    <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
+                    </div>
+                </div> */}
         </>
     );
 };

@@ -345,7 +345,7 @@
     display: none;
   }
 
-  .scroll-down-button-mobile {
+  .brandings-button .scroll-down-button-mobile {
     display: inline-flex;
     position: fixed;
     top: 93%;
