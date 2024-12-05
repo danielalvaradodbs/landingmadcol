@@ -1,7 +1,8 @@
 
 .services {
-    height: 1000vh;
+    height: 200vh;
     position: relative;
+    background: #FFF;
 }
 
 .services .first-section {
@@ -52,21 +53,46 @@
     line-height: 1;
 }
 
-.services .header-sections h2 {
-   
-    animation: flip-in-hor-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    
-}
-
-.services .items ul {
+.services .header-sections .number,
+.services .header-sections .title {
     margin: 0;
     overflow: hidden;
+    line-height: 1;
+}
+
+.services .header-sections .number {
+    margin-bottom: 13px;
+}
+
+.services .header-sections h2 {
+    display: block;
+}
+
+.services .header-sections .reveal,
+.services .header-sections .number .reveal {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.services .items ul div,
+.services .items ul span {
+    margin: 0;
+    overflow: hidden;
+    line-height: 1;
 }
   
-.services .items ul li {
+.services .items ul .reveal {
     animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .services .footer-section .animation-text {
-    animation: reveal-up 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
+/* 
+  .header-sections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  } */
+  
+  

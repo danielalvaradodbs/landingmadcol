@@ -82,12 +82,12 @@
     left: 26%;
 }
 
-.concept .human .animation-video video {
+.concept .human .animation-video video.showVideo {
     animation: reveal-left 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 
 }
 
-.concept .centered .animation-video video {
+.concept .centered .animation-video video.showVideo {
     animation: reveal-right 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 
@@ -101,8 +101,8 @@
     display: flex;
 }
 
-.concept .leFadeInBottom span {
-    animation: leFadeInBottom 400ms both;
+.concept .leFadeInBottom span.animationText {
+    animation: customLeFadeInBottom 400ms both;
 }
 
 .concept .text h1 {
@@ -113,9 +113,6 @@
 .concept .text h1.leFadeInBottom {
     opacity: 1;
 }
-
-
-
 
 @media only screen and (min-width: 280px) and (max-width: 1440px) {
     .concept .human img {

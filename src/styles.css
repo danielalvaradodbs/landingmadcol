@@ -156,7 +156,7 @@ button:disabled {
   }
 }
 
-@keyframes leFadeInBottom {
+@keyframes customLeFadeInBottom {
     from {
         /* opacity: 0; */
         transform: translateY(100%);

@@ -4,6 +4,11 @@ import { FiguraAsterisco, Flecha, PildoraAzul, PildoraMagenta, VideoMad } from '
 import './concept.css';
 import { useEffect, useRef, useState } from 'react';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const Concept = () => {
 
   const videoRef = useRef(null);
@@ -26,17 +31,17 @@ export const Concept = () => {
   };
   }, [startTime]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const video1: any = contentVideo.current;
-    const video2: any = contentVideo2.current;
+  //   const video1: any = contentVideo.current;
+  //   const video2: any = contentVideo2.current;
 
-    setTimeout(() => {
-      video1.classList.add("show");
-      video2.classList.add("show");
-    }, 0);
+  //   setTimeout(() => {
+  //     video1.classList.add("show");
+  //     video2.classList.add("show");
+  //   }, 0);
 
-  }, []);
+  // }, []);
 
    const [showText, setShowText] = useState({
     human: false,
@@ -55,11 +60,41 @@ export const Concept = () => {
       }, 200);
     }, 100);
 
-  }, []);  
+  }, []);
+
+  useEffect(() => {
+    const sections = gsap.utils.toArray('.concept');
+
+
+    sections.forEach((section: any) => {
+    const h1Span = document.querySelectorAll('.concept .text h1 span');
+    const video = document.querySelectorAll('.concept .video video');
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top 90%',
+        onEnter: () => {
+          console.log('entrar');
+          h1Span.forEach( (span: any) => span.classList.add('animationText'));
+          video.forEach( (video: any) => video.classList.add('showVideo'));
+        },
+        onLeaveBack: () => {
+          console.log('salir');
+          h1Span.forEach( (span: any) => span.classList.remove('animationText'));
+          video.forEach( (video: any) => video.classList.remove('showVideo'));
+
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   const animateText = (text: any) => {
     return text.split('').map((letter: any, index: any) => (
-      <span style={{ animationDelay: `${index * 70}ms` }} key={index}>
+      <span className='animationText' style={{ animationDelay: `${index * 70}ms` }} key={index}>
         {letter}
       </span>
     ));
@@ -77,14 +112,14 @@ export const Concept = () => {
             </h1>
             <img className='animate__animated animate__fadeInUpBig' src={ FiguraAsterisco } alt=""/>
           </div>
-          <div className="video animation-video" ref={contentVideo}>
-            <video src={ VideoMad } autoPlay={ true } loop muted></video>
+          <div className="video animation-video" ref={ contentVideo }>
+            <video className='showVideo' src={ VideoMad } autoPlay={ true } loop muted></video>
           </div>
         </div>
 
         <div className="centered">
-          <div className="video animation-video" ref={contentVideo2} >
-            <video src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
+          <div className="video animation-video" ref={ contentVideo2 } >
+            <video className='showVideo' src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
           </div>
           <div className="text">
             <h1 className={`cssanimation ${showText.centered ? 'leFadeInBottom' : ''}`} style={{ paddingRight: '10px'}}>
@@ -104,7 +139,7 @@ export const Concept = () => {
             <img className='animate__animated animate__fadeInUpBig' src={ Flecha } alt="" />
           </div>
           <div className="video-mobile" style={{ display: 'none' }}>
-            <video src={ VideoMad } autoPlay loop muted></video>
+            <video className='showVideo' src={ VideoMad } autoPlay loop muted></video>
           </div>
           <div className="centro">
             <h5 className='animate__animated animate__fadeInUp animate__delay-1s  animate__faster'>// La marca es el todo,</h5>
