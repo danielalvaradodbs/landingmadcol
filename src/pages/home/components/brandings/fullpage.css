@@ -38,7 +38,7 @@
 .brandings {
     display: flex; 
     flex-direction: column;
-    width: 100vw !important; 
+    width: 100% !important; 
     /* height: 100vh; */
   }
   
@@ -139,24 +139,24 @@
     right: 2%;
     cursor: pointer;
     display: inline-flex;
-    padding: 12px;
+    /* padding: 12px; */
     align-items: center;
-    gap: 13px;
+    /* gap: 13px; */
   
-    border-radius: 10px;
-    background: rgba(117, 149, 182, 0.40);
-    backdrop-filter: blur(10px);
+    /* border-radius: 10px; */
+    /* background: rgba(117, 149, 182, 0.40); */
+    /* backdrop-filter: blur(10px); */
     
   }
   
   .scroll-down-button-mobile:hover,
   .scroll-down-button:hover {
     border-radius: 10px;
-    background: rgb(96 0 18 / 77%);
+    /* background: rgb(96 0 18 / 77%); */
     backdrop-filter: blur(10px);
   }
   
-  .scroll-down-button a {
+  .scroll-down-button button {
     color: #FFF;
     font-family: 'Safiro';
     font-size: 10px;

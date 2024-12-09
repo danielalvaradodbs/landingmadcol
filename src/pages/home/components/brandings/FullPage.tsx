@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
-import { brandings, ScrollDownIcon, ScrollDownIconMobile } from '../../../../shared';
+import { brandings, IconPlus, ScrollDownIcon, ScrollDownIconMobile } from '../../../../shared';
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
@@ -198,6 +198,10 @@ export const FullPage = () => {
                                             <div className="mask">
                                                 <Button 
                                                     texto='Ver proyecto'
+                                                    backgroundColor='transparent'
+                                                    hoverBorderColor='#2A00FF'
+                                                    hoverBackgroundColor='#2A00FF'
+                                                    urlIcon={ IconPlus }
                                                     onClick= { () => sendToLink(brandings[currentIndex].linkButton) } 
                                                     onMouseEnter={ () => handleMouseEnter(currentIndex) }
                                                     onMouseLeave={ handleMouseLeave }
@@ -220,7 +224,17 @@ export const FullPage = () => {
             />
                <div className="brandings-button">
                     <div className="scroll-down-button animate__animated animate__fadeInRight">
-                    <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a>
+                        <Button
+                            width='auto'
+                            height='auto'
+                            texto='Scroll down'
+                            urlIcon={ ScrollDownIcon }
+                            backgroundColor='rgba(117, 149, 182, 0.40)'
+                            hoverBorderColor='rgb(96 0 18 / 77%)'
+                            hoverBackgroundColor='rgb(96 0 18 / 77%)'
+                            border='none'
+                        />
+                    {/* <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a> */}
                     </div>
                 </div>
 

@@ -3,17 +3,40 @@ import gsap from 'gsap';
 import './button.css';
 
 import PropTypes from 'prop-types';
-// import { IconPlus } from '../../shared';
 
-export const Button = ({ texto, onMouseEnter, onMouseLeave, onClick }: any ) => {
+export const Button = ({ 
+  texto, 
+  onMouseEnter, 
+  onMouseLeave, 
+  onClick, 
+  backgroundColor, 
+  hoverBorderColor, 
+  hoverBackgroundColor, 
+  urlIcon,
+  width,
+  height,
+  border
+}: any ) => {
 
   const buttonRef = useRef(null);
   const flairRef = useRef(null);
+  const labelRef = useRef(null);
+  const labelRefHover = useRef(null);
   
   useEffect(() => {
     
-    const button:any = buttonRef.current;
-    const flair = flairRef.current;
+    const button: any = buttonRef.current;
+    const flair: any = flairRef.current;
+    const label: any = labelRef.current;
+    const labelHover: any = labelRefHover.current;
+
+
+    label.style.setProperty('--url-icon', `url(${urlIcon})`);
+    labelHover.style.setProperty('--url-icon', `url(${urlIcon})`);
+
+    button.style.setProperty('width', width);
+    button.style.setProperty('height', height);
+    button.style.setProperty('border', border);
 
     const xSet = gsap.quickSetter(flair, "xPercent");
     const ySet = gsap.quickSetter(flair, "yPercent");
@@ -38,6 +61,10 @@ export const Button = ({ texto, onMouseEnter, onMouseLeave, onClick }: any ) => 
     };
 
     const handleMouseEnter = (e:any) => {
+
+      button.style.setProperty('border-color', hoverBorderColor);
+      flair.style.setProperty('--flair-color', hoverBackgroundColor);
+
       const { x, y } = getXY(e);
       xSet(x);
       ySet(y);
@@ -50,6 +77,11 @@ export const Button = ({ texto, onMouseEnter, onMouseLeave, onClick }: any ) => 
     };  
 
     const handleMouseLeave = (e:any) => {
+
+      button.style.setProperty('border-color', 'rgba(255, 255, 255, 0.20)');
+      flair.style.setProperty('--flair-color', 'transparent');
+
+
       const { x, y } = getXY(e);
 
       gsap.killTweensOf(flair);
@@ -90,25 +122,33 @@ export const Button = ({ texto, onMouseEnter, onMouseLeave, onClick }: any ) => 
     <>     
     <button 
       ref={ buttonRef } 
-      className="button button--stroke" 
+      className="button button--stroke"
+      style={{ backgroundColor }}
       data-block="button"
       onClick={ onClick }
       onMouseEnter={ onMouseEnter }
       onMouseLeave={ onMouseLeave }
     >
-      <label ref={flairRef} className="button__flair"></label>
-      <label className="button__label">{ texto }</label>
-      <label className="button__label hover-label">{ texto }</label>
-      {/* <img src={ IconPlus} /> */}
+      <label ref={ flairRef } className="button__flair"></label>
+      <label ref={ labelRef } className="button__label">{ texto }</label>
+      <label ref={ labelRefHover } className="button__label hover-label">{ texto }</label>
+      <img src={ urlIcon } style={{ zIndex: 1 }} />
     </button>
     </>
   )
 }
 
 Button.propTypes = {
-  texto: PropTypes.string.isRequired, // Haciendo la prop 'texto' obligatoria
+  texto: PropTypes.string.isRequired,
   sendToLink: PropTypes.func,
   onClick: PropTypes.func,
   onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func
+  onMouseLeave: PropTypes.func,
+  backgroundColor: PropTypes.string,
+  hoverBorderColor: PropTypes.string,
+  hoverBackgroundColor: PropTypes.string,
+  urlIcon: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  border: PropTypes.string,
 };
