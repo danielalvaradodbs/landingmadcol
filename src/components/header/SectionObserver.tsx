@@ -9,11 +9,10 @@ export const SectionObserver = ({ children, darkMode }: any) => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Si la sección es visible, establece el modo oscuro según el valor de darkMode
           setIsDark(darkMode);
         }
       });
-    }, { threshold: [0.9] }); // Umbral ajustado para detectar cualquier visibilidad
+    }, { threshold: [0.9] });
 
     const section = observerRef.current;
 
@@ -29,8 +28,8 @@ export const SectionObserver = ({ children, darkMode }: any) => {
   }, [setIsDark, darkMode]);
 
   return (
-    <div ref={observerRef}>
-      {children}
+    <div ref={ observerRef }>
+      { children }
     </div>
   );
 };

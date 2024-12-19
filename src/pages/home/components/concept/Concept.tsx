@@ -16,6 +16,8 @@ export const Concept = () => {
   const contentVideo2 = useRef(null);
   const startTime = 4;
 
+   const [isFirstRender, setIsFirstRender] = useState(true);
+
   useEffect(() => {
     const video: any = videoRef.current;
 
@@ -68,7 +70,9 @@ export const Concept = () => {
 
     sections.forEach((section: any) => {
     const h1Span = document.querySelectorAll('.concept .text h1 span');
+    const h5Text = document.querySelectorAll('.concept .centro h5');
     const video = document.querySelectorAll('.concept .video video');
+    const imgs = document.querySelectorAll('.concept img');
 
       ScrollTrigger.create({
         trigger: section,
@@ -77,12 +81,15 @@ export const Concept = () => {
           console.log('entrar');
           h1Span.forEach( (span: any) => span.classList.add('animationText'));
           video.forEach( (video: any) => video.classList.add('showVideo'));
+          h5Text.forEach( (h5Text: any) => h5Text.classList.add('animate__fadeInUpBig'));
+          // imgs.forEach( (img: any ) => img.classList.add('animate__fadeInUpBig'));
         },
         onLeaveBack: () => {
           console.log('salir');
           h1Span.forEach( (span: any) => span.classList.remove('animationText'));
           video.forEach( (video: any) => video.classList.remove('showVideo'));
-
+          h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));
+          // imgs.forEach( (img: any ) => img.classList.remove('animate__fadeInUpBig'));
         },
       });
     });
@@ -94,20 +101,21 @@ export const Concept = () => {
 
   const animateText = (text: any) => {
     return text.split('').map((letter: any, index: any) => (
-      <span className='animationText' style={{ animationDelay: `${index * 70}ms` }} key={index}>
-        {letter}
+      <span className='animationText' style={{ animationDelay: `${index * 70}ms` }} key={ index }>
+        { letter }
       </span>
     ));
   };
   
+  
   return (
     <>
-    <SectionObserver darkMode={ false }>
-      <section className='concept' style={{ backgroundColor: 'white'}}>
+    <SectionObserver darkMode={ false } >
+      <section className='concept section-concept' style={{ backgroundColor: 'white'}}>
 
         <div className="human ">
           <div className="text">
-            <h1 className={`cssanimation ${showText.human ? 'leFadeInBottom' : ''}`}>
+            <h1 className={`cssanimation ${ showText.human ? 'leFadeInBottom' : ''}`}>
               {animateText('Human')}
             </h1>
             <img className='animate__animated animate__fadeInUpBig' src={ FiguraAsterisco } alt=""/>
@@ -122,7 +130,7 @@ export const Concept = () => {
             <video className='showVideo' src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
           </div>
           <div className="text">
-            <h1 className={`cssanimation ${showText.centered ? 'leFadeInBottom' : ''}`} style={{ paddingRight: '10px'}}>
+            <h1 className={`cssanimation ${ showText.centered ? 'leFadeInBottom' : ''}`}>
               {animateText('Centered')}
 
             </h1>
@@ -133,7 +141,7 @@ export const Concept = () => {
 
         <div className="branding">
           <div className="text">
-            <h1 className={`cssanimation ${showText.branding ? 'leFadeInBottom' : ''}`}>
+            <h1 className={`cssanimation ${ showText.branding ? 'leFadeInBottom' : ''}`}>
               {animateText('Branding')}
             </h1>
             <img className='animate__animated animate__fadeInUpBig' src={ Flecha } alt="" />
@@ -142,8 +150,8 @@ export const Concept = () => {
             <video className='showVideo' src={ VideoMad } autoPlay loop muted></video>
           </div>
           <div className="centro">
-            <h5 className='animate__animated animate__fadeInUp animate__delay-1s  animate__faster'>// La marca es el todo,</h5>
-            <h5 className='animate__animated animate__fadeInUp animate__delay-1s animate__fast'>el humano es el centro_</h5>
+            <h5 className='animate__animated animate__fadeInUpBig   animate__faster'>// La marca es el todo,</h5>
+            <h5 className='animate__animated animate__fadeInUpBig animate__fast'>el humano es el centro_</h5>
           </div>
         </div>
 

@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* overflow: scroll; */
+    position: relative;
+    z-index: 1;
 }
 
 .concept .branding,
@@ -14,7 +15,6 @@
 .concept .human {
     display: flex;
     align-items: center;
-    /* flex-wrap: wrap; */
     gap: 39px;
     justify-content: center;
 }
@@ -52,7 +52,6 @@
 .concept .centered .text,
 .concept .branding .text {
     position: relative;
-    overflow: hidden;
 }
 
 .concept h5 {
@@ -61,25 +60,25 @@
 
 .concept .human img {
     position: absolute;
-    left: 59%;
-    top: 34%
+    left: 57%;
+    top: 26%
 }
 
 .concept .centered .text img {
     position: absolute;
-    bottom: 10%;
-    right: 12%;
+    bottom: -5%;
+    right: 10%;
 }
 .concept .centered .text img:last-child {
     position: absolute;
-    bottom: 13%;
-    right: 6%;
+    bottom: 0%;
+    right: 3%;
 }
 
 .concept .branding img {
     position: absolute;
-    top: 34%;
-    left: 26%;
+    top: 22%;
+    left: 25%;
 }
 
 .concept .human .animation-video video.showVideo {
@@ -114,35 +113,108 @@
     opacity: 1;
 }
 
-@media only screen and (min-width: 280px) and (max-width: 1440px) {
+@media only screen and (min-width: 2048px) {
+    .concept .branding, 
+    .concept .centered, 
+    .concept .human {
+        gap: 50px;
+    }
+
     .concept .human img {
         position: absolute;
-        left: 55%;
-        top: 22%;
-        scale: 0.6;
-
+        left: 59%;
+        top: 34%
     }
-
-    .concept .centered img:first-child {
+    
+    .concept .centered .text img {
         position: absolute;
-        bottom: -10%;
-        right: 8%;
-        scale: 0.8;
+        bottom: 14%;
+        right: 12%;
     }
-
-    .concept .centered img:last-child {
+    .concept .centered .text img:last-child {
         position: absolute;
-        bottom: -10%;
-        right: 0%;
-        scale: 0.8;
+        bottom: 16%;
+        right: 6%;
     }
-
+    
     .concept .branding img {
         position: absolute;
-        top: 8%;
-        left: 23%;
-        scale: 0.8;
+        top: 34%;
+        left: 26%;
     }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1440px) {
+
+    .concept {
+        padding: 90px 27px;
+    }
+
+    .concept .human img {
+        position: absolute;
+        left: 57%;
+        top: 26%;
+    }
+
+    .concept .centered .text img {
+        position: absolute;
+        bottom: -5%;
+        right: 10%;
+    }
+
+    .concept .centered .text img:last-child {
+        position: absolute;
+        bottom: 0%;
+        right: 3%;
+    }
+
+    .concept .branding .text img {
+        position: absolute;
+        top: 22%;
+        left: 25%;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1200px) {
+
+    .concept {
+        padding: 90px 27px;
+    }
+
+    .concept .branding, 
+    .concept .centered, 
+    .concept .human {
+        justify-content: start;
+    }
+
+    .concept .human img {
+        position: absolute;
+        left: 56%;
+        top: 23%;
+        scale: 0.7;
+    }
+
+    .concept .centered .text img {
+        position: absolute;
+        bottom: -10%;
+        right: 7%;
+        scale: 0.7;
+    }
+
+    .concept .centered .text img:last-child {
+        position: absolute;
+        bottom: -5%;
+        right: 2%;
+        scale: 0.7;
+    }
+
+    .concept .branding .text img {
+        position: absolute;
+        top: 16%;
+        left: 24%;
+        scale: 0.7;
+    }
+
 }
 
 @media only screen and (min-width: 280px) and (max-width: 1023px) {

@@ -50,6 +50,11 @@
     align-items: flex-end;
     padding: 0 40px 45px 40px;
   }
+
+  .brandings .section-concept .fp-overflow {
+    padding: 0;
+    display: block;
+  }
   
   .brandings .info {
     display: flex;
@@ -141,6 +146,7 @@
     display: inline-flex;
     /* padding: 12px; */
     align-items: center;
+    z-index: 0;
     /* gap: 13px; */
   
     /* border-radius: 10px; */
@@ -333,7 +339,7 @@
   }
 
   .brandings .panel .fp-overflow {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     /* left: 50%; */
     /* transform: translate(-50%, -50%); */

@@ -16,26 +16,52 @@ export const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // useEffect(() => {
+  //   let lastScrollTop = 0;
+
+  //   const handleScroll = () => {
+  //     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  //     if (scrollTop > lastScrollTop) {
+  //       // setScrollingDown(true);
+  //       // setIsCentered(true);
+  //     } else if (scrollTop === 0) {
+  //       // setScrollingDown(false);
+  //       // setIsCentered(false);
+  //     }
+
+  //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
-    let lastScrollTop = 0;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setScrollingDown(true);
+          setIsCentered(true);
+        } else {
+          setScrollingDown(false);
+          setIsCentered(false);
+        }
+      });
+    });
 
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const conceptSection = document.querySelector('.services');
+    // const fullPage = document.querySelector('#fullpage');
+    if (conceptSection) {
+      observer.observe(conceptSection);
+    }
 
-      if (scrollTop > lastScrollTop) {
-        setScrollingDown(true);
-        setIsCentered(true);
-      } else if (scrollTop === 0) {
-        setScrollingDown(false);
-        setIsCentered(false);
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
-    };
-
-    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (conceptSection) {
+        observer.unobserve(conceptSection);
+      }
     };
   }, []);
   
@@ -56,7 +82,7 @@ export const Header = () => {
 
           <div className={`col-6 menu-items animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
           <div className="menu-logo">
-              <a href="#" style={{ display: isCentered ? 'inline' : 'none' }}>
+              <a href="#" style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8 }}>
                 <img 
                   style={{ display: isDark ? 'inline' : 'none' }} 
                   src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }

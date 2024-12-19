@@ -3,11 +3,13 @@
     height: 200vh;
     position: relative;
     background: #FFF;
+    z-index: 2;
 }
 
 .services .first-section {
-    padding: 70px 150px 83px 150px;
+    padding: 70px 150px 100px 150px;
     background-color: #2A00FF;
+    margin-bottom: -10px;
 }
 
 .services .header-sections {
@@ -25,12 +27,18 @@
 .services .second-section {
     padding: 70px 150px 83px 150px;
     background-color: #FF2951;
+    margin-bottom: -10px;
 }
 
 .services .third-section {
     padding: 70px 150px 83px 150px;
     background-color: #101820;
-    
+}
+
+.services .first-section,
+.services .second-section,
+.services .third-section {
+    border-radius: 10px 10px 0 0;
 }
 
 .services h1 {
@@ -61,7 +69,7 @@
 }
 
 .services .header-sections .number {
-    margin-bottom: 13px;
+    margin-bottom: 20px;
 }
 
 .services .header-sections h2 {
@@ -73,6 +81,12 @@
     animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
+
+.services .items ul {
+    margin: 0;
+    padding-bottom: 33px;
+}
+
 .services .items ul div,
 .services .items ul span {
     margin: 0;
@@ -81,7 +95,7 @@
 }
   
 .services .items ul .reveal {
-    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s backwards;
 }
 
 .services .footer-section .animation-text {

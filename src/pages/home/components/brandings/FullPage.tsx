@@ -4,6 +4,7 @@ import { brandings, IconPlus, ScrollDownIcon, ScrollDownIconMobile } from '../..
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
+import { Concept } from '../concept/Concept';
 
 declare global {
     interface Window {
@@ -124,25 +125,29 @@ export const FullPage = () => {
                 scrollBar={ true }
                 fitToSection={ false }
                 sectionsColor={['#fff', '#f0f0f0', '#000', '#fff']}
-                onLeave={(_origin, _destination, _direction) => {
-                    // const isLastSection = destination.index === brandings.length - 1;
-                    // console.log(direction);
-                    // console.log(isLastSection);                    
-                    // if(isLastSection && direction === 'up') {
-                    //     // Reactiva el scroll automático en otras secciones
-                    //     if (window.fullpage_api) {
-                    //         window.fullpage_api.setAutoScrolling(true);
-                    //         window.fullpage_api.setFitToSection(true);
-                    //         document.body.style.overflowY = 'hidden'; // Oculta el scroll normal
-                    //     }
-                    // } else {
-                    //     if (window.fullpage_api) {
-                    //         window.fullpage_api.setAutoScrolling(true);
-                    //         window.fullpage_api.setFitToSection(true);
-                    //         document.body.style.overflowY = 'auto';
-                    //     }
+                onLeave={(origin, destination, direction) => {
+                    const isLastSection = destination.isLast === true;
+                                    
+                    if(isLastSection) {
+                     
+
+                        // fpOverflow.styles.position = 'fixed';
+
+                        // Reactiva el scroll automático en otras secciones
+                        // if (window.fullpage_api) {
+                        //     window.fullpage_api.setAutoScrolling(true);
+                        //     window.fullpage_api.setFitToSection(true);
+                        //     document.body.style.overflowY = 'hidden'; // Oculta el scroll normal
+                        // }
+                    } 
+                
+                    // if (window.fullpage_api) {
+                    //     window.fullpage_api.setAutoScrolling(true);
+                    //     window.fullpage_api.setFitToSection(true);
+                    //     document.body.style.overflowY = 'auto';
                     // }
-                }}
+                    }
+                }
                 beforeLeave={(_anchorLink: any, index, _slideAnchor: any, _slideIndex: any) => {
                     handleScroll(index);
                     setTimeout(() => {
@@ -153,7 +158,20 @@ export const FullPage = () => {
                         setIsDark(brandings[index.index].isDark);
                     }, 600);
                 }}
-                afterLoad={(_anchorLink: any, _index: any, _slideAnchor: any, _slideIndex: any) => {                
+                afterLoad={(_anchorLink: any, destination: any, _slideAnchor: any, _slideIndex: any) => {           
+                    const isLastSection = destination.isLast === true;  
+                    const fpOverflow: any = document.querySelectorAll('.fp-overflow');
+                    if( isLastSection ) {
+                        fpOverflow.forEach((element: any) => {
+                            element.style.position = 'fixed';
+                            element.style.zIndex = 1;
+                        });
+                    } else {
+                        fpOverflow.forEach((element: any) => {
+                            element.style.position = 'relative';
+                            element.style.zIndex = 1;
+                        });
+                    }
                     // if (index.index === brandings.length - 1) {
                     //     document.body.style.overflowY = 'auto';
 
@@ -211,9 +229,35 @@ export const FullPage = () => {
                                         </div>
 
                                     </div>
-                                    {/* <div></div> */}
+
+                                    <div className="brandings-button">
+                                    <div className="scroll-down-button animate__animated animate__fadeInRight">
+                                        <Button
+                                            width='auto'
+                                            height='auto'
+                                            texto='Scroll down'
+                                            urlIcon={ ScrollDownIcon }
+                                            backgroundColor='rgba(117, 149, 182, 0.40)'
+                                            hoverBorderColor='rgb(96 0 18 / 77%)'
+                                            hoverBackgroundColor='rgb(96 0 18 / 77%)'
+                                            border='none'
+                                        />
+                                    {/* <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a> */}
+                                    </div>
+                                </div>
+
+                                <div className="brandings-button" style={{ display: 'none' }}>
+                                    <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
+                                    <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
+                                    </div>
+                                </div>
+
+                                    
                                 </section>
                             ))}
+                             {/* <section className="panel section">
+                                <Concept />
+                             </section> */}
                             </section>
 
                            
@@ -222,27 +266,7 @@ export const FullPage = () => {
                     );
                 }}
             />
-               <div className="brandings-button">
-                    <div className="scroll-down-button animate__animated animate__fadeInRight">
-                        <Button
-                            width='auto'
-                            height='auto'
-                            texto='Scroll down'
-                            urlIcon={ ScrollDownIcon }
-                            backgroundColor='rgba(117, 149, 182, 0.40)'
-                            hoverBorderColor='rgb(96 0 18 / 77%)'
-                            hoverBackgroundColor='rgb(96 0 18 / 77%)'
-                            border='none'
-                        />
-                    {/* <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a> */}
-                    </div>
-                </div>
-
-                <div className="brandings-button">
-                    <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
-                    <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
-                    </div>
-                </div>
+              
         </>
     );
 };
