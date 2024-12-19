@@ -23,6 +23,11 @@
     display: flex;
 }
 
+.concept .human,
+.concept .centered {
+    margin-bottom: 16px;
+}
+
 .concept .human .video {
     width: 555px;
     max-width: 555px;

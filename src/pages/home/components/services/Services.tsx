@@ -44,7 +44,7 @@ export const Services = () => {
     sections.forEach((section: any) => {
       const items = section.querySelectorAll('.items ul li');
       const textFooter = section.querySelector('.footer-section p');
-      const headerTexts = section.querySelectorAll('.header-sections h6, .header-sections h2');
+      const headerTexts = section.querySelectorAll('h6, .header-sections h2');
       const figures = section.querySelectorAll('img')
 
       
@@ -86,11 +86,11 @@ export const Services = () => {
   return (
     <div className="services">
       <section className="service-section first-section">
+        <div className="number">
+          <h6>01_</h6>
+        </div>
         <div className="header-sections">
           <div className="marca">
-            <div className="number">
-              <h6>01_</h6>
-            </div>
             <div className="title">
               <h2>Construcción de marca</h2>
             </div>
@@ -131,11 +131,11 @@ export const Services = () => {
       </section>
 
       <section className="service-section second-section">
+        <div className="number">
+          <h6>02_</h6>
+        </div>
         <div className="header-sections">
           <div className="identidad">
-          <div className="number">
-            <h6>02_</h6>
-          </div>
           <div className="title">
             <h2>Identidad de <br /> marca</h2>
           </div>
@@ -170,11 +170,11 @@ export const Services = () => {
       </section>
 
       <section className="service-section third-section">
+        <div className="number">
+          <h6>03_</h6>
+        </div>
         <div className="header-sections">
           <div className="posicionamiento">
-            <div className="number">
-              <h6>03_</h6>
-            </div>
             <div className="title">
               <h2>Posicionamiento de marca</h2>
             </div>

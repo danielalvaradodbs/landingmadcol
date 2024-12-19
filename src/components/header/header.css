@@ -11,12 +11,6 @@
     
 }
 
-.header.centered .menu-items .move-menu {
-    /* justify-content: center; */
-    /* transform: translateX(calc(-50vw + 50%)); */
-
-}
-
 .header.dark {
     color: #101820;
     transition: ease-in .4s;
@@ -50,7 +44,11 @@
 }
 
 .header .menu-items .menu-logo {
-    padding: 0;  
+    padding: 0;
+}
+
+.header .menu-items .menu-logo img {
+    margin-top: 3px;
 }
 
 .header .menu-items .menu-servicios:not(:last-child)::after,
@@ -66,7 +64,7 @@
     font-family: 'Safiro';
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     text-decoration: none;
 }
