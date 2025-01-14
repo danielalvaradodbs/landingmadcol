@@ -6,7 +6,6 @@ import './clients.css';
 export const Clients = () => {
 
   const sectionRef = useRef(null);
-  const figureRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -46,7 +45,7 @@ export const Clients = () => {
             <img 
               src={ FiguraClientes } alt=""
               className={`${ isVisible ? 'reveal' : '' }`}
-              style={{ position: 'absolute', top:'25%', left: '25%' }}
+              style={{ position: 'absolute', top:'25%', left: '21%' }}
             />
           </div>
           <div className="slider-brands">

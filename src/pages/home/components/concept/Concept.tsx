@@ -72,6 +72,7 @@ export const Concept = () => {
     const h1Span = document.querySelectorAll('.concept .text h1 span');
     const h5Text = document.querySelectorAll('.concept .centro h5');
     const video = document.querySelectorAll('.concept .video video');
+    const figures = document.querySelectorAll('.concept img')
     // const imgs = document.querySelectorAll('.concept img');
 
       ScrollTrigger.create({
@@ -82,11 +83,12 @@ export const Concept = () => {
           h1Span.forEach( (span: any) => span.classList.remove('animationText'));
           video.forEach( (video: any) => video.classList.remove('showVideo'));
           h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));
+          figures.forEach( (figures: any) => figures.classList.remove('animate__fadeInUp'));
           setTimeout(() => {
             h1Span.forEach( (span: any) => span.classList.add('animationText'));
             video.forEach( (video: any) => video.classList.add('showVideo'));
             h5Text.forEach( (h5Text: any) => h5Text.classList.add('animate__fadeInUpBig'));
-            
+            figures.forEach( (figures: any) => figures.classList.add('animate__fadeInUp'));
           }, 100);
           // imgs.forEach( (img: any ) => img.classList.add('animate__fadeInUpBig'));
         },
@@ -124,7 +126,7 @@ export const Concept = () => {
             <h1 className={`cssanimation ${ showText.human ? 'leFadeInBottom' : ''}`}>
               {animateText('Human')}
             </h1>
-            <img className='animate__animated animate__fadeInUpBig' src={ FiguraAsterisco } alt=""/>
+            <img className='animate__animated animate__fadeInUp' src={ FiguraAsterisco } alt=""/>
           </div>
           <div className="video animation-video" ref={ contentVideo }>
             <video className='showVideo' src={ VideoMad } autoPlay={ true } loop muted></video>
@@ -140,8 +142,8 @@ export const Concept = () => {
               {animateText('Centered')}
 
             </h1>
-            <img className='animate__animated animate__fadeInUpBig' src={ PildoraAzul } alt="" /> 
-            <img className='animate__animated animate__fadeInUpBig' src={ PildoraMagenta } alt="" />
+            <img className='animate__animated animate__fadeInUp' src={ PildoraAzul } alt="" /> 
+            <img className='animate__animated animate__fadeInUp' src={ PildoraMagenta } alt="" />
           </div>
         </div>
 
@@ -150,7 +152,7 @@ export const Concept = () => {
             <h1 className={`cssanimation ${ showText.branding ? 'leFadeInBottom' : ''}`}>
               {animateText('Branding')}
             </h1>
-            <img className='animate__animated animate__fadeInUpBig' src={ Flecha } alt="" />
+            <img className='animate__animated animate__fadeInUp' src={ Flecha } alt="" />
           </div>
           <div className="video-mobile" style={{ display: 'none' }}>
             <video className='showVideo' src={ VideoMad } autoPlay loop muted></video>
