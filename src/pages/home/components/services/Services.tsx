@@ -52,10 +52,12 @@ export const Services = () => {
         trigger: section,
         start: "top 95%",
         onEnter: () => {
-          items.forEach((li: any) => {
-            li.classList.add('reveal');
-          });
-          textFooter.classList.add('animation-text');
+          items.forEach((li: any) => { li.classList.remove('reveal')});
+          textFooter.classList.remove('animation-text');
+          setTimeout(() => {
+            items.forEach((li: any) => { li.classList.add('reveal')});
+            textFooter.classList.add('animation-text');
+          }, 50);
           headerTexts.forEach((header: any) => header.classList.add('reveal'));
           figures.forEach((figures: any) => figures.classList.add('animate__fadeInUp'));
         },

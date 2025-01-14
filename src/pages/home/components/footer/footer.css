@@ -1,0 +1,134 @@
+
+.footer,
+.pre-footer {
+    background-color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.pre-footer .siguenos,
+.pre-footer .stalkeanos,
+.pre-footer .talento,
+.pre-footer .escribenos {
+    display: flex;
+    padding: 75px 158px 61px 158px;
+    border-bottom: 1px solid #101820;
+}
+
+.pre-footer .stalkeanos {
+    align-items: center;
+}
+
+.pre-footer .siguenos p,
+.pre-footer .stalkeanos p,
+.pre-footer .talento p,
+.pre-footer .escribenos p {
+    color: #7595B6;
+    font-family: 'Safiro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 50%;
+}
+
+.pre-footer .siguenos p strong,
+.pre-footer .stalkeanos p strong,
+.pre-footer .talento p strong,
+.pre-footer .escribenos p strong {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.pre-footer .talento a,
+.pre-footer .escribenos a {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -2.4px;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.pre-footer .siguenos .container a:hover:nth-child(odd),
+.pre-footer .stalkeanos .container a:hover:nth-child(even),
+.pre-footer .talento a:hover {
+    color: #2A00FF;
+    font-family: 'Safiro';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -2.4px;
+    transition: ease 0.5s;
+}
+.pre-footer .siguenos .container a:hover:nth-child(even),
+.pre-footer .stalkeanos .container a:hover:nth-child(odd),
+.pre-footer .escribenos a:hover {
+    color: #FF2951;
+    font-family: 'Safiro';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -2.4px;
+    transition: ease 0.5s;
+}
+
+.pre-footer .siguenos .container a:hover:nth-child(odd),
+.pre-footer .siguenos .container a:hover:nth-child(even),
+.pre-footer .stalkeanos .container a:hover:nth-child(odd),
+.pre-footer .stalkeanos .container a:hover:nth-child(even) {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: normal;
+}
+
+.pre-footer .siguenos div,
+.pre-footer .stalkeanos div {
+    gap: 40px;
+    display: flex;
+}
+
+.pre-footer .siguenos a,
+.pre-footer .stalkeanos a {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.footer {
+    padding: 98px 43px 17px 43px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer .texto-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 89px;
+}
+
+.footer .texto-footer a,
+.footer .texto-footer span {
+    color: #ACB6C0;
+    text-align: center;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}

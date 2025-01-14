@@ -1,0 +1,225 @@
+
+.contact {
+    position: relative;
+    z-index: 3;
+    background-color: #101820;
+    padding: 118px 154px 144px 158px;
+}
+
+.contact .title-contact {
+    width: 50%;
+    position: relative;
+}
+
+.contact .title-contact h2 {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 96px;
+    letter-spacing: -4.8px;
+}
+
+.contact .title-contact .flecha-roja {
+  position: absolute;
+   top: 19%;
+   left: 28%;
+}
+
+.contact .title-contact .figura-contacto {
+    position: absolute;
+    top: 90%; 
+    left: 72%;
+}
+
+.contact .form {
+    padding: 48px 0 0 0;
+    color: #FFF;
+}
+
+.contact .form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .form label {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.contact.form .name,
+.contact .form .email,
+.contact .form .phone,
+.contact .form .message {
+    margin-bottom: 40px;
+}
+
+.contact .form .name input,
+.contact .form .email input,
+.contact .form .phone input,
+.contact .form .message input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    height: 40px;
+    caret-color: white;
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.contact .text-danger,
+.contact .form .name span,
+.contact .form .email span,
+.contact .form .phone span,
+.contact .form .message span {
+    color: #FF90A5 !important;
+    font-family: 'Safiro';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 3px;
+}
+
+.contact .form .terms-submit .terms label a,
+.contact .form .terms label {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    transition: ease 0.5s;
+
+}
+
+.contact .form input::placeholder{
+    color: #415970;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+::-webkit-input-placeholder {
+    color: #415970;
+}
+
+.contact .form .name,
+.contact .form .email,
+.contact .form .phone,
+.contact .form .message {
+    width: 48%;
+}
+
+.contact .form .phone .code-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.contact .form .phone .code-input select {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    appearance: none; 
+    width: 60px; 
+    cursor: pointer;
+}
+
+.contact .form .phone .code-input option {
+    background: transparent;
+    color: black;
+    width: 50px;
+}
+
+.contact .form .phone .code-input input {
+    border-bottom: 0;
+}
+
+.contact .form .terms-submit {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact .form .terms-submit .terms {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    gap: 12px;
+}
+
+.contact .form .terms-submit .terms input {
+    border-radius: 5px;
+    border: 1px solid #FF90A5;
+    background-color: transparent;
+    color: transparent;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 0;
+    transition: ease 0s;
+}
+
+.contact .form .terms-submit .terms input:checked {
+    background-color: #FF2951;
+    background-image: url(../../../../assets/icons/check.svg);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    background-position: center center;
+    transition: ease 0s;
+}
+
+.contact .form .terms-submit .submit button {
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    max-height: 48px;
+}
+
+.contact .form .terms-submit .submit label {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.contact .form .terms-submit .terms label a:hover {
+    color: #7595B6;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    transition: ease 0.5s;
+}

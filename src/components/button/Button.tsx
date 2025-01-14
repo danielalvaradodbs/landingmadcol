@@ -131,7 +131,7 @@ export const Button = ({
     >
       <label ref={ flairRef } className="button__flair"></label>
       <label ref={ labelRef } className="button__label">{ texto }</label>
-      <label ref={ labelRefHover } className="button__label hover-label">{ texto }</label>
+      <label style={{ left: '20%' }} ref={ labelRefHover } className="button__label hover-label">{ texto }</label>
       <img src={ urlIcon } style={{ zIndex: 1 }} />
     </button>
     </>

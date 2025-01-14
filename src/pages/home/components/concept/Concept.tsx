@@ -16,7 +16,7 @@ export const Concept = () => {
   const contentVideo2 = useRef(null);
   const startTime = 4;
 
-   const [isFirstRender, setIsFirstRender] = useState(true);
+  //  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
     const video: any = videoRef.current;
@@ -72,16 +72,22 @@ export const Concept = () => {
     const h1Span = document.querySelectorAll('.concept .text h1 span');
     const h5Text = document.querySelectorAll('.concept .centro h5');
     const video = document.querySelectorAll('.concept .video video');
-    const imgs = document.querySelectorAll('.concept img');
+    // const imgs = document.querySelectorAll('.concept img');
 
       ScrollTrigger.create({
         trigger: section,
         start: 'top 90%',
         onEnter: () => {
           console.log('entrar');
-          h1Span.forEach( (span: any) => span.classList.add('animationText'));
-          video.forEach( (video: any) => video.classList.add('showVideo'));
-          h5Text.forEach( (h5Text: any) => h5Text.classList.add('animate__fadeInUpBig'));
+          h1Span.forEach( (span: any) => span.classList.remove('animationText'));
+          video.forEach( (video: any) => video.classList.remove('showVideo'));
+          h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));
+          setTimeout(() => {
+            h1Span.forEach( (span: any) => span.classList.add('animationText'));
+            video.forEach( (video: any) => video.classList.add('showVideo'));
+            h5Text.forEach( (h5Text: any) => h5Text.classList.add('animate__fadeInUpBig'));
+            
+          }, 100);
           // imgs.forEach( (img: any ) => img.classList.add('animate__fadeInUpBig'));
         },
         onLeaveBack: () => {

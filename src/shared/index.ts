@@ -3,3 +3,4 @@ export * from './brandings';
 export * from './icons';
 export * from './videos';
 export * from './figures';
+export * from './clients';

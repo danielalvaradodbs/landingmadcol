@@ -5,6 +5,10 @@ import PildoraAzul from '../assets/figuras/Pildora-Azul.svg';
 import PildoraMagenta from '../assets/figuras/Pildora-Magenta.svg';
 import FlechaUp from '../assets/figuras/flecha-up.svg';
 import R from '../assets/figuras/R.svg';
+import FiguraClientes from '../assets/figuras/figuraClientes.svg';
+import FiguraContacto from '../assets/figuras/figuraContacto.svg';
+import FlechaRoja from '../assets/figuras/flechaRoja.svg';
+
 
 export {
     FiguraAsterisco,
@@ -13,5 +17,8 @@ export {
     PildoraMagenta,
     FlechaUp,
     R,
-    FiguraAsteriscoR    
+    FiguraAsteriscoR,
+    FiguraClientes,
+    FiguraContacto,
+    FlechaRoja
 }

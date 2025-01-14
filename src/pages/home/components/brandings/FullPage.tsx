@@ -5,7 +5,6 @@ import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
 import { Concept } from '../concept/Concept';
-
 declare global {
     interface Window {
         fullpage_api: any;
@@ -125,7 +124,7 @@ export const FullPage = () => {
                 scrollBar={ true }
                 fitToSection={ false }
                 sectionsColor={['#fff', '#f0f0f0', '#000', '#fff']}
-                onLeave={(origin, destination, direction) => {
+                onLeave={(_origin, destination, _direction) => {
                     const isLastSection = destination.isLast === true;
                                     
                     if(isLastSection) {
@@ -257,7 +256,7 @@ export const FullPage = () => {
                             ))}
                              {/* <section className="panel section">
                                 <Concept />
-                             </section> */}
+                             </section>  */}
                             </section>
 
                            
