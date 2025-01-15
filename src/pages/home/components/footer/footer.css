@@ -29,7 +29,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    width: 50%;
 }
 
 .pre-footer .siguenos p strong,
@@ -44,6 +43,34 @@
     line-height: 30px;
 }
 
+.pre-footer	.siguenos .container,
+.pre-footer .stalkeanos .container,
+.pre-footer .talento .container,
+.pre-footer .escribenos .container {
+    width: 50%;
+}
+
+.pre-footer	.siguenos .container div,
+.pre-footer .stalkeanos .container div,
+.pre-footer .talento .container div,
+.pre-footer .escribenos .container div {
+    overflow: hidden;
+    height: fit-content;
+}
+
+.pre-footer .talento .container a,
+.pre-footer .escribenos .container div a,
+.pre-footer .stalkeanos .stalk a.reveal,
+.pre-footer .siguenos .stalk a.reveal,
+.pre-footer .talento .stalk a.reveal,
+.pre-footer .escribenos .stalk a.reveal,
+.pre-footer .stalkeanos .container p.reveal,
+.pre-footer .siguenos .container p.reveal,
+.pre-footer .talento .container p.reveal,
+.pre-footer .escribenos p.reveal {
+    animation: reveal .8s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
 .pre-footer .talento a,
 .pre-footer .escribenos a {
     color: #101820;
@@ -54,7 +81,6 @@
     line-height: 64px;
     letter-spacing: -2.4px;
     cursor: pointer;
-    transition: ease 0.5s;
 }
 
 .pre-footer .siguenos .container a:hover:nth-child(odd),
@@ -91,10 +117,12 @@
     letter-spacing: normal;
 }
 
-.pre-footer .siguenos div,
-.pre-footer .stalkeanos div {
+.pre-footer .siguenos .stalk,
+.pre-footer .stalkeanos .stalk {
     gap: 40px;
     display: flex;
+    height: fit-content;
+    overflow: hidden;
 }
 
 .pre-footer .siguenos a,
@@ -104,7 +132,6 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
     text-decoration: none;
 }
 
@@ -131,4 +158,20 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
+    transition: ease 0.5s;
+}
+
+.footer .texto-footer a:hover {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
 }

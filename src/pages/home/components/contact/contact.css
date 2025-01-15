@@ -4,11 +4,13 @@
     z-index: 3;
     background-color: #101820;
     padding: 118px 154px 144px 158px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact .title-contact {
-    width: 50%;
     position: relative;
+    overflow: hidden;
 }
 
 .contact .title-contact h2 {
@@ -20,22 +22,49 @@
     line-height: 96px;
     letter-spacing: -4.8px;
 }
+.contact .title-contact .first,
+.contact .title-contact .second,
+.contact .title-contact .third {
+    overflow: hidden;
+    position: relative;
+}
+
+.contact .title-contact .first h2.reveal {
+    animation: reveal .8s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.contact .title-contact .second h2.reveal {
+    animation: reveal 1.1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.contact .title-contact .flecha-roja.reveal,
+.contact .title-contact .figura-contacto.reveal,
+.contact .title-contact .third h2.reveal {
+    animation: reveal 1.3s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
 
 .contact .title-contact .flecha-roja {
   position: absolute;
-   top: 19%;
-   left: 28%;
+   top: 50%;
+   left: 30%;
 }
 
 .contact .title-contact .figura-contacto {
     position: absolute;
-    top: 90%; 
-    left: 72%;
+    top: 67%; 
+    left: 79%;
 }
 
 .contact .form {
     padding: 48px 0 0 0;
     color: #FFF;
+}
+
+.contact .form .name.reveal,
+.contact .form .email.reveal,
+.contact .form .phone.reveal,
+.contact .form .message.reveal {
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .contact .form form {
@@ -53,7 +82,7 @@
     line-height: 30px;
 }
 
-.contact.form .name,
+.contact .form .name,
 .contact .form .email,
 .contact .form .phone,
 .contact .form .message {
@@ -158,6 +187,10 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.contact .form .terms-submit.reveal {
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .contact .form .terms-submit .terms {

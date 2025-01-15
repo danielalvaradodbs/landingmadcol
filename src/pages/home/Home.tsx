@@ -18,7 +18,7 @@ export const Home = () => {
       <Concept />
       <Services />
       <Clients />
-      <Contact />
+      <Contact /> 
       <Footer />
     </>
   )
