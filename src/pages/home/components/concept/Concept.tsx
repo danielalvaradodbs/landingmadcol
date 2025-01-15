@@ -6,10 +6,14 @@ import { useEffect, useRef, useState } from 'react';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useDarkMode } from '../../../../hooks/DarkModeContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Concept = () => {
+
+    const { setIsDark } = useDarkMode();
+  
 
   const videoRef = useRef(null);
   const contentVideo = useRef(null);
@@ -94,6 +98,7 @@ export const Concept = () => {
         },
         onLeaveBack: () => {
           console.log('salir');
+          setIsDark(true);
           h1Span.forEach( (span: any) => span.classList.remove('animationText'));
           video.forEach( (video: any) => video.classList.remove('showVideo'));
           h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));

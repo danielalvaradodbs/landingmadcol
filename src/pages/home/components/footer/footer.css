@@ -12,7 +12,7 @@
 .pre-footer .escribenos {
     display: flex;
     padding: 75px 158px 61px 158px;
-    border-bottom: 1px solid #101820;
+    /* border-bottom: 1px solid #101820; */
 }
 
 .pre-footer .stalkeanos {
@@ -58,8 +58,8 @@
     height: fit-content;
 }
 
-.pre-footer .talento .container a,
-.pre-footer .escribenos .container div a,
+.pre-footer .talento .container a.reveal,
+.pre-footer .escribenos .container div a.reveal,
 .pre-footer .stalkeanos .stalk a.reveal,
 .pre-footer .siguenos .stalk a.reveal,
 .pre-footer .talento .stalk a.reveal,
@@ -68,7 +68,7 @@
 .pre-footer .siguenos .container p.reveal,
 .pre-footer .talento .container p.reveal,
 .pre-footer .escribenos p.reveal {
-    animation: reveal .8s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .pre-footer .talento a,
@@ -91,7 +91,6 @@
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 64px;
     letter-spacing: -2.4px;
     transition: ease 0.5s;
 }
@@ -103,7 +102,6 @@
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 64px;
     letter-spacing: -2.4px;
     transition: ease 0.5s;
 }
@@ -113,7 +111,7 @@
 .pre-footer .stalkeanos .container a:hover:nth-child(odd),
 .pre-footer .stalkeanos .container a:hover:nth-child(even) {
     font-size: 14px;
-    line-height: 30px;
+    /* line-height: 30px; */
     letter-spacing: normal;
 }
 
@@ -174,4 +172,75 @@
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+}
+
+/* .pre-footer .line-loading {
+    height: 1px;
+    display: flex;
+    width: 100%;
+    background: black;
+} */
+
+.line-loading {
+    height: 2px;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.line-loading::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    left: -100%;
+    animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+        width: 0;
+    }
+    50% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.escribenos,
+.talento,
+.stalkeanos,
+.siguenos {
+    opacity: 0;
+}
+
+.hidden {
+    /* display: none; */
+    visibility: hidden;
+}
+
+.reveal {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in;
+}
+
+.reveal p, .reveal a {
+    opacity: 1;
+}
+
+.footer img.reveal {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.footer .texto-footer .reveal {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }

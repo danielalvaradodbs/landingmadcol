@@ -126,7 +126,7 @@ export const Contact = () => {
                                 <option value="+1">USA</option>
                                 <option value="+593">ECU</option>
                             </select>
-                            <img src={ Selector } alt="" style={{ position: 'absolute', left: '7%', zIndex: -1 }} />
+                            <img src={ Selector } alt="" style={{ position: 'absolute', left: '4%', zIndex: -1 }} />
                             <input type="number" id='phone' name='phone' value={ phone } onChange={ onInputChange } placeholder='(+57)'></input>
                         </div>
                             <span className="p-0 text-danger">

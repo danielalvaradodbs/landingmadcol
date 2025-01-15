@@ -42,7 +42,7 @@ export const Header = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (!entry.isIntersecting) {
           setScrollingDown(true);
           setIsCentered(true);
         } else {
@@ -52,8 +52,9 @@ export const Header = () => {
       });
     });
 
-    const conceptSection = document.querySelector('.services');
+    const conceptSection = document.querySelector('.brandings');
     // const fullPage = document.querySelector('#fullpage');
+
     if (conceptSection) {
       observer.observe(conceptSection);
     }
@@ -75,22 +76,28 @@ export const Header = () => {
               <img 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo' : ''}`}
+                style={{ display: isDark ? 'inline' : 'none' }}
+              />
+              <img 
+                src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
+                className={`${ scrollingDown ? 'move-logo' : ''}`}
+                style={{ display: !isDark ? 'inline' : 'none' }}
               />
             </a>
             
           </div>
 
-          <div className={`col-6 menu-items animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
+          <div className={`col-6 menu-items ${ isCentered ? 'logo-centered' : ''} animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
           <div className="menu-logo">
               <a href="#" style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8 }}>
                 <img 
-                  style={{ display: isDark ? 'inline' : 'none' }} 
+                  style={{ display: !isDark ? 'inline' : 'none' }} 
                   src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
                   className={`col-6 animate__animated animate__fadeIn`}
                 />
                   
                 <img 
-                  style={{ display: !isDark ? 'inline' : 'none' }} 
+                  style={{ display: isDark ? 'inline' : 'none' }} 
                   src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }  
                   className={`col-6 animate__animated animate__fadeIn`}
                 />
