@@ -9,11 +9,26 @@
 
 .clients h2 {
     color: #101820;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
 }
 
 .clients .title-clients img.reveal,
 .clients h2.reveal {
     animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.clients h2.reveal:after {
+    background: url('/src/assets/figuras/figuraClientes.svg') no-repeat;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    right: -27px;
+    top: 35px;
+    height: 48px;
+    width: 59px;
+    z-index: 1;
 }
 
 .clients .title-clients {
@@ -61,5 +76,59 @@
     }
     to {
         transform: translateX(-150%);
+    }
+}
+
+@media only screen and (min-width: 2048px) {
+    
+}
+
+@media only screen and (min-width: 1920px) {
+       
+}
+@media only screen and (min-width: 280px) and (max-width: 1440px) {
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1366px) {
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1200px) {
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1023px) {
+    .clients .title-clients {
+        margin: 0 0 46px 32px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 833px) {
+    .clients .title-clients {
+        margin: 0 0 46px 32px;
+    }
+    .clients h2 {
+        font-size: 63px ;
+    }
+    .clients h2.reveal:after {
+        right: -22px;
+        top: 24px;
+        width: 40px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 525px) {
+    .clients .title-clients {
+        margin: 0 0 16px 22px;
+    }
+    .clients h2 {
+        font-size: 44px ;
+        letter-spacing: -2.2px;
+    }
+    .clients h2.reveal:after {
+        right: -15px;
+        top: 20px;
+        width: 28px;
     }
 }

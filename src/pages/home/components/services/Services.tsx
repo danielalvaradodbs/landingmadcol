@@ -97,6 +97,13 @@ export const Services = () => {
               <h2>Construcción de marca</h2>
             </div>
           </div>
+
+          <div className="footer-section mobile">
+            <p className='animation-text'>
+            // Desarrollamos tu marca con autenticidad y enfoque en el usuario, logrando relevancia y diferenciación en el mercado.
+            </p>
+          </div>
+
           <div className="items">
             <ul>
             {animateText([
@@ -123,12 +130,12 @@ export const Services = () => {
             </ul>
             <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ R } alt="" style={{ paddingLeft: '30px' }} />
           </div>
+
         </div>
-        <div className="footer-section">
+        <div className="footer-section desktop">
           <p className='animation-text'>
           // Desarrollamos tu marca con autenticidad y enfoque en el usuario, logrando relevancia y diferenciación en el mercado.
           </p>
-
         </div>
       </section>
 
@@ -138,11 +145,17 @@ export const Services = () => {
         </div>
         <div className="header-sections">
           <div className="identidad">
-          <div className="title">
-            <h2>Identidad de <br /> marca</h2>
+            <div className="title">
+              <h2>Identidad de <br /> marca</h2>
+            </div>
           </div>
 
+          <div className="footer-section mobile">
+            <p className='animation-text'>
+            // Destaca frente a la competencia con una identidad sólida, generando impresiones memorables y conexiones duraderas con tus clientes.
+            </p>
           </div>
+          
           <div className="items">
             <ul>
             {animateText([
@@ -163,11 +176,10 @@ export const Services = () => {
             <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ FiguraAsteriscoR } alt="" style={{ paddingLeft: '30px' }} />
           </div>
         </div>
-        <div className="footer-section">
+        <div className="footer-section desktop">
           <p className='animation-text' style={{ marginTop: '40px' }}>
           // Destaca frente a la competencia con una identidad sólida, generando impresiones memorables y conexiones duraderas con tus clientes.
           </p>
-          
         </div>
       </section>
 
@@ -180,6 +192,11 @@ export const Services = () => {
             <div className="title">
               <h2>Posicionamiento de marca</h2>
             </div>
+          </div>
+          <div className="footer-section mobile">
+            <p className='animation-text'>
+            // Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.
+            </p>
           </div>
           <div className="items">
             <ul>
@@ -208,12 +225,10 @@ export const Services = () => {
 
           </div>
         </div>
-        <div className="footer-section">
+        <div className="footer-section desktop">
           <p className='animation-text'>
           // Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.
           </p>
-
-
         </div>
       </section>
 
