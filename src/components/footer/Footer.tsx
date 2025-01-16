@@ -174,7 +174,7 @@ export const Footer = () => {
           <img className={`${ isFooterVisible ? 'reveal' : '' }`} src={logosMadcritter.logoBlue.logo} alt="" />
         </div>
         <div className="texto-footer">
-          <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Mad Critter ® 2025   |  <a href="">Meet the team!</a></span>
+          <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Mad Critter ® 2025   |  <a href="/#/meet-the-team">Meet the team!</a></span>
           <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Bogotá, Colombia   |   Orlando, USA   |   Quito, Ecuador</span>
           <div data-animation="to-top" style={{ position: 'relative' }}>
             <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="">
