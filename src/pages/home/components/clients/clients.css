@@ -25,9 +25,9 @@
 .clients .slider-brands {
     display: flex;
     gap: 20px;
-    animation: scroll-horizontal 30s linear infinite;
-    will-change: transform;
-    width: calc(100%);
+    animation: scroll-horizontal 60s linear infinite;
+    /* will-change: transform;
+    width: calc(100%); */
 }
 
 .clients .slider-brands .slider {
@@ -56,10 +56,11 @@
 }
 
 @keyframes scroll-horizontal {
-    from {
-        transform: translateX(0%);
+    
+    0% {
+        transform: translateX(0);
     }
-    to {
-        transform: translateX(-150%);
+    100% {
+        transform: translateX(calc(-100% - 20px));
     }
 }

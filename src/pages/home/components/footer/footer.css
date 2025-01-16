@@ -244,3 +244,10 @@
 .footer .texto-footer .reveal {
     animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
+
+.footer .texto-footer .terms-condition {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    transition: color 50ms var(--ease-in-out-quart);
+}
