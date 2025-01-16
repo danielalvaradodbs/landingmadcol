@@ -8,6 +8,8 @@ import R from '../assets/figuras/R.svg';
 import FiguraClientes from '../assets/figuras/figuraClientes.svg';
 import FiguraContacto from '../assets/figuras/figuraContacto.svg';
 import FlechaRoja from '../assets/figuras/flechaRoja.svg';
+import BackButtonFigureBlue from '../assets/figuras/back-button.svg';
+import BackButtonFigureWhite from '../assets/figuras/back-button-white.svg';
 
 
 export {
@@ -20,5 +22,7 @@ export {
     FiguraAsteriscoR,
     FiguraClientes,
     FiguraContacto,
-    FlechaRoja
+    FlechaRoja,
+    BackButtonFigureBlue,
+    BackButtonFigureWhite
 }

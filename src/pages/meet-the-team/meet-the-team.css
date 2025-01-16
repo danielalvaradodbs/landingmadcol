@@ -1,0 +1,158 @@
+
+.meet-the-team {
+    background: #101820;
+    display: flex;
+    justify-items: center;
+    padding: 200px 0 135px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 0 135px;
+}
+
+.meet-the-team .button-back {
+    /* position: absolute;
+    z-index: 6;
+    top: 2%;
+    right: 2%; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 48px 60px 105px 0;
+}
+
+.meet-the-team .img-text {
+    text-align: center;
+    padding-bottom: 8px;
+    max-width: 190px;
+    width: 190px;
+}
+.meet-the-team .img-text p {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 36px;
+}
+
+.meet-the-team .the-team-image {
+    padding-bottom: 24px;
+}
+
+.meet-the-team span.exito {
+    padding-bottom: 29px;
+}
+
+.meet-the-team span {
+    color: #ACB6C0;
+    text-align: center;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.meet-the-team span strong {
+    color: #ACB6C0;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.meet-the-team span i {
+    font-style: italic;
+}
+
+.meet-the-team .conoce {
+    text-align: center;
+    padding: 23px 0 41px 0;
+    opacity: 0; /* Oculto por defecto */
+    transform: translateY(50px); /* Desplazado hacia abajo por defecto */
+    transition: opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+.meet-the-team span.conoce-the-team,
+.meet-the-team .conoce span {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.meet-the-team span.conoce-the-team strong,
+.meet-the-team .conoce span strong {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.meet-the-team .conoce .name h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Golsuka Kadila";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 96px;
+}
+
+.meet-the-team .conoce span {
+    color: #ACB6C0;
+    text-align: center;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.meet-the-team .logo-mad {
+    padding-top: 102px;
+}
+
+.button-back a {
+    max-width: 95px;
+    display: inline-flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    border: 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.20);
+    color: white;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    text-decoration: none;
+}
+
+.button-back a img {
+    transition: ease-in 0.2s;
+}
+
+.button-back a:hover {
+    border-radius: 5px;
+    background: #FF2951;
+    transition: ease-in 0.2s;
+}
+
+.exito.animate__delay-1s {
+    animation-delay: 500ms !important;
+}
+.conoce-the-team.animate__delay-1s {
+    animation-delay: 600ms !important;
+
+}

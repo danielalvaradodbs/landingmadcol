@@ -4,7 +4,7 @@ import './header.css';
 import { logosMadcritter } from '../../shared';
 import { useDarkMode } from '../../hooks/DarkModeContext';
 import { useEffect, useState } from 'react';
-
+import { useLocation } from "react-router-dom";
 export const Header = () => {
 
   const { isDark } = useDarkMode();
@@ -15,6 +15,9 @@ export const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const currentPath = useLocation();
+  
 
   // useEffect(() => {
   //   let lastScrollTop = 0;
@@ -69,6 +72,8 @@ export const Header = () => {
 
   return (
     <>
+    { currentPath.pathname !== '/meet-the-team' && (
+
         <div className={`header ${isDark ? 'dark' : ''}`}>
         <div 
           className={`col-6 logo animate__animated animate__fadeInUp animate__slow`}>
@@ -155,6 +160,7 @@ export const Header = () => {
         )}
           
         </div>
+    )}
     </>
   )
 }

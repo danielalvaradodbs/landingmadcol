@@ -2,7 +2,8 @@
 import './App.css'
 import { Header } from './components/header/Header'
 import { DarkModeProvider } from './hooks/DarkModeContext'
-import { Home } from './pages/home/Home'
+import { Footer } from './components/footer/Footer'
+import { AppRouter } from './routes/AppRouter'
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <>
     <DarkModeProvider>
       <Header />
-      <Home />
+      <AppRouter />
+      <Footer />
     </DarkModeProvider>
     </>
   )

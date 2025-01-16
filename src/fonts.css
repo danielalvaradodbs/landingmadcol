@@ -53,3 +53,17 @@
   font-weight: 700;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Golsuka Kadila';
+  src: url('./assets/fonts/Golsuka-Kadila.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Golsuka';
+  src: url('./assets/fonts/Golsuka-Kadila.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
