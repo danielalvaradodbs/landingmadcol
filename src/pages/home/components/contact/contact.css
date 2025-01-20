@@ -144,6 +144,14 @@
     cursor: pointer;
 }
 
+.contact .form .phone .code-input select#code {
+    background-image: url(/src/assets/icons/selector.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center right;
+    transition: ease 0s;
+}
+
 .contact .form .phone .code-input option {
     background: transparent;
     color: black;
@@ -153,6 +161,7 @@
 .contact .form .phone .code-input input {
     border-bottom: 0;
 }
+
 
 .contact .form .terms-submit {
     display: flex;
@@ -223,3 +232,86 @@
     text-underline-position: from-font;
     transition: ease 0.5s;
 }
+
+@media only screen and (min-width: 2048px) {
+    
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1660px) {
+    .contact .title-contact {
+        width: 69%;
+    }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1439px) {
+    .contact .title-contact {
+        width: 73.5%;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+    .contact {
+        padding: 118px 150px 144px 150px;
+    }
+    .contact .title-contact {
+        width: 79%;
+    }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1279px) {
+    .contact {
+        padding: 118px 150px 144px 150px;
+    }
+    .contact .title-contact {
+        width: 90%;
+    }
+    .contact .title-contact .flecha-roja {
+        left: 28.5%;
+    }
+    .contact .title-contact .figura-contacto {
+        left: 74%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .contact {
+        padding: 118px 34px 144px 34px;
+    }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1023px) {
+    
+}
+
+@media only screen and (min-width: 833px) and (max-width: 919px) {
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 832px) {
+    
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 525px) and (max-width: 599px) {
+    
+}
+
+@media only screen and (min-width: 425px) and (max-width: 524px) {
+    
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+    
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 319px) {
+    
+}
+  

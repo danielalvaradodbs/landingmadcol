@@ -132,13 +132,13 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .services .first-section {
-        padding: 70px 80px 100px 80px !important;
+        padding: 70px 34px 100px 34px !important;
     }
     .services .second-section {
-        padding: 70px 80px 100px 80px !important;
+        padding: 70px 34px 100px 34px !important;
     }
     .services .third-section {
-        padding: 70px 80px 100px 80px !important;
+        padding: 70px 34px 100px 34px !important;
     }
     .services .header-sections .marca,
     .services .header-sections .identidad,
