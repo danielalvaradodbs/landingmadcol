@@ -55,7 +55,7 @@ export const Header = () => {
       });
     });
 
-    const conceptSection = document.querySelector('.brandings');
+    const conceptSection = document.querySelector('.brandings .section-branding');
     // const fullPage = document.querySelector('#fullpage');
 
     if (conceptSection) {

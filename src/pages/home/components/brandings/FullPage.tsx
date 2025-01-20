@@ -4,6 +4,11 @@ import { brandings, IconPlus, ScrollDownIcon, ScrollDownIconMobile } from '../..
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
+import { Concept } from '../concept/Concept';
+import { Contact } from '../contact/Contact';
+import { Footer } from '../footer/Footer';
+import { Clients } from '../clients/Clients';
+import { Services } from '../services/Services';
 // import { Concept } from '../concept/Concept';
 declare global {
     interface Window {
@@ -119,6 +124,7 @@ export const FullPage = () => {
                 navigation={ false }
                 credits={{ enabled: false }}
                 css3={ true }
+                fadingEffect={true}
                 autoScrolling={ true }
                 scrollOverflow={ true }
                 scrollBar={ true }
@@ -160,17 +166,18 @@ export const FullPage = () => {
                 afterLoad={(_anchorLink: any, destination: any, _slideAnchor: any, _slideIndex: any) => {           
                     const isLastSection = destination.isLast === true;  
                     const fpOverflow: any = document.querySelectorAll('.fp-overflow');
-                    if( isLastSection ) {
-                        fpOverflow.forEach((element: any) => {
-                            element.style.position = 'fixed';
-                            element.style.zIndex = 1;
-                        });
-                    } else {
-                        fpOverflow.forEach((element: any) => {
-                            element.style.position = 'relative';
-                            element.style.zIndex = 1;
-                        });
-                    }
+                    console.log('after load');
+                    // if( isLastSection ) {
+                    //     fpOverflow.forEach((element: any) => {
+                    //         element.style.position = 'fixed';
+                    //         element.style.zIndex = 1;
+                    //     });
+                    // } else {
+                    //     fpOverflow.forEach((element: any) => {
+                    //         element.style.position = 'relative';
+                    //         element.style.zIndex = 1;
+                    //     });
+                    // }
                     // if (index.index === brandings.length - 1) {
                     //     document.body.style.overflowY = 'auto';
 
@@ -188,7 +195,7 @@ export const FullPage = () => {
                            
                             <section className="brandings">
                                 { brandings.map((item: any, index: any) => (
-                                <section className="panel section" key={ index } style={{ 
+                                <section className="panel section section-branding" key={ index } style={{ 
                                     backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
                                     backgroundColor: '#fff',
                                     backgroundRepeat: 'no-repeat',
@@ -198,33 +205,36 @@ export const FullPage = () => {
                                     }}
                                     >
 
-                                    <div className="mask">
-                                        <div className="info">
-                                            <div className="mask">
-                                                <span>{brandings[currentIndex]?.info}</span>
-                                            </div>
-                                            <div className="mask">
-                                                <span>-</span>
-                                            </div>
-                                            <div className="mask title">
-                                                <h4 className='animation-title'>{brandings[currentIndex]?.title}</h4>
-                                            </div>
-                                            <div className="mask description">
-                                                <p dangerouslySetInnerHTML={{ __html: brandings[currentIndex]?.description || <></> }}></p>
-                                            </div>
-                                            <div className="mask">
-                                                <Button 
-                                                    texto='Ver proyecto'
-                                                    backgroundColor='transparent'
-                                                    hoverBorderColor='#2A00FF'
-                                                    hoverBackgroundColor='#2A00FF'
-                                                    urlIcon={ IconPlus }
-                                                    onClick= { () => sendToLink(brandings[currentIndex].linkButton) } 
-                                                    onMouseEnter={ () => handleMouseEnter(currentIndex) }
-                                                    onMouseLeave={ handleMouseLeave }
-                                                />
+                                    <div className="container">
+                                        <div className="mask">
+                                            <div className="info">
+                                                <div className="mask">
+                                                    <span>{brandings[currentIndex]?.info}</span>
+                                                </div>
+                                                <div className="mask">
+                                                    <span>-</span>
+                                                </div>
+                                                <div className="mask title">
+                                                    <h4 className='animation-title'>{brandings[currentIndex]?.title}</h4>
+                                                </div>
+                                                <div className="mask description">
+                                                    <p dangerouslySetInnerHTML={{ __html: brandings[currentIndex]?.description || <></> }}></p>
+                                                </div>
+                                                <div className="mask">
+                                                    <Button 
+                                                        texto='Ver proyecto'
+                                                        backgroundColor='transparent'
+                                                        hoverBorderColor='#2A00FF'
+                                                        hoverBackgroundColor='#2A00FF'
+                                                        urlIcon={ IconPlus }
+                                                        onClick= { () => sendToLink(brandings[currentIndex].linkButton) } 
+                                                        onMouseEnter={ () => handleMouseEnter(currentIndex) }
+                                                        onMouseLeave={ handleMouseLeave }
+                                                    />
 
+                                                </div>
                                             </div>
+
                                         </div>
 
                                     </div>
@@ -254,9 +264,18 @@ export const FullPage = () => {
                                     
                                 </section>
                             ))}
-                             {/* <section className="panel section">
+                             <section className="panel section">
                                 <Concept />
-                             </section>  */}
+                             </section> 
+                             <section className="panel section fp-controlArrow">
+                                <Services />
+                             </section> 
+                             <section className="panel section">
+                                <Clients />
+                             </section> 
+                             <section className="panel section">
+                                <Contact />
+                             </section> 
                             </section>
 
                            

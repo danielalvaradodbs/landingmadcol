@@ -6,6 +6,7 @@
     padding: 118px 154px 144px 158px;
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
 }
 
 .contact .title-contact {
