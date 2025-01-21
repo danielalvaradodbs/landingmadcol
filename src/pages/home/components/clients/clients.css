@@ -1,14 +1,21 @@
 
 .clients {
-    padding: 102px 0 102px 0;
+    /* padding: 102px 0 102px 0; */
     background-color: white;
     position: relative;
     z-index: 3;
     overflow: hidden;
+    height: 90vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color .8s ease;
 }
 
 .clients h2 {
     color: #101820;
+    transition: .8s ease;
 }
 
 .clients .title-clients img.reveal,
@@ -42,6 +49,10 @@
     padding: 0 16px 0 16px;
 }
 
+.clients .slider-brands .slider .type {
+    text-align: center;
+}
+
 .clients .slider-brands .slider .brand {
     padding: 20px 55px 20px 55px;
 }
@@ -53,6 +64,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
+}
+
+.clients .slider-brands .brand img {
+    transition: ease .8s;
 }
 
 @keyframes scroll-horizontal {

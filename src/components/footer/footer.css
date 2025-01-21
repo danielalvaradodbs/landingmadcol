@@ -4,6 +4,7 @@
     background-color: white;
     position: relative;
     z-index: 3;
+    transition: background-color .8s ease;
 }
 
 .pre-footer .siguenos,
@@ -250,4 +251,13 @@
     position: relative;
     text-align: center;
     transition: color 50ms var(--ease-in-out-quart);
+}
+
+.pre-footer.footer-hidden {
+    background-color: #101820;
+}
+
+.pre-footer.footer-hidden .escribenos a,
+.pre-footer.footer-hidden .escribenos p strong {
+    color: white;
 }

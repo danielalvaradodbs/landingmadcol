@@ -12,7 +12,6 @@ export const Clients = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
-        console.log('hola soy visible');
       },
       {
         root: null,

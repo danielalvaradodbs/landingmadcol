@@ -9,7 +9,7 @@ const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
 export const Contact = () => {
 
-    const sectionRef = useRef(null);
+    const sectionRef: any = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -61,11 +61,27 @@ export const Contact = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
-                console.log('visible');
+                const clients: any = document.querySelector('.clients');
+                if ( clients ) {
+                    clients.style.backgroundColor = entry.isIntersecting ? '#101820' : '#FFFFFF';
+                    sectionRef.current.style.backgroundColor = entry.isIntersecting ? '#101820' : '#FFFFFF';
+
+                }
+
+                const clientHeaders: any = document.querySelector('.clients h2');
+                const clientImg: any = document.querySelectorAll('.clients .slider-brands .brand img');
+                const contactHeaders: any = document.querySelector('.contact h2');
+                clientHeaders.style.color = entry.isIntersecting ? 'white' : '#000000'; 
+                contactHeaders.style.color = entry.isIntersecting ? 'white' : '#000000';
+
+                clientImg.forEach((img: any) => {
+                    img.style.filter = entry.isIntersecting ? 'invert()' : 'none';
+                });
+
             },
             {
                 root: null,
-                threshold: 0.1
+                threshold: 0.2
             },
     
         );
@@ -82,6 +98,52 @@ export const Contact = () => {
             }
         };
     }, []);
+
+    useEffect(() => {
+        const footer: any = document.querySelector('.pre-footer');
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+
+                // footer.style.backgroundColor = !entry.isIntersecting ? '#101820' : '#FFFFFF';
+                // sectionRef.current.style.backgroundColor = !entry.isIntersecting ? '#101820' : '#FFFFFF';
+
+                
+                if( entry.isIntersecting ) {
+                    sectionRef.current.classList.add('contact-hidden');
+                    footer.classList.remove('footer-hidden');
+
+                    // footer.style.backgroundColor = !entry.isIntersecting ? '#101820' : '#FFFFFF';
+                } else {
+                    sectionRef.current.classList.remove('contact-hidden');
+                    footer.classList.add('footer-hidden');
+
+                    // footer.style.backgroundColor = !entry.isIntersecting ? '#101820' : '#FFFFFF';
+                }
+            },
+            {
+                root: null,
+                threshold: 0.3
+            },
+    
+        );
+        
+        setIsVisible(!isVisible);
+        if (footer) {
+            console.log(observer.observe(footer));
+            observer.observe(footer);
+        }
+    
+    
+        return () => {
+            if (footer) {
+            observer.unobserve(footer);
+            }
+        };
+    }, []);
+
+
 
   return (
     <>

@@ -58,7 +58,6 @@ export const Footer = () => {
     sections.forEach((section, index) => {
       setTimeout(() => {
         setVisibleSections(prev => [...prev, section]);
-        console.log(visibleSections);
         if (index === sections.length - 1) {
           setTimeout(() => {
             setIsFooterVisible(true);

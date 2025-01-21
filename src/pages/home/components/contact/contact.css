@@ -3,9 +3,10 @@
     position: relative;
     z-index: 3;
     background-color: #101820;
-    padding: 118px 154px 144px 158px;
+    padding: 118px 154px 144px 102px;
     display: flex;
     flex-wrap: wrap;
+    transition: background-color .8s ease;
 }
 
 .contact .title-contact {
@@ -21,6 +22,7 @@
     font-weight: 500;
     line-height: 96px;
     letter-spacing: -4.8px;
+    transition: .8s ease;
 }
 .contact .title-contact .first,
 .contact .title-contact .second,
@@ -255,4 +257,32 @@
     text-underline-offset: auto;
     text-underline-position: from-font;
     transition: ease 0.5s;
+}
+
+.contact.contact.contact-hidden {
+    background-color: white !important;
+}
+
+.contact.contact-hidden h2,
+.contact.contact-hidden label,
+.contact.contact-hidden input,
+.contact.contact-hidden span,
+.contact.contact-hidden a {
+    color: #101820 !important;
+}
+
+.contact.contact-hidden input {
+    border-bottom: 1px solid #101820 !important;
+}
+
+.contact.contact-hidden div.code-input {
+    border-bottom: 1px solid #101820 !important;
+}
+
+.contact.contact-hidden div.code-input input {
+    border-bottom: 0px solid #101820 !important;
+}
+
+.contact.contact-hidden .form .terms-submit .submit label {
+    color: white !important;
 }
