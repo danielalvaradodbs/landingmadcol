@@ -1,0 +1,14 @@
+.thanks-contact {
+    background-color: #101820;
+    height: 100vh;
+}
+
+.thanks-contact h2 {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128px;
+    letter-spacing: -6.4px;
+}
