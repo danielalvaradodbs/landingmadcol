@@ -41,11 +41,11 @@ export const Clients = () => {
         <section className="clients" ref={ sectionRef }>
           <div className="title-clients">
             <h2 className={`${ isVisible ? 'reveal' : '' }`}>Clientes</h2>
-            <img 
+            {/* <img 
               src={ FiguraClientes } alt=""
               className={`${ isVisible ? 'reveal' : '' }`}
               style={{ position: 'absolute', top:'25%', left: '21%' }}
-            />
+            /> */}
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
           <div className="slider-brands">

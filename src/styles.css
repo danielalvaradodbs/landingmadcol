@@ -134,6 +134,13 @@ button:disabled {
     border: 1px solid rgba(255, 255, 255, 0.20);
 }
 
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+
 @keyframes flip-in-hor-top {
   0% {
     transform: rotateX(-80deg);
@@ -330,48 +337,65 @@ button:disabled {
   }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 640px) {
     h1 {
-        color: #000;
-        font-family: 'Safiro';
         font-size: 90px;
-        font-style: normal;
-        font-weight: 600;
         line-height: 90px;
         letter-spacing: -3.2px;
         margin: 0;
     }
 
     h5 {
-        color: #7595B6;
-        font-family: Safiro;
         font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 24px;
         letter-spacing: -0.16px;
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 550px) {
+@media only screen and (min-width: 550px) and (max-width: 599px) {
     h1 {
-        color: #000;
-        font-family: 'Safiro';
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 70px;
-        letter-spacing: -3.2px;
-        margin: 0;
+        font-size: 86px;
     }
 
     h5 {
-        color: #7595B6;
-        font-family: Safiro;
         font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 24px;
-        letter-spacing: -0.16px;
     }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 549px) {
+  h1 {
+      font-size: 70px;
+      line-height: 70px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  h1 {
+      font-size: 68px;
+      line-height: 68px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  h1 {
+      font-size: 58px;
+      line-height: 70px;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 319px) {
+  h1 {
+      font-size: 52px;
+      line-height: 52px;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
 }

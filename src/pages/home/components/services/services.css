@@ -108,5 +108,431 @@
     left: 0;
     width: 100%;
   } */
-  
+
+
+@media only screen and (min-width: 2048px) {
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1440px) {
+
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1439px) {
+    h2.reveal {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+    h2.reveal {
+        font-size: 94px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .services .first-section {
+        padding: 70px 34px 100px 34px !important;
+    }
+    .services .second-section {
+        padding: 70px 34px 100px 34px !important;
+    }
+    .services .third-section {
+        padding: 70px 34px 100px 34px !important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 60%;
+    }
+    h2.reveal {
+        font-size: 84px;
+    }
+    .services .footer-section {
+        width: 65%;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 72px;
+    }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1023px) {
+    .services .pin-spacer {
+        max-width: 100%!important;
+        width: 100%!important;
+    }
+    .services .first-section {
+        padding: 70px 32px 100px 32px !important;
+    }
+    .services .second-section {
+        padding: 70px 32px 100px 32px !important;
+    }
+    .services .third-section {
+        padding: 70px 32px 100px 32px !important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 60%;
+    }
+    h2.reveal {
+        font-size: 80px;
+    }
+    .services .footer-section {
+        width: 65%;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 68px;
+    }
+    .items ul  li {
+        line-height: 26px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 833px) and (max-width: 919px) {
+    .services .first-section {
+        padding: 70px 32px 100px 32px!important;
+    }
+    .services .second-section {
+        padding: 70px 32px 100px 32px!important;
+    }
+    .services .third-section {
+        padding: 70px 32px 100px 32px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 60%;
+    }
+    h2.reveal {
+        font-size: 62px;
+        letter-spacing: -2.8px;
+        line-height: 56px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 56px;
+        letter-spacing: -2.8px;
+        line-height: 56px;
+    }
+    .services .footer-section {
+        width: 65%;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 832px) {
+    .services .first-section {
+        padding: 70px 32px 100px 32px!important;
+    }
+    .services .second-section {
+        padding: 70px 32px 100px 32px!important;
+    }
+    .services .third-section {
+        padding: 70px 32px 100px 32px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 60%;
+    }
+    h2.reveal {
+        font-size: 62px;
+        letter-spacing: -2.8px;
+        line-height: 56px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 56px;
+        letter-spacing: -2.8px;
+        line-height: 56px;
+    }
+    .services .footer-section {
+        width: 65%;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 525px) and (max-width: 599px) {
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 524px) {
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 319px) {
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
+}
   

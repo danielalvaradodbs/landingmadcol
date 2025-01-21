@@ -289,4 +289,72 @@
         border-radius: 10px;
     }
 }
-  
+
+@media only screen and (min-width: 280px) and (max-width: 525px) {
+    .concept .video {
+        display: none;
+    }
+
+    .concept .branding .video-mobile {
+        display: block !important;
+        width: 100%;
+        max-height: 154px;
+        height: 154px;
+        border-radius: 10px;
+    }
+
+    .concept .branding .video-mobile video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 524px) {
+    .concept .human img {
+        scale: 0.6;
+    }
+    .concept .centered .text img {
+        scale: 0.6;
+    }
+    .concept .branding .text img {
+        scale: 0.6;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+    .concept .human img {
+        scale: 0.6;
+    }
+    .concept .centered .text img {
+        scale: 0.6;
+    }
+    .concept .branding .text img {
+        scale: 0.6;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    .concept .human img {
+        scale: 0.5;
+    }
+    .concept .centered .text img {
+        scale: 0.5;
+    }
+    .concept .branding .text img {
+        scale: 0.5;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 319px) {
+    .concept .human img {
+        scale: 0.5;
+    }
+    .concept .centered .text img {
+        scale: 0.5;
+    }
+    .concept .branding .text img {
+        scale: 0.5;
+    }
+}

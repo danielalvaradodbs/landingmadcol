@@ -6,6 +6,7 @@ import { Clients } from './components/clients/Clients';
 import { Concept } from './components/concept/Concept';
 import { Contact } from './components/contact/Contact';
 import { Services } from './components/services/Services';
+import { TermsConditions } from '../terms-conditions/TermsConditions';
 import './home.css';
 
 export const Home = () => {
@@ -18,6 +19,8 @@ export const Home = () => {
       <Services />
       <Clients />
       <Contact />
+      {/* <TermsConditions/> */}
+
     </>
   )
 }

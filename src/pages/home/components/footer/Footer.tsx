@@ -134,24 +134,25 @@ export const Footer = () => {
         <section className="line-section">
           <span className={`${visibleSections.includes('stalkeanos') ? 'line-loading' : 'hidden'}`}></span>
         </section>
+        <section className="footer">
+          <img src={ logosMadcritter.logoBlue.logo } alt="" />
+          <div className="texto-footer">
+            <ul className="meeting-footer">
+              <li>Mad Critter® 2025</li>
+              <li><a href="">Meet the team!</a></li>
+            </ul>
 
-        <div className={`siguenos ${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}>
-          <div className="container">
-            <div>
-              <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}><strong>SÍGUENOS</strong></p>
-            </div>
-            <div>
-              <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}>Social Media</p>
-            </div>
+            <ul className="cities-footer">
+              <li>Bogotá, Colombia</li>
+              <li>Orlando, USA</li>
+              <li>Quito, Ecuador</li>
+            </ul>
+
+            <ul className="terms-footer">
+              <li><a href="">Términos y Condiciones</a></li>
+            </ul>
           </div>
-          <div className='container stalk'>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">LINKEDIN</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">INSTAGRAM</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">FACEBOOK</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">TIKTOK</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">STRAVA</a>
-          </div>
-        </div>
+        </section>
 
         {/* Línea de síguenos */}
         <section className="line-section">
