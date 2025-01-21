@@ -78,7 +78,7 @@ export const Footer = () => {
       <section className="pre-footer" ref={sectionRef}>
         
         <div className={`escribenos ${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}`}>
-          <div className='container'>
+          <div className='container first-container'>
             <div>
               <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } ><strong>ESCRÍBENOS</strong></p>
             </div>
@@ -86,7 +86,7 @@ export const Footer = () => {
               <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >Nuestro equipo comercial te ayudará</p>
             </div>
           </div>
-          <div className='container'>
+          <div className='container text'>
             <div>
               <a className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
             </div>
@@ -102,7 +102,7 @@ export const Footer = () => {
         </section>
 
         <div className={`talento ${visibleSections.includes('talento') ? 'reveal' : 'hidden'}`}>
-          <div className="container">
+          <div className="container first-container">
             <div>
               <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } ><strong>TALENTO</strong></p>
             </div>
@@ -110,7 +110,7 @@ export const Footer = () => {
               <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >Envía tu CV y portafolio</p>
             </div>
           </div>
-          <div className='container'>
+          <div className='container text'>
             <a className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >talento@madcritter.com</a>
           </div>
         </div>
