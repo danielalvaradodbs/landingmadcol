@@ -173,14 +173,37 @@ export const Footer = () => {
           <img className={`${ isFooterVisible ? 'reveal' : '' }`} src={logosMadcritter.logoBlue.logo} alt="" />
         </div>
         <div className="texto-footer">
-          <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Mad Critter ® 2025   |  <a href="/#/meet-the-team">Meet the team!</a></span>
+          {/* <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Mad Critter ® 2025   |  <a href="/#/meet-the-team">Meet the team!</a></span>
           <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Bogotá, Colombia   |   Orlando, USA   |   Quito, Ecuador</span>
           <div data-animation="to-top" style={{ position: 'relative' }}>
-            <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="">
+            <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="/#/terms-conditions">
               <label>Términos y Condiciones</label>
               <label>Términos y Condiciones</label>
             </a>
-          </div>
+          </div> */}
+
+          <ul className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow meeting-footer' : '' }`}>
+            <li>Mad Critter® 2025</li>
+            <li><a href="/#/meet-the-team">Meet the team!</a></li>
+          </ul>
+
+          <ul className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow cities-footer' : '' }`}>
+            <li>Bogotá, Colombia</li>
+            <li>Orlando, USA</li>
+            <li>Quito, Ecuador</li>
+          </ul>
+
+          <ul className="terms-footer">
+            <li>
+              <div data-animation="to-top" style={{ position: 'relative' }}>
+                <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="/#/terms-conditions">
+                  <label>Términos y Condiciones</label>
+                  <label>Términos y Condiciones</label>
+                </a>
+              </div>
+            </li>
+          </ul>
+
         </div>
       </section>
     )}
