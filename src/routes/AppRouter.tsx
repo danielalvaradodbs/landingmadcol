@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../pages/home/Home";
 import { MeetTheTeam } from "../pages/meet-the-team/MeetTheTeam";
+import { TermsConditions } from "../pages/terms-conditions/TermsConditions";
 
 export const AppRouter = () => {
   return (
@@ -11,6 +12,7 @@ export const AppRouter = () => {
           <Route path="/nosotros" element={<Home />} />
           <Route path="/contacto" element={<Home />} />
           <Route path="/meet-the-team" element={<MeetTheTeam />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
       </Routes>
     </>
   )
