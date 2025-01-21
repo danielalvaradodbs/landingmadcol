@@ -145,9 +145,13 @@
     padding: 10px 15px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.30);
+    background: #101820;
+
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     font-size: 14px;
+
+    height: 100vh;
 
     display: flex;
     justify-content: space-between;
@@ -156,6 +160,7 @@
     left: 0;
     right: 0;
 }
+
 .header .menu-items-mobile ul {
     margin: 0;
     padding: 0;
@@ -205,8 +210,9 @@
 
 .header .menu-items-mobile .submenu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 
 @media only screen and (min-width: 280px) and (max-width: 834px) {
