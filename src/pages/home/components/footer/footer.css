@@ -15,7 +15,8 @@
     border-bottom: 1px solid #101820;
 }
 
-.pre-footer .stalkeanos {
+.pre-footer .stalkeanos,
+.pre-footer .siguenos {
     align-items: center;
 }
 
@@ -61,11 +62,8 @@
 .pre-footer .stalkeanos .container a:hover:nth-child(even),
 .pre-footer .talento a:hover {
     color: #2A00FF;
-    font-family: 'Safiro';
-    font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 64px;
     letter-spacing: -2.4px;
     transition: ease 0.5s;
 }
@@ -74,10 +72,8 @@
 .pre-footer .escribenos a:hover {
     color: #FF2951;
     font-family: 'Safiro';
-    font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 64px;
     letter-spacing: -2.4px;
     transition: ease 0.5s;
 }
@@ -118,17 +114,366 @@
 
 .footer .texto-footer {
     display: flex;
-    justify-content: space-between;
-    padding-top: 89px;
+    padding-top: 90px;
+    align-items: center;
+}
+.footer .texto-footer ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.footer .texto-footer ul.meeting-footer {
+    display: flex;
+    width: 33.333%;
+    justify-content: flex-start;
 }
 
-.footer .texto-footer a,
-.footer .texto-footer span {
+.footer .texto-footer ul.cities-footer {
+    display: flex;
+    justify-content: center;
+    width: 33.333%;
+}
+
+.footer .texto-footer ul.terms-footer {
+    display: flex;
+    width: 33.333%;
+    justify-content: flex-end;
+}
+
+.footer .texto-footer ul li {
     color: #ACB6C0;
-    text-align: center;
+    display: initial;
     font-family: 'Safiro';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 12px;
+    position: relative;
+}
+.footer .texto-footer ul li:marker {
+    display: none;
+}
+.footer .texto-footer ul.meeting-footer li {
+    margin-right: 15px;
+    padding: 0 15px 0 0;
+}
+.footer .texto-footer ul.meeting-footer li:after {
+    content: "";
+    color: #bfc6ce;
+    position: absolute;
+    right: 0;
+    height: 14px;
+    width: 1px;
+    background: #bfc6ce;
+    top: -1px;
+}
+.footer .texto-footer ul.meeting-footer li:nth-child(2):after {
+    display: none;
+}
+.footer .texto-footer ul.cities-footer li {
+    margin: 0;
+}
+.footer .texto-footer ul.cities-footer li:nth-child(2) {
+    margin: 0 15px;
+    padding: 0 15px;
+}
+.footer .texto-footer ul.cities-footer li:nth-child(2):before {
+    content: "";
+    color: #bfc6ce;
+    position: absolute;
+    left: 0;
+    height: 14px;
+    width: 1px;
+    background: #bfc6ce;
+    top: -1px;
+}
+.footer .texto-footer ul.cities-footer li:nth-child(2):after {
+    content: "";
+    color: #bfc6ce;
+    position: absolute;
+    right: 0;
+    height: 14px;
+    width: 1px;
+    background: #bfc6ce;
+    top: -1px;
+}
+.footer .texto-footer ul.terms-footer li {
+    margin: 0 0;
+}
+.footer .texto-footer ul li a {
+    color: #ACB6C0;
+}
+
+
+@media only screen and (min-width: 2048px) {
+    
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1660px) {
+    
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1439px) {
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+    .pre-footer .siguenos,
+    .pre-footer .stalkeanos,
+    .pre-footer .talento,
+    .pre-footer .escribenos {
+        padding: 80px 140px;
+        align-items: center;
+    }
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1279px) {
+    .pre-footer .siguenos,
+    .pre-footer .stalkeanos,
+    .pre-footer .talento,
+    .pre-footer .escribenos {
+        padding: 80px 100px;
+        align-items: center;
+    }
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 35%;
+    }
+
+    .footer .texto-footer {
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer .texto-footer ul.meeting-footer {
+        width: 50%;
+        justify-content: flex-start;
+        order: 2;
+    }
+    .footer .texto-footer ul.cities-footer {
+        justify-content: center;
+        order: 1;
+        margin: 0 0 70px 0;
+        width: 100%;
+    }
+    .footer .texto-footer ul.terms-footer {
+        order: 3;
+        width: 50%;
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1139px) {
+    .pre-footer .siguenos,
+    .pre-footer .stalkeanos,
+    .pre-footer .talento,
+    .pre-footer .escribenos {
+        padding: 80px 100px;
+        align-items: center;
+    }
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 30%;
+    }
+
+    .footer .texto-footer {
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer .texto-footer ul.meeting-footer {
+        width: 50%;
+        justify-content: flex-start;
+        order: 2;
+    }
+    .footer .texto-footer ul.cities-footer {
+        justify-content: center;
+        order: 1;
+        margin: 0 0 70px 0;
+        width: 100%;
+    }
+    .footer .texto-footer ul.terms-footer {
+        order: 3;
+        width: 50%;
+        justify-content: flex-end;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+    .pre-footer .siguenos,
+    .pre-footer .stalkeanos,
+    .pre-footer .talento,
+    .pre-footer .escribenos {
+        padding: 80px 35px;
+        align-items: center;
+    }
+    .pre-footer .talento a, .pre-footer .escribenos a {
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+    .footer .texto-footer {
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer .texto-footer ul.meeting-footer {
+        width: 50%;
+        justify-content: flex-start;
+        order: 2;
+    }
+    .footer .texto-footer ul.cities-footer {
+        justify-content: center;
+        order: 1;
+        margin: 0 0 70px 0;
+        width: 100%;
+    }
+    .footer .texto-footer ul.terms-footer {
+        order: 3;
+        width: 50%;
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1023px) {
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 32%;
+    }  
+}
+
+@media only screen and (min-width: 833px) and (max-width: 919px) {
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 35%;
+    }   
+}
+
+@media only screen and (min-width: 768px) and (max-width: 832px) {
+    .pre-footer .siguenos p,
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+    .pre-footer .siguenos, .pre-footer .stalkeanos,
+    .pre-footer .talento, .pre-footer .escribenos {
+        flex-direction: column;
+        padding: 66px 16px;
+        gap: 15px;
+    }
+    .pre-footer .siguenos p, .pre-footer .stalkeanos p,
+    .pre-footer .talento p, .pre-footer .escribenos p {
+        width: 100%;
+    }
+    .pre-footer .talento a,
+    .pre-footer .escribenos a {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -1px;
+    }
+    .pre-footer .siguenos div,
+    .pre-footer .stalkeanos div {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .pre-footer .stalkeanos,
+    .pre-footer .siguenos {
+        align-items: start;
+    }
+    .footer {
+        padding: 80px 0 80px 0;
+    }
+    .footer .texto-footer {
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer .texto-footer ul.meeting-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        order: 2;
+        width: 100%;
+    }
+    .footer .texto-footer ul.meeting-footer li {
+        margin: 0;
+        padding: 0;
+    }
+    .footer .texto-footer ul.meeting-footer li:after {
+        display: none;
+    }
+    .footer .texto-footer ul.cities-footer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .footer .texto-footer ul.cities-footer li {
+        margin: 0;
+        padding: 0;
+    }
+    .footer .texto-footer ul.cities-footer li:before,
+    .footer .texto-footer ul.cities-footer li:after {
+        display: none;
+    }
+
+    .footer .texto-footer ul.terms-footer {
+        width: 100%;
+        justify-content: center;
+        order: 3;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    
+}
+
+@media only screen and (min-width: 525px) and (max-width: 599px) {
+    
+}
+
+@media only screen and (min-width: 425px) and (max-width: 524px) {
+    
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+    
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 319px) {
+    
 }

@@ -53,7 +53,7 @@
     line-height: 30px;
 }
 
-.contact.form .name,
+.contact .form .name,
 .contact .form .email,
 .contact .form .phone,
 .contact .form .message {
@@ -102,7 +102,6 @@
     font-weight: 400;
     line-height: 20px;
     transition: ease 0.5s;
-
 }
 
 .contact .form input::placeholder{
@@ -277,41 +276,259 @@
     .contact {
         padding: 118px 34px 144px 34px;
     }
+    .contact .title-contact {
+        width: 81%;
+        position: relative;
+    }
+    .contact .title-contact h2 {
+        font-size: 62px;
+        line-height: 70px;
+        letter-spacing: -2.8px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 18.1%;
+        height: auto;
+        width: 24px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 52%;
+        left: 53.5%;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+    .contact {
+        padding: 118px 34px 144px 34px;
+    }
+
+    .contact .title-contact h2 {
+        font-size: 62px;
+        line-height: 70px;
+        letter-spacing: -2.8px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 18.1%;
+        height: auto;
+        width: 24px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 52%;
+        left: 53.5%;
+    }
+
+    .contact .form .name,
+    .contact .form .email,
+    .contact .form .phone, 
+    .contact .form .message {
+        width: 100%;
+    }
+
+    .contact .form .terms-submit {
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+    }
+    .contact .form .terms-submit .terms {
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+    .contact .form .terms-submit .submit {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media only screen and (min-width: 920px) and (max-width: 1023px) {
-    
+    .contact .title-contact {
+        width: 91%;
+        position: relative;
+    }
 }
 
 @media only screen and (min-width: 833px) and (max-width: 919px) {
-    
+    .contact .title-contact {
+        width: 91%;
+        position: relative;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 832px) {
-    
+    .contact .title-contact {
+        width: 100%;
+        position: relative;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 20.1%;
+        height: auto;
+        width: 24px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 52%;
+        left: 59.5%;
+    }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+    .contact {
+        padding: 90px 16px 90px 16px;
+    }
+    .contact .title-contact {
+        width: 100%;
+        position: relative;
+    }
+    .contact .form .name,
+    .contact .form .email,
+    .contact .form .phone, 
+    .contact .form .message {
+        width: 100%;
+    }
+    .contact .form .terms-submit {
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+    }
+    .contact .form .terms-submit .terms {
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+    .contact .form .terms-submit .submit {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+}
 
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    .contact {
+        padding: 90px 16px 90px 16px;
+    }
+    .contact .title-contact {
+        width: 100%;
+        position: relative;
+    }
+    .contact .title-contact h2 {
+        font-size: 62px;
+        line-height: 60px;
+        letter-spacing: -1.8px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 20.1%;
+        height: auto;
+        width: 24px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 52%;
+        left: 59.5%;
+    }
 }
 
 @media only screen and (min-width: 525px) and (max-width: 599px) {
-    
+    .contact .title-contact h2 {
+        font-size: 62px;
+        line-height: 60px;
+        letter-spacing: -1.8px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 30.5%;
+        height: auto;
+        width: 18px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 90%;
+        left: 76%;
+        width: 65px;
+    }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 524px) {
-    
+    .contact .title-contact h2 {
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: -1.5px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 30.5%;
+        height: auto;
+        width: 18px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 90%;
+        left: 76%;
+        width: 65px;
+    }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
-    
+    .contact .title-contact h2 {
+        font-size: 44px;
+        line-height: 46px;
+        letter-spacing: -1.5px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 30.5%;
+        height: auto;
+        width: 16px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 90%;
+        left: 76%;
+        width: 52px;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 374px) {
-    
+    .contact .title-contact h2 {
+        font-size: 38px;
+        line-height: 40px;
+        letter-spacing: -2px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 30%;
+        height: auto;
+        width: 14px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 90%;
+        left: 75%;
+        width: 43px;
+    }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 319px) {
-    
+    .contact .title-contact h2 {
+        font-size: 34px;
+        line-height: 36px;
+        letter-spacing: -2px;
+    }
+    .contact .title-contact .flecha-roja {
+        top: 18%;
+        left: 30%;
+        height: auto;
+        width: 14px;
+    }
+    .contact .title-contact .figura-contacto {
+        position: absolute;
+        top: 90%;
+        left: 75%;
+        width: 43px;
+    }
 }
   

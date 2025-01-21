@@ -41,9 +41,20 @@ export const Footer = () => {
         <section className="footer">
           <img src={ logosMadcritter.logoBlue.logo } alt="" />
           <div className="texto-footer">
-            <span>Mad Critter ® 2025   |  <a href="">Meet the team!</a></span>
-            <span>Bogotá, Colombia   |   Orlando, USA   |   Quito, Ecuador</span>
-            <a href="">Términos y Condiciones</a>
+            <ul className="meeting-footer">
+              <li>Mad Critter® 2025</li>
+              <li><a href="">Meet the team!</a></li>
+            </ul>
+
+            <ul className="cities-footer">
+              <li>Bogotá, Colombia</li>
+              <li>Orlando, USA</li>
+              <li>Quito, Ecuador</li>
+            </ul>
+
+            <ul className="terms-footer">
+              <li><a href="">Términos y Condiciones</a></li>
+            </ul>
           </div>
         </section>
     </>

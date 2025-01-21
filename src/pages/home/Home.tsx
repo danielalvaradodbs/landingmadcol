@@ -7,6 +7,7 @@ import { Concept } from './components/concept/Concept';
 import { Contact } from './components/contact/Contact';
 import { Footer } from './components/footer/Footer';
 import { Services } from './components/services/Services';
+import { TermsConditions } from '../terms-conditions/TermsConditions';
 import './home.css';
 
 export const Home = () => {
@@ -14,12 +15,16 @@ export const Home = () => {
   return (
     <>
       {/* <Brandings /> */}
-      {/* <FullPage/> */}
+      {/* <FullPage/>
       <Concept />
       <Services />
-      <Clients />
+      <Clients /> */}
       <Contact />
-      {/* <Footer /> */}
+      
+
+      <TermsConditions/>
+
+      <Footer />
     </>
   )
 }

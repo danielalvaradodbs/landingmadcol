@@ -157,14 +157,18 @@
 }
 
 @media only screen and (min-width: 920px) and (max-width: 1023px) {
+    .services .pin-spacer {
+        max-width: 100%!important;
+        width: 100%!important;
+    }
     .services .first-section {
-        padding: 70px 60px 100px 60px !important;
+        padding: 70px 32px 100px 32px !important;
     }
     .services .second-section {
-        padding: 70px 60px 100px 60px !important;
+        padding: 70px 32px 100px 32px !important;
     }
     .services .third-section {
-        padding: 70px 60px 100px 60px !important;
+        padding: 70px 32px 100px 32px !important;
     }
     .services .header-sections .marca,
     .services .header-sections .identidad,
@@ -263,7 +267,48 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-
+    .services .header-sections {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .services .first-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .second-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .third-section {
+        padding: 70px 22px 100px 22px!important;
+    }
+    .services .header-sections .marca,
+    .services .header-sections .identidad,
+    .services .header-sections .posicionamiento {
+        width: 100%;
+    }
+    h2.reveal {
+        font-size: 44px;
+        letter-spacing: -2.2px;
+        line-height: 44px;
+    }
+    .services .header-sections .posicionamiento h2.reveal {
+        font-size: 36px;
+        letter-spacing: -2px;
+        line-height: 38px;
+    }
+    .services .footer-section {
+        width: 100%;
+    }
+    .services .items ul {
+        padding-left: 15px;
+    }
+    .items ul  li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .services p {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 525px) and (max-width: 599px) {
