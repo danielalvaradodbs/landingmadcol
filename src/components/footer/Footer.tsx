@@ -121,8 +121,13 @@ export const Footer = () => {
             </div>
           </div>
           <div className='container stalk'>
-            <a className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} href="">DRIBBBLE</a>
-            <a className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} href="">BEHANCE</a>
+            <a 
+              className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}
+              href="https://dribbble.com/madcritter1122"target='_blank'>DRIBBBLE</a>
+            <a 
+              className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} 
+              href="https://www.behance.net/madcritter" 
+              target='_blank'>BEHANCE</a>
           </div>
         </div>
 
@@ -141,11 +146,21 @@ export const Footer = () => {
             </div>
           </div>
           <div className='container stalk'>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">LINKEDIN</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">INSTAGRAM</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">FACEBOOK</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">TIKTOK</a>
-            <a className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} href="">STRAVA</a>
+            <a 
+              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+              href="https://www.linkedin.com/company/mad-critter" target='_blank'>LINKEDIN</a>
+            <a 
+              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+              href="https://instagram.com/madcritterco" target='_blank'>INSTAGRAM</a>
+            <a 
+              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+              href="https://facebook.com/Madcritter" target='_blank'>FACEBOOK</a>
+            <a 
+              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+              href="https://www.tiktok.com/@madcritterco" target='_blank'>TIKTOK</a>
+            <a 
+              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+              href="" target='_blank'>STRAVA</a>
           </div>
         </div>
 
@@ -187,7 +202,6 @@ export const Footer = () => {
             <li>
               <div data-animation="to-top" style={{ position: 'relative' }}>
                 <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="/#/terms-conditions">
-                  <label>Términos y Condiciones</label>
                   <label>Términos y Condiciones</label>
                 </a>
               </div>

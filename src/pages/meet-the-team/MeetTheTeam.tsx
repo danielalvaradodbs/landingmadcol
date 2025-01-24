@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import './meet-the-team.css';
 import { BackButtonFigureBlue, BackButtonFigureWhite, logosMadcritter, meetTheTeam, TheTeamImage } from '../../shared';
 import { gsap } from 'gsap';
+import { Button } from '../../components/button/Button';
 
 export const MeetTheTeam = () => {
     const button = useRef(null);
@@ -47,14 +48,31 @@ export const MeetTheTeam = () => {
         };
     }, []);
 
+    const sendToLink = ( link: string ) => {
+        window.location.href = link;
+    }
+
+    const handleMouseEnter = () => {
+        setIsHover(!isHover);
+    };
+    
+    const handleMouseLeave = () => {
+        setIsHover(!isHover);
+    };
+
     return (
         <section className="meet-the-team">
             <div className="button-back">
-                <a ref={button} href='/'>
-                    <img style={{ display: !isHover ? 'none' : 'inline' }} src={BackButtonFigureWhite} alt="" />
-                    <img style={{ display: isHover ? 'none' : 'inline' }} src={BackButtonFigureBlue} alt="" />
-                    Volver
-                </a>
+                <Button
+                    texto='Volver'
+                    backgroundColor='rgba(255, 255, 255, 0.20)'
+                    hoverBorderColor='#FF2951'
+                    hoverBackgroundColor='#FF2951'
+                    urlIcon={ isHover ? BackButtonFigureWhite : BackButtonFigureBlue  }
+                    onClick= { () => sendToLink('/') }
+                    onMouseEnter={ handleMouseEnter }
+                    onMouseLeave={ handleMouseLeave }
+                />
             </div>
             <div className='img-text'>
                 <img className='animate__animated animate__fadeInUp animate__faster' style={{ width: '100%' }} src={logosMadcritter.logoMad.logo} alt={logosMadcritter.logoMad.alt} />

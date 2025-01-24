@@ -14,6 +14,8 @@ export const Contact = () => {
     const sectionRef: any = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
+    const [labelColor, setLabelColor] = useState({ fullName: 'white', email: 'white', phone: 'white', message: 'white' });
+
     const [formSubmitted, setFormSubmitted] = useState(false);
         
     const formValidations = {
@@ -34,6 +36,7 @@ export const Contact = () => {
         fullName, 
         email,
         phone,
+        code= '+57',
         terms,
 
         onInputChange,
@@ -145,12 +148,18 @@ export const Contact = () => {
         };
     }, []);
 
+    const handleFocus = (field: any) => {
+        setLabelColor(prev => ({ ...prev, [field]: '#415970' }));
+    };
 
+    const handleBlur = (field: any) => {
+        setLabelColor(prev => ({ ...prev, [field]: 'white' }));
+    };
 
   return (
     <>
     <div>
-        <section className="contact" ref={ sectionRef }>
+        <section className="contact" ref={ sectionRef } id='contact'>
             <div className="title-contact">
                 <div className="first">
                     <h2 className= { `${isVisible ? 'reveal' : ''}` }>Da el primer paso</h2>
@@ -159,7 +168,7 @@ export const Contact = () => {
                 <div className="second">
                     <h2 className= { `${isVisible ? 'reveal' : ''}` }>para aumentar el </h2>
                 </div>
-                <div className="third">
+                <div className="third" style={{ position: 'relative' }}>
                     <h2 className= { `third ${isVisible ? 'reveal' : ''}` }>valor de tu marca</h2>
                     <img src={ FiguraContacto } alt="" className= { `figura-contacto ${isVisible ? 'reveal' : ''}` } />
                 </div>
@@ -169,37 +178,84 @@ export const Contact = () => {
             <div className="form">
                 <form onSubmit={onSubmitForm}>
                     <div className={`name ${isVisible ? 'reveal' : ''} `}>
-                        <label htmlFor="name" className={ `${fullNameValid && formSubmitted ? 'text-danger' :  " "}` }>Nombre*</label>
-                        <input type="text" id='name' name='fullName' value={ fullName } onChange={ onInputChange } placeholder='Ingresa nombre y apellido' />
+                        <label 
+                            htmlFor="name" 
+                            className={ `${fullNameValid && formSubmitted ? 'text-danger' :  " "}` }
+                            style={{ color: labelColor.fullName }}
+                        >
+                            Nombre*
+                        </label>
+                        <input 
+                            type="text" 
+                            id='name' 
+                            name='fullName' 
+                            value={ fullName } 
+                            onChange={ onInputChange } 
+                            onFocus={() => handleFocus('fullName')}
+                            onBlur={() => handleBlur('fullName')} 
+                            placeholder='Ingresa nombre y apellido' />
                         <span className="p-0 text-danger">
                             {fullNameValid && formSubmitted ? fullNameValid : ""}
                         </span>
                     </div>
                     <div className={`email ${isVisible ? 'reveal' : ''}` }>
-                        <label htmlFor="email" className={ `${emailValid && formSubmitted ? 'text-danger' :  " "}` }>Correo corporativo**</label>
-                        <input type="text" id='email' name='email' value={ email } onChange={ onInputChange } placeholder='Ingresa tu correo corporativo' />
+                        <label 
+                            style={{ color: labelColor.email }} 
+                            htmlFor="email" 
+                            className={ `${emailValid && formSubmitted ? 'text-danger' :  " "}` }>Correo corporativo*</label>
+                        <input 
+                            onFocus={() => handleFocus('email')}
+                            onBlur={() => handleBlur('email')} 
+                             type="text" 
+                             id='email' 
+                             name='email' 
+                             value={ email } onChange={ onInputChange } placeholder='Ingresa tu correo corporativo' />
                         <span className="p-0 text-danger">
                             {emailValid && formSubmitted ? emailValid : ""}
                         </span>
                     </div>
                     <div className={`phone ${isVisible ? 'reveal' : ''}`}>
-                        <label htmlFor="phone" className={ `${phoneValid && formSubmitted ? 'text-danger' :  " "}` }>Teléfono*</label>
+                        <label 
+                            htmlFor="phone" 
+                            className={ `${phoneValid && formSubmitted ? 'text-danger' :  " "}` }
+                            style={{ color: labelColor.phone }}
+                            >Teléfono*</label>
                         <div className="code-input">
-                            <select name="code" id="code">
-                                <option value="+57">CO</option>
-                                <option value="+1">USA</option>
-                                <option value="+593">ECU</option>
-                            </select>
-                            {/* <img src={ Selector } alt="" style={{ position: 'absolute', left: '10%', zIndex: -1 }} /> */}
-                            <input type="number" id='phone' name='phone' value={ phone } onChange={ onInputChange } placeholder='(+57)'></input>
+                            <div className="container" style={{ position: 'relative' }}>
+
+                                <select name="code" id="code" value={ code } onChange={ onInputChange }>
+                                    <option value="+57">CO</option>
+                                    <option value="+1">USA</option>
+                                    <option value="+593">ECU</option>
+                                </select>
+                                <img src={ Selector } alt="" style={{ position: 'absolute', left: '30%', zIndex: -1 }} />
+                                <span style={{ width: '1px', height: '16px', backgroundColor: 'white', margin: 0, marginRight: '11px' }}></span>
+                                <label htmlFor='phone' className='value-code'>({ code })</label>    
+
+                            </div>
+                            <input 
+                                type="number" 
+                                id='phone' 
+                                name='phone' 
+                                value={ phone } 
+                                onChange={ onInputChange }
+                                onFocus={() => handleFocus('phone')}
+                                onBlur={() => handleBlur('phone')} 
+                                placeholder=''></input>
                         </div>
                             <span className="p-0 text-danger">
                                 {phoneValid && formSubmitted ? phoneValid : ""}
                             </span>
                     </div>
                     <div className={`message ${isVisible ? 'reveal' : ''}`} >
-                        <label htmlFor="message">Mensaje (Opcional)</label>
-                        <input type="text" id='message' placeholder='Cuéntanos como podemos ayudarte' />
+                        <label style={{ color: labelColor.message }} htmlFor="message">Mensaje (Opcional)</label>
+                        <input 
+                            onFocus={() => handleFocus('message')}
+                            onBlur={() => handleBlur('message')} 
+                            type="text" 
+                            id='message' 
+                            placeholder='Cuéntanos como podemos ayudarte'
+                        />
                     </div>
                     <div className={`terms-submit ${isVisible ? 'reveal' : ''}`}>
                         <div className="terms">

@@ -15,7 +15,7 @@ export const FullPage = () => {
 
     const { setIsDark } = useDarkMode();
     const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    let [currentIndex, setCurrentIndex] = useState(0);
     const previousIndexRef = useRef(0);
 
     const imagesRef = useRef<{ [key: string]: HTMLImageElement }>({});
@@ -42,7 +42,28 @@ export const FullPage = () => {
 
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
-      }
+    }
+
+    const sendToSectionId = ( id: string ) => {
+
+        // if (window.fullpage_api) {
+        //     window.fullpage_api.setFitToSection(false);
+        // }
+    
+        const section = document.querySelector(id);
+        if (section) {
+            brandings[2].isDark = false;
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        setTimeout(() => {
+            if (window.fullpage_api) {
+                window.fullpage_api.setFitToSection(false);
+                brandings[2].isDark = true;
+
+            }
+        }, 1000);
+    }
     
       const handleMouseEnter = (index: number) => {
         setHoveredPanel(index);
@@ -241,6 +262,7 @@ export const FullPage = () => {
                                             hoverBorderColor='rgb(96 0 18 / 77%)'
                                             hoverBackgroundColor='rgb(96 0 18 / 77%)'
                                             border='none'
+                                            onClick={ () => sendToSectionId('#concept') }
                                         />
                                     {/* <a href="">Scroll down <img src={ ScrollDownIcon } alt="" /></a> */}
                                     </div>
@@ -248,7 +270,8 @@ export const FullPage = () => {
 
                                 <div className="brandings-button">
                                     <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
-                                    <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
+                                    <a 
+                                        onClick={() => sendToSectionId('#concept')}><img src={ ScrollDownIconMobile } alt="" /></a>
                                     </div>
                                 </div>
 

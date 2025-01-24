@@ -49,6 +49,43 @@
 
 .thanks-contact .button-back {
     padding-top: 20px;
+
+}
+
+.button-back {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start
+}
+
+.button-back a {
+    max-width: 95px;
+    display: inline-flex;
+    padding: 15px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    border: 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.20);
+    color: white;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    text-decoration: none;
+}
+
+.button-back a .button__label.hover-label {
+    left: 40% !important;
+}
+
+ .button-back a img {
+    transition: ease-in 0.2s;
+}
+
+.button-back a:hover {
+    border-radius: 5px;
+    background: #FF2951
 }
 
 @media only screen and (min-width: 280px) and (max-width: 675px) {

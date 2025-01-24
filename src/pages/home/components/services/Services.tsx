@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Services = () => {
   useEffect(() => {
-    const sections = gsap.utils.toArray('.service-section');
+    const sections = gsap.utils.toArray<HTMLElement>('.service-section');
     
     sections.forEach((section: any, _index) => {
       const items = section.querySelector('.items');
@@ -16,24 +16,32 @@ export const Services = () => {
       gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: '40%',
-          end: '+=15%',
+          start: 'top top',
+          end: '+=25%',
           pin: true,
           pinSpacing: false,
           scrub: true,
 
+        },
+      });
+
+      const nextSection = sections[_index + 1];
+      if (nextSection) {
+        ScrollTrigger.create({
+          trigger: nextSection,
+          start: 'top 45%',
           onEnter: () => {
-            gsap.to(items, { opacity: 0, duration: 0.5, });
+            gsap.to(items, { opacity: 0, duration: 0.5 });
             gsap.to(textFooter, { opacity: 0, duration: 0.5 });
           },
           onLeaveBack: () => {
             gsap.to(items, { opacity: 1, duration: 0.5 });
             gsap.to(textFooter, { opacity: 1, duration: 0.5 });
           },
-
-        },
-      });
+        });
+      }
     });
+
 
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -88,7 +96,7 @@ export const Services = () => {
   };
 
   return (
-    <div className="services">
+    <div className="services" id='services'>
       <section className="service-section first-section">
         <div className="number">
           <h6>01_</h6>
@@ -232,6 +240,9 @@ export const Services = () => {
           // Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.
           </p>
         </div>
+      </section>
+
+      <section className="service-section four-section">
       </section>
 
     </div>

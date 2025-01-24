@@ -83,7 +83,7 @@
     display: flex;
     width: 1px;
     height: 24px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     margin: 0 13px;
     gap: 13px;
 }
@@ -93,7 +93,7 @@
 }
 
 .header.dark .menu-items span {
-    background: rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.20);
 }
 
 .header .menu-items a {

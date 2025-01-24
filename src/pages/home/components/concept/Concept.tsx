@@ -124,7 +124,7 @@ export const Concept = () => {
   return (
     <>
     <SectionObserver darkMode={ false } >
-      <section className='concept section-concept' style={{ backgroundColor: 'white'}}>
+      <section className='concept section-concept' id='concept' style={{ backgroundColor: 'white'}}>
 
         <div className="human ">
           <div className="text">

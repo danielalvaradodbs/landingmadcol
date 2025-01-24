@@ -48,7 +48,7 @@ export const Clients = () => {
             /> */}
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
-          <div className="slider-brands">
+          <div className={`slider-brands ${ isVisible ? 'animation' : '' }`}>
           { [...clients, ...clients].map((item: any, index: any) => (
                 <div className="slider" key={ index }>
                   <div className="country">
@@ -70,7 +70,7 @@ export const Clients = () => {
             
           ))}
           </div>
-          <div className="slider-brands">
+          <div className={`slider-brands ${ isVisible ? 'animation' : '' }`}>
           { [...clients, ...clients].map((item: any, index: any) => (
                 <div className="slider" key={ index }>
                   <div className="country">

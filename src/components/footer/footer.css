@@ -180,7 +180,7 @@
 } */
 
 .line-loading {
-    height: 2px;
+    height: 1px;
     width: 100%;
     background: transparent;
     overflow: hidden;
@@ -193,7 +193,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: black;
+    background: #101820;
     left: -100%;
     animation: loading 2s linear forwards;
 }
@@ -344,7 +344,6 @@
 @media only screen and (max-width: 1439px) {
 
     .pre-footer .container.text a {
-        color: #101820;
         font-family: 'Safiro';
         font-size: 38px;
         font-style: normal;
