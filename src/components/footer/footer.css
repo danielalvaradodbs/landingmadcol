@@ -81,6 +81,7 @@
     line-height: 64px;
     letter-spacing: -2.4px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .pre-footer .siguenos .container a:hover:nth-child(odd),
