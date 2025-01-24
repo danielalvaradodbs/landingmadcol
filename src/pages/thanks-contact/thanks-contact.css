@@ -1,6 +1,11 @@
 .thanks-contact {
     background-color: #101820;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10%;
+    align-items: flex-start;
 }
 
 .thanks-contact h2 {
@@ -11,4 +16,92 @@
     font-weight: 500;
     line-height: 128px;
     letter-spacing: -6.4px;
+}
+
+.thanks-contact .text-thanks {
+    width: 80%;
+}
+
+.thanks-contact .text-thanks p {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+.thanks-contact .title-thanks {
+    position: relative;
+}
+
+.thanks-contact .title-thanks .flecha {
+    position: absolute;
+    top: 28%;
+    left: 28%;
+}
+
+.thanks-contact .title-thanks .figura {
+    position: absolute;
+    top: 77%;
+    left: 91%;
+}
+
+.thanks-contact .button-back {
+    padding-top: 20px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 675px) {
+    .thanks-contact .title-thanks h2 {
+        font-size: 100px;
+        font-style: normal;
+        line-height: 100px;
+    }
+
+    .thanks-contact .title-thanks .figura,
+    .thanks-contact .title-thanks .flecha {
+        scale: 0.8;
+    }
+
+    .thanks-contact .title-thanks .figura {
+        top: 75%;
+        left: 90%;
+    }
+
+    .thanks-contact .title-thanks .flecha {
+        top: 24%;
+        left: 27%;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 500px) {
+    .thanks-contact .title-thanks h2 {
+        font-size: 70px;
+        font-style: normal;
+        line-height: 70px;
+    }
+
+    .thanks-contact .text-thanks p {
+        color: #FFF;
+        font-family: 'Safiro';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .thanks-contact .title-thanks .figura,
+    .thanks-contact .title-thanks .flecha {
+        scale: 0.6;
+    }
+
+    .thanks-contact .title-thanks .figura {
+        top: 70%;
+        left: 88%;
+    }
+
+    .thanks-contact .title-thanks .flecha {
+        top: 22%;
+        left: 25%;
+    }
 }

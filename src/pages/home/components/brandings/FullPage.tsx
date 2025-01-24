@@ -158,19 +158,19 @@ export const FullPage = () => {
                     }, 600);
                 }}
                 afterLoad={(_anchorLink: any, destination: any, _slideAnchor: any, _slideIndex: any) => {           
-                    const isLastSection = destination.isLast === true;  
-                    const fpOverflow: any = document.querySelectorAll('.fp-overflow');
-                    if( isLastSection ) {
-                        fpOverflow.forEach((element: any) => {
-                            element.style.position = 'fixed';
-                            element.style.zIndex = 1;
-                        });
-                    } else {
-                        fpOverflow.forEach((element: any) => {
-                            element.style.position = 'relative';
-                            element.style.zIndex = 1;
-                        });
-                    }
+                    // const isLastSection = destination.isLast === true;  
+                    // const fpOverflow: any = document.querySelectorAll('.fp-overflow');
+                    // if( isLastSection ) {
+                    //     fpOverflow.forEach((element: any) => {
+                    //         element.style.position = 'fixed';
+                    //         element.style.zIndex = 1;
+                    //     });
+                    // } else {
+                    //     fpOverflow.forEach((element: any) => {
+                    //         element.style.position = 'relative';
+                    //         element.style.zIndex = 1;
+                    //     });
+                    // }
                     // if (index.index === brandings.length - 1) {
                     //     document.body.style.overflowY = 'auto';
 
@@ -197,6 +197,7 @@ export const FullPage = () => {
                                     backgroundPosition: 'center center',
                                     }}
                                     >
+                                        
 
                                     <div className="mask">
                                         <div className="info">
@@ -245,7 +246,7 @@ export const FullPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="brandings-button" style={{ display: 'none' }}>
+                                <div className="brandings-button">
                                     <div className="scroll-down-button-mobile animate__animated animate__fadeInRight">
                                     <a href=""><img src={ ScrollDownIconMobile } alt="" /></a>
                                     </div>

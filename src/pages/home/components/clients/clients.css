@@ -157,6 +157,13 @@
     }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 837px) {
+    .clients {
+        height: 60vh;
+    }
+}
+
+
 @media only screen and (min-width: 280px) and (max-width: 525px) {
     .clients .title-clients {
         margin: 0 0 16px 22px;

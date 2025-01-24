@@ -16,19 +16,21 @@ export const Services = () => {
       gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: 'top top',
+          start: '40%',
           end: '+=15%',
           pin: true,
           pinSpacing: false,
           scrub: true,
+
           onEnter: () => {
-            gsap.to(items, { opacity: 0, duration: 0.5 });
+            gsap.to(items, { opacity: 0, duration: 0.5, });
             gsap.to(textFooter, { opacity: 0, duration: 0.5 });
           },
           onLeaveBack: () => {
             gsap.to(items, { opacity: 1, duration: 0.5 });
             gsap.to(textFooter, { opacity: 1, duration: 0.5 });
           },
+
         },
       });
     });

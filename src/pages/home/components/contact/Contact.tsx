@@ -4,11 +4,13 @@ import { Button } from '../../../../components/button/Button';
 import { FiguraContacto, FlechaButton, FlechaRoja, Selector } from '../../../../shared';
 import './contact.css';
 import { useForm } from './hooks/useForm';
+import { useNavigate } from 'react-router-dom';
 
 const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
 export const Contact = () => {
 
+    const navigate = useNavigate();
     const sectionRef: any = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -55,6 +57,7 @@ export const Contact = () => {
 
     const submitForm = () => {
         console.log('hola Mundo');
+        navigate('/thanks-contact')
     }
 
     useEffect(() => {
@@ -130,8 +133,7 @@ export const Contact = () => {
         );
         
         setIsVisible(!isVisible);
-        if (footer) {
-            console.log(observer.observe(footer));
+        if (footer) {   
             observer.observe(footer);
         }
     

@@ -362,6 +362,25 @@
     align-items: center;
     gap: 13px;
     margin-top: 1px;
+
+  }
+
+  .brandings-button .scroll-down-button-mobile a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 555px) {
+}
+
+@media only screen and (min-width: 280px) and (max-width: 555px) {
+  .brandings .panel .fp-overflow {
+    position: fixed;
+    top: 0;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    padding: 0 16px 60px 16px;
+    justify-content: center;
   }
 }
 

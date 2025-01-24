@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Footer = () => {
 
-    const currentPath = useLocation();
+  const currentPath = useLocation();
   
   const sectionRef = useRef(null);
   
@@ -44,15 +44,6 @@ export const Footer = () => {
     };
   }, []);
 
-  // const showSections = () => {
-  //   const sections = ['escribenos', 'talento', 'stalkeanos', 'siguenos'];
-  //   sections.forEach((section, index) => {
-  //     setTimeout(() => {
-  //       setVisibleSections(prev => [...prev, section]);
-  //     }, index * 500);
-  //   });
-  // };
-
   const showSections = () => {
     const sections = ['escribenos', 'talento', 'stalkeanos', 'siguenos'];
     sections.forEach((section, index) => {
@@ -74,7 +65,7 @@ export const Footer = () => {
 
   return (
     <>
-    { currentPath.pathname !== '/meet-the-team' && (
+    { (currentPath.pathname !== '/meet-the-team' && currentPath.pathname !== '/thanks-contact') && (
       <section className="pre-footer" ref={sectionRef}>
         
         <div className={`escribenos ${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}`}>
@@ -158,7 +149,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Línea de síguenos */}
         <section className="line-section">
           <span className={`${visibleSections.includes('siguenos') ? 'line-loading' : 'hidden'}`}></span>
         </section>
@@ -166,7 +156,7 @@ export const Footer = () => {
       </section>
 
     )}
-    {isFooterVisible && (
+    {isFooterVisible && currentPath.pathname !== '/thanks-contact' && (
 
       <section className={`footer ${isFooterVisible ? 'visible' : ''}`}>
         <div style={{ overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>

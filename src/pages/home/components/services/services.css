@@ -192,6 +192,15 @@
     }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 837px) {
+    .services .first-section,
+    .services .second-section,
+    .services .third-section {
+        /* max-height: 800px !important; */
+        height: 660px !important;
+    }
+}
+
 @media only screen and (min-width: 833px) and (max-width: 919px) {
     .services .first-section {
         padding: 70px 32px 100px 32px!important;
