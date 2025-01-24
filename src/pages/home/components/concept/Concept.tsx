@@ -83,7 +83,6 @@ export const Concept = () => {
         trigger: section,
         start: 'top 90%',
         onEnter: () => {
-          console.log('entrar');
           h1Span.forEach( (span: any) => span.classList.remove('animationText'));
           video.forEach( (video: any) => video.classList.remove('showVideo'));
           h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));
@@ -97,7 +96,6 @@ export const Concept = () => {
           // imgs.forEach( (img: any ) => img.classList.add('animate__fadeInUpBig'));
         },
         onLeaveBack: () => {
-          console.log('salir');
           setIsDark(true);
           h1Span.forEach( (span: any) => span.classList.remove('animationText'));
           video.forEach( (video: any) => video.classList.remove('showVideo'));

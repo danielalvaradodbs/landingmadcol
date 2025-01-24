@@ -62,10 +62,10 @@ export const Footer = () => {
     setVisibleSections([]);
     setIsFooterVisible(false);
   };
-
+  
   return (
     <>
-    { (currentPath.pathname !== '/meet-the-team' && currentPath.pathname !== '/thanks-contact') && (
+    { ( currentPath.pathname !== '/thanks-contact') && (
       <section className="pre-footer" ref={sectionRef}>
         
         <div className={`escribenos ${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}`}>
@@ -79,10 +79,10 @@ export const Footer = () => {
           </div>
           <div className='container text'>
             <div>
-              <a target='_blank' href='mailto:rafajordan@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
+              <a href='mailto:rafajordan@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
             </div>
             <div>
-              <a target='_blank' href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
+              <a href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className='container text'>
-            <a target='_blank' href='mailto:talento@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >talento@madcritter.com</a>
+            <a href='mailto:talento@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >talento@madcritter.com</a>
           </div>
         </div>
 

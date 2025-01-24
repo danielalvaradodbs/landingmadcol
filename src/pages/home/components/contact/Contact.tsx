@@ -4,12 +4,13 @@ import { Button } from '../../../../components/button/Button';
 import { FiguraContacto, FlechaButton, FlechaRoja, Selector } from '../../../../shared';
 import './contact.css';
 import { useForm } from './hooks/useForm';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
 export const Contact = () => {
 
+    const currentPath = useLocation();
     const navigate = useNavigate();
     const sectionRef: any = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -155,6 +156,13 @@ export const Contact = () => {
     const handleBlur = (field: any) => {
         setLabelColor(prev => ({ ...prev, [field]: 'white' }));
     };
+
+    useEffect(() => {
+        const preFooter: any = document.querySelector('.pre-footer');
+        if( currentPath.pathname !== '/meet-the-team' ) {
+            preFooter.style.display = 'block'
+        }
+    }, []);
 
   return (
     <>

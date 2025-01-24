@@ -3,6 +3,7 @@ import './meet-the-team.css';
 import { BackButtonFigureBlue, BackButtonFigureWhite, logosMadcritter, meetTheTeam, TheTeamImage } from '../../shared';
 import { gsap } from 'gsap';
 import { Button } from '../../components/button/Button';
+import { useLocation } from 'react-router-dom';
 
 export const MeetTheTeam = () => {
     const button = useRef(null);
@@ -10,6 +11,8 @@ export const MeetTheTeam = () => {
     const teamRefs = useRef<any>([]);
     const mcRef = useRef<any>();
     const [firstCharge, setFirstCharge] = useState(true);
+
+    const currentPath = useLocation();
 
     useEffect(() => {
         const buttonCurrent: any = button.current;
@@ -59,6 +62,13 @@ export const MeetTheTeam = () => {
     const handleMouseLeave = () => {
         setIsHover(!isHover);
     };
+
+    useEffect(() => {
+        const preFooter: any = document.querySelector('.pre-footer');
+        if( currentPath.pathname === '/meet-the-team' ) {
+            preFooter.style.display = 'none'
+        }
+    }, []);
 
     return (
         <section className="meet-the-team">

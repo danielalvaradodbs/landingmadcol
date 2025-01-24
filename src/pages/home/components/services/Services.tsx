@@ -53,7 +53,7 @@ export const Services = () => {
 
     sections.forEach((section: any) => {
       const items = section.querySelectorAll('.items ul li');
-      const textFooter = section.querySelector('.footer-section p');
+      const textFooter = section.querySelectorAll('.footer-section p');
       const headerTexts = section.querySelectorAll('h6, .header-sections h2');
       const figures = section.querySelectorAll('img')
 
@@ -63,10 +63,11 @@ export const Services = () => {
         start: "top 95%",
         onEnter: () => {
           items.forEach((li: any) => { li.classList.remove('reveal')});
-          textFooter.classList.remove('animation-text');
+          textFooter.forEach((p: any) => { p.classList.remove('animation-text')});
           setTimeout(() => {
             items.forEach((li: any) => { li.classList.add('reveal')});
-            textFooter.classList.add('animation-text');
+            textFooter.forEach((p: any) => { p.classList.add('animation-text')});
+
           }, 50);
           headerTexts.forEach((header: any) => header.classList.add('reveal'));
           figures.forEach((figures: any) => figures.classList.add('animate__fadeInUp'));
@@ -75,7 +76,7 @@ export const Services = () => {
           items.forEach((li: any) => {
             li.classList.remove('reveal');
           });
-          textFooter.classList.remove('animation-text');
+          textFooter.forEach((p: any) => { p.classList.remove('animation-text')});
           headerTexts.forEach((header: any) => header.classList.remove('reveal'));
           figures.forEach((figures: any) => figures.classList.remove('animate__fadeInUp'));
         },
