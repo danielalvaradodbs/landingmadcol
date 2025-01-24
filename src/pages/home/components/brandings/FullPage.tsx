@@ -178,7 +178,7 @@ export const FullPage = () => {
                         setIsDark(brandings[index.index].isDark);
                     }, 600);
                 }}
-                afterLoad={(_anchorLink: any, destination: any, _slideAnchor: any, _slideIndex: any) => {           
+                afterLoad={(_anchorLink: any, _destination: any, _slideAnchor: any, _slideIndex: any) => {           
                     // const isLastSection = destination.isLast === true;  
                     // const fpOverflow: any = document.querySelectorAll('.fp-overflow');
                     // if( isLastSection ) {

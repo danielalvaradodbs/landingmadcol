@@ -179,9 +179,9 @@ export const Header = () => {
                 </div>
 
                 <div className={`socials animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}>
-                  <span><a href="">LINKEDIN</a></span>
-                  <span><a href="">INSTAGRAM</a></span>
-                  <span><a href="">TIKTOK</a></span>
+                  <span><a target='_blank' href="https://www.linkedin.com/company/mad-critter">LINKEDIN</a></span>
+                  <span><a target='_blank' href="https://instagram.com/madcritterco">INSTAGRAM</a></span>
+                  <span><a target='_blank' href="https://www.tiktok.com/@madcritterco">TIKTOK</a></span>
                 </div>
 
               </div>

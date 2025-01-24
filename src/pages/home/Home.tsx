@@ -1,7 +1,6 @@
 
 // import { Brandings } from './components/brandings/Brandings';
 // import { Brandings } from './components/brandings/Brandings';
-import { ThanksContact } from '../thanks-contact/ThanksContact';
 import { FullPage } from './components/brandings/FullPage';
 import { Clients } from './components/clients/Clients';
 import { Concept } from './components/concept/Concept';

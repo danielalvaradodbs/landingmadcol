@@ -1,6 +1,6 @@
 
 import { useEffect, useRef, useState } from 'react';
-import { clients, FiguraClientes } from '../../../../shared';
+import { clients } from '../../../../shared';
 import './clients.css';
 
 export const Clients = () => {
