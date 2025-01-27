@@ -181,6 +181,10 @@
     cursor: pointer;
 }
 
+.contact.contact-hidden .form .phone .code-input select {
+    color: #101820 !important;
+}
+
 /* .contact .form .phone .code-input select#code {
     background-image: url(/src/assets/icons/selector.svg);
     background-repeat: no-repeat;

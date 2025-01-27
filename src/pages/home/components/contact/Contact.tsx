@@ -30,6 +30,7 @@ export const Contact = () => {
         fullName: '',
         email: '',
         phone: '',
+        message: '',
         terms: false
     }
 
@@ -38,6 +39,7 @@ export const Contact = () => {
         email,
         phone,
         code= '+57',
+        message,
         terms,
 
         onInputChange,
@@ -60,8 +62,23 @@ export const Contact = () => {
     }
 
     const submitForm = () => {
-        console.log('hola Mundo');
-        navigate('/thanks-contact')
+        submitGoogle();
+        navigate('/thanks-contact');
+    }
+
+    const submitGoogle = () => {
+        const formEle = document.querySelector("form");
+        const formData = new FormData(formEle!);
+
+        fetch(
+            "https://script.google.com/macros/s/AKfycbxowBLWDOAaEJYPxfcttN7apka6gajnwxFfz3BYEqmIk5FELk6Vhj-FaeJaWBA-MiU21g/exec",
+            {
+                method: 'POST',
+                body: formData
+            }
+        ).then((res) => res.json())
+         .then(() => {})
+         .catch(() => {console.log})
     }
 
     useEffect(() => {
@@ -260,8 +277,11 @@ export const Contact = () => {
                         <input 
                             onFocus={() => handleFocus('message')}
                             onBlur={() => handleBlur('message')} 
-                            type="text" 
-                            id='message' 
+                            type="text"
+                            name='message' 
+                            id='message'
+                            value={ message }
+                            onChange={ onInputChange }
                             placeholder='Cuéntanos como podemos ayudarte'
                         />
                     </div>
