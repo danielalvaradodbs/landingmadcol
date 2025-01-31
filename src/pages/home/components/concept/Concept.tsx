@@ -132,13 +132,30 @@ export const Concept = () => {
             <img className='animate__animated animate__fadeInUp' src={ FiguraAsterisco } alt=""/>
           </div>
           <div className="video animation-video" ref={ contentVideo }>
-            <video className='showVideo' src={ VideoMad } autoPlay={ true } loop muted></video>
+            <video 
+              className='showVideo' 
+              src={ VideoMad } 
+              autoPlay={true}
+              loop 
+              muted
+              controls={false}
+              playsInline
+            ></video>
           </div>
         </div>
 
         <div className="centered">
           <div className="video animation-video" ref={ contentVideo2 } >
-            <video className='showVideo' src={ VideoMad } ref={videoRef} autoPlay={ true } loop muted></video>
+            <video 
+              className='showVideo' 
+              src={ VideoMad } 
+              ref={ videoRef } 
+              autoPlay={true}
+              loop 
+              muted
+              controls={false}
+              playsInline
+            ></video>
           </div>
           <div className="text">
             <h1 className={`cssanimation ${ showText.centered ? 'leFadeInBottom' : ''}`}>
@@ -158,7 +175,15 @@ export const Concept = () => {
             <img className='animate__animated animate__fadeInUp' src={ Flecha } alt="" />
           </div>
           <div className="video-mobile" style={{ display: 'none' }}>
-            <video className='showVideo' src={ VideoMad } autoPlay loop muted></video>
+            <video 
+              className='showVideo' 
+              src={ VideoMad } 
+              autoPlay={true}
+              loop 
+              muted
+              controls={false}
+              playsInline
+            ></video>
           </div>
           <div className="centro">
             <h5 className='animate__animated animate__fadeInUpBig   animate__faster'>// La marca es el todo,</h5>
