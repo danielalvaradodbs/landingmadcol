@@ -174,7 +174,7 @@ export const Header = () => {
               />
               <img 
                 src={ logosMadcritter.logoBlack.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? 'move-logo' : ''}`}
+                className={`${ scrollingDown ? '' : ''}`}
                 style={{ display: currentPath.pathname === '/terms-conditions' || isCentered ? 'inline' : 'none' }}
               />
             </a>
