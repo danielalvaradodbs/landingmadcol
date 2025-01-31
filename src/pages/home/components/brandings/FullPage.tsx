@@ -4,7 +4,6 @@ import { brandings, IconPlus, ScrollDownIcon, ScrollDownIconMobile } from '../..
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
-import { useLocation } from 'react-router-dom';
 // import { Concept } from '../concept/Concept';
 declare global {
     interface Window {
