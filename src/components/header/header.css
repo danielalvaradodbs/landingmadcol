@@ -357,16 +357,17 @@
         opacity: 1;
     }
 }
-
 .move-logo {
+    opacity: 1;
+    transform: none;
+}
+
+.header.dark .move-logo {
     transform: translateX(calc(45vw - 50%));
     opacity: 0;
 }
 
-.header .move-logo {
-    opacity: 1;
-    transform: none;
-}
+
 
 .move-menu {
     transform: translateX(calc(-50vw + 50% + 40px));

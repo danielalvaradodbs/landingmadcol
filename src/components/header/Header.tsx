@@ -172,7 +172,12 @@ export const Header = () => {
             
         </div>
 
-          <div className={`col-6 menu-items ${ isCentered ? 'logo-centered' : ''} ${ currentPath.pathname !== 'terms-conditions' ? 'termsHeader' : '' } animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
+          <div
+            className={`col-6 menu-items ${ isCentered ? 'logo-centered' : ''} ${ currentPath.pathname === '/terms-conditions' ? 'termsHeader' : '' } animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top"
+           
+    // background: rgba(16, 24, 32, 0.30);
+
+          >
           <div className="menu-logo">
               <a href='/' style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8, cursor: 'pointer' }}>
                 <img 
