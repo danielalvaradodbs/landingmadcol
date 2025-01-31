@@ -4,7 +4,7 @@ import Remo from '../assets/images/brands/Remo.svg';
 import Bisolvon from '../assets/images/brands/Bisolvon.svg';
 import Pluxee from '../assets/images/brands/Pluxee.svg';
 import Sanofi from '../assets/images/brands/Sanofi.svg';
-import Sixty from '../assets/images/brands/sixty.svg';
+import Sixty from '../assets/images/brands/3Sixty.svg';
 import Amgen from '../assets/images/brands/Amgen.svg';
 import Abbvie from '../assets/images/brands/abbvie.svg';
 import VaxTrials from '../assets/images/brands/vaxtrials.svg';

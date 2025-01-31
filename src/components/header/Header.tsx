@@ -12,6 +12,7 @@ export const Header = () => {
   const [isCentered, setIsCentered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [blueScreen, setBlueScreen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setBlueScreen(!blueScreen);
@@ -39,10 +40,9 @@ export const Header = () => {
           setIsCentered(false);
         }
       });
-    });
+    }, { threshold: [0.1] });
 
     const conceptSection = document.querySelector('.brandings');
-    // const fullPage = document.querySelector('#fullpage');
 
     if (conceptSection) {
       observer.observe(conceptSection);
@@ -57,6 +57,20 @@ export const Header = () => {
 
   const sendToSectionId = ( id: string ) => {
 
+
+    if( currentPath.pathname === '/terms-conditions' ) {
+      window.location.href = '/#' + id.substring(1);
+      const section = document.querySelector(id);
+      if (section) {
+        brandings[2].isDark = false;
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if( menuOpen ) {
+          toggleMenu();
+        }
+    }
+      return;
+    }
+
     const section = document.querySelector(id);
     if (section) {
         brandings[2].isDark = false;
@@ -64,6 +78,8 @@ export const Header = () => {
         if( menuOpen ) {
           toggleMenu();
         }
+    } else {
+      console.log('no found');
     }
 
     setTimeout(() => {
@@ -73,7 +89,33 @@ export const Header = () => {
 
         }
     }, 1000);
+    
   }
+
+  useEffect(() => {
+    if( currentPath.pathname === '/terms-conditions') {
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+          setScrollingDown(true);
+          setIsCentered(true);
+        } else if (currentScrollY === 0) {
+          setScrollingDown(false);
+          setIsCentered(false);
+        }
+
+        setLastScrollY(currentScrollY);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
+  
       
   
 
@@ -83,18 +125,32 @@ export const Header = () => {
 
         <div className={`header ${isDark ? 'dark' : ''}`}>
         <div 
-          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}>
+          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}
+          style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
+
+        >
             <a href="/" >
               <img 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo' : ''}`}
-                style={{ display: isDark ? 'inline' : 'none' }}
               />
+            
+            </a>
+            
+        </div>
+        <div 
+          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}
+          style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none'}}
+          
+          
+          >
+            <a href="/" >
+             
               <img 
                 src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo' : ''}`}
-                style={{ display: !isDark ? 'inline' : 'none' }}
               />
+            
             </a>
             
         </div>
@@ -105,12 +161,18 @@ export const Header = () => {
               <img 
                 src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo' : ''}`}
+                style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
+              />
+              <img 
+                src={ logosMadcritter.logoBlack.logo } alt={ logosMadcritter.logoMad.alt }
+                className={`${ scrollingDown ? 'move-logo' : ''}`}
+                style={{ display: currentPath.pathname === '/terms-conditions' || isCentered ? 'inline' : 'none' }}
               />
             </a>
             
         </div>
 
-          <div className={`col-6 menu-items ${ isCentered ? 'logo-centered' : ''} animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
+          <div className={`col-6 menu-items ${ isCentered ? 'logo-centered' : ''} ${ currentPath.pathname !== 'terms-conditions' ? 'termsHeader' : '' } animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top">
           <div className="menu-logo">
               <a href='/' style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8, cursor: 'pointer' }}>
                 <img 
@@ -166,6 +228,16 @@ export const Header = () => {
                 </div>
 
               </div> */}
+              <div 
+                className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-mobile`}>
+                  <a href="#" >
+                    <img 
+                      src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                      className={`${ scrollingDown ? 'move-logo' : ''}`}
+                      style={{ display: isCentered ? 'inline' : 'none' }}
+                    />
+               </a>
+              </div>
               <div className={`submenu ${ menuOpen ? 'active' : '' }`}>
                 <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>Menú</span>
                 <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>

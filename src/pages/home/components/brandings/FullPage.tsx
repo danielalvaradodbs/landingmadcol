@@ -4,6 +4,7 @@ import { brandings, IconPlus, ScrollDownIcon, ScrollDownIconMobile } from '../..
 import './fullpage.css';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Button } from '../../../../components/button/Button';
+import { useLocation } from 'react-router-dom';
 // import { Concept } from '../concept/Concept';
 declare global {
     interface Window {
@@ -17,22 +18,22 @@ export const FullPage = () => {
     const [hoveredPanel, setHoveredPanel] = useState<number | null>(null);
     let [currentIndex, setCurrentIndex] = useState(0);
     const previousIndexRef = useRef(0);
+    
 
     const imagesRef = useRef<{ [key: string]: HTMLImageElement }>({});
 
     useEffect(() => {
         preloadImages(brandings.map(item => item.imageHover));
     }, []);
+    
 
     useEffect(() => {
-        // Configurar fullPage.js solo cuando se monta el componente
         if (window.fullpage_api) {
           window.fullpage_api.setAutoScrolling(true);
           window.fullpage_api.setFitToSection(true);
         }
     
         return () => {
-          // Limpiar al desmontar el componente
           if (window.fullpage_api) {
             window.fullpage_api.setAutoScrolling(false);
             window.fullpage_api.setFitToSection(false);
@@ -50,8 +51,10 @@ export const FullPage = () => {
         //     window.fullpage_api.setFitToSection(false);
         // }
     
+        // console.log(id);
         const section = document.querySelector(id);
         if (section) {
+            console.log('hi');
             brandings[2].isDark = false;
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -60,10 +63,20 @@ export const FullPage = () => {
             if (window.fullpage_api) {
                 window.fullpage_api.setFitToSection(false);
                 brandings[2].isDark = true;
-
             }
         }, 1000);
     }
+
+    useEffect(() => {
+        console.log(window.location);
+        if( window.location.hash ) {
+            console.log('hi');
+            setTimeout(() => {
+                sendToSectionId(window.location.hash);
+                
+            }, 1000);
+        }
+    }, []);
     
       const handleMouseEnter = (index: number) => {
         setHoveredPanel(index);

@@ -12,7 +12,7 @@ export const SectionObserver = ({ children, darkMode }: any) => {
           setIsDark(darkMode);
         }
       });
-    }, { threshold: [0.9] });
+    }, { threshold: [1] });
 
     const section = observerRef.current;
 

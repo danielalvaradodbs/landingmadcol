@@ -410,6 +410,8 @@
     }
 }
 
+
+
 @media only screen and (min-width: 375px) and (max-width: 424px) {
     .services .header-sections {
         display: flex;
@@ -542,6 +544,39 @@
     }
     .services p {
         font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+
+    .services p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .items ul li {
+        line-height: 28px;
+    }
+
+    .services .items img {
+        padding-left: 0 !important;
+    }
+
+    .services .first-section,
+    .services .second-section,
+    .services .third-section {
+        height: auto !important;
+        padding-bottom: 82px !important;
+    }
+
+    .services .header-sections .title h2 {
+        color: #FFF;
+        font-family: 'Safiro';
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: -2.2px;
     }
 }
   

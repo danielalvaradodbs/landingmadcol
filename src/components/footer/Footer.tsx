@@ -62,6 +62,11 @@ export const Footer = () => {
     setVisibleSections([]);
     setIsFooterVisible(false);
   };
+
+  const sendToLink = ( link: string ) => {
+    window.location.href = link;
+    window.location.reload();
+  }
   
   return (
     <>
@@ -189,7 +194,7 @@ export const Footer = () => {
 
           <ul className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow meeting-footer' : '' }`}>
             <li>Mad Critter® 2025</li>
-            <li><a href="/#/meet-the-team">Meet the team!</a></li>
+            <li><a onClick={() => sendToLink('#/meet-the-team')}>Meet the team!</a></li>
           </ul>
 
           <ul className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow cities-footer' : '' }`}>
@@ -201,7 +206,7 @@ export const Footer = () => {
           <ul className="terms-footer">
             <li>
               <div data-animation="to-top" style={{ position: 'relative' }}>
-                <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="/#/terms-conditions">
+                <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} onClick={() => sendToLink('#/terms-conditions') }>
                   <label>Términos y Condiciones</label>
                 </a>
               </div>

@@ -9,13 +9,15 @@
 
 .pre-footer .siguenos,
 .pre-footer .stalkeanos,
-.pre-footer .talento,
+.pre-footer .talento {
+    padding: 40px 120px 40px 120px;
+    display: flex;
+    align-items: center;
+}
+
 .pre-footer .escribenos {
     display: flex;
     padding: 75px 120px 61px 120px;
-}
-
-.pre-footer .stalkeanos {
     align-items: center;
 }
 
@@ -158,6 +160,12 @@
     transition: ease 0.5s;
 }
 
+.footer .texto-footer a {
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
 .footer .texto-footer a:hover {
     color: #101820;
     font-family: 'Safiro';
@@ -196,7 +204,7 @@
     width: 100%;
     background: #101820;
     left: -100%;
-    animation: loading 2s linear forwards;
+    animation: loading 3s linear forwards;
 }
 
 @keyframes loading {
@@ -342,14 +350,14 @@
 
 
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 1024px) {
 
     .pre-footer .container.text a {
         font-family: 'Safiro';
         font-size: 38px;
         font-style: normal;
         font-weight: 400;
-        line-height: 64px;
+        line-height: 48px;
         letter-spacing: -2.4px;
         transition: ease 0.5s;
 
@@ -360,7 +368,6 @@
         font-family: 'Safiro';
         font-style: normal;
         font-weight: 400;
-        line-height: 64px;
         letter-spacing: -2.4px;
         transition: ease 0.5s;
 
@@ -504,12 +511,12 @@
     .pre-footer .stalkeanos,
     .pre-footer .talento,
     .pre-footer .escribenos {
-        padding: 80px 34px 80px 70px;
+        padding: 80px 34px 80px 34px;
     }
     
 }
 
-@media only screen and (min-width: 280px) and (max-width: 1023px) { 
+@media only screen and (min-width: 280px) and (max-width: 828px) { 
    
    
     .pre-footer .siguenos,
@@ -531,8 +538,50 @@
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 832px) {
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+
+    .pre-footer .siguenos .container,
+    .pre-footer .stalkeanos .container,
+    .pre-footer .talento .container,
+    .pre-footer .escribenos .container {
+        width: 100%;
+    }
+
+    .pre-footer .siguenos .container,
+    .pre-footer .stalkeanos .container,
+    .pre-footer .talento .container.first-container,
+    .pre-footer .escribenos .container.first-container {
+        width: 50%;
+    }
+
+    .pre-footer .siguenos .container.stalk,
+    .pre-footer .stalkeanos .container.stalk {
+        width: 100%;
+    }
    
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+
+    .pre-footer .siguenos .container,
+    .pre-footer .stalkeanos .container,
+    .pre-footer .talento .container,
+    .pre-footer .escribenos .container {
+        width: 100%;
+    }
+    
+    .pre-footer .siguenos .container,
+    .pre-footer .stalkeanos .container,
+    .pre-footer .talento .container.first-container,
+    .pre-footer .escribenos .container.first-container {
+        width: 50%;
+    }
+
+    .pre-footer .siguenos .container.stalk,
+    .pre-footer .stalkeanos .container.stalk {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 600px) {
@@ -617,6 +666,50 @@
         order: 3;
     }
 }
+
+
+
+@media only screen and (min-width: 280px) and (max-width: 1365px) {
+
+    .pre-footer .siguenos,
+    .pre-footer .stalkeanos,
+    .pre-footer .talento {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+
+    .pre-footer .siguenos,
+    .pre-footer .stalkeanos,
+    .pre-footer .talento {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+    .pre-footer .escribenos {
+        display: flex;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .pre-footer .siguenos div,
+    .pre-footer .stalkeanos div {
+        gap: 0;
+    }
+
+    .pre-footer .container.stalk {
+        padding-top: 19px;
+    }
+
+}
+
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     

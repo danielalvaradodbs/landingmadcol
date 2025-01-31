@@ -93,6 +93,7 @@ export const Contact = () => {
                 }
 
                 const clientHeaders: any = document.querySelector('.clients h2');
+                const sliders: any = document.querySelectorAll('.clients .slider-brands .slider');
                 const clientImg: any = document.querySelectorAll('.clients .slider-brands .brand img');
                 const contactHeaders: any = document.querySelector('.contact h2');
                 clientHeaders.style.color = entry.isIntersecting ? 'white' : '#000000'; 
@@ -100,6 +101,10 @@ export const Contact = () => {
 
                 clientImg.forEach((img: any) => {
                     img.style.filter = entry.isIntersecting ? 'invert()' : 'none';
+                });
+
+                sliders.forEach((slider: any) => {
+                    slider.style.borderColor = entry.isIntersecting ? 'rgba(255, 255, 255, 0.49)' : 'rgba(16, 24, 32, 0.10)'
                 });
 
             },
@@ -299,6 +304,8 @@ export const Contact = () => {
                                 hoverBackgroundColor={'#2A00FF'}
                                 border={ '#FF2951' }
                                 hoverBorderColor={ '#2A00FF' }
+                                height={'48px'}
+                                width={'127px'}
                             />
                         </div>
 

@@ -7,11 +7,16 @@ export const Clients = () => {
 
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [animation, setAnimation] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
+        setTimeout(() => {
+          setAnimation(entry.isIntersecting);
+
+        }, 1000);
       },
       {
         root: null,
@@ -21,6 +26,7 @@ export const Clients = () => {
     );
     
     setIsVisible(!isVisible);
+    setAnimation(!animation);
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
@@ -48,7 +54,7 @@ export const Clients = () => {
             /> */}
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
-          <div className={`slider-brands ${ isVisible ? 'animation' : '' }`}>
+          <div className={`slider-brands ${ animation ? 'animation' : '' }`}>
           { [...clients, ...clients].map((item: any, index: any) => (
                 <div className="slider" key={ index }>
                   <div className="country">
@@ -58,7 +64,6 @@ export const Clients = () => {
                     <img 
                       src={ item.img } 
                       alt={ item.altImg } 
-                      width={ 100 } 
                       style={{ aspectRatio: 3/2, objectFit: 'contain' }} 
                       />
                   </div>
@@ -70,7 +75,7 @@ export const Clients = () => {
             
           ))}
           </div>
-          <div className={`slider-brands ${ isVisible ? 'animation' : '' }`}>
+          <div className={`slider-brands ${ animation ? 'animation' : '' }`}>
           { [...clients, ...clients].map((item: any, index: any) => (
                 <div className="slider" key={ index }>
                   <div className="country">
@@ -79,8 +84,7 @@ export const Clients = () => {
                   <div className="brand">
                     <img 
                       src={ item.img } 
-                      alt={ item.altImg } 
-                      width={ 100 } 
+                      alt={ item.altImg }
                       style={{ aspectRatio: 3/2, objectFit: 'contain' }} 
                       />
                   </div>

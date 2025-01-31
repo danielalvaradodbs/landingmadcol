@@ -3,20 +3,18 @@
     background: #101820;
     display: flex;
     justify-items: center;
-    padding: 200px 0 135px;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
 
-    padding: 0 15px 135px;
+    padding: 153px 15px 135px;
 }
 
 .meet-the-team .button-back {
-    /* position: absolute;
+    position: fixed;
     z-index: 6;
-    top: 2%;
-    right: 2%; */
+    top: 0%;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -72,9 +70,13 @@
 .meet-the-team .conoce {
     text-align: center;
     padding: 23px 0 41px 0;
-    opacity: 0; /* Oculto por defecto */
-    transform: translateY(50px); /* Desplazado hacia abajo por defecto */
-    transition: opacity 0.5s ease-in-out; /* Transición suave */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.meet-the-team span.conoce-the-team {
+    padding-bottom: 24px;
 }
 
 .meet-the-team span.conoce-the-team,

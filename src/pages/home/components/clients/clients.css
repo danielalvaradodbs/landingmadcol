@@ -61,6 +61,11 @@
     border-radius: 10px;
     border: 1px solid rgba(16, 24, 32, 0.10);
     flex: 0 0 auto;
+    width: 210px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .clients .slider-brands .slider .country,
@@ -73,7 +78,8 @@
 }
 
 .clients .slider-brands .slider .brand {
-    padding: 20px 55px 20px 55px;
+    padding: 33px 55px 34px 55px;
+    text-align: center;
 }
 
 .clients .slider-brands .slider span {
@@ -179,5 +185,12 @@
         right: -15px;
         top: 20px;
         width: 28px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+
+    .clients .title-clients {
+        margin-bottom: 32px;
     }
 }

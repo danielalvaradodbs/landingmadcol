@@ -384,8 +384,8 @@ button:disabled {
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
   h1 {
-      font-size: 68px;
-      line-height: 68px;
+      font-size: 64px;
+      line-height: 70px;
   }
 }
 
@@ -409,5 +409,9 @@ button:disabled {
   }
   .desktop {
     display: none;
+  }
+
+  h6 {
+    font-size: 18px;
   }
 }

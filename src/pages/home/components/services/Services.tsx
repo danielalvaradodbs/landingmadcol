@@ -10,37 +10,40 @@ export const Services = () => {
   useEffect(() => {
     const sections = gsap.utils.toArray<HTMLElement>('.service-section');
     
-    sections.forEach((section: any, _index) => {
-      const items = section.querySelector('.items');
-      const textFooter = section.querySelector('.footer-section');
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: '+=25%',
-          pin: true,
-          pinSpacing: false,
-          scrub: true,
-
-        },
-      });
-
-      const nextSection = sections[_index + 1];
-      if (nextSection) {
-        ScrollTrigger.create({
-          trigger: nextSection,
-          start: 'top 45%',
-          onEnter: () => {
-            gsap.to(items, { opacity: 0, duration: 0.5 });
-            gsap.to(textFooter, { opacity: 0, duration: 0.5 });
-          },
-          onLeaveBack: () => {
-            gsap.to(items, { opacity: 1, duration: 0.5 });
-            gsap.to(textFooter, { opacity: 1, duration: 0.5 });
+    console.log(window.innerWidth);
+    if( window.innerWidth > 768 ) {
+      sections.forEach((section: any, _index) => {
+        const items = section.querySelector('.items');
+        const textFooter = section.querySelector('.footer-section');
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: '+=25%',
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+  
           },
         });
-      }
-    });
+  
+        const nextSection = sections[_index + 1];
+        if (nextSection) {
+          ScrollTrigger.create({
+            trigger: nextSection,
+            start: 'top 45%',
+            onEnter: () => {
+              gsap.to(items, { opacity: 0, duration: 0.5 });
+              gsap.to(textFooter, { opacity: 0, duration: 0.5 });
+            },
+            onLeaveBack: () => {
+              gsap.to(items, { opacity: 1, duration: 0.5 });
+              gsap.to(textFooter, { opacity: 1, duration: 0.5 });
+            },
+          });
+        }
+      });
+    }
 
 
     return () => {
@@ -51,6 +54,7 @@ export const Services = () => {
   useEffect(() => {
     const sections = gsap.utils.toArray('.service-section');
 
+    
     sections.forEach((section: any) => {
       const items = section.querySelectorAll('.items ul li');
       const textFooter = section.querySelectorAll('.footer-section p');
@@ -82,6 +86,7 @@ export const Services = () => {
         },
       });
     });
+
 
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
