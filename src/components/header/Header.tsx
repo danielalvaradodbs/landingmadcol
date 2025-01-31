@@ -64,9 +64,9 @@ export const Header = () => {
       if (section) {
         brandings[2].isDark = false;
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        if( menuOpen ) {
-          toggleMenu();
-        }
+    }
+    if( menuOpen ) {
+      toggleMenu();
     }
       return;
     }
