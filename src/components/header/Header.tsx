@@ -64,6 +64,7 @@ export const Header = () => {
       if (section) {
         brandings[2].isDark = false;
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
     }
     if( menuOpen ) {
       toggleMenu();
@@ -90,6 +91,14 @@ export const Header = () => {
         }
     }, 1000);
     
+  }
+
+  const sendToLink = (link: string) => {
+    console.log(link);
+    window.location.href = link;
+    setTimeout(() => {
+      window.location.reload();
+    }, 200);
   }
 
   useEffect(() => {
@@ -157,7 +166,7 @@ export const Header = () => {
 
         <div 
           className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-mobile`}>
-            <a href="#" >
+            <a onClick={() => sendToLink('/') } style={{ cursor: 'pointer' }}>
               <img 
                 src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo' : ''}`}
@@ -235,11 +244,9 @@ export const Header = () => {
               </div> */}
               <div 
                 className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-mobile`}>
-                  <a href="#" >
+                  <a onClick={ () => sendToLink('/') } >
                     <img 
                       src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                      className={`${ scrollingDown ? 'move-logo' : ''}`}
-                      style={{ display: isCentered ? 'inline' : 'none' }}
                     />
                </a>
               </div>

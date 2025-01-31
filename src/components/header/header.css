@@ -79,6 +79,7 @@
     font-weight: 500;
     line-height: normal;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .header .menu-items.logo-centered a {
@@ -252,6 +253,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 }
 
 .header .menu-items-mobile .submenu .socials {
