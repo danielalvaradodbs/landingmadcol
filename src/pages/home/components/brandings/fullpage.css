@@ -41,7 +41,12 @@
     width: 100% !important; 
     /* height: 100vh; */
   }
-  
+
+  .brandings .panel {
+    height: 100% !important;
+    width: 100% !important;
+  }
+ 
   .brandings .panel .fp-overflow {
     width: 100%;
     height: 100%;
@@ -387,3 +392,12 @@
   }
 }
 
+@media only screen and (max-width: 555px) and (-webkit-min-device-pixel-ratio: 3) {
+  .panel {
+      background-attachment: scroll;
+  }
+
+  .brandings {
+    height: 288vh;
+  }
+}

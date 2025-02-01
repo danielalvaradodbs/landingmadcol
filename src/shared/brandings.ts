@@ -1,13 +1,17 @@
-import RemoLab from '../assets/images/brandings/Remo1.avif';
+import RemoLab from '../assets/images/brandings/RemoLab.jpg';
+import RemoLabMobile from '../assets/images/brandings/RemoLab Mobile.jpg';
 import RemoLabHover from '../assets/images/brandings/Remo2.avif';
 import VaxTrials from '../assets/images/brandings/VaxTrials1.avif';
+import VaxTrialsMobile from '../assets/images/brandings/VaxTrialsMobile.jpg';
 import VaxTrialsHover from '../assets/images/brandings/VaxTrials2.avif';
 import HeroMotoCorp from '../assets/images/brandings/HeroMotoCorp1.avif';
+import HeroMotoCorpMobile from '../assets/images/brandings/HeroMobile.jpg';
 import HeroMotoCorpHover from '../assets/images/brandings/HeroMotoCorp2.avif';
 
 export const brandings = [
     {
         image: RemoLab,
+        imageMobile: RemoLabMobile,
         altImage: 'RemoLab',
         info: 'IDENTIDAD DE MARCA',
         title: 'Remó Lab',
@@ -18,6 +22,7 @@ export const brandings = [
     },
     {
         image: VaxTrials,
+        imageMobile: VaxTrialsMobile,
         altImage: 'Vax TRIALS',
         info: 'IDENTIDAD DE MARCA',
         title: 'Vax TRIALS',
@@ -28,6 +33,7 @@ export const brandings = [
     },
     {
         image: HeroMotoCorp,
+        imageMobile: HeroMotoCorpMobile,
         altImage: 'VaxTrials',
         info: 'POSICIONAMIENTO DE MARCA',
         title: 'Hero Motocorp',

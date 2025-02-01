@@ -222,7 +222,7 @@ export const FullPage = () => {
                             <section className="brandings">
                                 { brandings.map((item: any, index: any) => (
                                 <section className="panel section" key={ index } style={{ 
-                                    backgroundImage: hoveredPanel === index && item.imageHover ? `url(${ item.imageHover })` : `url(${ item.image })`,
+                                    backgroundImage: (hoveredPanel === index && item.imageHover) ? `url(${ item.imageHover })` : `url(${ item.image })`,
                                     backgroundColor: '#fff',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundSize: 'cover',
@@ -230,8 +230,6 @@ export const FullPage = () => {
                                     backgroundPosition: 'center center',
                                     }}
                                     >
-                                        
-
                                     <div className="mask">
                                         <div className="info">
                                             <div className="mask">
