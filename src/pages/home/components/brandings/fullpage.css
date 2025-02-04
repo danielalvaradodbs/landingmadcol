@@ -359,8 +359,8 @@
   .brandings-button .scroll-down-button-mobile {
     display: inline-flex;
     position: fixed;
-    top: 85%;
-    right: 20%;
+    top: 93%;
+    left: 45%;
     cursor: pointer;
     justify-content: center;
     padding: 10px 15px;
@@ -387,7 +387,7 @@
     top: 0;
     /* left: 50%; */
     /* transform: translate(-50%, -50%); */
-    padding: 0 16px 90px 16px;
+    padding: 0 16px 120px 16px;
     justify-content: center;
   }
 }
@@ -398,6 +398,16 @@
   }
 
   .brandings {
-    height: 300vh;
+    height: 288vh;
+  }
+
+  .brandings .panel .fp-overflow {
+    padding: 0 16px 165px 16px;
+  }
+}
+
+@media only screen and (max-width: 555px) and (-webkit-min-device-pixel-ratio: 4) {
+  .brandings {
+    height: 295vh;
   }
 }

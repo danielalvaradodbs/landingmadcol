@@ -53,7 +53,6 @@ export const FullPage = () => {
         // console.log(id);
         const section = document.querySelector(id);
         if (section) {
-            console.log('hi');
             brandings[2].isDark = false;
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -63,7 +62,7 @@ export const FullPage = () => {
                 window.fullpage_api.setFitToSection(false);
                 brandings[2].isDark = true;
             }
-        }, 1000);
+        }, 0);
     }
 
     useEffect(() => {
