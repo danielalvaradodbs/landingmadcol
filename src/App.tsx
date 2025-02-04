@@ -12,7 +12,7 @@ function App() {
   
    
       
-    window.addEventListener("popstate", function (event) {
+    window.addEventListener("popstate", function (_event) {
       window.location.reload();
     });
       
