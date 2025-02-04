@@ -102,6 +102,7 @@ export const Header = () => {
   }
 
   useEffect(() => {
+    console.log(currentPath);
     if( currentPath.pathname === '/terms-conditions') {
       const handleScroll = () => {
         const currentScrollY = window.scrollY;
@@ -141,7 +142,7 @@ export const Header = () => {
             <a href="/" >
               <img 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? 'move-logo' : ''}`}
+                className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
               />
             
             </a>

@@ -89,6 +89,10 @@
     transition: ease 0.2s;
 }
 
+.contact .form .terms-submit .submit label {
+    transition: 0s;
+}
+
 .contact .form .name,
 .contact .form .name,
 .contact .form .email,
@@ -144,6 +148,7 @@
 
 .contact .form .terms-submit .terms label a {
     color: #7595B6;
+    cursor: pointer;
 }
 
 .contact .form input::placeholder{
@@ -559,9 +564,9 @@
     }
     .contact .title-contact .figura-contacto {
         position: absolute;
-        top: 55%;
-        left: 76%;
-        width: 52px;
+        top: 65%;
+        left: 78%;
+        width: 42px;
 
     }
 }
@@ -605,8 +610,10 @@
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 767px) {
-   
+@media only screen and (min-width: 280px) and (max-width: 500px) {
+   .contact {
+    padding-top: 0;
+   }
 
 }
 

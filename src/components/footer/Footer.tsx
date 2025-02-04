@@ -176,7 +176,7 @@ export const Footer = () => {
       </section>
 
     )}
-    {isFooterVisible && currentPath.pathname !== '/thanks-contact' && (
+    {isFooterVisible && currentPath.pathname !== '/thanks-contact' && currentPath.pathname !== '/meet-the-team' && (
 
       <section className={`footer ${isFooterVisible ? 'visible' : ''}`}>
         <div style={{ overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>

@@ -363,6 +363,10 @@
     transform: none;
 }
 
+.isCenterMenu {
+    opacity: 0;
+}
+
 .header.dark .move-logo {
     transform: translateX(calc(45vw - 50%));
     opacity: 0;

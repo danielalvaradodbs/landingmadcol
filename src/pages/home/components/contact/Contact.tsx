@@ -81,6 +81,11 @@ export const Contact = () => {
          .catch(() => {console.log})
     }
 
+    const sendToLink = ( link: string ) => {
+        window.location.href = link;
+        window.location.reload();
+      }
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -95,9 +100,11 @@ export const Contact = () => {
                 const clientHeaders: any = document.querySelector('.clients h2');
                 const sliders: any = document.querySelectorAll('.clients .slider-brands .slider');
                 const clientImg: any = document.querySelectorAll('.clients .slider-brands .brand img');
-                const contactHeaders: any = document.querySelector('.contact h2');
+                const contactHeaders: any = document.querySelectorAll('.contact h2');
                 clientHeaders.style.color = entry.isIntersecting ? 'white' : '#000000'; 
-                contactHeaders.style.color = entry.isIntersecting ? 'white' : '#000000';
+                contactHeaders.forEach((h2: any) => {
+                    h2.style.color = entry.isIntersecting ? 'white' : '#000000';
+                });
 
                 clientImg.forEach((img: any) => {
                     img.style.filter = entry.isIntersecting ? 'invert()' : 'none';
@@ -293,7 +300,7 @@ export const Contact = () => {
                     <div className={`terms-submit ${isVisible ? 'reveal' : ''}`}>
                         <div className="terms">
                             <input type="checkbox" id='terms' name='terms' checked={ terms } onChange={ onInputChange } />
-                            <label htmlFor="terms">Al enviar los datos proporcionados confirmo que he leído y aceptado los <a href="">términos legales</a> de este sitio web.</label>
+                            <label htmlFor="terms">Al enviar los datos proporcionados confirmo que he leído y aceptado los <a onClick={() => sendToLink('#/terms-conditions')}>términos legales</a> de este sitio web.</label>
                         </div>
                            
                         <div className="submit">
