@@ -71,7 +71,7 @@ export const Contact = () => {
         const formData = new FormData(formEle!);
 
         fetch(
-            "https://script.google.com/macros/s/AKfycbxowBLWDOAaEJYPxfcttN7apka6gajnwxFfz3BYEqmIk5FELk6Vhj-FaeJaWBA-MiU21g/exec",
+            "https://script.google.com/macros/s/AKfycbwFFONZ2YXvSdjIrzTXlTS2bHD7ZLowYvoxoJf88BCdF6Oh_nDTkxB_alHGUbWweX_vXg/exec",
             {
                 method: 'POST',
                 body: formData
