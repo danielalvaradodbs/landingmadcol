@@ -62,7 +62,7 @@ export const FullPage = () => {
                 window.fullpage_api.setFitToSection(false);
                 brandings[2].isDark = true;
             }
-        }, 0);
+        }, 1000);
     }
 
     useEffect(() => {
