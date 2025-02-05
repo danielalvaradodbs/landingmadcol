@@ -395,6 +395,12 @@
 /* ----------- iPad y Iphone ----------- */
 
 /* Portrait and Landscape */
+@media only screen and (min-device-width: 555px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .panel {
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
 
     .panel {
@@ -405,8 +411,11 @@
       height: 288vh;
     }
 
+    
     .brandings .panel .fp-overflow {
       padding: 0 16px 165px 16px;
+      position: fixed;
+
     }
 
 }
@@ -422,6 +431,7 @@
 
   .brandings .panel .fp-overflow {
     padding: 0 16px 165px 16px;
+    position: fixed;
   }
 }
 

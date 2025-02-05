@@ -139,14 +139,10 @@ export const Header = () => {
           style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
 
         >
-            <a href="/"  className='row-reverse-tablet'>
+            <a href="/" >
               <img 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
-              />
-              <img 
-                src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ !scrollingDown ? 'move-logo isCenterMenu' : ''} `}
               />
             
             </a>
