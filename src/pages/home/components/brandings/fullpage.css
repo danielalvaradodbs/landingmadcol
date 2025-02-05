@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 40px 45px 40px;
+    padding: 0 40px 40px 40px;
   }
 
   .brandings .section-concept .fp-overflow {
@@ -146,7 +146,7 @@
   .scroll-down-button {
     position: fixed;
     top: 92%;
-    right: 2%;
+    right: 4%;
     cursor: pointer;
     display: inline-flex;
     /* padding: 12px; */
@@ -390,6 +390,25 @@
     padding: 0 16px 120px 16px;
     justify-content: center;
   }
+}
+
+/* ----------- iPad y Iphone ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .panel {
+      background-attachment: scroll;
+    }
+
+    .brandings {
+      height: 288vh;
+    }
+
+    .brandings .panel .fp-overflow {
+      padding: 0 16px 165px 16px;
+    }
+
 }
 
 @media only screen and (max-width: 555px) and (-webkit-min-device-pixel-ratio: 3) {

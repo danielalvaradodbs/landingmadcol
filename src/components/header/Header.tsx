@@ -139,10 +139,14 @@ export const Header = () => {
           style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
 
         >
-            <a href="/" >
+            <a href="/"  className='row-reverse-tablet'>
               <img 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
+              />
+              <img 
+                src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
+                className={`${ !scrollingDown ? 'move-logo isCenterMenu' : ''} `}
               />
             
             </a>
@@ -253,7 +257,7 @@ export const Header = () => {
               </div>
               <div className={`submenu ${ menuOpen ? 'active' : '' }`}>
                 <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>Menú</span>
-                <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
+                <span className={`line-span animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
                 <div className="items">
                   <ul>
                     <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#services')}>Servicios</a></li>

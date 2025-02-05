@@ -263,8 +263,8 @@ export const FullPage = () => {
                                     <div className="brandings-button">
                                     <div className="scroll-down-button animate__animated animate__fadeInRight">
                                         <Button
-                                            width='auto'
-                                            height='auto'
+                                            width='107px'
+                                            height='36px'
                                             texto='Scroll down'
                                             urlIcon={ ScrollDownIcon }
                                             backgroundColor='rgba(117, 149, 182, 0.40)'

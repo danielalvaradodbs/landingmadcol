@@ -76,7 +76,7 @@
 }
 
 .meet-the-team span.conoce-the-team {
-    padding-bottom: 24px;
+    padding-bottom: 30px;
 }
 
 .meet-the-team span.conoce-the-team,
@@ -178,3 +178,53 @@
         padding-bottom: 35px;
     }
 }
+
+@media only screen and (min-width: 555px) and (max-width: 899px) {
+
+    .meet-the-team {
+        padding-top: 120px;
+    }
+
+    .meet-the-team .button-back {
+        padding-top: 24px;
+    }
+
+    .meet-the-team .the-team-image {
+        padding: 0 130px 24px;
+    }
+
+    .meet-the-team span.conoce-the-team,
+    .meet-the-team span {
+        font-size: 16px;
+    }
+
+    .meet-the-team .conoce .name h1 {
+        color: #FFF;
+        text-align: center;
+        font-family: "Golsuka Kadila";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96px;
+    }
+
+    .meet-the-team .conoce .span {
+        color: #ACB6C0;
+        text-align: center;
+        font-family: 'Safiro';
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    .meet-the-team .cargo {
+        margin: -24px;
+    }
+
+    .meet-the-team .conoce {
+        padding-bottom: 38px;
+        padding-top: 0;
+    }
+}
+

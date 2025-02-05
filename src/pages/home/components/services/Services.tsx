@@ -11,7 +11,7 @@ export const Services = () => {
     const sections = gsap.utils.toArray<HTMLElement>('.service-section');
     
     console.log(window.innerWidth);
-    if( window.innerWidth > 768 ) {
+    if( window.innerWidth > 899 ) {
       sections.forEach((section: any, _index) => {
         const items = section.querySelector('.items');
         const textFooter = section.querySelector('.footer-section');
