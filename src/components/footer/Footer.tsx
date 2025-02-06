@@ -170,7 +170,7 @@ export const Footer = () => {
               href="https://www.tiktok.com/@madcritterco" target='_blank'>TIKTOK</a>
             <a 
               className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
-              href="" target='_blank'>STRAVA</a>
+              href="https://www.strava.com/clubs/madcritter" target='_blank'>STRAVA</a>
           </div>
         </div>
 
