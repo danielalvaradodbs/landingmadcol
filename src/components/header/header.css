@@ -371,10 +371,6 @@
 
 @media only screen and (min-width: 555px) and (max-width: 899px) {
 
-    .header .logo-desktop {
-        width: 14%;
-    }
-
     .header .menu-items-mobile .submenu .socials {
         justify-content: flex-start;
         gap: 67px;
