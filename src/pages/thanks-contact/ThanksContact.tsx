@@ -12,10 +12,12 @@ export const ThanksContact = () => {
   useEffect(() => {
     const buttonCurrent: any = button.current;
 
-        if (buttonCurrent) {
-            buttonCurrent.addEventListener('mouseover', () => setIsHover(true));
-            buttonCurrent.addEventListener('mouseout', () => setIsHover(false));
-        }
+    if (buttonCurrent) {
+        buttonCurrent.addEventListener('mouseover', () => setIsHover(true));
+        buttonCurrent.addEventListener('mouseout', () => setIsHover(false));
+    }
+
+    window.scrollTo(0, 0);
   }, []);
 
   const sendToLink = ( link: string ) => {

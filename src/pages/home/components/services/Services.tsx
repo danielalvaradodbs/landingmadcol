@@ -10,7 +10,6 @@ export const Services = () => {
   useEffect(() => {
     const sections = gsap.utils.toArray<HTMLElement>('.service-section');
     
-    console.log(window.innerWidth);
     if( window.innerWidth > 899 ) {
       sections.forEach((section: any, _index) => {
         const items = section.querySelector('.items');

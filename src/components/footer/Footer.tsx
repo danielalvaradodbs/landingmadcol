@@ -4,7 +4,7 @@ import './footer.css';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { logosMadcritter } from '../../shared';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -64,8 +64,13 @@ export const Footer = () => {
   };
 
   const sendToLink = ( link: string ) => {
+
+    console.log(window.location.pathname);
+    if(window.location.pathname === '/') {
+      window.scrollTo(0,0);
+    }
     window.location.href = link;
-    window.location.reload();
+    // window.location.reload();
   }
   
   return (
@@ -206,9 +211,9 @@ export const Footer = () => {
           <ul className="terms-footer">
             <li>
               <div data-animation="to-top" style={{ position: 'relative' }}>
-                <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} onClick={() => sendToLink('#/terms-conditions') }>
+                <Link className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} to='/terms-conditions' target='_blank' >
                   <label>Términos y Condiciones</label>
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

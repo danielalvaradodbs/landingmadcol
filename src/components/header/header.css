@@ -281,6 +281,12 @@
     display: none;
 }
 
+.header .logo-mobile {
+    padding: 10px 5px 10px 8px;
+    border-radius: 10px;
+    background-color: rgba(16, 24, 32, 0.30);
+}
+
 .header .menu-items-mobile .submenu span,
 .header .menu-items-mobile .submenu .socials a {
     color:#7595B6;
@@ -305,6 +311,14 @@
 .header .menu-toggle.active .bar-3 {
     transform: translateY(-6.7px) rotate(-45deg);
 
+}
+
+.header .img-tablet {
+    display: inline;
+}
+
+.header .no-visible {
+    display: none;
 }
 
 .blue-screen {
@@ -356,6 +370,11 @@
 }
 
 @media only screen and (min-width: 555px) and (max-width: 899px) {
+
+    .header .logo-desktop {
+        width: 14%;
+    }
+
     .header .menu-items-mobile .submenu .socials {
         justify-content: flex-start;
         gap: 67px;
@@ -392,6 +411,7 @@
         display: none;
     }
 }
+
 
 @keyframes slideDown {
     from {

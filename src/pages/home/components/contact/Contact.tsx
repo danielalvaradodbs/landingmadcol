@@ -300,7 +300,7 @@ export const Contact = () => {
                     <div className={`terms-submit ${isVisible ? 'reveal' : ''}`}>
                         <div className="terms">
                             <input type="checkbox" id='terms' name='terms' checked={ terms } onChange={ onInputChange } />
-                            <label htmlFor="terms">Al enviar los datos proporcionados confirmo que he leído y aceptado los <a onClick={() => sendToLink('#/terms-conditions')}>términos legales</a> de este sitio web.</label>
+                            <label htmlFor="terms">Al enviar los datos proporcionados confirmo que he leído y aceptado los <a href='#/terms-conditions' target='_blank'>términos legales</a> de este sitio web.</label>
                         </div>
                            
                         <div className="submit">

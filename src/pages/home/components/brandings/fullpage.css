@@ -159,6 +159,10 @@
     /* backdrop-filter: blur(10px); */
     
   }
+
+  .scroll-down-button button img {
+    position: absolute;
+  }
   
   .scroll-down-button-mobile:hover,
   .scroll-down-button:hover {

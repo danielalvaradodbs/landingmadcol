@@ -26,19 +26,19 @@ export const FullPage = () => {
     }, []);
     
 
-    useEffect(() => {
-        if (window.fullpage_api) {
-          window.fullpage_api.setAutoScrolling(true);
-          window.fullpage_api.setFitToSection(true);
-        }
+    // useEffect(() => {
+    //     if (window.fullpage_api) {
+    //       window.fullpage_api.setAutoScrolling(true);
+    //       window.fullpage_api.setFitToSection(true);
+    //     }
     
-        return () => {
-          if (window.fullpage_api) {
-            window.fullpage_api.setAutoScrolling(false);
-            window.fullpage_api.setFitToSection(false);
-          }
-        };
-      }, []);
+    //     return () => {
+    //       if (window.fullpage_api) {
+    //         window.fullpage_api.setAutoScrolling(false);
+    //         window.fullpage_api.setFitToSection(false);
+    //       }
+    //     };
+    //   }, []);
 
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
@@ -66,9 +66,7 @@ export const FullPage = () => {
     }
 
     useEffect(() => {
-        console.log(window.location);
         if( window.location.hash ) {
-            console.log('hi');
             setTimeout(() => {
                 sendToSectionId(window.location.hash);
                 
@@ -263,13 +261,13 @@ export const FullPage = () => {
                                     <div className="brandings-button">
                                     <div className="scroll-down-button animate__animated animate__fadeInRight">
                                         <Button
-                                            width='107px'
+                                            width='50px'
                                             height='36px'
-                                            texto='Scroll down'
+                                            texto=''
                                             urlIcon={ ScrollDownIcon }
                                             backgroundColor='rgba(117, 149, 182, 0.40)'
                                             hoverBorderColor='rgb(96 0 18 / 77%)'
-                                            hoverBackgroundColor='rgb(96 0 18 / 77%)'
+                                            hoverBackgroundColor='rgb(255, 41, 81)'
                                             border='none'
                                             onClick={ () => sendToSectionId('#concept') }
                                         />

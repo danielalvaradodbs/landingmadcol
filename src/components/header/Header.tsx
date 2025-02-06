@@ -3,11 +3,12 @@ import './header.css';
 
 import { brandings, logosMadcritter } from '../../shared';
 import { useDarkMode } from '../../hooks/DarkModeContext';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from "react-router-dom";
 export const Header = () => {
 
   const { isDark } = useDarkMode();
+  const imgTablet: any = useRef(null);
   const [scrollingDown, setScrollingDown] = useState(false);
   const [isCentered, setIsCentered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,13 +29,17 @@ export const Header = () => {
   };
 
   const currentPath = useLocation();
+  let visibleSection = true;
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+
+        visibleSection = entry.isIntersecting;
         if (!entry.isIntersecting) {
           setScrollingDown(true);
-          setIsCentered(true);
+          setIsCentered(true);  
+
         } else {
           setScrollingDown(false);
           setIsCentered(false);
@@ -54,6 +59,39 @@ export const Header = () => {
       }
     };
   }, []);
+
+  const handleResize = useCallback(() => {
+    if(imgTablet.current) {
+      if (!visibleSection ) {
+  
+        if( window.innerWidth < 899  ) {
+          imgTablet.current.classList.remove('no-visible');
+        }
+  
+        if( window.innerWidth > 899 ) {
+          imgTablet.current.classList.add('no-visible');
+        }
+  
+      } else {
+        imgTablet.current.classList.add('no-visible');
+      }
+
+    }
+  }, []);
+
+
+  useEffect(() => {
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleResize);
+    };
+  }, [handleResize]);
+  
 
   const sendToSectionId = ( id: string ) => {
 
@@ -94,7 +132,6 @@ export const Header = () => {
   }
 
   const sendToLink = (link: string) => {
-    console.log(link);
     window.location.href = link;
     setTimeout(() => {
       window.location.reload();
@@ -102,7 +139,6 @@ export const Header = () => {
   }
 
   useEffect(() => {
-    console.log(currentPath);
     if( currentPath.pathname === '/terms-conditions') {
       const handleScroll = () => {
         const currentScrollY = window.scrollY;
@@ -143,6 +179,14 @@ export const Header = () => {
               <img 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
+                style={{ display: !isCentered ? 'inline' : 'none' }}
+
+              />
+
+              <img 
+                ref={imgTablet}
+                src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
+                
               />
             
             </a>
@@ -174,7 +218,7 @@ export const Header = () => {
                 style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
               />
               <img 
-                src={ logosMadcritter.logoBlack.logo } alt={ logosMadcritter.logoMad.alt }
+                src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? '' : ''}`}
                 style={{ display: currentPath.pathname === '/terms-conditions' || isCentered ? 'inline' : 'none' }}
               />
@@ -198,17 +242,17 @@ export const Header = () => {
               </a>
               <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
             </div>
-            <div className='menu-servicios'>
-              <a onClick={() => sendToSectionId('#services')}>
-              <label>Servicios</label>
-              <label>Servicios</label>
-              </a>
-            </div>
-              <span></span>
             <div className='menu-nosotros'>
               <a onClick={() => sendToSectionId('#concept')}>
                 <label>Nosotros</label>
                 <label>Nosotros</label>
+              </a>
+            </div>
+              <span></span>
+              <div className='menu-servicios'>
+              <a onClick={() => sendToSectionId('#services')}>
+              <label>Servicios</label>
+              <label>Servicios</label>
               </a>
             </div>
               <span></span>
@@ -256,8 +300,8 @@ export const Header = () => {
                 <span className={`line-span animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
                 <div className="items">
                   <ul>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#services')}>Servicios</a></li>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#concept')}>Nosotros</a></li>
+                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#concept')}>Nosotros</a></li>
+                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#services')}>Servicios</a></li>
                     <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>Contacto</a></li>
                   </ul>
 
