@@ -81,10 +81,10 @@ export const Contact = () => {
          .catch(() => {console.log})
     }
 
-    const sendToLink = ( link: string ) => {
-        window.location.href = link;
-        window.location.reload();
-      }
+    // const sendToLink = ( link: string ) => {
+    //     window.location.href = link;
+    //     window.location.reload();
+    //   }
 
     useEffect(() => {
         const observer = new IntersectionObserver(
