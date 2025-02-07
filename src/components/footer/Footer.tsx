@@ -112,7 +112,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className='container text'>
-            <a href='mailto:talento@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >talento@madcritter.com</a>
+            <a href='mailto:gestionhumana@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >gestionhumana@madcritter.com</a>
           </div>
         </div>
 
@@ -210,7 +210,11 @@ export const Footer = () => {
 
           <ul className="terms-footer">
             <li>
-              <div data-animation="to-top" style={{ position: 'relative' }}>
+              <div data-animation="to-top">
+                <Link className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} to='https://madcritter.com/BIC/BIC.pdf' target='_blank' >
+                  <label>Reporte BIC</label>
+                </Link>
+                <span className='tablet'>|</span>
                 <Link className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} to='/terms-conditions' target='_blank' >
                   <label>Términos y Condiciones</label>
                 </Link>

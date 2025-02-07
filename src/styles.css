@@ -16,9 +16,9 @@
     --ease-in-out-quart: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-  } */
+  }
 
 body, html {
     font-family: 'Safiro', sans-serif;
