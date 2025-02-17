@@ -102,7 +102,7 @@ export const Services = () => {
 
   return (
     <div className="services" id='services'>
-      <section className="service-section first-section">
+      <section className="service-section first-section" id='first-section'>
         <div className="number">
           <h6>01_</h6>
         </div>
@@ -154,7 +154,7 @@ export const Services = () => {
         </div>
       </section>
 
-      <section className="service-section second-section">
+      <section className="service-section second-section" id='second-section'>
         <div className="number">
           <h6>02_</h6>
         </div>
@@ -198,7 +198,7 @@ export const Services = () => {
         </div>
       </section>
 
-      <section className="service-section third-section">
+      <section className="service-section third-section" id='third-section'>
         <div className="number">
           <h6>03_</h6>
         </div>

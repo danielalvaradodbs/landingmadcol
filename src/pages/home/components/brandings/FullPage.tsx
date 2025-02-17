@@ -46,9 +46,9 @@ export const FullPage = () => {
 
     const sendToSectionId = ( id: string ) => {
 
-        // if (window.fullpage_api) {
-        //     window.fullpage_api.setFitToSection(false);
-        // }
+        if (window.fullpage_api) {
+            window.fullpage_api.setFitToSection(false);
+        }
     
         // console.log(id);
         const section = document.querySelector(id);

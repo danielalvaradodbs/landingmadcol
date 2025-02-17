@@ -12,8 +12,10 @@ export const Header = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
   const [isCentered, setIsCentered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [blueScreen, setBlueScreen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isDarkBackground, setIsDarkBackground] = useState(false);
 
   const toggleMenu = () => {
     setBlueScreen(!blueScreen);
@@ -27,6 +29,16 @@ export const Header = () => {
     }
 
   };
+
+
+  const handleServicesMouseEnter = () => {
+    setIsServicesDropdownOpen(true);
+  };
+
+  const handleServicesMouseLeave = () => {
+    setIsServicesDropdownOpen(false);
+  };
+
 
   const currentPath = useLocation();
   let visibleSection = true;
@@ -79,7 +91,6 @@ export const Header = () => {
     }
   }, []);
 
-
   useEffect(() => {
 
     handleResize();
@@ -125,7 +136,6 @@ export const Header = () => {
         if (window.fullpage_api) {
             window.fullpage_api.setFitToSection(false);
             brandings[2].isDark = true;
-
         }
     }, 1000);
     
@@ -162,7 +172,32 @@ export const Header = () => {
     }
   }, []);
   
+  useEffect(() => {
+    const handleScroll = () => {
+
+      const sections = [
+        document.querySelector('.concept.section-concept'),
+        document.querySelector('.contacts'),
+        document.querySelector('.pre-footer')
+      ];
+
+      let isDark = false;
+      sections.forEach((section) => {
+        if( section ) {
+          const sectionRect = section.getBoundingClientRect();
+          if (sectionRect.top < window.innerHeight && sectionRect.bottom > 0) {
+            isDark = true;
+          }
+        }
+      })
       
+      setIsDarkBackground(isDark);
+      
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);    
   
 
   return (
@@ -171,12 +206,13 @@ export const Header = () => {
 
         <div className={`header ${isDark ? 'dark' : ''}`}>
         <div 
-          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}
+          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop tablet`}
           style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
 
         >
             <a href="/" >
-              <img 
+              <img
+                width={'100%'} 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
                 style={{ display: !isCentered ? 'inline' : 'none' }}
@@ -184,6 +220,7 @@ export const Header = () => {
               />
 
               <img 
+                width={'100%'} 
                 ref={imgTablet}
                 src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
                 
@@ -195,7 +232,6 @@ export const Header = () => {
         <div 
           className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}
           style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none'}}
-          
           
           >
             <a href="/" >
@@ -214,12 +250,12 @@ export const Header = () => {
             <a onClick={() => sendToLink('/') } style={{ cursor: 'pointer' }}>
               <img 
                 src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? 'move-logo' : ''}`}
+                className={`${ scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
                 style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
               />
               <img 
                 src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? '' : ''}`}
+                className={`${ scrollingDown ? '' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
                 style={{ display: currentPath.pathname === '/terms-conditions' || isCentered ? 'inline' : 'none' }}
               />
             </a>
@@ -241,7 +277,7 @@ export const Header = () => {
                   
               </a>
               <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
-            </div>
+          </div>
             <div className='menu-nosotros'>
               <a onClick={() => sendToSectionId('#concept')}>
                 <label>Nosotros</label>
@@ -249,11 +285,22 @@ export const Header = () => {
               </a>
             </div>
               <span></span>
-              <div className='menu-servicios'>
+              <div className='menu-servicios'
+                onMouseEnter={handleServicesMouseEnter}
+                onMouseLeave={handleServicesMouseLeave}
+              >
               <a onClick={() => sendToSectionId('#services')}>
               <label>Servicios</label>
               <label>Servicios</label>
               </a>
+              {isServicesDropdownOpen && (
+                <div className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}>
+                  {/* Aquí irían los elementos del menú desplegable */}
+                  <a onClick={() => sendToSectionId('#first-section')}>Construcción de marca</a>
+                  <a onClick={() => sendToSectionId('#second-section')}>Identidad de marca</a>
+                  <a onClick={() => sendToSectionId('#third-section')}>Posicionamiento de marca</a>
+                </div>
+              )}
             </div>
               <span></span>
             <div className='menu-contactos'>
@@ -289,11 +336,20 @@ export const Header = () => {
               </div> */}
               <div 
                 className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-mobile`}>
-                  <a onClick={ () => sendToLink('/') } >
+
+                  <a onClick={ () => sendToLink('/') } className='a-mobile'>
                     <img 
                       src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
                     />
-               </a>
+                  </a>
+                  <a href="/" className='a-tablet'>
+                    <img 
+                      src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                      className={``}
+                      style={{}}
+                    />
+                  </a>
+               
               </div>
               <div className={`submenu ${ menuOpen ? 'active' : '' }`}>
                 <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>Menú</span>

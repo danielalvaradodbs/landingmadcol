@@ -1,4 +1,4 @@
-import RemoLab from '../assets/images/brandings/RemoLab.jpg';
+import RemoLab from '../assets/images/brandings/Remo1.avif';
 import RemoLabHover from '../assets/images/brandings/Remo2.avif';
 import VaxTrials from '../assets/images/brandings/VaxTrials1.avif';
 import VaxTrialsHover from '../assets/images/brandings/VaxTrials2.avif';

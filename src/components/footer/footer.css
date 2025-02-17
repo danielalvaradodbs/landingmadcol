@@ -60,7 +60,7 @@
     height: fit-content;
 }
 
-.pre-footer .talento .container a.reveal,
+/* .pre-footer .talento .container a.reveal,
 .pre-footer .escribenos .container div a.reveal,
 .pre-footer .stalkeanos .stalk a.reveal,
 .pre-footer .siguenos .stalk a.reveal,
@@ -70,8 +70,7 @@
 .pre-footer .siguenos .container p.reveal,
 .pre-footer .talento .container p.reveal,
 .pre-footer .escribenos p.reveal {
-    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
-}
+} */
 
 .pre-footer .talento a,
 .pre-footer .escribenos a {
@@ -86,9 +85,9 @@
     text-decoration: none;
 }
 
-.pre-footer .siguenos .container a:hover:nth-child(odd),
-.pre-footer .stalkeanos .container a:hover:nth-child(even),
-.pre-footer .talento a:hover {
+.pre-footer .siguenos .container div:hover:nth-child(odd) a,
+.pre-footer .stalkeanos .container div:hover:nth-child(even) a,
+.pre-footer .talento .container.text:hover a {
     color: #2A00FF;
     font-family: 'Safiro';
     font-style: normal;
@@ -96,9 +95,10 @@
     letter-spacing: -2.4px;
     transition: ease 0.5s;
 }
-.pre-footer .siguenos .container a:hover:nth-child(even),
-.pre-footer .stalkeanos .container a:hover:nth-child(odd),
-.pre-footer .escribenos a:hover {
+.pre-footer .siguenos .container div:hover:nth-child(even) a,
+.pre-footer .stalkeanos .container div:hover:nth-child(odd) a,
+.pre-footer .escribenos .email:hover a,
+.pre-footer .escribenos .container.text div:hover a {
     color: #FF2951;
     font-family: 'Safiro';
     font-style: normal;
@@ -107,14 +107,15 @@
     transition: ease 0.5s;
 }
 
-.pre-footer .siguenos .container a:hover:nth-child(odd),
-.pre-footer .siguenos .container a:hover:nth-child(even),
-.pre-footer .stalkeanos .container a:hover:nth-child(odd),
-.pre-footer .stalkeanos .container a:hover:nth-child(even) {
+.pre-footer .siguenos .container div:hover:nth-child(odd) a,
+.pre-footer .siguenos .container div:hover:nth-child(even) a,
+.pre-footer .stalkeanos .container div:hover:nth-child(odd) a,
+.pre-footer .stalkeanos .container div:hover:nth-child(even) a {
     font-size: 14px;
     /* line-height: 30px; */
     letter-spacing: normal;
 }
+
 
 .pre-footer .siguenos .stalk,
 .pre-footer .stalkeanos .stalk {
@@ -273,12 +274,14 @@
     padding-top: 60px;
     align-items: center;
 }
+
 .footer .texto-footer ul {
     margin: 0;
     padding: 0;
     position: relative;
     
 }
+
 .footer .texto-footer ul li {
     color: #ACB6C0;
     display: initial;
@@ -290,11 +293,13 @@
     position: relative;
     
 }
+
 .footer .texto-footer ul.meeting-footer {
     display: flex;
     width: 33.333%;
     justify-content: flex-start;
 }
+
 .footer .texto-footer ul.meeting-footer li:nth-child(1) {
     margin-right: 15px;
     padding-right: 15px;
@@ -354,7 +359,73 @@
     gap: 5px;
 }
 
+.pre-footer .siguenos .container.stalk div,
+.pre-footer .stalkeanos .container.stalk div,
+.pre-footer .talento .container.text div,
+.pre-footer .escribenos .container.text div {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
 
+.pre-footer .siguenos .container.stalk div a,
+.pre-footer .stalkeanos .container.stalk div a,
+.pre-footer .talento .container.text div a,
+.pre-footer .escribenos .container.text div a {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    cursor: pointer;
+}
+
+.pre-footer .siguenos .container.stalk div a:first-child,
+.pre-footer .stalkeanos .container.stalk div a:first-child,
+.pre-footer .talento .container.text div a:first-child,
+.pre-footer .escribenos .container.text div a:first-child {
+    display: inline-block;
+}
+
+.pre-footer .siguenos .container.stalk div a:last-child,
+.pre-footer .stalkeanos .container.stalk div a:last-child,
+.pre-footer .talento .container.text div a:last-child,
+.pre-footer .escribenos .container.text div a:last-child {
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.pre-footer .siguenos .container.stalk div:hover a:last-child,
+.pre-footer .siguenos .container.stalk[data-animation] div:hover a:last-child,
+.pre-footer .stalkeanos .container.stalk div:hover a:last-child,
+.pre-footer .stalkeanos .container.stalk[data-animation] div:hover a:last-child,
+.pre-footer .talento .container.text div:hover a:last-child,
+.pre-footer .talento .container.text[data-animation] div:hover a:last-child,
+.pre-footer .escribenos .container.text div:hover a:last-child,
+.pre-footer .escribenos .container.text[data-animation] div:hover a:last-child {
+    transform: none;
+    opacity: 1;
+}
+
+.pre-footer .siguenos .container.stalk[data-animation="to-top"] div a:last-child,
+.pre-footer .stalkeanos .container.stalk[data-animation="to-top"] div a:last-child,
+.pre-footer .talento .container.text[data-animation="to-top"] div a:last-child,
+.pre-footer .escribenos .container.text[data-animation="to-top"] div a:last-child {
+    transform: translateY(100%);
+    opacity: 0;
+}
+  
+.pre-footer .siguenos .container.stalk[data-animation="to-top"] div:hover a:first-child,
+.pre-footer .stalkeanos .container.stalk[data-animation="to-top"] div:hover a:first-child,
+.pre-footer .talento .container.text[data-animation="to-top"] div:hover a:first-child,
+.pre-footer .escribenos .container.text[data-animation="to-top"] div:hover a:first-child {
+    transform: translateY(-100%);
+    opacity: 0;
+}
 
 
 @media only screen and (max-width: 1024px) {

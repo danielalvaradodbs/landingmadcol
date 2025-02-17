@@ -189,6 +189,10 @@
         padding-top: 24px;
     }
 
+    .meet-the-team .button-back {
+        padding-right: 32px;
+    }
+
     .meet-the-team .the-team-image {
         padding: 0 130px 24px;
     }
@@ -228,3 +232,13 @@
     }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 554px) {
+    .meet-the-team .button-back {
+        padding-top: 24px;
+    }
+    
+    .meet-the-team .button-back {
+        padding-right: 16px;
+    }
+
+}

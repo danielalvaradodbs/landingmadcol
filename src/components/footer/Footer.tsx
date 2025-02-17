@@ -10,7 +10,6 @@ import { Link, useLocation } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 export const Footer = () => {
-
   const currentPath = useLocation();
   
   const sectionRef = useRef(null);
@@ -87,12 +86,17 @@ export const Footer = () => {
               <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >Nuestro equipo comercial te ayudará</p>
             </div>
           </div>
-          <div className='container text'>
-            <div>
+          <div className='container text' style={{ position: 'relative'}} data-animation="to-top">
+            <div className='email'>
+              <a href='mailto:rafajordan@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
               <a href='mailto:rafajordan@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
             </div>
-            <div>
-              <a href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
+            <div className='container text' data-animation="to-top">
+              <div>
+                <a href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
+                <a href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
+
+              </div>
             </div>
           </div>
         </div>
@@ -111,8 +115,11 @@ export const Footer = () => {
               <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >Envía tu CV y portafolio</p>
             </div>
           </div>
-          <div className='container text'>
-            <a href='mailto:gestionhumana@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >gestionhumana@madcritter.com</a>
+          <div className='container text' data-animation="to-top">
+            <div>
+              <a href='mailto:gestionhumana@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` }>gestionhumana@madcritter.com</a>
+              <a href='mailto:gestionhumana@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` }>gestionhumana@madcritter.com</a>
+            </div>
           </div>
         </div>
 
@@ -130,14 +137,25 @@ export const Footer = () => {
               <p className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}>Portafolio</p>
             </div>
           </div>
-          <div className='container stalk'>
-            <a 
-              className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}
-              href="https://dribbble.com/madcritter1122"target='_blank'>DRIBBBLE</a>
-            <a 
-              className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} 
-              href="https://www.behance.net/madcritter" 
-              target='_blank'>BEHANCE</a>
+          <div className='container stalk' data-animation="to-top">
+            <div>
+              <a 
+                className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}
+                href="https://dribbble.com/madcritter1122"target='_blank'>DRIBBBLE</a>
+              <a 
+                className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}
+                href="https://dribbble.com/madcritter1122"target='_blank'>DRIBBBLE</a>
+            </div>
+            <div>
+              <a 
+                className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.behance.net/madcritter" 
+                target='_blank'>BEHANCE</a>
+              <a 
+                className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.behance.net/madcritter" 
+                target='_blank'>BEHANCE</a>
+            </div>
           </div>
         </div>
 
@@ -155,22 +173,48 @@ export const Footer = () => {
               <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}>Social Media</p>
             </div>
           </div>
-          <div className='container stalk'>
-            <a 
-              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
-              href="https://www.linkedin.com/company/mad-critter" target='_blank'>LINKEDIN</a>
-            <a 
-              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
-              href="https://instagram.com/madcritterco" target='_blank'>INSTAGRAM</a>
-            <a 
-              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
-              href="https://facebook.com/Madcritter" target='_blank'>FACEBOOK</a>
-            <a 
-              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
-              href="https://www.tiktok.com/@madcritterco" target='_blank'>TIKTOK</a>
-            <a 
-              className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
-              href="https://www.strava.com/clubs/madcritter" target='_blank'>STRAVA</a>
+          <div className='container stalk' data-animation="to-top">
+            <div>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.linkedin.com/company/mad-critter" target='_blank'>LINKEDIN</a>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.linkedin.com/company/mad-critter" target='_blank'>LINKEDIN</a>
+            </div>
+            <div>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://instagram.com/madcritterco" target='_blank'>INSTAGRAM</a>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://instagram.com/madcritterco" target='_blank'>INSTAGRAM</a>
+            </div>
+            <div>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://facebook.com/Madcritter" target='_blank'>FACEBOOK</a>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://facebook.com/Madcritter" target='_blank'>FACEBOOK</a>
+            </div>
+            <div>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.tiktok.com/@madcritterco" target='_blank'>TIKTOK</a>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.tiktok.com/@madcritterco" target='_blank'>TIKTOK</a>
+            </div>
+            <div>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.strava.com/clubs/madcritter" target='_blank'>STRAVA</a>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://www.strava.com/clubs/madcritter" target='_blank'>STRAVA</a>
+
+            </div>
           </div>
         </div>
 

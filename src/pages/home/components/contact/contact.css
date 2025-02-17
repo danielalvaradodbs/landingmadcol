@@ -527,8 +527,8 @@
     }
     .contact .title-contact .figura-contacto {
         position: absolute;
-        top: 52%;
-        height: 24px;
+        top: 66%;
+        height: 22px;
     }
 }
 
@@ -584,9 +584,9 @@
     }
     .contact .title-contact .figura-contacto {
         position: absolute;
-        top: 55%;
-        left: 76%;
-        width: 52px;
+        top: 65%;
+        left: 78%;
+        width: 42px;
     }
 }
 
