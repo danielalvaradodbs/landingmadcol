@@ -178,7 +178,8 @@ export const Header = () => {
       const sections = [
         document.querySelector('.concept.section-concept'),
         document.querySelector('.contacts'),
-        document.querySelector('.pre-footer')
+        document.querySelector('.pre-footer'),
+        document.querySelector('.terms-conditions')
       ];
 
       let isDark = false;
@@ -222,8 +223,9 @@ export const Header = () => {
               <img 
                 width={'100%'} 
                 ref={imgTablet}
-                src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
-                
+                className={`${ !scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
+                src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                style={{ display: isCentered ? 'inline' : 'none' }}
               />
             
             </a>
@@ -256,7 +258,11 @@ export const Header = () => {
               <img 
                 src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? '' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
-                style={{ display: currentPath.pathname === '/terms-conditions' || isCentered ? 'inline' : 'none' }}
+                style={{ display: currentPath.pathname !== '/terms-conditions' && isCentered ? 'inline' : 'none' }}
+              />
+              <img 
+                src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }
+                style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none' }}
               />
             </a>
             
@@ -335,7 +341,7 @@ export const Header = () => {
 
               </div> */}
               <div 
-                className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-mobile`}>
+                className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-tablet`}>
 
                   <a onClick={ () => sendToLink('/') } className='a-mobile'>
                     <img 
@@ -343,7 +349,8 @@ export const Header = () => {
                     />
                   </a>
                   <a href="/" className='a-tablet'>
-                    <img 
+                    <img
+                      width={'180px'} 
                       src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                       className={``}
                       style={{}}

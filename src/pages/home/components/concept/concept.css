@@ -194,29 +194,29 @@
 
     .concept .human img {
         position: absolute;
-        left: 52%;
-        top: 16%;
+        left: 56%;
+        top: 25%;
         scale: 0.6;
     }
 
     .concept .centered .text img {
         position: absolute;
-        bottom: -28%;
-        right: -1%;
-        scale: 0.6;
+        bottom: -8%;
+        right: 12%;
+        scale: 0.8;
     }
 
     .concept .centered .text img:last-child {
         position: absolute;
-        bottom: -20%;
-        right: -3%;
-        scale: 0.6;
+        bottom: -9%;
+        right: 6%;
+        scale: 0.8;
     }
 
     .concept .branding .text img {
         position: absolute;
-        top: 0%;
-        left: 20%;
+        top: 14%;
+        left: 23.5%;
         scale: 0.6;
     }
 
@@ -290,6 +290,38 @@
     }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+
+    .concept .human img {
+        position: absolute;
+        left: 52%;
+        top: 10%;
+        scale: 0.5;
+    }
+
+    .concept .centered .text img {
+        position: absolute;
+        bottom: -28%;
+        right: 1%;
+        scale: 0.5;
+    }
+
+    .concept .centered .text img:last-child {
+        position: absolute;
+        bottom: -22%;
+        right: -2%;
+        scale: 0.5;
+    }
+
+    .concept .branding .text img {
+        position: absolute;
+        top: -3%;
+        left: 20%;
+        scale: 0.5;
+    }
+
+}
+
 @media only screen and (min-width: 280px) and (max-width: 525px) {
     .concept .video {
         display: none;
@@ -312,15 +344,7 @@
 }
 
 @media only screen and (min-width: 425px) and (max-width: 524px) {
-    .concept .human img {
-        scale: 0.6;
-    }
-    .concept .centered .text img {
-        scale: 0.6;
-    }
-    .concept .branding .text img {
-        scale: 0.6;
-    }
+  
 }
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {

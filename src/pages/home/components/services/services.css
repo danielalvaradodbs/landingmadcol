@@ -238,6 +238,13 @@
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+    .services .footer-section {
+        margin-top: -6%;
+        width: 60%;
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 832px) {
     .services .first-section {
         padding: 70px 32px 100px 32px!important;
@@ -281,7 +288,7 @@
     .services .second-section,
     .services .third-section {
         /* max-height: 800px !important; */
-        height: 600px !important;
+        height: 570px !important;
     }
 
     h2.reveal {
