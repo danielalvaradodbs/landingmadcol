@@ -111,7 +111,31 @@
 
 
 @media only screen and (min-width: 2048px) {
-    
+
+    .services .service-section {
+        padding: 70px 200px 100px !important;
+        height: 650px !important;
+        max-height: 650px !important;
+    }
+
+    .services .service-section .number h6 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .services .service-section .header-sections .items ul li {
+        font-size: 24px;
+    }
+
+    .services .service-section .title h2 {
+        font-size: 116px;
+        line-height: 116px;
+    }
+
+    .services .service-section .footer-section p {
+        font-size: 31px;
+        line-height: 40px;
+    }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 1440px) {

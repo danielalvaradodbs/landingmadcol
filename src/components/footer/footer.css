@@ -111,8 +111,6 @@
 .pre-footer .siguenos .container div:hover:nth-child(even) a,
 .pre-footer .stalkeanos .container div:hover:nth-child(odd) a,
 .pre-footer .stalkeanos .container div:hover:nth-child(even) a {
-    font-size: 14px;
-    /* line-height: 30px; */
     letter-spacing: normal;
 }
 
@@ -466,6 +464,40 @@
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1660px) {
+    
+}
+
+@media only screen and (min-width: 2048px) {
+    .pre-footer .siguenos p strong, 
+    .pre-footer .stalkeanos p strong,
+    .pre-footer .talento p strong,
+    .pre-footer .escribenos p strong {
+        font-size: 24px;
+    }
+
+    .pre-footer .siguenos p, 
+    .pre-footer .stalkeanos p,
+    .pre-footer .talento p,
+    .pre-footer .escribenos p {
+        font-size: 21px;
+    }
+
+    .pre-footer .talento a,
+    .pre-footer .escribenos a {
+        font-size: 64px;
+        line-height: 74px;
+    }
+
+    .pre-footer .siguenos a,
+    .pre-footer .stalkeanos a {
+        font-size: 16px;
+    }
+
+    .footer .texto-footer ul li a:hover,
+    .footer .texto-footer ul li a,
+    .footer .texto-footer ul li {
+        font-size: 21px;
+    }
     
 }
 

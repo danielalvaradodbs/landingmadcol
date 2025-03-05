@@ -109,7 +109,7 @@ export const Services = () => {
         <div className="header-sections">
           <div className="marca">
             <div className="title">
-              <h2>Construcción de marca</h2>
+              <h2>Construcción de <br/> marca</h2>
             </div>
           </div>
 
@@ -205,7 +205,7 @@ export const Services = () => {
         <div className="header-sections">
           <div className="posicionamiento">
             <div className="title">
-              <h2>Posicionamiento de marca</h2>
+              <h2>Posicionamiento de <br/> marca</h2>
             </div>
           </div>
           <div className="footer-section mobile">

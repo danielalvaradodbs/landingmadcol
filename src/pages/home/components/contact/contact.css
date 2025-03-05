@@ -298,10 +298,8 @@
 .contact .form .terms-submit .terms label a:hover {
     color: #7595B6;
     font-family: 'Safiro';
-    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px;
 }
 
 .contact .form button .button__label.hover-label {
@@ -346,7 +344,49 @@
 
 
 @media only screen and (min-width: 2048px) {
-    
+    .contact .title-contact h2 {
+        font-size: 116px;
+        line-height: 116px;
+    }
+
+    .contact .title-contact .flecha-roja {
+        left: 31%;
+        top: 55%;
+    }
+
+    .contact .title-contact .figura-contacto {
+        top: 68%;
+    }
+
+    .contact .form .terms-submit .terms label a,
+    .contact .form .terms label {
+        font-size: 21px;
+    }
+    .contact .form label {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .contact .form .name input::placeholder, 
+    .contact .form .email input::placeholder, 
+    .contact .form .phone input::placeholder, 
+    .contact .form .message input::placeholder
+    .contact .form .name input, 
+    .contact .form .email input, 
+    .contact .form .phone input, 
+    .contact .form .message input {
+        font-size: 21px !important;
+    }
+
+    .contact .form .terms-submit .submit label {
+        font-size: 21px;
+    }
+    .contact .form button .button__label.hover-label {
+        left: 19% !important;
+    }
+
+    .contact .form .phone .code-input .container .value-code {
+        font-size: 21px;
+    }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1660px) {
