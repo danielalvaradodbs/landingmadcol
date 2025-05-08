@@ -109,7 +109,9 @@ export const Header = () => {
 
     if( currentPath.pathname === '/terms-conditions' ) {
       window.location.href = '/#' + id.substring(1);
+      console.log(window.location.href);
       const section = document.querySelector(id);
+      console.log(section);
       if (section) {
         brandings[2].isDark = false;
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -211,12 +213,12 @@ export const Header = () => {
           style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
 
         >
-            <a href="/" >
+            <a href="/" style={{ display: !isCentered ? 'inline' : 'none' }} >
               <img
                 width={'100%'} 
                 src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
                 className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
-                style={{ display: !isCentered ? 'inline' : 'none' }}
+                // style={{ display: !isCentered ? 'inline' : 'none' }}
 
               />
 
@@ -284,7 +286,7 @@ export const Header = () => {
               </a>
               <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
           </div>
-            <div className='menu-nosotros'>
+            <div className='menu-nosotros' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#concept')}>
                 <label>Nosotros</label>
                 <label>Nosotros</label>
@@ -293,23 +295,28 @@ export const Header = () => {
               <span></span>
               <div className='menu-servicios'
                 onMouseEnter={handleServicesMouseEnter}
-                onMouseLeave={handleServicesMouseLeave}
+                // onMouseLeave={handleServicesMouseLeave}
               >
               <a onClick={() => sendToSectionId('#services')}>
               <label>Servicios</label>
               <label>Servicios</label>
               </a>
               {isServicesDropdownOpen && (
-                <div className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}>
+                <div 
+                  className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}
+                  onMouseLeave={handleServicesMouseLeave}
+                  >
                   {/* Aquí irían los elementos del menú desplegable */}
                   <a onClick={() => sendToSectionId('#first-section')}>Construcción de marca</a>
+                  <span></span>
                   <a onClick={() => sendToSectionId('#second-section')}>Identidad de marca</a>
+                  <span></span>
                   <a onClick={() => sendToSectionId('#third-section')}>Posicionamiento de marca</a>
                 </div>
               )}
             </div>
               <span></span>
-            <div className='menu-contactos'>
+            <div className='menu-contactos' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#contact')}>
                 <label>Contacto</label>
                 <label>Contacto</label>

@@ -156,6 +156,16 @@ export const Footer = () => {
                 href="https://www.behance.net/madcritter" 
                 target='_blank'>BEHANCE</a>
             </div>
+            <div>
+              <a 
+                className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} 
+                href="https://vimeo.com/madcritterfilm" 
+                target='_blank'>VIMEO</a>
+              <a 
+                className={` ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`} 
+                href="https://vimeo.com/madcritterfilm" 
+                target='_blank'>VIMEO</a>
+            </div>
           </div>
         </div>
 

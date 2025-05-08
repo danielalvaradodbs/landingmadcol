@@ -138,8 +138,10 @@
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 1440px) {
-
+@media only screen and (min-width: 280px) and (max-width: 1443px) {
+    .services .header-sections .title h2 br {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1366px) and (max-width: 1439px) {

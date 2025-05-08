@@ -363,7 +363,9 @@
 .pre-footer .escribenos .container.text div {
     position: relative;
     display: block;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: visible;
+    width: max-content;
 }
 
 .pre-footer .siguenos .container.stalk div a,
