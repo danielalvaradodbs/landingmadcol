@@ -231,6 +231,7 @@
 
 .contact .form .terms-submit {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 }
@@ -241,7 +242,7 @@
 
 .contact .form .terms-submit .terms {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     width: 50%;
     gap: 12px;
 }
