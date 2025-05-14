@@ -5,6 +5,7 @@ import { FiguraContacto, FlechaButton, FlechaRoja, Selector } from '../../../../
 import './contact.css';
 import { useForm } from './hooks/useForm';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
@@ -14,6 +15,9 @@ export const Contact = () => {
     const navigate = useNavigate();
     const sectionRef: any = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+
+    const [captchaValue, setCaptchaValue] = useState(null);
+    const [captchaError, setCaptchaError] = useState('');
 
     const [labelColor, setLabelColor] = useState({ fullName: 'white', email: 'white', phone: 'white', message: 'white' });
 
@@ -54,9 +58,16 @@ export const Contact = () => {
     const onSubmitForm = ( event: any ) => {
         event.preventDefault();
         setFormSubmitted(true);
-        if( !isFormValid ) return;
-        submitForm();
 
+        // Validar captcha
+        if (!captchaValue) {
+            setCaptchaError('Por favor, confirma que no eres un robot.');
+            return;
+        }
+
+        if( !isFormValid ) return;
+
+        submitForm();
         onResetForm();
         setFormSubmitted(false);
     }
@@ -296,6 +307,20 @@ export const Contact = () => {
                             onChange={ onInputChange }
                             placeholder='Cuéntanos como podemos ayudarte'
                         />
+                    </div>
+                    <div className="catcha">
+                        <ReCAPTCHA
+                            // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                            sitekey="6LdAczorAAAAABnzRcnVECik9pDftN2cv8rRH15g"
+                            onChange={(value: any) => {
+                                setCaptchaValue(value);
+                                setCaptchaError('');
+                            }}
+                            theme="dark"
+                            style={{ margin: '0' }}
+                        />
+                        {captchaError && <span style={{ margin: '0 0 16px' }} className="p-0 text-danger">{captchaError}</span>}
+
                     </div>
                     <div className={`terms-submit ${isVisible ? 'reveal' : ''}`}>
                         <div className="terms">
