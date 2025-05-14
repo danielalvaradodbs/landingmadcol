@@ -9,8 +9,6 @@ import { useEffect } from 'react'
 function App() {
 
   useEffect(() => {
-  
-   
       
     window.addEventListener("popstate", function (_event) {
       window.location.reload();
@@ -25,8 +23,6 @@ function App() {
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
-      
-       
   
   }, []);
 

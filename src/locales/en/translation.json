@@ -1,0 +1,22 @@
+{
+  "welcome": "Welcome to my app",
+  "description": "This is a demo",
+  "verProyecto": "View project",
+  "brandings": {
+    "remo": {
+      "info": "BRAND IDENTITY",
+      "title": "Remó Lab",
+      "description": "Consistent design that reinforces brand identity on every package."
+    },
+    "vax": {
+      "info": "BRAND IDENTITY",
+      "title": "Vax TRIALS",
+      "description": "Science + Strategy: </br> B2B growth and scientific talent attraction."
+    },
+    "hero": {
+      "info": "BRAND POSITIONING",
+      "title": "Hero Motocorp",
+      "description": "Digital optimization, driven by an intuitive and functional web experience."
+    }
+  }
+}

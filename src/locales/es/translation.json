@@ -1,0 +1,22 @@
+{
+  "welcome": "Bienvenido a mi app",
+  "description": "Esto es una demo",
+  "verProyecto": "Ver proyecto",
+  "brandings": {
+    "remo": {
+      "info": "IDENTIDAD DE MARCA",
+      "title": "Remó Lab",
+      "description": "Diseño consistente que refuerza la identidad de marca en cada empaque."
+    },
+    "vax": {
+      "info": "IDENTIDAD DE MARCA",
+      "title": "Vax TRIALS",
+      "description": "Ciencia + estrategia: </br> Crecimiento B2B y atracción de talento científico."
+    },
+    "hero": {
+      "info": "POSICIONAMIENTO DE MARCA",
+      "title": "Hero Motocorp",
+      "description": "Optimización digital, impulsada por una experiencia web intuitiva y funcional."
+    }
+  }
+}

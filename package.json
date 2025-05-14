@@ -14,9 +14,12 @@
     "animate.css": "^4.1.1",
     "gsap": "^3.12.5",
     "hover.css": "^2.3.2",
+    "i18next": "^25.1.2",
+    "i18next-browser-languagedetector": "^8.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^15.5.1",
     "react-router-dom": "^6.28.2",
     "scrollmagic": "^2.0.8"
   },

@@ -5,6 +5,7 @@ import { brandings, logosMadcritter } from '../../shared';
 import { useDarkMode } from '../../hooks/DarkModeContext';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 export const Header = () => {
 
   const { isDark } = useDarkMode();
@@ -16,6 +17,8 @@ export const Header = () => {
   const [blueScreen, setBlueScreen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isDarkBackground, setIsDarkBackground] = useState(false);
+
+  const { i18n } = useTranslation();
 
   const toggleMenu = () => {
     setBlueScreen(!blueScreen);
@@ -205,6 +208,7 @@ export const Header = () => {
 
   return (
     <>
+   
     { (currentPath.pathname !== '/meet-the-team' && currentPath.pathname !== '/thanks-contact') && (
 
         <div className={`header ${isDark ? 'dark' : ''}`}>
@@ -276,52 +280,58 @@ export const Header = () => {
     // background: rgba(16, 24, 32, 0.30);
 
           >
-          <div className="menu-logo">
-              <a href='/' style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8, cursor: 'pointer' }}>
-                <img 
-                  src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                  className={`col-6 animate__animated animate__fadeIn`}
-                />
-                  
-              </a>
-              <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
-          </div>
+            <div className="menu-logo">
+                <a href='/' style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8, cursor: 'pointer' }}>
+                  <img 
+                    src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                    className={`col-6 animate__animated animate__fadeIn`}
+                  />
+                    
+                </a>
+                <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
+            </div>
             <div className='menu-nosotros' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#concept')}>
                 <label>Nosotros</label>
                 <label>Nosotros</label>
               </a>
             </div>
-              <span></span>
-              <div className='menu-servicios'
-                onMouseEnter={handleServicesMouseEnter}
-                // onMouseLeave={handleServicesMouseLeave}
-              >
-              <a onClick={() => sendToSectionId('#services')}>
-              <label>Servicios</label>
-              <label>Servicios</label>
-              </a>
-              {isServicesDropdownOpen && (
-                <div 
-                  className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}
-                  onMouseLeave={handleServicesMouseLeave}
-                  >
-                  {/* Aquí irían los elementos del menú desplegable */}
-                  <a onClick={() => sendToSectionId('#first-section')}>Construcción de marca</a>
-                  <span></span>
-                  <a onClick={() => sendToSectionId('#second-section')}>Identidad de marca</a>
-                  <span></span>
-                  <a onClick={() => sendToSectionId('#third-section')}>Posicionamiento de marca</a>
-                </div>
-              )}
+            <span></span>
+            <div className='menu-servicios'
+              onMouseEnter={handleServicesMouseEnter}
+              // onMouseLeave={handleServicesMouseLeave}
+            >
+            <a onClick={() => sendToSectionId('#services')}>
+            <label>Servicios</label>
+            <label>Servicios</label>
+            </a>
+            {isServicesDropdownOpen && (
+              <div 
+                className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}
+                onMouseLeave={handleServicesMouseLeave}
+                >
+                {/* Aquí irían los elementos del menú desplegable */}
+                <a onClick={() => sendToSectionId('#first-section')}>Construcción de marca</a>
+                <span></span>
+                <a onClick={() => sendToSectionId('#second-section')}>Identidad de marca</a>
+                <span></span>
+                <a onClick={() => sendToSectionId('#third-section')}>Posicionamiento de marca</a>
+              </div>
+            )}
             </div>
-              <span></span>
+            <span></span>
             <div className='menu-contactos' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#contact')}>
                 <label>Contacto</label>
                 <label>Contacto</label>
               </a>
             </div>
+            <span></span>
+            <div className='menu-translation' onMouseEnter={handleServicesMouseLeave}>
+              <button onClick={() => i18n.changeLanguage('es')}>Español</button>
+              <button onClick={() => i18n.changeLanguage('en')}>English</button>
+            </div>
+
           </div>
 
         <div className="header-mobile">

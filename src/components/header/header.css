@@ -49,6 +49,22 @@
     gap: 8px;
 }
 
+.header .menu-items .menu-translation {
+    padding: 0px;
+}
+
+.header .menu-translation button {
+    padding: 8px;
+    height: auto;
+    width: auto;
+    border: 1px solid transparent;
+}
+
+.header .menu-translation button:hover {
+    border-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
 .header .logo-centered {
     border-radius: 10px;
     background: rgba(16, 24, 32, 0.50) !important;
