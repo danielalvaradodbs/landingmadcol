@@ -18,6 +18,7 @@ export const Contact = () => {
 
     const [captchaValue, setCaptchaValue] = useState(null);
     const [captchaError, setCaptchaError] = useState('');
+    const [themeGoogleCatcha, setThemeGoogleCatcha] = useState<any>('dark');
 
     const [labelColor, setLabelColor] = useState({ fullName: 'white', email: 'white', phone: 'white', message: 'white' });
 
@@ -158,11 +159,13 @@ export const Contact = () => {
 
                 
                 if( entry.isIntersecting ) {
+                    setThemeGoogleCatcha('light');
                     sectionRef.current.classList.add('contact-hidden');
                     footer.classList.remove('footer-hidden');
 
                     // footer.style.backgroundColor = !entry.isIntersecting ? '#101820' : '#FFFFFF';
                 } else {
+                    setThemeGoogleCatcha('dark');
                     sectionRef.current.classList.remove('contact-hidden');
                     footer.classList.add('footer-hidden');
 
@@ -310,13 +313,15 @@ export const Contact = () => {
                     </div>
                     <div className="catcha">
                         <ReCAPTCHA
+                            key={themeGoogleCatcha}
                             // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                            sitekey="6LdAczorAAAAABnzRcnVECik9pDftN2cv8rRH15g"
+                            sitekey="6LcDeDorAAAAAF0KH8LJ6xnisscM1e612leKx4Pl"
                             onChange={(value: any) => {
                                 setCaptchaValue(value);
                                 setCaptchaError('');
                             }}
-                            theme="dark"
+                            // theme="dark"
+                            theme={themeGoogleCatcha}
                             style={{ margin: '0' }}
                         />
                         {captchaError && <span style={{ margin: '0 0 16px' }} className="p-0 text-danger">{captchaError}</span>}
