@@ -337,8 +337,8 @@ export const Contact = () => {
                     <div className="catcha">
                         <ReCAPTCHA
                             key={themeGoogleCatcha}
-                            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                            // sitekey="6LcDeDorAAAAAF0KH8LJ6xnisscM1e612leKx4Pl"
+                            // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                            sitekey="6LcDeDorAAAAAF0KH8LJ6xnisscM1e612leKx4Pl"
                             onChange={(value: any) => {
                                 setCaptchaValue(value);
                                 setCaptchaError('');
