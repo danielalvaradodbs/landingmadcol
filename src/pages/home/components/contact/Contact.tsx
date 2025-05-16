@@ -6,6 +6,8 @@ import './contact.css';
 import { useForm } from './hooks/useForm';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from '@emailjs/browser';
+
 
 const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
@@ -75,7 +77,28 @@ export const Contact = () => {
 
     const submitForm = () => {
         submitGoogle();
-        navigate('/thanks-contact');
+        submitEmail();
+        // navigate('/thanks-contact');
+    }
+
+    const submitEmail = () => {
+
+        const templateParams = {
+            fullName,
+            email,
+            title: 'MadCritter Web',
+            phone: `(${code}) ${phone}`,
+            message
+        };
+
+        emailjs
+        .send('service_z4hdkvl', 'template_s4c62zl', templateParams, 'Xm5P1DQl7C6GaEtSa')
+        .then(() => {
+            navigate('/thanks-contact');
+        })
+        .catch((error) => {
+            console.error('Error al enviar el correo:', error);
+        });
     }
 
     const submitGoogle = () => {
@@ -314,8 +337,8 @@ export const Contact = () => {
                     <div className="catcha">
                         <ReCAPTCHA
                             key={themeGoogleCatcha}
-                            // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                            sitekey="6LcDeDorAAAAAF0KH8LJ6xnisscM1e612leKx4Pl"
+                            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                            // sitekey="6LcDeDorAAAAAF0KH8LJ6xnisscM1e612leKx4Pl"
                             onChange={(value: any) => {
                                 setCaptchaValue(value);
                                 setCaptchaError('');
