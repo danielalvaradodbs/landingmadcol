@@ -58,11 +58,18 @@
     height: auto;
     width: auto;
     border: 1px solid transparent;
+    color: #101820;
+    transition: ease-in .4s;
 }
 
 .header .menu-translation button:hover {
     border-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.header.dark .menu-translation button {
+    color: white;
+    transition: ease-in .4s;
 }
 
 .header .logo-centered {

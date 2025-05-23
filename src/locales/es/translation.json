@@ -2,6 +2,19 @@
   "welcome": "Bienvenido a mi app",
   "description": "Esto es una demo",
   "verProyecto": "Ver proyecto",
+  "header": {
+    "menu": "Menú",
+    "aboutUs": "Nosotros",
+    "services": {
+      "title": "Servicios",
+      "subItems": {
+        "brandBuilding": "Construcción de marca",
+        "brandIdentity": "Identidad de marca",
+        "brandPositioning": "Posicionamiento de marca"
+      }
+    },
+    "contact": "Contacto"
+  },
   "brandings": {
     "remo": {
       "info": "IDENTIDAD DE MARCA",
@@ -17,6 +30,230 @@
       "info": "POSICIONAMIENTO DE MARCA",
       "title": "Hero Motocorp",
       "description": "Optimización digital, impulsada por una experiencia web intuitiva y funcional."
+    }
+  },
+  "humanCentered": {
+    "brand": "// La marca es el todo,",
+    "human": "el humano es el centro_"
+  },
+  "services": {
+    "brandBuilding": {
+      "title": "Construcción de </br> marca",
+      "description": "// Desarrollamos tu marca con autenticidad y enfoque en el usuario, logrando relevancia y diferenciación en el mercado.",
+      "items": [
+        "Auditoría de marca",
+        "Arquitectura de marca",
+        "Naming",
+        "Imagen de marca",
+        "Propósito y personalidad de marca",
+        "Manifesto de marca",
+        "Diseño de personajes",
+        "Cultura de marca",
+        "Orientación en registro de marca"
+      ]
+    },
+    "brandIdentity": {
+      "title": "Identidad de </br> marca",
+      "description": "// Destaca frente a la competencia con una identidad sólida, generando impresiones memorables y conexiones duraderas con tus clientes.",
+      "items": [
+        "Manual de identidad visual",
+        "Sistema de diseño",
+        "Empaques",
+        "Key Visual",
+        "Identidad Social",
+        "Guía de comunicaciones"
+      ]
+    },
+    "brandPositioning": {
+      "title": "Posicionamiento de </br> marca",
+      "description": "// Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.",
+      "items": [
+        "Estrategia de marca",
+        "Social Storytelling",
+        "Campañas digitales",
+        "Contenido audiovisual",
+        "Social listening",
+        "Web",
+        "Comunicaciones corporativas",
+        "Endomarketing",
+        "Acciones estratégicas"
+      ]
+    }
+  },
+  "clients": {
+    "title": "Clientes",
+    "type": {
+      "hero": "+4 años juntos",
+      "mucosolvan": "Endomarketing",
+      "remoLab": "Branding estratégico",
+      "bisolvon": "Endomarketing",
+      "pluxee": "Campaña B2B",
+      "sanofi": "+3 años juntos",
+      "3Sixty": "+7 años juntos",
+      "amgen": "Social Listening",
+      "abbvie": "+ 3 años juntos",
+      "vaxTrials": "Estrategia B2B",
+      "nutrabiotics": "Video Marketing",
+      "gaiaAmazonas": "Portal web"
+    }
+  },
+  "contacts": {
+    "title": {
+      "first": "Da el primer paso",
+      "second": "para aumentar el",
+      "third": "valor de tu marca"
+    },
+    "form": {
+      "name": {
+        "title": "Nombre*",
+        "placeholder": "Ingresa nombre y apellido"
+      },
+      "email": {
+        "title": "Correo corporativo*",
+        "placeholder": "Ingresa tu correo corporativo"
+      },
+      "phone": {
+        "title": "Teléfono*"
+      },
+      "message": {
+        "title": "Mensaje (Opcional)",
+        "placeholder": "Cuéntanos como podemos ayudarte"
+      },
+      "terms": {
+        "start": "Al enviar los datos proporcionados confirmo que he leído y aceptado los términos legales ",
+        "legal": "términos legales",
+        "final": " de este sitio web."
+      },
+      "btnSubmit": "Enviar"
+    }
+  },
+  "footer": {
+    "writeToUs": {
+      "title": "ESCRÍBENOS",
+      "subTitle": "Nuestro equipo comercial te ayudará"
+    },
+    "talent": {
+      "title": "TALENTO",
+      "subTitle": "Envía tu CV y portafolio"
+    },
+    "stalkUs": {
+      "title": "STALKEANOS",
+      "subTitle": "Portafolio"
+    },
+    "followUs": {
+      "title": "SÍGUENOS",
+      "subTitle": "Social Media"
+    },
+    "bigReport": "Reporte BIC",
+    "termsConditions": "Términos y Condiciones"
+  },
+  "meetTheTeam": {
+    "button": "Volver",
+    "present": "PRESENTA",
+    "subTitle": "“El éxito de una <strong>gran marca</strong> comienza <br /> con <strong>el talento</strong> que la impulsa.”",
+    "team": "Conoce a nuestro equipo, los protagonistas y creadores que hacen <br /><strong>posible cada proyecto.</strong><br />-",
+    "position": {
+      "agencyLead": "LÍDER AGENCIA / CO-FUNDADOR",
+      "commercialLead": "LÍDER COMERCIAL / CO-FUNDADOR",
+      "strategyLead": "LÍDER ESTRATEGIA / CO-FUNDADORA",
+      "designLead": "LÍDER DISEÑO / CO-FUNDADORA",
+      "operationsLead": "LÍDER OPERACIONES",
+      "talentLead": "LÍDER TALENTO",
+      "marketingLead": "LÍDER MARKETING",
+      "creativityLead": "LÍDER CREATIVIDAD",
+      "accountExecutive": "EJECUTIVA DE CUENTAS",
+      "accountExecutiveTwo": "EJECUTIVA DE CUENTAS",
+      "creativeCopyWriter": "COPY CREATIVA",
+      "graphicDesigner": "DISEÑADORA GRÁFICA",
+      "graphicDesignerTwo": "DISEÑADOR GRÁFICO",
+      "webDesigner": "DISEÑADOR WEB",
+      "developer": "DESARROLLADOR"
+    }
+  },
+  "termsConditions": {
+    "title": "Términos y<br/> Condiciones",
+    "description": "Al navegar en la página www.madcritter.com, el usuario puede ingresar datos personales para acceder a los servicios que se ofrecen. Así mismo, en el desarrollo de los negocios de Mad Critter S.A.S en adelante LA COMPAÑÍA; se han recolectado y almacenado datos personales de los clientes y por ese motivo, LA COMPAÑÍA se comprometen a adoptar una política de confidencialidad y protección de datos personales, con el propósito de proteger la información personal obtenida de sus clientes a través de sus distintos canales de comercialización y contacto, política que se regirá por las siguientes condiciones:",
+    "conditionsOrderList": {
+      "one": {
+        "title": "Carácter vinculante de las normas sobre protección de datos:",
+        "information": "El responsable del tratamiento de la información que ha sido recolectada y almacenada en el desarrollo de los negocios es LA COMPAÑÍA."
+      },
+      "two": {
+        "title": "Principios generales que se acogen para garantizar la protección de los datos personales de los clientes de LA COMPAÑÍA:",
+        "information": "Dentro del compromiso legal y Corporativo de LA COMPAÑÍA para garantizar la confidencialidad de la información personal de sus clientes, se establecen como principios generales para el tratamiento de la información, en desarrollo de los establecidos en la ley 1581 de 2012 y el decreto reglamentario 1377 de 2013, los siguientes:"
+      }
+    },
+    "legality": {
+      "title": "Principio de Legalidad:",
+      "information": "No habrá tratamiento de información personal de los clientes sin observar las reglas establecidas en la normatividad vigente y en las demás disposiciones que se desarrollen sobre el tema.Principio de finalidad: La incorporación de datos a las bases de datos físicas o digitales del tratamiento de la información de los clientes por parte de LA COMPAÑÍA deberá obedecer a una finalidad legítima, la cual será informada al titular."
+    },
+    "purpose": {
+      "title": "",
+      "information": ""
+    },
+    "freedom": {
+      "title": "Principio de libertad:",
+      "information": "LA COMPAÑÍA únicamente realizarán tratamiento de datos personales de sus clientes cuando cuenten con la autorización de éstos en los términos del art. 3 literal a) de la ley 1581 de 2012 y el Capítulo II del decreto 1377 de 2013. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización o en ausencia de mandato legal o judicial que releve el consentimiento. Principio de veracidad y calidad: LA COMPAÑÍA propenderá porque la información de sus clientes sea veraz exacta, comprensible, comprobable y se encuentre actualizada, para lo cual dispondrá de medios eficientes para la actualización y rectificación de los datos personales. Igualmente, LA COMPAÑÍA se abstendrá de llevar a cabo el tratamiento de la información cuando existan dudas sobre la calidad o veracidad de la misma."
+    },
+    "transparency": {
+      "title": "Principio de transparencia:",
+      "information": "LA COMPAÑÍA únicamente realizarán tratamiento de datos personales de sus clientes cuando cuenten con la autorización de éstos en los términos del art. 3 literal a) de la ley 1581 de 2012 y el Capítulo II del decreto 1377 de 2013. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización o en ausencia de mandato legal o judicial que releve el consentimiento. Principio de veracidad y calidad: LA COMPAÑÍA propenderá porque la información de sus clientes sea veraz exacta, comprensible, comprobable y se encuentre actualizada, para lo cual dispondrá de medios eficientes para la actualización y rectificación de los datos personales. Igualmente, LA COMPAÑÍA se abstendrá de llevar a cabo el tratamiento de la información cuando existan dudas sobre la calidad o veracidad de la misma."
+    },
+    "security": {
+      "title": "Principio de seguridad:",
+      "information": "LA COMPAÑÍA adelantará todas las medidas técnicas, administrativas y humanas para garantizar que la información personal de los titulares no circule, sea adulterada, se pierda, consultada o usada por personas no autorizadas o personas que tengan un fin fraudulento.Principio de acceso y circulación restringida: El Tratamiento se sujeta a los límites que se derivan de la naturaleza de los datos personales, de las disposiciones de la ley 1581 de 2012, su decreto reglamentario 1377 de 2013 y la Constitución. En este sentido, el tratamiento sólo podrá hacerse por personas autorizadas por el titular y/o por las personas previstas en la presente ley."
+    },
+    "clientRightsOrderList": {
+      "one": {
+        "title": "Derechos que asisten al titular de los datos personales:",
+        "information": "Los titulares de la información podrán, en cualquier tiempo ejercer los siguientes derechos: conocer, actualizar y rectificar sus datos personales frente a LA COMPAÑÍA, solicitar prueba de la autorización otorgada a LA COMPAÑÍA para el tratamiento, ser informado por LA COMPAÑÍA sobre el uso que se ha dado a los datos; revocar la autorización y/o solicitar la supresión de sus datos cuando sea procedente, acceder en forma gratuita a los mismos, presentar ante la Superintendencia de Industria y Comercio quejas por infracciones en que incurra LA COMPAÑÍA a las normas relacionadas con datos personales."
+      },
+      "two": {
+        "title": "Atención de peticiones, consultas y reclamos, responsable y proceso:",
+        "information": "Para el ejercicio de los derechos el titular de la información podrá comunicarse con la línea de atención al cliente (1) 3576031 o enviar un correo electrónico a info@www.madcritter.com, o establecer contacto con LA COMPAÑÍA a través de los distintos medios que éstas tienen dispuestos para tal fin, tales como página web, redes sociales y oficinas de atención al cliente."
+      },
+      "third": {
+        "title": "Información que recolectamos y almacenamos de nuestros clientes:",
+        "information": "En virtud de la asesoría que brinda LA COMPAÑÍA, la información que se recopila o almacena puede incluir lo siguiente: Datos generales de contacto, tales como: Dirección, teléfono fijo, teléfono móvil, correo electrónico."
+      }
+    },
+    "dataCollected": {
+      "information": "Datos particulares según el tipo de vinculación: Nivel de ingresos, datos financieros, capacidad de endeudamiento, patrimonio bruto, personas a cargo, composición del grupo familiar, hobbies o aficiones, bienes que posee, información laboral.",
+      "moreInformation": "Datos sensibles: Datos biométricos y relativos a la salud.",
+      "orderList": {
+        "one": {
+          "title": "Política para el tratamiento de datos sensibles:",
+          "information": "LA COMPAÑÍA no recolectará, incorporará ni almacenará datos sensibles de sus clientes, empleados o terceros a menos que exista una autorización previa del titular de la información. Sólo se solicitará la autorización mencionada cuando sea necesaria y proporcional para la ejecución de la relación contractual con el titular, siempre y cuando la ley exija o permita acceder a información sensible de éste. La autorización para el tratamiento de los datos sensibles se solicitará previa la incorporación de los mismos, y en ésta se señalará la finalidad para la cual se incorporan, se indicará que la respuesta a las preguntas sobre datos sensibles es facultativa, y los demás elementos descritos en la presente política para la obtención de la autorización para el tratamiento de la información. No podrá realizarse tratamiento de datos sensibles para fines distintos de los autorizados por el titular. El acceso, circulación y tratamiento de los datos sensibles será restringido y se limitará a lo expresamente autorizado por el titular y a lo estipulado en la ley."
+        },
+        "two": {
+          "title": "Política para el tratamiento de datos de niños y adolescentes:",
+          "information": "Los niños y adolescentes, podrán ser usuarios de los productos y servicios que ofrece LA COMPAÑÍA, siempre y cuando actúen a través de o debidamente representados por sus padres o por quienes tengan la patria potestad del menor o su representación legal. LA COMPAÑÍA velará por el uso adecuado de los datos personales de los niños y adolescentes menores de edad, garantizando que en el tratamiento de sus datos se respete el interés superior de ellos, y sus derechos fundamentales, únicamente habrá tratamiento de éstos datos cuando exista autorización expresa de sus representantes legales."
+        },
+        "third": {
+          "title": "El tratamiento de la información personal de los titulares:",
+          "information": "LA COMPAÑÍA usará la información personal de sus clientes para proveer nuestros servicios, productos y soluciones en seguros y aquellos señalados en las presentes políticas, siempre que el tratamiento obedezca a un fin legítimo y sea proporcional de acuerdo a la vinculación del cliente, particularmente para lo que resulte necesario para la prestación de los servicios encargados, como ejecutar y cumplir el contrato. También se realizará tratamiento de la información para entregarla o compartirla con autoridades administrativas y judiciales en virtud de un requerimiento legal o reglamentario con proveedores, con el fin de ser contactado para promocionar y publicitar nuestras actividades, productos y servicios, envío de información, incluyendo ofertas comerciales y publicitarias de terceros."
+        },
+        "fourth": {
+          "title": "Entrega de información personal a proveedores de servicios:",
+          "information": "Es posible que para cumplir con la relación contractual que LA COMPAÑÍA sostenga con el titular de la información, ésta sea entregada o compartida con proveedores para las finalidades autorizadas por el titular o las previstas en la ley, tales como, personas naturales o jurídicas que presten servicios sus servicios profesionales para efectuar estadísticas, cálculos actuariales, desarrollo de software y cualquier otra actividad para llevar a cabo el objeto social de LA COMPAÑÍA y prestar correctamente el servicio. Siempre que su información sea entregada o compartida con proveedores LA COMPAÑÍA se asegurará de establecer unas condiciones que vinculen al proveedor a las políticas de privacidad de ésta de tal forma que la información personal de los clientes se encuentre protegida, así mismo, se establecerán acuerdos de confidencialidad para el manejo de la información y obligaciones responsable-encargado cuando el tipo de entrega lo amerite. Para el efecto, LA COMPAÑÍA garantizará que en todas las relaciones comerciales y contractuales en donde se transmita información personal a un proveedor de servicios, se garantizará la realización de auditorías aleatorias preventivas y a que la política de seguridad sea divulgada al interior de dichas compañías para la aplicación en todos sus dependientes y contratistas."
+        },
+        "five": {
+          "title": "Preferencias para el envío de información comercial, publicidad y ofertas de productos y servicios:",
+          "information": "Los titulares de la información personal podrán contactarse con LA COMPAÑÍA por los medios señalados para el ejercicio de los derechos que les asisten como titulares con el fin de manifestar sus preferencias para el envío de ofertas comerciales, de publicidad e información sobre productos y servicios, igualmente podrán solicitar la cancelación del envío de éstas ofertas, sin perjuicio de que LA COMPAÑÍA pueda continuar enviando información que resulte necesaria para la ejecución de la relación contractual. Nuestro objetivo es cumplir con la solicitud de cancelación efectuada por el titular dentro de un plazo razonable, sin embargo, en caso de que LA COMPAÑÍA haya compartido la información personal con anterioridad al recibo de la solicitud de cancelación, de acuerdo a la autorización otorgada previamente por el titular, no se podrá garantizar que éste no vuelva a recibir la información descrita cuando la base de datos en que se almacene la información no sea responsabilidad de LA COMPAÑÍA."
+        },
+        "six": {
+          "title": "Vigencia del tratamiento de los datos:",
+          "information": "La información suministrada por los titulares, permanecerá almacenada por el término necesario para el cumplimiento de los fines para los cuales fue incorporada."
+        },
+        "seven": {
+          "title": "Modificaciones a la política de privacidad y tratamiento de datos personales:",
+          "information": "LA COMPAÑÍA se reserva el derecho de modificar las normas de confidencialidad y protección de datos con el fin de adaptarlas a nuevos requerimientos de tipo legal, jurisprudencial, técnico y en general, cuando sea necesario para prestar un mejor servicio."
+        }
+      }
+    },
+    "final": {
+      "subFooter": "El responsable del tratamiento de la información es Mad Critter S.A.S con sede principal en Calle 74a # 22-31 oficina 308.",
+      "footer:": "Aceptación de esta Política de Privacidad:El titular de la información acepta el tratamiento de sus datos personales conforme los términos de esta Política de Privacidad, cuando proporciona los datos a través de nuestros canales o puntos de atención o compra incluyendo Call Centers o cuando adquiere, se afilia o usa cualquiera de nuestros productos o servicios."
     }
   }
 }

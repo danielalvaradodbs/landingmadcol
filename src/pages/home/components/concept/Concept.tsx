@@ -7,12 +7,14 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Concept = () => {
 
     const { setIsDark } = useDarkMode();
+    const { t } = useTranslation();
   
 
   const videoRef = useRef(null);
@@ -186,8 +188,8 @@ export const Concept = () => {
             ></video>
           </div>
           <div className="centro">
-            <h5 className='animate__animated animate__fadeInUpBig   animate__faster'>// La marca es el todo,</h5>
-            <h5 className='animate__animated animate__fadeInUpBig animate__fast'>el humano es el centro_</h5>
+            <h5 className='animate__animated animate__fadeInUpBig   animate__faster'>{t('humanCentered.brand')}</h5>
+            <h5 className='animate__animated animate__fadeInUpBig animate__fast'>{t('humanCentered.human')}</h5>
           </div>
         </div>
 

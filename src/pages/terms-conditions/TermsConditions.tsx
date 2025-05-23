@@ -1,25 +1,43 @@
+import { useTranslation } from 'react-i18next';
 import './terms-conditions.css';
 
 export const TermsConditions = () => {
+
+  const { t } = useTranslation();
+// termsConditions
   return (
     <>  
         <div className="terms-conditions">
-            <h2>Términos y<br/> Condiciones</h2>
+            <h2 dangerouslySetInnerHTML={{__html: t('termsConditions.title')}}></h2>
 
-            <p>Al navegar en la página www.madcritter.com, el usuario puede ingresar datos personales para acceder a los servicios que se ofrecen. Así mismo, en el desarrollo de los negocios de Mad Critter S.A.S en adelante LA COMPAÑÍA; se han recolectado y almacenado datos personales de los clientes y por ese motivo, LA COMPAÑÍA se comprometen a adoptar una política de confidencialidad y protección de datos personales, con el propósito de proteger la información personal obtenida de sus clientes a través de sus distintos canales de comercialización y contacto, política que se regirá por las siguientes condiciones:</p>
+            <p>{t('termsConditions.description')}</p>
 
             <ol>
-                <li>Carácter vinculante de las normas sobre protección de datos: El responsable del tratamiento de la información que ha sido recolectada y almacenada en el desarrollo de los negocios es LA COMPAÑÍA.</li>
-                <li>Principios generales que se acogen para garantizar la protección de los datos personales de los clientes de LA COMPAÑÍA: Dentro del compromiso legal y Corporativo de LA COMPAÑÍA para garantizar la confidencialidad de la información personal de sus clientes, se establecen como principios generales para el tratamiento de la información, en desarrollo de los establecidos en la ley 1581 de 2012 y el decreto reglamentario 1377 de 2013, los siguientes:</li>
+                <li><strong>{t('termsConditions.conditionsOrderList.one.title')}</strong> {t('termsConditions.conditionsOrderList.one.information')}</li>
+                <li><strong>{t('termsConditions.conditionsOrderList.two.title')}</strong> {t('termsConditions.conditionsOrderList.two.information')}</li>
             </ol>
 
-            <p>Principio de Legalidad: No habrá tratamiento de información personal de los clientes sin observar las reglas establecidas en la normatividad vigente y en las demás disposiciones que se desarrollen sobre el tema.Principio de finalidad: La incorporación de datos a las bases de datos físicas o digitales del tratamiento de la información de los clientes por parte de LA COMPAÑÍA deberá obedecer a una finalidad legítima, la cual será informada al titular.</p>
+            <p>
+              <strong>{t('termsConditions.legality.title')} </strong>
+              {t('termsConditions.legality.information')}
+            </p>
+            <p>
+              <strong>{t('termsConditions.purpose.title')} </strong>
+              {t('termsConditions.purpose.information')}
+            </p>
+            <p>
+              <strong>{t('termsConditions.freedom.title')} </strong>
+              {t('termsConditions.freedom.information')}
+            </p>
+            <p>
+              <strong>{t('termsConditions.transparency.title')} </strong>
+              {t('termsConditions.transparency.information')}
+            </p>
 
-            <p>Principio de libertad: LA COMPAÑÍA únicamente realizarán tratamiento de datos personales de sus clientes cuando cuenten con la autorización de éstos en los términos del art. 3 literal a) de la ley 1581 de 2012 y el Capítulo II del decreto 1377 de 2013. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización o en ausencia de mandato legal o judicial que releve el consentimiento. Principio de veracidad y calidad: LA COMPAÑÍA propenderá porque la información de sus clientes sea veraz exacta, comprensible, comprobable y se encuentre actualizada, para lo cual dispondrá de medios eficientes para la actualización y rectificación de los datos personales. Igualmente, LA COMPAÑÍA se abstendrá de llevar a cabo el tratamiento de la información cuando existan dudas sobre la calidad o veracidad de la misma.</p>
-
-            <p>Principio de transparencia: Dentro de los mecanismos que se establezcan para el ejercicio de los derechos de los titulares de la información personal, LA COMPAÑÍA garantizará al titular, el acceso a la información sobre datos personales que le conciernan sin ningún tipo de restricciones y en el momento en que el titular lo requiera.</p>
-
-            <p>Principio de seguridad: LA COMPAÑÍA adelantará todas las medidas técnicas, administrativas y humanas para garantizar que la información personal de los titulares no circule, sea adulterada, se pierda, consultada o usada por personas no autorizadas o personas que tengan un fin fraudulento.Principio de acceso y circulación restringida: El Tratamiento se sujeta a los límites que se derivan de la naturaleza de los datos personales, de las disposiciones de la ley 1581 de 2012, su decreto reglamentario 1377 de 2013 y la Constitución. En este sentido, el tratamiento sólo podrá hacerse por personas autorizadas por el titular y/o por las personas previstas en la presente ley.</p>
+            <p>
+              <strong>{t('termsConditions.security.title')} </strong>
+              {t('termsConditions.security.information')}
+            </p>
 
             <ol>
             <li>Derechos que asisten al titular de los datos personales: Los titulares de la información podrán, en cualquier tiempo ejercer los siguientes derechos: conocer, actualizar y rectificar sus datos personales frente a LA COMPAÑÍA, solicitar prueba de la autorización otorgada a LA COMPAÑÍA para el tratamiento, ser informado por LA COMPAÑÍA sobre el uso que se ha dado a los datos; revocar la autorización y/o solicitar la supresión de sus datos cuando sea procedente, acceder en forma gratuita a los mismos, presentar ante la Superintendencia de Industria y Comercio quejas por infracciones en que incurra LA COMPAÑÍA a las normas relacionadas con datos personales.</li>

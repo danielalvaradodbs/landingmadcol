@@ -5,11 +5,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { logosMadcritter } from '../../shared';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Footer = () => {
+
+  const { t } = useTranslation();
+
   const currentPath = useLocation();
   
   const sectionRef = useRef(null);
@@ -80,10 +84,10 @@ export const Footer = () => {
         <div className={`escribenos ${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}`}>
           <div className='container first-container'>
             <div>
-              <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } ><strong>ESCRÍBENOS</strong></p>
+              <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } ><strong>{t('footer.writeToUs.title')}</strong></p>
             </div>
             <div>
-              <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >Nuestro equipo comercial te ayudará</p>
+              <p className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >{t('footer.writeToUs.subTitle')}</p>
             </div>
           </div>
           <div className='container text' style={{ position: 'relative'}} data-animation="to-top">
@@ -109,10 +113,10 @@ export const Footer = () => {
         <div className={`talento ${visibleSections.includes('talento') ? 'reveal' : 'hidden'}`}>
           <div className="container first-container">
             <div>
-              <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } ><strong>TALENTO</strong></p>
+              <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } ><strong>{t('footer.talent.title')}</strong></p>
             </div>
             <div>
-              <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >Envía tu CV y portafolio</p>
+              <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >{t('footer.writeToUs.subTitle')}</p>
             </div>
           </div>
           <div className='container text' data-animation="to-top">
@@ -131,10 +135,10 @@ export const Footer = () => {
         <div className={`stalkeanos ${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}>
           <div className="container">
             <div>
-              <p className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}><strong>STALKEANOS</strong></p>
+              <p className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}><strong>{t('footer.stalkUs.title')}</strong></p>
             </div>
             <div>
-              <p className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}>Portafolio</p>
+              <p className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}>{t('footer.stalkUs.subTitle')}</p>
             </div>
           </div>
           <div className='container stalk' data-animation="to-top">
@@ -177,10 +181,10 @@ export const Footer = () => {
         <div className={`siguenos ${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}>
           <div className="container">
             <div>
-              <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}><strong>SÍGUENOS</strong></p>
+              <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}><strong>{t('footer.followUs.title')}</strong></p>
             </div>
             <div>
-              <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}>Social Media</p>
+              <p className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`}>{t('footer.followUs.subTitle')}</p>
             </div>
           </div>
           <div className='container stalk' data-animation="to-top">
@@ -242,14 +246,6 @@ export const Footer = () => {
           <img className={`${ isFooterVisible ? 'reveal' : '' }`} src={logosMadcritter.logoBlue.logo} alt="" />
         </div>
         <div className="texto-footer">
-          {/* <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Mad Critter ® 2025   |  <a href="/#/meet-the-team">Meet the team!</a></span>
-          <span className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`}>Bogotá, Colombia   |   Orlando, USA   |   Quito, Ecuador</span>
-          <div data-animation="to-top" style={{ position: 'relative' }}>
-            <a className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} href="/#/terms-conditions">
-              <label>Términos y Condiciones</label>
-              <label>Términos y Condiciones</label>
-            </a>
-          </div> */}
 
           <ul className={`${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow meeting-footer' : '' }`}>
             <li>Mad Critter® 2025</li>
@@ -266,11 +262,11 @@ export const Footer = () => {
             <li>
               <div data-animation="to-top">
                 <Link className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} to='https://madcritter.com/BIC/BIC.pdf' target='_blank' >
-                  <label>Reporte BIC</label>
+                  <label>{t('footer.bigReport')}</label>
                 </Link>
                 <span className='tablet'>|</span>
                 <Link className={`terms-condition ${ isFooterVisible ? 'animate__animated animate__fadeIn animate__slow' : '' }`} to='/terms-conditions' target='_blank' >
-                  <label>Términos y Condiciones</label>
+                  <label>{t('footer.termsConditions')}</label>
                 </Link>
               </div>
             </li>

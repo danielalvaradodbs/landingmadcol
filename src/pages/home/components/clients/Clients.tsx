@@ -2,12 +2,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { clients } from '../../../../shared';
 import './clients.css';
+import { useTranslation } from 'react-i18next';
 
 export const Clients = () => {
 
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [animation, setAnimation] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +49,7 @@ export const Clients = () => {
 
         <section className="clients" ref={ sectionRef }>
           <div className="title-clients">
-            <h2 className={`${ isVisible ? 'reveal' : '' }`}>Clientes</h2>
+            <h2 className={`${ isVisible ? 'reveal' : '' }`}>{t('clients.title')}</h2>
             {/* <img 
               src={ FiguraClientes } alt=""
               className={`${ isVisible ? 'reveal' : '' }`}
@@ -68,7 +71,7 @@ export const Clients = () => {
                       />
                   </div>
                   <div className="type">
-                    <span>{ item.type }</span>
+                    <span>{ t(item.type) }</span>
                   </div>
 
                 </div>

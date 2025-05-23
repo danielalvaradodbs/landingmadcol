@@ -3,10 +3,18 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './services.css';
 import { FiguraAsteriscoR, FlechaUp, R } from '../../../../shared';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Services = () => {
+
+   const { t } = useTranslation();
+
+  const itemsBrandBuilding = t('services.brandBuilding.items', { returnObjects: true }) as string[];
+  const itemsBrandIdentity = t('services.brandIdentity.items', { returnObjects: true }) as string[];
+  const itemsbrandPositioning = t('services.brandPositioning.items', { returnObjects: true }) as string[];
+  
   useEffect(() => {
     const sections = gsap.utils.toArray<HTMLElement>('.service-section');
     
@@ -109,39 +117,19 @@ export const Services = () => {
         <div className="header-sections">
           <div className="marca">
             <div className="title">
-              <h2>Construcción de <br/> marca</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: t('services.brandBuilding.title') || <></> }}></h2>
             </div>
           </div>
 
           <div className="footer-section mobile">
             <p className='animation-text'>
-            // Desarrollamos tu marca con autenticidad y enfoque en el usuario, logrando relevancia y diferenciación en el mercado.
+            {t('services.brandBuilding.description')}
             </p>
           </div>
 
           <div className="items">
             <ul>
-            {animateText([
-              'Auditoría de marca',
-              'Arquitectura de marca',
-              'Naming',
-              'Imagen de marca',
-              'Propósito y personalidad de marca',
-              'Manifesto de marca',
-              'Diseño de personajes',
-              'Cultura de marca',
-              'Orientación en registro de marca'
-            ])}
-              {/* <span><li>Auditoría de marca</li></span>
-              <span><li>Arquitectura de marca</li></span>
-              <span><li>Naming</li></span>
-              <span><li>Imagen de marca</li></span>
-              <span><li>Propósito y personalidad de marca</li></span>
-              <span><li>Manifesto de marca</li></span>
-              <span><li>Diseño de personajes</li></span>
-              <span><li>Cultura de marca</li></span>
-              <span><li>Orientación en registro de marca</li></span> */}
-             
+              {animateText(itemsBrandBuilding)}
             </ul>
             <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ R } alt="" style={{ paddingLeft: '30px' }} />
           </div>
@@ -149,7 +137,7 @@ export const Services = () => {
         </div>
         <div className="footer-section desktop">
           <p className='animation-text'>
-          // Desarrollamos tu marca con autenticidad y enfoque en el usuario, logrando relevancia y diferenciación en el mercado.
+            {t('services.brandBuilding.description')}
           </p>
         </div>
       </section>
@@ -161,39 +149,27 @@ export const Services = () => {
         <div className="header-sections">
           <div className="identidad">
             <div className="title">
-              <h2>Identidad de <br /> marca</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: t('services.brandIdentity.title') || <></> }}></h2>
             </div>
           </div>
 
           <div className="footer-section mobile">
             <p className='animation-text'>
-            // Destaca frente a la competencia con una identidad sólida, generando impresiones memorables y conexiones duraderas con tus clientes.
+              {t('services.brandIdentity.description')}
             </p>
           </div>
           
           <div className="items">
             <ul>
-            {animateText([
-              'Manual de identidad visual',
-              'Sistema de diseño',
-              'Empaques',
-              'Key Visual',
-              'Identidad Social',
-              'Guía de comunicaciones',
-            ])}
-              {/* <li>Manual de identidad visual</li>
-              <li>Sistema de diseño</li>
-              <li>Empaques</li>
-              <li>Key Visual</li>
-              <li>Identidad Social</li>
-              <li>Guía de comunicaciones</li> */}
+              {animateText(itemsBrandIdentity)}
             </ul>
             <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ FiguraAsteriscoR } alt="" style={{ paddingLeft: '30px' }} />
           </div>
         </div>
         <div className="footer-section desktop">
           <p className='animation-text' style={{ marginTop: '40px' }}>
-          // Destaca frente a la competencia con una identidad sólida, generando impresiones memorables y conexiones duraderas con tus clientes.
+          {t('services.brandIdentity.description')}
+
           </p>
         </div>
       </section>
@@ -205,44 +181,27 @@ export const Services = () => {
         <div className="header-sections">
           <div className="posicionamiento">
             <div className="title">
-              <h2>Posicionamiento de <br/> marca</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: t('services.brandPositioning.title') || <></> }}></h2>
+              
             </div>
           </div>
           <div className="footer-section mobile">
             <p className='animation-text'>
-            // Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.
+            {t('services.brandPositioning.description')}
+
             </p>
           </div>
           <div className="items">
             <ul>
-            {animateText([
-              'Estrategia de marca',
-              'Social Storytelling',
-              'Campañas digitales',
-              'Contenido audiovisual',
-              'Social listening',
-              'Web',
-              'Comunicaciones corporativas',
-              'Endomarketing',
-              'Acciones estratégicas',
-            ])}
-              {/* <li>Estrategia de marca</li>
-              <li>Social Storytelling</li>
-              <li>Campañas digitales</li>
-              <li>Contenido audiovisual</li>
-              <li>Social listening</li>
-              <li>Web</li>
-              <li>Comunicaciones corporativas</li>
-              <li>Endomarketing</li>
-              <li>Acciones estratégicas</li> */}
+            {animateText(itemsbrandPositioning)}
             </ul>
             <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ FlechaUp } alt="" style={{ paddingLeft: '30px' }} />
-
           </div>
         </div>
         <div className="footer-section desktop">
           <p className='animation-text'>
-          // Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.
+          {t('services.brandPositioning.description')}
+
           </p>
         </div>
       </section>

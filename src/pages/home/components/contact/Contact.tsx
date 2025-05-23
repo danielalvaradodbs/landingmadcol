@@ -5,10 +5,13 @@ import { FiguraContacto, FlechaButton, FlechaRoja, Selector } from '../../../../
 import './contact.css';
 import { useForm } from './hooks/useForm';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
 export const Contact = () => {
+
+    const { t } = useTranslation();
 
     const currentPath = useLocation();
     const navigate = useNavigate();
@@ -20,10 +23,10 @@ export const Contact = () => {
     const [formSubmitted, setFormSubmitted] = useState(false);
         
     const formValidations = {
-            fullName: [ (value: string) => value.length >= 1, '*Este dato es necesario para poder contactarte.' ],
-            email: [ (value: string) => new RegExp(emailPattern).test(value), '*Revisa el correo que ingresaste, parece un formato no válido.' ],
-            phone: [ (value: string) => value.length >= 10, '*Este dato es necesario para poder contactarte.' ],
-            terms: [ (value: boolean) => value, '*Para continuar, por favor confirma haber leído nuestros términos y condiciones' ],
+        fullName: [ (value: string) => value.length >= 1, '*Este dato es necesario para poder contactarte.' ],
+        email: [ (value: string) => new RegExp(emailPattern).test(value), '*Revisa el correo que ingresaste, parece un formato no válido.' ],
+        phone: [ (value: string) => value.length >= 10, '*Este dato es necesario para poder contactarte.' ],
+        terms: [ (value: boolean) => value, '*Para continuar, por favor confirma haber leído nuestros términos y condiciones' ],
     }
 
     const formData = {
@@ -199,14 +202,15 @@ export const Contact = () => {
         <section className="contact" ref={ sectionRef } id='contact'>
             <div className="title-contact">
                 <div className="first">
-                    <h2 className= { `${isVisible ? 'reveal' : ''}` }>Da el primer paso</h2>
+                    {/* <h2 className= { `${isVisible ? 'reveal' : ''}` }>Da el primer paso</h2> */}
+                    <h2 className= { `${isVisible ? 'reveal' : ''}` }>{ t('contacts.title.first') }</h2>
                     <img src={ FlechaRoja } alt="" className= { `flecha-roja ${isVisible ? 'reveal' : ''}` }/>
                 </div>
                 <div className="second">
-                    <h2 className= { `${isVisible ? 'reveal' : ''}` }>para aumentar el </h2>
+                    <h2 className= { `${isVisible ? 'reveal' : ''}` }>{t('contacts.title.second')}</h2>
                 </div>
                 <div className="third" style={{ position: 'relative' }}>
-                    <h2 className= { `third ${isVisible ? 'reveal' : ''}` }>valor de tu marca</h2>
+                    <h2 className= { `third ${isVisible ? 'reveal' : ''}` }>{t('contacts.title.third')}</h2>
                     <img src={ FiguraContacto } alt="" className= { `figura-contacto ${isVisible ? 'reveal' : ''}` } />
                 </div>
             </div>
@@ -220,7 +224,8 @@ export const Contact = () => {
                             className={ `${fullNameValid && formSubmitted ? 'text-danger' :  " "}` }
                             style={{ color: labelColor.fullName }}
                         >
-                            Nombre*
+                            {t('contacts.form.name.title')}
+                            {/* Nombre* */}
                         </label>
                         <input 
                             type="text" 
@@ -230,7 +235,7 @@ export const Contact = () => {
                             onChange={ onInputChange } 
                             onFocus={() => handleFocus('fullName')}
                             onBlur={() => handleBlur('fullName')} 
-                            placeholder='Ingresa nombre y apellido' />
+                            placeholder={t('contacts.form.name.placeholder')} />
                         <span className="p-0 text-danger">
                             {fullNameValid && formSubmitted ? fullNameValid : ""}
                         </span>
@@ -239,14 +244,14 @@ export const Contact = () => {
                         <label 
                             style={{ color: labelColor.email }} 
                             htmlFor="email" 
-                            className={ `${emailValid && formSubmitted ? 'text-danger' :  " "}` }>Correo corporativo*</label>
+                            className={ `${emailValid && formSubmitted ? 'text-danger' :  " "}` }>{t('contacts.form.email.title')}</label>
                         <input 
                             onFocus={() => handleFocus('email')}
                             onBlur={() => handleBlur('email')} 
                              type="text" 
                              id='email' 
                              name='email' 
-                             value={ email } onChange={ onInputChange } placeholder='Ingresa tu correo corporativo' />
+                             value={ email } onChange={ onInputChange } placeholder={t('contacts.form.email.placeholder')} />
                         <span className="p-0 text-danger">
                             {emailValid && formSubmitted ? emailValid : ""}
                         </span>
@@ -256,7 +261,9 @@ export const Contact = () => {
                             htmlFor="phone" 
                             className={ `${phoneValid && formSubmitted ? 'text-danger' :  " "}` }
                             style={{ color: labelColor.phone }}
-                            >Teléfono*</label>
+                        >
+                            {t('contacts.form.phone.title')}
+                        </label>
                         <div className="code-input">
                             <div className="container" style={{ position: 'relative' }}>
 
@@ -285,7 +292,7 @@ export const Contact = () => {
                             </span>
                     </div>
                     <div className={`message ${isVisible ? 'reveal' : ''}`} >
-                        <label style={{ color: labelColor.message }} htmlFor="message">Mensaje (Opcional)</label>
+                        <label style={{ color: labelColor.message }} htmlFor="message">{t('contacts.form.message.title')}</label>
                         <input 
                             onFocus={() => handleFocus('message')}
                             onBlur={() => handleBlur('message')} 
@@ -294,18 +301,18 @@ export const Contact = () => {
                             id='message'
                             value={ message }
                             onChange={ onInputChange }
-                            placeholder='Cuéntanos como podemos ayudarte'
+                            placeholder={ t('contacts.form.message.placeholder') }
                         />
                     </div>
                     <div className={`terms-submit ${isVisible ? 'reveal' : ''}`}>
                         <div className="terms">
                             <input type="checkbox" id='terms' name='terms' checked={ terms } onChange={ onInputChange } />
-                            <label htmlFor="terms">Al enviar los datos proporcionados confirmo que he leído y aceptado los <a href='#/terms-conditions' target='_blank'>términos legales</a> de este sitio web.</label>
+                            <label htmlFor="terms">{t('contacts.form.terms.start')}<a href='#/terms-conditions' target='_blank'>{t('contacts.form.terms.legal')}</a>{t('contacts.form.terms.final')}</label>
                         </div>
                            
                         <div className="submit">
                             <Button 
-                                texto='Enviar' 
+                                texto={t('contacts.form.btnSubmit')}
                                 urlIcon={ FlechaButton } 
                                 backgroundColor={'#FF2951'}
                                 hoverBackgroundColor={'#2A00FF'}

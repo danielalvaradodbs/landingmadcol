@@ -3,62 +3,64 @@
 export const meetTheTeam = [
     {
         name: 'alejandro neira',
-        cargo: 'LÍDER AGENCIA / CO-FUNDADOR'
+        cargo: 'meetTheTeam.position.agencyLead'
     },
     {
         name: 'rafael jordan',
-        cargo: 'LÍDER COMERCIAL / CO-FUNDADOR'
+        cargo: 'meetTheTeam.position.commercialLead'
     },
     {
         name: 'liliana ballén',
-        cargo: 'LÍDER ESTRATEGIA / CO-FUNDADORA'
+        cargo: 'meetTheTeam.position.strategyLead'
     },
     {
         name: 'carolina guzmán',
-        cargo: 'LÍDER DISEÑO / CO-FUNDADORA'
+        cargo: 'meetTheTeam.position.designLead'
+
     },
     {
         name: 'daniela serna',
-        cargo: 'LÍDER OPERACIONES'
+        cargo: 'meetTheTeam.position.operationsLead'
     },
     {
         name: 'oscar acosta',
-        cargo: 'LÍDER TALENTO'
+        cargo: 'meetTheTeam.position.talentLead'
+
     },
     {
         name: 'andrés marín',
-        cargo: 'LÍDER MARKETING'
+        cargo: 'meetTheTeam.position.marketingLead'
     },
     {
         name: 'michelle abril',
-        cargo: 'LÍDER CREATIVIDAD'
+        cargo: 'meetTheTeam.position.creativityLead'
     },
     {
         name: 'tatiana ballén',
-        cargo: 'EJECUTIVA DE CUENTAS'
+        cargo: 'meetTheTeam.position.accountExecutive'
     },
     {
         name: 'margarita martinez',
-        cargo: 'EJECUTIVA DE CUENTAS'
+        cargo: 'meetTheTeam.position.accountExecutiveTwo'
     },
     {
         name: 'isabela enciso',
-        cargo: 'COPY CREATIVA'
+        cargo: 'meetTheTeam.position.creativeCopyWriter'
     },
     {
         name: 'maria josé escobar',
-        cargo: 'DISEÑADORA GRÁFICA'
+        cargo: 'meetTheTeam.position.graphicDesigner'
     },
     {
         name: 'diego osorio',
-        cargo: 'DISEÑADOR GRÁFICO'
+        cargo: 'meetTheTeam.position.graphicDesignerTwo'
     },
     {
         name: 'miguel barón',
-        cargo: 'DISEÑADOR WEB'
+        cargo: 'meetTheTeam.position.webDesigner'
     },
     {
         name: 'daniel alvarado',
-        cargo: 'DESARROLLADOR'
+        cargo: 'meetTheTeam.position.developer'
     },
 ]

@@ -18,7 +18,7 @@ export const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isDarkBackground, setIsDarkBackground] = useState(false);
 
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setBlueScreen(!blueScreen);
@@ -292,8 +292,8 @@ export const Header = () => {
             </div>
             <div className='menu-nosotros' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#concept')}>
-                <label>Nosotros</label>
-                <label>Nosotros</label>
+                <label>{t('header.aboutUs')}</label>
+                <label>{t('header.aboutUs')}</label>
               </a>
             </div>
             <span></span>
@@ -302,8 +302,8 @@ export const Header = () => {
               // onMouseLeave={handleServicesMouseLeave}
             >
             <a onClick={() => sendToSectionId('#services')}>
-            <label>Servicios</label>
-            <label>Servicios</label>
+              <label>{t('header.services.title')}</label>
+              <label>{t('header.services.title')}</label>
             </a>
             {isServicesDropdownOpen && (
               <div 
@@ -311,19 +311,19 @@ export const Header = () => {
                 onMouseLeave={handleServicesMouseLeave}
                 >
                 {/* Aquí irían los elementos del menú desplegable */}
-                <a onClick={() => sendToSectionId('#first-section')}>Construcción de marca</a>
+                <a onClick={() => sendToSectionId('#first-section')}>{t('header.services.subItems.brandBuilding')}</a>
                 <span></span>
-                <a onClick={() => sendToSectionId('#second-section')}>Identidad de marca</a>
+                <a onClick={() => sendToSectionId('#second-section')}>{t('header.services.subItems.brandIdentity')}</a>
                 <span></span>
-                <a onClick={() => sendToSectionId('#third-section')}>Posicionamiento de marca</a>
+                <a onClick={() => sendToSectionId('#third-section')}>{t('header.services.subItems.brandPositioning')}</a>
               </div>
             )}
             </div>
             <span></span>
             <div className='menu-contactos' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#contact')}>
-                <label>Contacto</label>
-                <label>Contacto</label>
+                <label>{t('header.contact')}</label>
+                <label>{t('header.contact')}</label>
               </a>
             </div>
             <span></span>
@@ -376,13 +376,13 @@ export const Header = () => {
                
               </div>
               <div className={`submenu ${ menuOpen ? 'active' : '' }`}>
-                <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>Menú</span>
+                <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>{t('header.menu')}</span>
                 <span className={`line-span animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
                 <div className="items">
                   <ul>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#concept')}>Nosotros</a></li>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#services')}>Servicios</a></li>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>Contacto</a></li>
+                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#concept')}>{t('header.aboutUs')}</a></li>
+                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#services')}>{t('header.services.title')}</a></li>
+                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>{t('header.contact')}</a></li>
                   </ul>
 
                 </div>
