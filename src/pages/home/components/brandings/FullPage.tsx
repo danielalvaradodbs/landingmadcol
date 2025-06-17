@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useTransition } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDarkMode } from '../../../../hooks/DarkModeContext';
 import { brandings, IconPlus, ScrollDownIcon, ScrollDownIconMobile } from '../../../../shared';
 import './fullpage.css';
