@@ -15,7 +15,8 @@ export const Button = ({
   urlIcon,
   width,
   height,
-  border
+  border,
+  idButton
 }: any ) => {
 
   const buttonRef = useRef(null);
@@ -122,6 +123,7 @@ export const Button = ({
     <>     
     <button 
       ref={ buttonRef } 
+      id={ idButton }
       className="button button--stroke"
       style={{ backgroundColor }}
       data-block="button"
@@ -145,6 +147,7 @@ Button.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   backgroundColor: PropTypes.string,
+  idButton: PropTypes.string,
   hoverBorderColor: PropTypes.string,
   hoverBackgroundColor: PropTypes.string,
   urlIcon: PropTypes.string,

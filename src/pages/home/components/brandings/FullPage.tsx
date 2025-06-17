@@ -199,6 +199,7 @@ export const FullPage = () => {
                                             </div>
                                             <div className="mask">
                                                 <Button 
+                                                    idButton={ brandings[currentIndex].altImage }
                                                     texto={t('verProyecto')}
                                                     backgroundColor='transparent'
                                                     hoverBorderColor='#2A00FF'
