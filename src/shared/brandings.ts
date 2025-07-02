@@ -28,7 +28,7 @@ export const brandings = [
     },
     {
         image: HeroMotoCorp,
-        altImage: 'VaxTrials',
+        altImage: 'Hero Motocorp',
         info: 'brandings.hero.info',
         title: 'brandings.hero.title',
         description: 'brandings.hero.description',
