@@ -130,11 +130,12 @@ export const Button = ({
       onClick={ onClick }
       onMouseEnter={ onMouseEnter }
       onMouseLeave={ onMouseLeave }
+      data-button-name={ idButton }
     >
-      <label ref={ flairRef } className="button__flair"></label>
-      <label ref={ labelRef } className="button__label">{ texto }</label>
-      <label style={{ left: '20%' }} ref={ labelRefHover } className="button__label hover-label">{ texto }</label>
-      <img src={ urlIcon } style={{ zIndex: 1 }} />
+      <label id={ idButton } ref={ flairRef } className="button__flair"></label>
+      <label id={ idButton } ref={ labelRef } className="button__label">{ texto }</label>
+      <label id={ idButton } style={{ left: '20%' }} ref={ labelRefHover } className="button__label hover-label">{ texto }</label>
+      <img id={ idButton } src={ urlIcon } style={{ zIndex: 1 }} />
     </button>
     </>
   )
