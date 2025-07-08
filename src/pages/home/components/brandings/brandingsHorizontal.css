@@ -1,0 +1,40 @@
+.brandings {
+    height: 100dvh;
+}
+#fullpage {
+    position: relative !important;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+/* Mueve la navegación de slides hacia abajo (horizontal) */
+.fp-slidesNav {
+  bottom: 20px;
+  top: auto !important;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  flex-direction: row !important;
+  display: flex !important;
+  gap: 8px;
+}
+
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.fp-slidesNav ul li {
+  display: inline-block;
+}
+
+.fp-slidesNav ul li a span,
+.fp-slidesNav ul li a {
+  background: #000; /* Cambia el color del bullet si quieres */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}

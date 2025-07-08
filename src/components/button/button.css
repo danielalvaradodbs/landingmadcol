@@ -3,6 +3,7 @@
   padding: 12px 12px 12px 12px;
   position: relative;
   transition: 0.2s ease-out;
+  backdrop-filter: blur(10px);
 }
 
 @media (hover: hover) {
@@ -13,6 +14,7 @@
   .button--stroke:hover:after {
     border-radius: 10px;
     border-color: var(border-color);
+    
   }
 }
 
@@ -87,7 +89,7 @@
 .button label.button__label.hover-label {
   opacity: 0;
   position: absolute;
-  transform: translate(-11%,100%);
+  transform: translate(-15%,100%);
   transition: 0.2s ease-out;
 }
 .button:hover label.button__label.hover-label {

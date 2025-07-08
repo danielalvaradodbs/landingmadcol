@@ -62,7 +62,7 @@ export const Header = () => {
       });
     }, { threshold: [0.1] });
 
-    const conceptSection = document.querySelector('.brandings');
+    const conceptSection = document.querySelector('.brandy');
 
     if (conceptSection) {
       observer.observe(conceptSection);
@@ -203,7 +203,7 @@ export const Header = () => {
   
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);    
+  }, []);
   
 
   return (
@@ -212,74 +212,71 @@ export const Header = () => {
     { (currentPath.pathname !== '/meet-the-team' && currentPath.pathname !== '/thanks-contact') && (
 
         <div className={`header ${isDark ? 'dark' : ''}`}>
-        <div 
-          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop tablet`}
-          style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
+          <div 
+            className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop tablet`}
+            style={{ display: currentPath.pathname !== '/terms-conditions' ? 'inline' : 'none' }}
 
-        >
-            <a href="/" style={{ display: !isCentered ? 'inline' : 'none' }} >
-              <img
-                width={'100%'} 
-                src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
-                // style={{ display: !isCentered ? 'inline' : 'none' }}
-
-              />
-
-              <img 
-                width={'100%'} 
-                ref={imgTablet}
-                className={`${ !scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
-                src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
-                style={{ display: isCentered ? 'inline' : 'none' }}
-              />
-            
-            </a>
-            
-        </div>
-        <div 
-          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}
-          style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none'}}
-          
           >
-            <a href="/" >
-             
-              <img 
-                src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? 'move-logo' : ''}`}
-              />
-            
-            </a>
-            
-        </div>
+              <a href="/" style={{ display: !isCentered ? 'inline' : 'none' }} >
+                <img
+                  width={'100%'} 
+                  src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                  className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
+                  // style={{ display: !isCentered ? 'inline' : 'none' }}
+                />
 
-        <div 
-          className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-mobile`}>
-            <a onClick={() => sendToLink('/') } style={{ cursor: 'pointer' }}>
-              <img 
-                src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
-                style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
-              />
-              <img 
-                src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                className={`${ scrollingDown ? '' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
-                style={{ display: currentPath.pathname !== '/terms-conditions' && isCentered ? 'inline' : 'none' }}
-              />
-              <img 
-                src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }
-                style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none' }}
-              />
-            </a>
+                <img 
+                  width={'100%'} 
+                  ref={imgTablet}
+                  className={`${ !scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
+                  src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                  style={{ display: isCentered ? 'inline' : 'none' }}
+                />
+              
+              </a>
+              
+          </div>
+          <div 
+            className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-desktop`}
+            style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none'}}
             
-        </div>
+            >
+              <a href="/" >
+              
+                <img 
+                  src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
+                  className={`${ scrollingDown ? 'move-logo' : ''}`}
+                />
+              
+              </a>
+              
+          </div>
+
+          <div 
+            className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-mobile`}>
+              <a onClick={() => sendToLink('/') } style={{ cursor: 'pointer' }}>
+                <img 
+                  src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                  className={`${ scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
+                  style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
+                />
+                <img 
+                  src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                  className={`${ scrollingDown ? '' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
+                  style={{ display: currentPath.pathname !== '/terms-conditions' && isCentered ? 'inline' : 'none' }}
+                />
+                <img 
+                  src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }
+                  style={{ display: currentPath.pathname === '/terms-conditions' ? 'inline' : 'none' }}
+                />
+              </a>
+              
+          </div>
 
           <div
             className={`col-6 menu-items ${ isCentered ? 'logo-centered' : ''} ${ currentPath.pathname === '/terms-conditions' ? 'termsHeader' : '' } animate__animated animate__fadeIn animate__slow ${ scrollingDown ? 'move-menu' : ''}`} data-animation="to-top"
-           
-    // background: rgba(16, 24, 32, 0.30);
-
           >
+            
             <div className="menu-logo">
                 <a href='/' style={{ display: isCentered ? 'inline' : 'none', marginLeft: 8, cursor: 'pointer' }}>
                   <img 
@@ -296,106 +293,100 @@ export const Header = () => {
                 <label>{t('header.aboutUs')}</label>
               </a>
             </div>
-            <span></span>
+            {/* <span></span> */}
             <div className='menu-servicios'
               onMouseEnter={handleServicesMouseEnter}
-              // onMouseLeave={handleServicesMouseLeave}
             >
-            <a onClick={() => sendToSectionId('#services')}>
-              <label>{t('header.services.title')}</label>
-              <label>{t('header.services.title')}</label>
-            </a>
-            {isServicesDropdownOpen && (
-              <div 
-                className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}
-                onMouseLeave={handleServicesMouseLeave}
-                >
-                {/* Aquí irían los elementos del menú desplegable */}
-                <a onClick={() => sendToSectionId('#first-section')}>{t('header.services.subItems.brandBuilding')}</a>
-                <span></span>
-                <a onClick={() => sendToSectionId('#second-section')}>{t('header.services.subItems.brandIdentity')}</a>
-                <span></span>
-                <a onClick={() => sendToSectionId('#third-section')}>{t('header.services.subItems.brandPositioning')}</a>
-              </div>
-            )}
+              <a onClick={() => sendToSectionId('#services')}>
+                <label>{t('header.services.title')}</label>
+                <label>{t('header.services.title')}</label>
+              </a>
+              {isServicesDropdownOpen && (
+                <div 
+                  className={`dropdown ${ isCentered ? 'logo-centered' : '' }`}
+                  onMouseLeave={handleServicesMouseLeave}
+                  >
+                  <a onClick={() => sendToSectionId('#first-section')}>{t('header.services.subItems.brandBuilding')}</a>
+                  <span></span>
+                  <a onClick={() => sendToSectionId('#second-section')}>{t('header.services.subItems.brandIdentity')}</a>
+                  <span></span>
+                  <a onClick={() => sendToSectionId('#third-section')}>{t('header.services.subItems.brandPositioning')}</a>
+                </div>
+              )}
             </div>
-            <span></span>
+            {/* <span></span> */}
+            <div className='menu-portfolio' onMouseEnter={handleServicesMouseLeave}>
+              <a onClick={() => sendToSectionId('#portfolio')}>
+                <label>{t('header.portfolio')}</label>
+                <label>{t('header.portfolio')}</label>
+              </a>
+            </div>
             <div className='menu-contactos' onMouseEnter={handleServicesMouseLeave}>
               <a onClick={() => sendToSectionId('#contact')}>
                 <label>{t('header.contact')}</label>
                 <label>{t('header.contact')}</label>
               </a>
             </div>
-            <span></span>
-            <div className='menu-translation' onMouseEnter={handleServicesMouseLeave}>
-              <button onClick={() => i18n.changeLanguage('es')}>Español</button>
-              <button onClick={() => i18n.changeLanguage('en')}>English</button>
-            </div>
+            {/* <span></span> */}
 
+            <div className='menu-translation' onMouseEnter={handleServicesMouseLeave}>
+              <button onClick={() => i18n.changeLanguage('es')} className={i18n.language === 'es' ? 'active' : ''}>ESP</button>
+              <button onClick={() => i18n.changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>ENG</button>
+            </div>
           </div>
 
-        <div className="header-mobile">
+          <div className="header-mobile">
           <div className={`menu-toggle ${ blueScreen ? 'active' : '' } animate__animated animate__fadeIn`} onClick={ toggleMenu }>
             <span className="bar-1"></span>
             <span className="bar-2"></span>
             <span className="bar-3"></span>
           </div>
           
-        </div>
+          </div>
           <div className={ `blue-screen ${ blueScreen ? '' : 'out' }` }></div>
 
             
-            <div className="menu-items-mobile" style={{ display: menuOpen ? 'flex' : 'none' }}>
-              {/* <div className="header-mobile">
-                <div className="logo">
-                    <img src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoShortWhite.alt } />
-                 </div>
-                 <div className={`menu-toggle ${ blueScreen ? 'active' : '' }`} onClick={ toggleMenu }>
-                    <span className="bar-1"></span>
-                    <span className="bar-2"></span>
-                    <span className="bar-3"></span>
-                </div>
+          <div className="menu-items-mobile" style={{ display: menuOpen ? 'flex' : 'none' }}>
+           
+            <div 
+              className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-tablet`}>
 
-              </div> */}
-              <div 
-                className={`col-6 logo animate__animated animate__fadeIn animate__faster logo-tablet`}>
+                <a onClick={ () => sendToLink('/') } className='a-mobile'>
+                  <img 
+                    src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                  />
+                </a>
+                <a href="/" className='a-tablet'>
+                  <img
+                    width={'180px'} 
+                    src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                    className={``}
+                    style={{}}
+                  />
+                </a>
+              
+            </div>
+            <div className={`submenu ${ menuOpen ? 'active' : '' }`}>
+              <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>{t('header.menu')}</span>
+              <span className={`line-span animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
+              <div className="items">
+                <ul>
+                  <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#concept')}>{t('header.aboutUs')}</a></li>
+                  <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#services')}>{t('header.services.title')}</a></li>
+                  <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>{t('header.contact')}</a></li>
+                </ul>
 
-                  <a onClick={ () => sendToLink('/') } className='a-mobile'>
-                    <img 
-                      src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                    />
-                  </a>
-                  <a href="/" className='a-tablet'>
-                    <img
-                      width={'180px'} 
-                      src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
-                      className={``}
-                      style={{}}
-                    />
-                  </a>
-               
               </div>
-              <div className={`submenu ${ menuOpen ? 'active' : '' }`}>
-                <span className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}>{t('header.menu')}</span>
-                <span className={`line-span animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
-                <div className="items">
-                  <ul>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#concept')}>{t('header.aboutUs')}</a></li>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#services')}>{t('header.services.title')}</a></li>
-                    <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>{t('header.contact')}</a></li>
-                  </ul>
 
-                </div>
-
-                <div className={`socials animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}>
-                  <span><a target='_blank' href="https://www.linkedin.com/company/mad-critter">LINKEDIN</a></span>
-                  <span><a target='_blank' href="https://instagram.com/madcritterco">INSTAGRAM</a></span>
-                  <span><a target='_blank' href="https://www.tiktok.com/@madcritterco">TIKTOK</a></span>
-                </div>
-
+              <div className={`socials animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}>
+                <span><a target='_blank' href="https://www.linkedin.com/company/mad-critter">LINKEDIN</a></span>
+                <span><a target='_blank' href="https://instagram.com/madcritterco">INSTAGRAM</a></span>
+                <span><a target='_blank' href="https://www.tiktok.com/@madcritterco">TIKTOK</a></span>
               </div>
 
             </div>
+
+          </div>
           
           
         </div>

@@ -1,6 +1,5 @@
 
-import { SectionObserver } from '../../../../components/header/SectionObserver';
-import { FiguraAsterisco, Flecha, PildoraAzul, PildoraMagenta, VideoMad } from '../../../../shared';
+import { VideoMad } from '../../../../shared';
 import './concept.css';
 import { useEffect, useRef, useState } from 'react';
 
@@ -13,16 +12,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Concept = () => {
 
-    const { setIsDark } = useDarkMode();
-    const { t } = useTranslation();
+  const { setIsDark } = useDarkMode();
+  const { t } = useTranslation();
   
 
   const videoRef = useRef(null);
   const contentVideo = useRef(null);
   const contentVideo2 = useRef(null);
   const startTime = 4;
-
-  //  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
     const video: any = videoRef.current;
@@ -38,18 +35,6 @@ export const Concept = () => {
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
   };
   }, [startTime]);
-
-  // useEffect(() => {
-
-  //   const video1: any = contentVideo.current;
-  //   const video2: any = contentVideo2.current;
-
-  //   setTimeout(() => {
-  //     video1.classList.add("show");
-  //     video2.classList.add("show");
-  //   }, 0);
-
-  // }, []);
 
    const [showText, setShowText] = useState({
     human: false,
@@ -78,7 +63,9 @@ export const Concept = () => {
     const h1Span = document.querySelectorAll('.concept .text h1 span');
     const h5Text = document.querySelectorAll('.concept .centro h5');
     const video = document.querySelectorAll('.concept .video video');
-    const figures = document.querySelectorAll('.concept img')
+    const figures = document.querySelectorAll('.concept img');
+    const texto = document.querySelectorAll('.concept .second-section p');
+    const textoH5 = document.querySelectorAll('.concept .second-section h5');
     // const imgs = document.querySelectorAll('.concept img');
 
       ScrollTrigger.create({
@@ -89,20 +76,24 @@ export const Concept = () => {
           video.forEach( (video: any) => video.classList.remove('showVideo'));
           h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));
           figures.forEach( (figures: any) => figures.classList.remove('animate__fadeInUp'));
+          texto.forEach( (text: any) => text.classList.remove('animationText'));
+          textoH5.forEach( (text: any) => text.classList.remove('animate__fadeInUpBig'));
           setTimeout(() => {
             h1Span.forEach( (span: any) => span.classList.add('animationText'));
             video.forEach( (video: any) => video.classList.add('showVideo'));
             h5Text.forEach( (h5Text: any) => h5Text.classList.add('animate__fadeInUpBig'));
             figures.forEach( (figures: any) => figures.classList.add('animate__fadeInUp'));
+            texto.forEach( (text: any) => text.classList.add('animationText'));
+            textoH5.forEach( (text: any) => text.classList.add('animate__fadeInUpBig'));
+
+
           }, 100);
-          // imgs.forEach( (img: any ) => img.classList.add('animate__fadeInUpBig'));
         },
         onLeaveBack: () => {
           setIsDark(true);
           h1Span.forEach( (span: any) => span.classList.remove('animationText'));
           video.forEach( (video: any) => video.classList.remove('showVideo'));
           h5Text.forEach( (h5Text: any) => h5Text.classList.remove('animate__fadeInUpBig'));
-          // imgs.forEach( (img: any ) => img.classList.remove('animate__fadeInUpBig'));
         },
       });
     });
@@ -123,15 +114,16 @@ export const Concept = () => {
   
   return (
     <>
-    <SectionObserver darkMode={ false } >
+    {/* <SectionObserver darkMode={ false } > */}
       <section className='concept section-concept' id='concept' style={{ backgroundColor: 'white'}}>
 
+      <div className="first-section">
         <div className="human ">
           <div className="text">
             <h1 className={`cssanimation ${ showText.human ? 'leFadeInBottom' : ''}`}>
               {animateText('Human')}
             </h1>
-            <img className='animate__animated animate__fadeInUp' src={ FiguraAsterisco } alt=""/>
+            {/* <img className='animate__animated animate__fadeInUp' src={ FiguraAsterisco } alt=""/> */}
           </div>
           <div className="video animation-video" ref={ contentVideo }>
             <video 
@@ -164,18 +156,21 @@ export const Concept = () => {
               {animateText('Centered')}
 
             </h1>
-            <img className='animate__animated animate__fadeInUp' src={ PildoraAzul } alt="" /> 
-            <img className='animate__animated animate__fadeInUp' src={ PildoraMagenta } alt="" />
+            {/* <img className='animate__animated animate__fadeInUp' src={ PildoraAzul } alt="" /> 
+            <img className='animate__animated animate__fadeInUp' src={ PildoraMagenta } alt="" /> */}
           </div>
         </div>
 
         <div className="branding">
           <div className="text">
-            <h1 className={`cssanimation ${ showText.branding ? 'leFadeInBottom' : ''}`}>
-              {animateText('Branding')}
-            </h1>
-            <img className='animate__animated animate__fadeInUp' src={ Flecha } alt="" />
+            <div className="line">
+              <h1 className={`cssanimation ${ showText.branding ? 'leFadeInBottom' : ''}`}>
+                {animateText('Branding')}
+              </h1>              
+            </div>
+            {/* <img className='animate__animated animate__fadeInUp' src={ Flecha } alt="" /> */}
           </div>
+
           <div className="video-mobile" style={{ display: 'none' }}>
             <video 
               className='showVideo' 
@@ -188,14 +183,23 @@ export const Concept = () => {
             ></video>
           </div>
           <div className="centro">
-            <h5 className='animate__animated animate__fadeInUpBig   animate__faster'>{t('humanCentered.brand')}</h5>
-            <h5 className='animate__animated animate__fadeInUpBig animate__fast'>{t('humanCentered.human')}</h5>
+             <h1 className={`cssanimation ${ showText.branding ? 'leFadeInBottom' : ''}`}>
+                {animateText('—')}
+              </h1>
+           
           </div>
         </div>
+        <div className="second-section">
+          <p>Hace <strong>más de 13 años</strong> acompañamos a empresas que se atreven a <strong>evolucionar, a conectar con su público y a transformar su marca</strong> en un activo estratégico.</p><br/>
+          <p>Guiamos la evolución de marcas con <strong>estrategias efectivas y una propuesta de valor centrada en lo humano.</strong> Redefinimos el branding para que tu marca <strong>inspire, crezca y deje huella.</strong></p>
+          <h5 className='animate__animated animate__fadeInUpBig'>{t('humanCentered.brand')}</h5>
+        </div>
+
+      </div>
 
       </section>
 
-    </SectionObserver>
+    {/* </SectionObserver> */}
     </>
   )
 }

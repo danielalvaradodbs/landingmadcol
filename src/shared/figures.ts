@@ -1,4 +1,5 @@
 import FiguraAsterisco from '../assets/figuras/Figura_Asterisco.svg';
+import Asterisco from '../assets/figuras/Asterisco.svg';
 import FiguraAsteriscoR from '../assets/figuras/FiguraAstericoR.svg';
 import Flecha from '../assets/figuras/Flecha.svg';
 import PildoraAzul from '../assets/figuras/Pildora-Azul.svg';
@@ -8,11 +9,16 @@ import R from '../assets/figuras/R.svg';
 import FiguraClientes from '../assets/figuras/figuraClientes.svg';
 import FiguraContacto from '../assets/figuras/figuraContacto.svg';
 import FlechaRoja from '../assets/figuras/flechaRoja.svg';
+import FlechaDiagonal from '../assets/figuras/flecha-diagonal.svg';
 import BackButtonFigureBlue from '../assets/figuras/back-button.svg';
 import BackButtonFigureWhite from '../assets/figuras/back-button-white.svg';
+import GloboIcono from '../assets/figuras/Globo-icono.svg';
+import MarcaRegistrada from '../assets/figuras/marca-registrada.svg';
+
 
 
 export {
+    Asterisco,
     FiguraAsterisco,
     Flecha,
     PildoraAzul,
@@ -24,5 +30,8 @@ export {
     FiguraContacto,
     FlechaRoja,
     BackButtonFigureBlue,
-    BackButtonFigureWhite
+    BackButtonFigureWhite,
+    GloboIcono,
+    MarcaRegistrada,
+    FlechaDiagonal
 }

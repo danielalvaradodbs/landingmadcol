@@ -3,6 +3,7 @@ import ScrollDownIcon from '../assets/icons/scroll-down-icon.svg';
 import ScrollDownIconMobile from '../assets/icons/scrollDownMobile.svg';
 import FlechaButton from '../assets/icons/flechaButton.svg';
 import Selector from '../assets/icons/selector.svg';
+import Selector2 from '../assets/icons/selector-2.svg';
 import Check from '../assets/icons/check.svg';
 
 export {
@@ -11,5 +12,6 @@ export {
     ScrollDownIconMobile,
     FlechaButton,
     Selector,
-    Check
+    Check,
+    Selector2
 }

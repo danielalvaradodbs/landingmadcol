@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './services.css';
-import { FiguraAsteriscoR, FlechaUp, R } from '../../../../shared';
+import { FiguraAsteriscoR, FlechaUp, R, MarcaRegistrada, Asterisco, FlechaDiagonal } from '../../../../shared';
 import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -131,7 +131,7 @@ export const Services = () => {
             <ul>
               {animateText(itemsBrandBuilding)}
             </ul>
-            <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ R } alt="" style={{ paddingLeft: '30px' }} />
+            <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ MarcaRegistrada } alt="" style={{ paddingLeft: '30px' }} />
           </div>
 
         </div>
@@ -163,7 +163,7 @@ export const Services = () => {
             <ul>
               {animateText(itemsBrandIdentity)}
             </ul>
-            <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ FiguraAsteriscoR } alt="" style={{ paddingLeft: '30px' }} />
+            <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ Asterisco } alt="" style={{ paddingLeft: '30px' }} />
           </div>
         </div>
         <div className="footer-section desktop">
@@ -195,7 +195,7 @@ export const Services = () => {
             <ul>
             {animateText(itemsbrandPositioning)}
             </ul>
-            <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ FlechaUp } alt="" style={{ paddingLeft: '30px' }} />
+            <img className='animate__animated animate__fadeInUp animate__delay-1s' src={ FlechaDiagonal } alt="" style={{ paddingLeft: '30px' }} />
           </div>
         </div>
         <div className="footer-section desktop">

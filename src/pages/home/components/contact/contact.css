@@ -267,7 +267,7 @@
 }
 
 .contact .form .terms-submit .terms input:checked {
-    background-color: #FF2951;
+    background-color: #7595B6;
     background-image: url(../../../../assets/icons/check.svg);
     background-repeat: no-repeat;
     background-size: 13px 13px;
@@ -294,6 +294,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.contact .form .terms-submit .submit button:hover label {
+   color: #101820;
+}
+.contact .form .terms-submit .submit button:hover img {
+   filter: invert();
 }
 
 .contact .form .terms-submit .terms label a:hover {

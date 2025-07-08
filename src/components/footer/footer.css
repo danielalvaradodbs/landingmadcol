@@ -60,18 +60,6 @@
     height: fit-content;
 }
 
-/* .pre-footer .talento .container a.reveal,
-.pre-footer .escribenos .container div a.reveal,
-.pre-footer .stalkeanos .stalk a.reveal,
-.pre-footer .siguenos .stalk a.reveal,
-.pre-footer .talento .stalk a.reveal,
-.pre-footer .escribenos .stalk a.reveal,
-.pre-footer .stalkeanos .container p.reveal,
-.pre-footer .siguenos .container p.reveal,
-.pre-footer .talento .container p.reveal,
-.pre-footer .escribenos p.reveal {
-} */
-
 .pre-footer .talento a,
 .pre-footer .escribenos a {
     color: #101820;
@@ -88,7 +76,7 @@
 .pre-footer .siguenos .container div:hover:nth-child(odd) a,
 .pre-footer .stalkeanos .container div:hover:nth-child(even) a,
 .pre-footer .talento .container.text:hover a {
-    color: #2A00FF;
+    color: #355372;
     font-family: 'Safiro';
     font-style: normal;
     font-weight: 400;
@@ -99,7 +87,7 @@
 .pre-footer .stalkeanos .container div:hover:nth-child(odd) a,
 .pre-footer .escribenos .email:hover a,
 .pre-footer .escribenos .container.text div:hover a {
-    color: #FF2951;
+    color: #7595B6;
     font-family: 'Safiro';
     font-style: normal;
     font-weight: 400;

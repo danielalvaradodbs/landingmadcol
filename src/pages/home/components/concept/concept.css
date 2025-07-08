@@ -2,12 +2,59 @@
 .concept {
     padding: 142px 100px;
     text-transform: uppercase;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 1;
+    
+}
+
+.concept .first-section {
+    display: flex;
+    max-width: 1200px;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+
+.concept .second-section {
+    margin-top: 66px;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    padding-right: 10%;
+}
+
+.concept .second-section p {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.44px;
+    text-transform: none;
+    width: 52%;
+
+}
+
+.concept .second-section p strong {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.44px;
 }
 
 .concept .branding,
@@ -16,16 +63,42 @@
     display: flex;
     align-items: center;
     gap: 39px;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+
+.concept .second-section h5 {
+    margin-top: 20px;
+    color: #7595B6;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
 }
 
 .concept .branding {
     display: flex;
+    /* justify-content: flex-start; */
+    
 }
 
 .concept .human,
 .concept .centered {
     margin-bottom: 16px;
+}
+
+.concept .centered h1 {
+    color: #101820;
+    font-family: Safiro;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150px;
+    letter-spacing: -7.5px;
 }
 
 .concept .human .video {
@@ -36,6 +109,10 @@
     flex-shrink: 0;
     overflow: hidden;
 
+}
+
+.concept .animationText {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .concept .centered .video {
@@ -118,6 +195,7 @@
     opacity: 1;
 }
 
+
 @media only screen and (min-width: 2048px) {
     .concept {
         padding: 142px 450px;
@@ -174,6 +252,10 @@
 
 }
 
+@media only screen and (min-width: 1500px) {
+    
+}
+
 @media only screen and (min-width: 280px) and (max-width: 1440px) {
 
     .concept {
@@ -184,6 +266,14 @@
         position: absolute;
         left: 57%;
         top: 26%;
+    }
+
+    .concept .branding,
+    .concept .centered,
+    .concept .human {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .concept .centered .text img {
@@ -247,6 +337,18 @@
 
 }
 
+@media only screen and (min-width: 280px) and (max-width: 1199px) {
+    .concept .centered h1 {
+        color: #101820;
+        font-family: 'Safiro';
+        font-size: 109px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 109px;
+        letter-spacing: -7.5px;
+    }
+}
+
 @media only screen and (min-width: 280px) and (max-width: 1023px) {
     
     .concept .branding,
@@ -260,7 +362,7 @@
 
     .concept .branding {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .concept .branding .centro {
@@ -312,6 +414,15 @@
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
+    }
+
+    .concept .branding {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .concept .branding .centro {
+        display: none;
     }
 }
 
@@ -410,8 +521,17 @@
 
 @media only screen and (min-width: 280px) and (max-width: 767px) {
 
+    .concept .centered h1 {
+        color: #101820;
+        font-family: 'Safiro';
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px;
+        letter-spacing: -7.5px;
+    }
+
     .concept .human h1,
-    .concept .centered h1,
     .concept .branding h1 {
         color: #101820;
         font-family: 'Safiro';

@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '../../../../components/button/Button';
-import { FiguraContacto, FlechaButton, FlechaRoja, Selector } from '../../../../shared';
+import { FiguraContacto, FlechaButton, FlechaRoja, Selector, Selector2 } from '../../../../shared';
 import './contact.css';
 import { useForm } from './hooks/useForm';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -204,14 +204,14 @@ export const Contact = () => {
                 <div className="first">
                     {/* <h2 className= { `${isVisible ? 'reveal' : ''}` }>Da el primer paso</h2> */}
                     <h2 className= { `${isVisible ? 'reveal' : ''}` }>{ t('contacts.title.first') }</h2>
-                    <img src={ FlechaRoja } alt="" className= { `flecha-roja ${isVisible ? 'reveal' : ''}` }/>
+                    {/* <img src={ FlechaRoja } alt="" className= { `flecha-roja ${isVisible ? 'reveal' : ''}` }/> */}
                 </div>
                 <div className="second">
                     <h2 className= { `${isVisible ? 'reveal' : ''}` }>{t('contacts.title.second')}</h2>
                 </div>
                 <div className="third" style={{ position: 'relative' }}>
                     <h2 className= { `third ${isVisible ? 'reveal' : ''}` }>{t('contacts.title.third')}</h2>
-                    <img src={ FiguraContacto } alt="" className= { `figura-contacto ${isVisible ? 'reveal' : ''}` } />
+                    {/* <img src={ FiguraContacto } alt="" className= { `figura-contacto ${isVisible ? 'reveal' : ''}` } /> */}
                 </div>
             </div>
            
@@ -272,7 +272,7 @@ export const Contact = () => {
                                     <option value="+1">USA</option>
                                     <option value="+593">ECU</option>
                                 </select>
-                                <img src={ Selector } alt="" style={{ position: 'absolute', left: '30%', zIndex: -1 }} />
+                                <img src={ Selector2 } alt="" style={{ position: 'absolute', left: '30%', zIndex: -1 }} />
                                 <span style={{ width: '1px', height: '16px', backgroundColor: 'white', margin: 0, marginRight: '11px' }}></span>
                                 <label htmlFor='phone' className='value-code'>({ code })</label>    
 
@@ -314,10 +314,10 @@ export const Contact = () => {
                             <Button 
                                 texto={t('contacts.form.btnSubmit')}
                                 urlIcon={ FlechaButton } 
-                                backgroundColor={'#FF2951'}
-                                hoverBackgroundColor={'#2A00FF'}
-                                border={ '#FF2951' }
-                                hoverBorderColor={ '#2A00FF' }
+                                backgroundColor={'#7595B6'}
+                                hoverBackgroundColor={'#FFFFFF'}
+                                border={ '#7595B6' }
+                                hoverBorderColor={ '#FFFFFF' }
                                 height={'48px'}
                                 width={'127px'}
                             />

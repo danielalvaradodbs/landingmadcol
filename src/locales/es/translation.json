@@ -5,6 +5,7 @@
   "header": {
     "menu": "Menú",
     "aboutUs": "Nosotros",
+    "portfolio": "Portafolio",
     "services": {
       "title": "Servicios",
       "subItems": {
@@ -33,8 +34,7 @@
     }
   },
   "humanCentered": {
-    "brand": "// La marca es el todo,",
-    "human": "el humano es el centro_"
+    "brand": "// La marca es el todo, el humano es el centro."
   },
   "services": {
     "brandBuilding": {
