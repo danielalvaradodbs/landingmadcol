@@ -49,10 +49,12 @@
     margin: 0 13px;
 }
 
+/* .header .menu-items-mobile div.menu-translation,
 .header .menu-items div.menu-translation {
     margin: 0;
-}
+} */
 
+.header .menu-items-mobile .menu-translation,
 .header .menu-items .menu-translation {
     display: inline-flex;
     height: 35px;
@@ -65,12 +67,14 @@
     background: rgba(255, 255, 255, 0.20);
 }
 
+.header .menu-items-mobile .menu-translation:hover,
 .header .menu-items .menu-translation:hover {
     border-radius: 50px;
     background: #FFF;
     transition: ease-in .3s;
 }
 
+.header .menu-items-mobile .menu-translation button,
 .header .menu-translation button {
     padding: 8px;
     height: auto;
@@ -86,14 +90,19 @@
     font-weight: 500;
     line-height: normal;
 }
+
+.header .menu-items-mobile .menu-translation button.active,
 .header .menu-translation button.active {
      background: #101820;
 }
 
+.header .menu-items-mobile .menu-translation:hover button.active,
 .header .menu-items .menu-translation:hover button.active {
     color: #fff;
 }
 
+.header .menu-items-mobile .menu-translation:hover button,
+.header .menu-items-mobile .menu-translation button:hover,
 .header .menu-items .menu-translation:hover button,
 .header .menu-translation button:hover {
     border-color: transparent;
@@ -101,6 +110,7 @@
     /* background-color: rgba(255, 255, 255, 0.20); */
 }
 
+/* .header.dark .menu-items-mobile .menu-translation button, */
 .header.dark .menu-translation button {
     color: white;
     transition: ease-in .3s;
@@ -297,6 +307,11 @@
     opacity: 1;
     transition: all ease 0.5s;
 }
+
+.header .menu-items-mobile .menu-translation {
+    margin-top: 20px;
+}
+
 
 .header-mobile {
     z-index: 9999;
@@ -507,6 +522,19 @@
 
     .a-tablet {
         display: none;
+    }
+
+    .header .menu-items-mobile div.menu-translation,
+    .header .menu-items div.menu-translation {
+        gap: 15px;
+        width: 115px;
+        height: 49px;
+        padding: 10px;
+    }
+
+    .header .menu-items-mobile .menu-translation button,
+    .header .menu-translation button {
+        font-size: 11px;
     }
 
 }

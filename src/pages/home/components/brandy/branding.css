@@ -1,15 +1,18 @@
 .brandy {
-  height: 100dvh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: black;
+  position: relative;
 }
 
 .brandy video {
   object-fit: cover;
   position: absolute;
-  z-index: -11;
+  object-position: center center;
+  /* z-index: -11; */
 }
 
 .brandy .text {
@@ -17,6 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 99;
 }
 
 .brandy .text h1 {
@@ -81,8 +85,8 @@
 }
 
 .brandy .button-brandy {
-  position: relative;
-  top: 30%;
+  position: absolute;
+  top: 90%;
   color: #FFF;
 }
 
@@ -108,13 +112,6 @@
 }
 
 @media only screen and (min-width: 280px) and (max-width: 1366px) {
-
-  .brandy .button-brandy {
-    position: relative;
-    top: 20%;
-    color: #FFF;
-  }
-
 }
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
@@ -123,6 +120,14 @@
     padding: 0 48px;
   }
 
+  .brandy video {
+    object-position: center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .brandy .text h1 strong,
   .brandy .text h1 {
     font-size: 38px;
     line-height: normal;

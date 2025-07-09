@@ -2,6 +2,7 @@ import { GloboIcono, ScrollDownIcon, VideoBrandy } from '../../../../shared';
 import './branding.css';
 import { Button } from '../../../../components/button/Button';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export const Brandings = () => {
 
@@ -18,12 +19,22 @@ export const Brandings = () => {
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
+
+    useEffect(() => {
+        const setVh = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+        setVh();
+        window.addEventListener('resize', setVh);
+        return () => window.removeEventListener('resize', setVh);
+    }, []);
    
     return (
         <>
             <section id="brandy" className="brandy">
                 
-                <video loop autoPlay muted controls src={ VideoBrandy }></video>
+                <video loop autoPlay muted src={ VideoBrandy }></video>
                 <div className="text">
                     <div className="mask">
                         <h1>{t('brandy.noBrandy')}</h1>

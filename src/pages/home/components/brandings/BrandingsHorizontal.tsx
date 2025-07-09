@@ -91,34 +91,34 @@ export const BrandingsHorizontal = () => {
                             >
 
                                 <div className="mask">
-                                        <div className="info">
-                                            <div className="mask">
-                                                <span>{t(brandings[currentIndex]?.info)}</span>
-                                            </div>
-                                            <div className="mask">
-                                                <span>-</span>
-                                            </div>
-                                            <div className="mask title">
-                                                <h4 className='animation-title'>{t(brandings[currentIndex]?.title)}</h4>
-                                            </div>
-                                            <div className="mask description">
-                                                <p dangerouslySetInnerHTML={{ __html: t(brandings[currentIndex]?.description) || <></> }}></p>
-                                            </div>
-                                            <div className="mask">
-                                                <Button 
-                                                    idButton={ brandings[currentIndex].altImage }
-                                                    texto={t('verProyecto')}
-                                                    backgroundColor='transparent'
-                                                    hoverBorderColor='#7595B6'
-                                                    hoverBackgroundColor='#7595B6'
-                                                    urlIcon={ IconPlus }
-                                                    onClick= { () => sendToLink(brandings[currentIndex].linkButton) } 
-                                                    onMouseEnter={ () => handleMouseEnter(currentIndex) }
-                                                    onMouseLeave={ handleMouseLeave }
-                                                />
+                                <div className="info">
+                                    <div className="mask">
+                                        <span>{t(brandings[currentIndex]?.info)}</span>
+                                    </div>
+                                    <div className="mask">
+                                        <span>-</span>
+                                    </div>
+                                    <div className="mask title">
+                                        <h4 className='animation-title'>{t(brandings[currentIndex]?.title)}</h4>
+                                    </div>
+                                    <div className="mask description">
+                                        <p dangerouslySetInnerHTML={{ __html: t(brandings[currentIndex]?.description) || <></> }}></p>
+                                    </div>
+                                    <div className="mask">
+                                        <Button 
+                                            idButton={ brandings[currentIndex].altImage }
+                                            texto={t('verProyecto')}
+                                            backgroundColor='transparent'
+                                            hoverBorderColor='#7595B6'
+                                            hoverBackgroundColor='#7595B6'
+                                            urlIcon={ IconPlus }
+                                            onClick= { () => sendToLink(brandings[currentIndex].linkButton) } 
+                                            onMouseEnter={ () => handleMouseEnter(currentIndex) }
+                                            onMouseLeave={ handleMouseLeave }
+                                        />
 
-                                            </div>
-                                        </div>
+                                    </div>
+                                </div>
 
                                 </div>
 
@@ -132,8 +132,8 @@ export const BrandingsHorizontal = () => {
                         <div className={`back ${ isFirstSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
-                                hoverBorderColor='#7595B6'
-                                hoverBackgroundColor='#7595B6'
+                                hoverBorderColor='#fff'
+                                hoverBackgroundColor='#fff'
                                 urlIcon={ FlechaButton }
                                 onMouseLeave={ handleMouseLeave }
                                 onClick={() =>  handleSlideLeft(fullpageApi)}
@@ -143,8 +143,8 @@ export const BrandingsHorizontal = () => {
                         <div className={`front ${ isLastSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
-                                hoverBorderColor='#7595B6'
-                                hoverBackgroundColor='#7595B6'
+                                hoverBorderColor='#fff'
+                                hoverBackgroundColor='#fff'
                                 urlIcon={ FlechaButton }
                                 onClick={() => handleSlideRight(fullpageApi)}
                                 onMouseLeave={handleMouseLeave}

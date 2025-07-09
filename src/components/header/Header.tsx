@@ -257,7 +257,7 @@ export const Header = () => {
               <a onClick={() => sendToLink('/') } style={{ cursor: 'pointer' }}>
                 <img 
                   src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
-                  className={`${ scrollingDown ? 'move-logo' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
+                  className={`${ scrollingDown ? 'move-logo' : ''}  ${ isDarkBackground ? 'invert' : '' }`}
                   style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
                 />
                 <img 
@@ -376,6 +376,11 @@ export const Header = () => {
                   <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>{t('header.contact')}</a></li>
                 </ul>
 
+              </div>
+
+              <div className='menu-translation animate__animated animate__fadeInUp animate__slower' onMouseEnter={handleServicesMouseLeave}>
+                <button onClick={() => i18n.changeLanguage('es')} className={i18n.language === 'es' ? 'active' : ''}>ESP</button>
+                <button onClick={() => i18n.changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>ENG</button>
               </div>
 
               <div className={`socials animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}>

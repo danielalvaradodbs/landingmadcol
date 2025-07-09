@@ -78,35 +78,22 @@ export const MeetTheTeam = () => {
     return (
         <section className="meet-the-team">
             <div className="button-back" style={{gap: '5px'}}>
+                <div className='menu-translation'>
+                    <button onClick={() => i18n.changeLanguage('es')} className={i18n.language === 'es' ? 'active' : ''}>ESP</button>
+                    <button onClick={() => i18n.changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>ENG</button>
+                </div>
                 <Button
                     texto={t('meetTheTeam.button')}
                     backgroundColor='rgba(255, 255, 255, 0.20)'
-                    hoverBorderColor='#FF2951'
-                    hoverBackgroundColor='#FF2951'
+                    hoverBorderColor='#7595B6'
+                    hoverBackgroundColor='#7595B6'
                     urlIcon={ isHover ? BackButtonFigureWhite : BackButtonFigureBlue  }
                     onClick= { () => sendToLink('/') }
                     onMouseEnter={ handleMouseEnter }
                     onMouseLeave={ handleMouseLeave }
                 />
 
-                 <Button
-                    texto='Español'
-                    backgroundColor='rgba(255, 255, 255, 0.20)'
-                    hoverBorderColor='#FF2951'
-                    hoverBackgroundColor='#FF2951'
-                    onClick={() => i18n.changeLanguage('es')}
-                    onMouseEnter={ handleMouseEnter }
-                    onMouseLeave={ handleMouseLeave }
-                />
-                <Button
-                    texto='English'
-                    backgroundColor='rgba(255, 255, 255, 0.20)'
-                    hoverBorderColor='#FF2951'
-                    hoverBackgroundColor='#FF2951'
-                    onClick={() => i18n.changeLanguage('en')}
-                    onMouseEnter={ handleMouseEnter }
-                    onMouseLeave={ handleMouseLeave }
-                />
+                
                
             </div>
             <div className='img-text'>
