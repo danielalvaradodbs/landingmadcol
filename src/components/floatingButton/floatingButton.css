@@ -28,6 +28,11 @@
     padding: 10px 8px 10px 14px;
 }
 
+.buttonFloating img,
+.buttonFloating .info {
+    cursor: pointer;
+}
+
 .buttonFloating .info .text span {
    color: #FFF;
     font-family: 'Safiro';
