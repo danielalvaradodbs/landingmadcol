@@ -16,6 +16,17 @@
     },
     "contact": "Contacto"
   },
+  "brandy": {
+    "noBrandy": "No hacemos Brandy, pero si",
+    "butYes": "<strong>branding</strong> y <strong>¡del bueno!</strong>",
+    "noFerment": "Nosotros no fermentamos, destilamos ideas. No",
+    "bottle": "embotellamos, creamos identidad. No solo diseñamos,",
+    "brandings": "construimos marcas."
+  },
+  "concept": {
+    "yearsOld": "Hace <strong>más de 13 años</strong> acompañamos a empresas que se atreven a <strong>evolucionar, a conectar con su público y a transformar su marca</strong> en un activo estratégico.",
+    "guide": "Guiamos la evolución de marcas con <strong>estrategias efectivas y una propuesta de valor centrada en lo humano.</strong> Redefinimos el branding para que tu marca <strong>inspire, crezca y deje huella.</strong>"
+  },
   "brandings": {
     "pluxee": {
       "info": "POSICIONAMIENTO DE MARCA ",
@@ -132,6 +143,7 @@
       "btnSubmit": "Enviar"
     }
   },
+  "floatingButton": "Soy Rafa. ¿Te ayudo? <br/> Hablemos de tu marca.",
   "footer": {
     "writeToUs": {
       "title": "ESCRÍBENOS",

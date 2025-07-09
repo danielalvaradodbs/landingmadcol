@@ -14,8 +14,6 @@ export const BrandingsHorizontal = () => {
     const isFirstSlide = currentIndex === 0;
     const isLastSlide = currentIndex === brandings.length - 1;
 
-    const [fixedBackgroundSlide, setFixedBackgroundSlide] = useState<number | null>(0);
-
 
     const sendToLink = ( link: string ) => {
         window.open(link, '_blank');
@@ -67,7 +65,7 @@ export const BrandingsHorizontal = () => {
             scrollBar={false}
             slidesNavigation={false}
             css3={ false }
-            onSlideLeave={(_section, origin, destination, _direction) => {
+            onSlideLeave={(_section, _origin, destination, _direction) => {
                 resetAnimations();
                 // setFixedBackgroundSlide(destination.index);
                 setTimeout(() => {

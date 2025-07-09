@@ -16,11 +16,22 @@
     },
     "contact": "Contact"
   },
+  "brandy": {
+    "noBrandy": "We don’t make Brandy, but we",
+    "butYes": "do <strong>branding</strong> and we do <strong>it well!</strong>",
+    "noFerment": "We don’t ferment, we distill ideas. We don’t",
+    "bottle": "bottle, we create identity. We don’t just design,",
+    "brandings": "we build brands."
+  },
+  "concept": {
+    "yearsOld": "For <strong>ver 13 years</strong> we’ve been hekping companies that dare to <strong> evolve, connect with their audience, and transform their brand</strong> into a strategic asset.",
+    "guide": "We guide brand evolution through <strong>effective strategies and a human-centered value proposition.</strong> We redefine branding so your brand <strong>can inspire, grow, and make a lasting impression.</strong>"
+  },
   "brandings": {
     "pluxee": {
-      "info": "POSICIONAMIENTO DE MARCA ",
+      "info": "BRAND POSITIONING",
       "title": "Pluxee",
-      "description": "Estrategia + Creatividad </br> Resultados B2B con contenido para social media, web y mailing."
+      "description": "Strategy + Creativity </br> B2B results through content for social media, web, and email campaigns."
     },
     "remo": {
       "info": "BRAND IDENTITY",
@@ -132,6 +143,7 @@
       "btnSubmit": "Submit"
     }
   },
+  "floatingButton": "I'm Rafa. Need a hand? <br/> Let’s talk about your brand.",
    "footer": {
     "writeToUs": {
       "title": "WRITE TO US",

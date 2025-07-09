@@ -190,8 +190,8 @@ export const Concept = () => {
           </div>
         </div>
         <div className="second-section">
-          <p>Hace <strong>más de 13 años</strong> acompañamos a empresas que se atreven a <strong>evolucionar, a conectar con su público y a transformar su marca</strong> en un activo estratégico.</p><br/>
-          <p>Guiamos la evolución de marcas con <strong>estrategias efectivas y una propuesta de valor centrada en lo humano.</strong> Redefinimos el branding para que tu marca <strong>inspire, crezca y deje huella.</strong></p>
+          <p dangerouslySetInnerHTML={{ __html: t('concept.yearsOld') || <></> }}></p><br/>
+          <p dangerouslySetInnerHTML={{ __html: t('concept.guide') || <></> }}></p>
           <h5 className='animate__animated animate__fadeInUpBig'>{t('humanCentered.brand')}</h5>
         </div>
 

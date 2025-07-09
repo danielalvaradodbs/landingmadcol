@@ -1,8 +1,11 @@
 import { GloboIcono, ScrollDownIcon, VideoBrandy } from '../../../../shared';
 import './branding.css';
 import { Button } from '../../../../components/button/Button';
+import { useTranslation } from 'react-i18next';
 
 export const Brandings = () => {
+
+    const { t } = useTranslation();
 
     const sendToSectionId = ( id: string ) => {
     
@@ -23,23 +26,21 @@ export const Brandings = () => {
                 <video loop autoPlay muted controls src={ VideoBrandy }></video>
                 <div className="text">
                     <div className="mask">
-                        <h1>No hacemos Brandy, pero si</h1>
+                        <h1>{t('brandy.noBrandy')}</h1>
                     </div>
                     <div className="mask">
-                        <h1><strong>branding</strong> y <strong>¡del bueno!</strong></h1>
+                        <h1 dangerouslySetInnerHTML={{ __html: t('brandy.butYes') || <></> }}></h1>
                     </div>
-
-
                     
                     <div className="info">
                         <div className="mask">
-                            <span>Nosotros no fermentamos, destilamos ideas. No</span>
+                            <span>{ t('brandy.noFerment') }</span>
                         </div>
                         <div className="mask">
-                            <span>embotellamos, creamos identidad. No solo diseñamos,</span>  
+                            <span>{ t('brandy.bottle') }</span>  
                         </div>
                         <div className="mask">
-                            <span>construimos marcas.</span>
+                            <span>{t('brandy.brandings')}</span>
                         </div>
                     </div>
 
