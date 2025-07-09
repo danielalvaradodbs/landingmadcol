@@ -458,9 +458,32 @@
 
 }
 
-@media only screen and (min-width: 280px) and (max-width: 525px) {
+@media only screen and (min-width: 280px) and (max-width: 767px) {
     .concept .video {
         display: none;
+    }
+
+    .concept .second-section {
+        padding: 0;
+    }
+    
+    .concept .second-section p {
+        width: 100%;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: -0.396px;
+    }
+
+    .concept .second-section h5 {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
     }
 
     .concept .branding .video-mobile {

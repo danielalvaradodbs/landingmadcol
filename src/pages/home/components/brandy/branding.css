@@ -8,7 +8,7 @@
 
 .brandy video {
   object-fit: cover;
-  position: fixed;
+  position: absolute;
   z-index: -11;
 }
 
@@ -92,7 +92,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
- 
 }
 
 
@@ -107,3 +106,39 @@
     transform: translate(0,0);
   }
 }
+
+@media only screen and (min-width: 280px) and (max-width: 1366px) {
+
+  .brandy .button-brandy {
+    position: relative;
+    top: 20%;
+    color: #FFF;
+  }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+  .brandy {
+    padding: 0 48px;
+  }
+
+  .brandy .text h1 {
+    font-size: 38px;
+    line-height: normal;
+    letter-spacing: -1.14px;
+  }
+
+  .brandy .text span {
+    font-size: 16px;
+  }
+
+  .button-brandy button {
+    height: 34px !important;
+    width: 44px !important;
+  }
+  .button-brandy button label:not(:first-child) {
+    display: none;
+  }
+}
+

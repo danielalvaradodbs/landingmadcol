@@ -8,23 +8,49 @@ import { Contact } from './components/contact/Contact';
 import { Services } from './components/services/Services';
 import './home.css';
 import { BrandingsHorizontal } from './components/brandings/BrandingsHorizontal';
+import { useEffect, useRef, useState } from 'react';
+import { FloatingButton } from '../../components/floatingButton/FloatingButton';
 
 export const Home = () => {
+
+  const conceptRef = useRef<HTMLDivElement>(null);
+  const [showButton, setShowButton] = useState(false);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowButton(entry.isIntersecting || entry.boundingClientRect.top < 0);
+      },
+      { threshold: 0.9 }
+    );
+
+    if (conceptRef.current) {
+      observer.observe(conceptRef.current);
+    }
+
+    return () => {
+      if (conceptRef.current) {
+        observer.unobserve(conceptRef.current);
+      }
+    };
+  }, []);
   
   return (
     <>
-      {/* <FullPage/> */}
       <Brandings />
-      <Concept />
+      <div ref={conceptRef}>
+        <Concept />
+      </div>
       <Services />
-      <Clients />
       <section style={{ height: '100vh', overflow: 'hidden' }}>
         <BrandingsHorizontal />
       </section>
+      <Clients />
       {/* <FullPage/> */}
-      {/* <BrandingsHorizontal/> */}
       <Contact />
 
+      <FloatingButton isVisible={showButton} />
     </>
   )
 }

@@ -1,6 +1,9 @@
 .brandings {
-    height: 100dvh;
+  height: 100dvh;
+  padding: 56px 33px;
+  margin-bottom: 70px;
 }
+
 #fullpage {
     position: relative !important;
 }
@@ -8,33 +11,281 @@
 .fp-watermark {
   display: none !important;
 }
-/* Mueve la navegación de slides hacia abajo (horizontal) */
-.fp-slidesNav {
-  bottom: 20px;
-  top: auto !important;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  flex-direction: row !important;
-  display: flex !important;
-  gap: 8px;
+
+.section,
+.slide {
+  background-size: cover;
+  background-attachment: local;
 }
 
-.fp-slidesNav ul {
-  margin: 0;
-  padding: 0;
+.brandings .section .slide {
+  width: 100%;
+  height: 100vh;
+  align-items: flex-end;
+  padding: 0 40px 40px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.brandings .info {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  color: white;
+  max-width: 325px;
+  align-items: flex-start;
+  border-radius: 10px;
+  background: #101820;
+  padding: 39px 44px 40px 44px;
 }
 
-.fp-slidesNav ul li {
-  display: inline-block;
+.brandings .info span {
+  color:#7595B6;
+  font-family: 'Safiro';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
 }
 
-.fp-slidesNav ul li a span,
-.fp-slidesNav ul li a {
-  background: #000; /* Cambia el color del bullet si quieres */
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+.brandings .mask button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.brandings .buttons-controls {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: -1.7%;
+  right: 20%;
+  right: 5%;
+  z-index: 99;
+}
+
+.brandings .buttons-controls .front button,
+.brandings .buttons-controls .back button {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  height: 36px;
+  padding: 4px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(10px);
+  border: none;
+}
+
+.brandings .buttons-controls .front button label:not(:first-child),
+.brandings .buttons-controls .back button label:not(:first-child) {
+  display: none;
+}
+
+.brandings .buttons-controls .back button img {
+  transform: rotate(180deg);
+}
+
+.brandings .buttons-controls .is-disabled button label,
+.brandings .buttons-controls .is-disabled button {
+  cursor: default;
+}
+
+.brandings .buttons-controls .is-disabled button:hover label {
+  --flair-color: transparent !important;
+}
+
+.brandings .buttons-controls .is-disabled img {
+  filter: brightness(0) invert(0);
+}
+
+.mask {
+  margin: 0;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.animationInUp.title,
+.animationOut.title,
+.mask.title {
+  margin: 8px 0;
+}
+  
+.animationInUp.description,
+.animationOut.description,
+.mask.description {
+  margin-bottom: 22px;
+}
+  
+.animationInUp span,
+.mask span {
+  display: block;
+}
+  
+.mask h4,
+.mask p,
+.mask span,
+.mask button {
+  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.mask div:first-child {
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.animationInUp h4,
+.animationInUp p,
+.animationInUp span,
+.animationInUp button {
+  animation: reveal-up 2s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+}
+
+.animationInUp div:first-child {
+  animation: reveal-left 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.animationInUp,
+.animationOut {
+  margin: 0;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.animationInUp span,
+.animationOut span {
+  display: block;
+}
+
+.animationInUp div {
+  animation: fade-in-div 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.animationOut div {
+  animation: fade-out-div 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.animationOut h4, 
+.animationOut p,
+.animationOut span,
+.animationOut button {
+  animation: fade-out 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal-up {
+  0% {
+    opacity: 0;
+    transform: translate(0,-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes reveal-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes fade-in-div {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+  
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translate(0,100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+}
+/* @keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
+} */
+
+@keyframes fade-out-div {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes fade-out-initial {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -100%);
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+  .brandings {
+    padding: 17px 17px;
+    margin-top: 0;
+  }
+
+  .brandings .section .slide {
+    padding: 0 15px 30px;
+    justify-content: center;
+  }
+
+  .brandings .buttons-controls {
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+
+    
+  }
+
+  .brandings .buttons-controls div {
+    border-radius: 7px;
+    background: rgba(16, 24, 32, 0.20);
+    backdrop-filter: blur(10px);
+  }
+
 }
