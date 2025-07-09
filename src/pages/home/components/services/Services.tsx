@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './services.css';
-import { FiguraAsteriscoR, FlechaUp, R, MarcaRegistrada, Asterisco, FlechaDiagonal } from '../../../../shared';
+import { MarcaRegistrada, Asterisco, FlechaDiagonal } from '../../../../shared';
 import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);

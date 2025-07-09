@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '../../../../components/button/Button';
-import { FiguraContacto, FlechaButton, FlechaRoja, Selector, Selector2 } from '../../../../shared';
+import { FlechaButton, Selector2 } from '../../../../shared';
 import './contact.css';
 import { useForm } from './hooks/useForm';
 import { useLocation, useNavigate } from 'react-router-dom';
