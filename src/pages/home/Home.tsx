@@ -21,7 +21,7 @@ export const Home = () => {
       ([entry]) => {
         setShowButton(entry.isIntersecting || entry.boundingClientRect.top < 0);
       },
-      { threshold: 0.9 }
+      { threshold: 0.5 }
     );
 
     if (conceptRef.current) {
