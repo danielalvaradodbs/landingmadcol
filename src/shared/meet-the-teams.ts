@@ -44,10 +44,6 @@ export const meetTheTeam = [
         cargo: 'meetTheTeam.position.accountExecutiveTwo'
     },
     {
-        name: 'isabela enciso',
-        cargo: 'meetTheTeam.position.creativeCopyWriter'
-    },
-    {
         name: 'maria josé escobar',
         cargo: 'meetTheTeam.position.graphicDesigner'
     },
