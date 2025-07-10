@@ -8,9 +8,11 @@ export const FloatingButton = ({ isVisible }: any) => {
   const { t } = useTranslation();
 
   const sendToLink = () => {
-    const phoneNumber = '3186954120';
-    const message = encodeURIComponent('¡Hola! Quisiera más información.');
-    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+    // const phoneNumber = '3186954120';
+    // const message = encodeURIComponent('¡Hola! Quisiera más información.');
+    // https://api.whatsapp.com/send?phone=3186954120&text=%C2%A1Hola%21+Quisiera+m%C3%A1s+informaci%C3%B3n&utm_source=whatssapp_rafa&utm_medium=cpc&utm_campaign=mad_critter_leads_whatsapp_rafa
+    // const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+    const url = `https://api.whatsapp.com/send?phone=3186954120&text=%C2%A1Hola%21+Quisiera+m%C3%A1s+informaci%C3%B3n&utm_source=whatssapp_rafa&utm_medium=cpc&utm_campaign=mad_critter_leads_whatsapp_rafa`;
 
     window.open(url, '_blank');
   };
