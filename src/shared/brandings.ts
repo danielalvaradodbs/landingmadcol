@@ -12,7 +12,7 @@ export const brandings = [
         info: 'brandings.pluxee.info',
         title: 'brandings.pluxee.title',
         description: 'brandings.pluxee.description',
-        linkButton: 'https://www.behance.net/gallery/210736629/Remo-Lab-Packaging-Design',
+        linkButton: 'https://www.behance.net/gallery/193368341/Sodexo-now-Pluxee',
         imageHover: PluxeeHover,
         isDark: true,
     },
