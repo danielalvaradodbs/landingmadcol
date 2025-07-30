@@ -54,6 +54,21 @@ export const Contact = () => {
         onResetForm
     } = useForm( formData, formValidations );
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+
+        const utm_source = params.get("utm_source");
+        const utm_medium = params.get("utm_medium");
+        const utm_campaign = params.get("utm_campaign");
+
+        if (utm_source || utm_medium || utm_campaign) {
+            localStorage.setItem("utm_source", utm_source ?? "");
+            localStorage.setItem("utm_medium", utm_medium ?? "");
+            localStorage.setItem("utm_campaign", utm_campaign ?? "");
+        }
+    }, []);
+
+
     const onSubmitForm = ( event: any ) => {
         event.preventDefault();
         setFormSubmitted(true);
@@ -72,6 +87,11 @@ export const Contact = () => {
     const submitGoogle = () => {
         const formEle = document.querySelector("form");
         const formData = new FormData(formEle!);
+
+        // Agregas las UTM desde localStorage
+        formData.append("utm_source", localStorage.getItem("utm_source") ?? "");
+        formData.append("utm_medium", localStorage.getItem("utm_medium") ?? "");
+        formData.append("utm_campaign", localStorage.getItem("utm_campaign") ?? "");
 
         fetch(
             "https://script.google.com/macros/s/AKfycbwFFONZ2YXvSdjIrzTXlTS2bHD7ZLowYvoxoJf88BCdF6Oh_nDTkxB_alHGUbWweX_vXg/exec",
