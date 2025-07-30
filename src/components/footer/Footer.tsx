@@ -116,7 +116,7 @@ export const Footer = () => {
               <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } ><strong>{t('footer.talent.title')}</strong></p>
             </div>
             <div>
-              <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >{t('footer.writeToUs.subTitle')}</p>
+              <p className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >{t('footer.talent.subTitle')}</p>
             </div>
           </div>
           <div className='container text' data-animation="to-top">
