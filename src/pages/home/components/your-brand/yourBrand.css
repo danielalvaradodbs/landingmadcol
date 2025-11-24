@@ -1,0 +1,32 @@
+
+.yourBrand {
+    padding: 156px 0 135px 151px
+}
+
+.yourBrand .title {
+    padding-bottom: 64px;
+}
+
+.yourBrand .title h2 {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 64px */
+    letter-spacing: -3.2px;
+}
+
+.yourBrand .title h2 strong {
+    color: #101820;
+    font-family: "Behind The Nineties";
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+}
+
+.yourBrand .buttons {
+    display: flex;
+}

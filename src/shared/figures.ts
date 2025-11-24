@@ -14,6 +14,8 @@ import BackButtonFigureBlue from '../assets/figuras/back-button.svg';
 import BackButtonFigureWhite from '../assets/figuras/back-button-white.svg';
 import GloboIcono from '../assets/figuras/Globo-icono.svg';
 import MarcaRegistrada from '../assets/figuras/marca-registrada.svg';
+import PlusBlue from '../assets/figuras/plusBlue.svg';
+import FlechaBlue from '../assets/figuras/flechaBlue.svg';
 
 
 
@@ -33,5 +35,7 @@ export {
     BackButtonFigureWhite,
     GloboIcono,
     MarcaRegistrada,
-    FlechaDiagonal
+    FlechaDiagonal,
+    PlusBlue,
+    FlechaBlue
 }

@@ -6,3 +6,4 @@ export * from './figures';
 export * from './clients';
 export * from './meet-the-teams';
 export * from './imagesMTT';
+export * from './ideasBrands';

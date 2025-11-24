@@ -62,7 +62,7 @@ export const Header = () => {
       });
     }, { threshold: [0.1] });
 
-    const conceptSection = document.querySelector('.brandy');
+    const conceptSection = document.querySelector('.breakSchemes');
 
     if (conceptSection) {
       observer.observe(conceptSection);
@@ -220,7 +220,7 @@ export const Header = () => {
               <a href="/" style={{ display: !isCentered ? 'inline' : 'none' }} >
                 <img
                   width={'100%'} 
-                  src={ logosMadcritter.logoMad.logo } alt={ logosMadcritter.logoMad.alt }
+                  src={ logosMadcritter.logoBlue.logo } alt={ logosMadcritter.logoMad.alt }
                   className={`${ scrollingDown ? 'move-logo isCenterMenu' : ''} `}
                   // style={{ display: !isCentered ? 'inline' : 'none' }}
                 />

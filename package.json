@@ -22,12 +22,15 @@
     "react-google-recaptcha": "^3.1.0",
     "react-i18next": "^15.5.1",
     "react-router-dom": "^6.28.2",
-    "scrollmagic": "^2.0.8"
+    "react-slick": "^0.31.0",
+    "scrollmagic": "^2.0.8",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@types/react-google-recaptcha": "^2.1.9",
+    "@types/react-slick": "^0.23.13",
     "@types/scrollmagic": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",

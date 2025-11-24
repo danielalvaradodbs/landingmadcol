@@ -1,0 +1,86 @@
+.breakSchemes {
+    padding: 195px 155px 0 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.breakSchemes .title {
+    margin-bottom: 10px;
+}
+
+.breakSchemes .title h2 {
+    color: #101820;
+    text-align: center;
+    font-family: 'Safiro';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -3.2px;
+}
+
+.breakSchemes .title h2 strong {
+    color: #101820;
+    font-family: "Behind The Nineties";
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -1.92px;
+}
+
+.breakSchemes .description p {
+    color: #101820;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.4px;
+}
+
+.breakSchemes .description p strong {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+}
+
+.breakSchemes .buttons {
+    padding-top: 42px;
+    display: flex;
+    gap: 17px;
+    padding-bottom: 80px;
+}
+
+.breakSchemes .buttons button {
+    display: flex;
+    width: 284px;
+    height: 54px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 1.5px solid #101820;
+    border-color: #101820 !important;
+    color: #101820;
+}
+
+.breakSchemes .buttons button:last-child {
+    color: #fff;
+}
+
+.breakSchemes .buttons button:last-child:hover {
+    color: #101820;
+}

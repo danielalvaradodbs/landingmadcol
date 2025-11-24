@@ -1,0 +1,16 @@
+
+.sliderCard {
+    width: 324px;
+    height: 324px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #101820;
+    display: flex;
+}
+
+.sliderCard .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 38px 35px 37px;
+}

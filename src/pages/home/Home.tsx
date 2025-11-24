@@ -9,6 +9,8 @@ import './home.css';
 import { BrandingsHorizontal } from './components/brandings/BrandingsHorizontal';
 import { useEffect, useRef, useState } from 'react';
 import { FloatingButton } from '../../components/floatingButton/FloatingButton';
+import { BreakSchemes } from './components/break-schemes/BreakSchemes';
+import { YourBrand } from './components/your-brand/YourBrand';
 
 export const Home = () => {
 
@@ -37,7 +39,9 @@ export const Home = () => {
   
   return (
     <>
-      <Brandings />
+      {/* <Brandings /> */}
+      <BreakSchemes />
+      <YourBrand />
       <div ref={conceptRef}>
         <Concept />
       </div>
