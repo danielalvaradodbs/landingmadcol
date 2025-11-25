@@ -77,6 +77,11 @@ export const BrandingsHorizontal = () => {
             <ReactFullpage.Wrapper>
 
                 <div className="brandings" id='portfolio'>
+                    <div className="horizontalBranding">
+                        <div className="title">
+                            <h2>Portafolio</h2>
+                        </div>
+                    </div>
                     <div className="section">
                         { brandings.map((item: any, index: any) => (
                             <div className="slide" key={ index }

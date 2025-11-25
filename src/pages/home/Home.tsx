@@ -1,8 +1,6 @@
 
 // import { Brandings } from './components/brandings/Brandings';
-import { Brandings } from './components/brandy/Brandings';
 import { Clients } from './components/clients/Clients';
-import { Concept } from './components/concept/Concept';
 import { Contact } from './components/contact/Contact';
 import { Services } from './components/services/Services';
 import './home.css';
@@ -11,6 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FloatingButton } from '../../components/floatingButton/FloatingButton';
 import { BreakSchemes } from './components/break-schemes/BreakSchemes';
 import { YourBrand } from './components/your-brand/YourBrand';
+import { HowDoIt } from './components/how-do-it/HowDoIt';
 
 export const Home = () => {
 
@@ -42,8 +41,9 @@ export const Home = () => {
       {/* <Brandings /> */}
       <BreakSchemes />
       <YourBrand />
+      <HowDoIt />
       <div ref={conceptRef}>
-        <Concept />
+        {/* <Concept /> */}
       </div>
       <Services />
       <section style={{ height: '100vh', overflow: 'hidden' }}>

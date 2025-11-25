@@ -29,4 +29,22 @@
 
 .yourBrand .buttons {
     display: flex;
+    justify-content: flex-end;
+    padding-right: 158px;
+    padding-top: 52px;
+    gap: 10px;
+}
+
+.yourBrand .buttons button {
+    gap: 0;
+    border-radius: 100px;
+}
+
+.yourBrand .buttons .btn-wrapper:first-child button img {
+    transform: rotate(180deg);
+}
+
+.yourBrand .buttons .btn-wrapper.disabled {
+    opacity: 0.3;
+    pointer-events: none;
 }

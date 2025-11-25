@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { FlechaButton, ideasBrandings } from '../../../../shared';
 import { Card } from './components/card/Card';
 import Slider from "react-slick";
@@ -10,13 +10,22 @@ export const YourBrand = () => {
 
     let sliderRef = useRef<Slider>(null);
 
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slidesToShow = 3;
+    const totalSlides = ideasBrandings.length;
+
     const settings = {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToShow,
+        slidesToScroll: 1,
+        beforeChange: (_oldIndex: number, newIndex: number) => {
+            setCurrentSlide(newIndex);
+        }
     };
+
+
 
     const next = () => {
         sliderRef.current?.slickNext();
@@ -24,6 +33,9 @@ export const YourBrand = () => {
     const previous = () => {
         sliderRef.current?.slickPrev();
     };
+
+    const isFirst = currentSlide === 0;
+    const isLast = currentSlide >= totalSlides - slidesToShow;
 
   return (
     <>
@@ -41,25 +53,30 @@ export const YourBrand = () => {
                 </Slider>
             </div>
             <div className='buttons'>
-                <Button 
-                    texto=''
-                    backgroundColor={'#1018201A'}
-                    urlIcon={ FlechaButton }
-                    onClick={ previous }
-                    width={'100px'}
-                    height={'40px'}
-                />
-                <Button 
-                    texto=''
-                    backgroundColor={'#1018201A'}
-                    urlIcon={ FlechaButton }
-                    onClick={ next }
-                    border={'100px'}
-                    width={'100px'}
-                    height={'40px'}
-                />
-                {/* <button className="button" onClick={previous}>Previous </button>
-                <button className="button" onClick={next}>Next</button> */}
+                <div className={isFirst ? "btn-wrapper disabled" : "btn-wrapper"}>
+                    <Button 
+                        texto=''
+                        backgroundColor={'#101820'}
+                        hoverBorderColor={'#101820'}
+                        urlIcon={ FlechaButton }
+                        onClick={ previous }
+                        border={'100px'}
+                        width={'40px'}
+                        height={'40px'}
+                    />
+                </div>
+                <div className={isLast ? "btn-wrapper disabled" : "btn-wrapper"}>
+                    <Button 
+                        texto=''
+                        backgroundColor={'#101820'}
+                        hoverBorderColor={'#101820'}
+                        urlIcon={ FlechaButton }
+                        onClick={ next }
+                        border={'100px'}
+                        width={'40px'}
+                        height={'40px'}
+                    />
+                </div>
             </div>
         </div>
     </>

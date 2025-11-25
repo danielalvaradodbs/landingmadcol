@@ -54,42 +54,43 @@
   },
   "services": {
     "brandBuilding": {
-      "title": "Construcción de </br> marca",
-      "description": "// Desarrollamos tu marca con autenticidad y enfoque en el usuario, logrando relevancia y diferenciación en el mercado.",
+      "title": "Construcción </br> <strong>de marca</strong>",
+      "description": "La base sólida para <strong>crecer y destacar</strong> en tu mercado.",
       "items": [
-        "Auditoría de marca",
+        "Workshops de marca",
+        "Auditoría y diagnóstico de marca",
         "Arquitectura de marca",
         "Naming",
         "Imagen de marca",
-        "Propósito y personalidad de marca",
-        "Manifesto de marca",
+        "Propósito y personalidad",
+        "Manifiesto de marca",
         "Diseño de personajes",
         "Cultura de marca",
-        "Orientación en registro de marca"
+        "Orientación en registro"
       ]
     },
     "brandIdentity": {
-      "title": "Identidad de </br> marca",
-      "description": "// Destaca frente a la competencia con una identidad sólida, generando impresiones memorables y conexiones duraderas con tus clientes.",
+      "title": "Identidad </br> <strong>de marca</strong>",
+      "description": "La forma en que tu negocio <strong>se ve, se siente y conecta</strong> con la gente, <strong>lo que te saca del montón.</strong>",
       "items": [
         "Manual de identidad visual",
         "Sistema de diseño",
         "Empaques",
         "Key Visual",
-        "Identidad Social",
+        "Identidad social",
         "Guía de comunicaciones"
       ]
     },
     "brandPositioning": {
-      "title": "Posicionamiento de </br> marca",
-      "description": "// Implementamos estrategias de posicionamiento interno y externo, alineando el propósito de tu marca con tus objetivos de negocio.",
+      "title": "Posicionamiento </br> <strong>de marca</strong>",
+      "description": "Estrategias que hacen que tu marca se <strong>convierta en referente y sea imposible ignorar.</strong>",
       "items": [
         "Estrategia de marca",
-        "Social Storytelling",
+        "Social storytelling",
         "Campañas digitales",
         "Contenido audiovisual",
         "Social listening",
-        "Web",
+        "Desarrollo web",
         "Comunicaciones corporativas",
         "Endomarketing",
         "Acciones estratégicas"

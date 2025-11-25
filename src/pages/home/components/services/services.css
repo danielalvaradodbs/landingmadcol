@@ -6,8 +6,68 @@
     z-index: 2;
 }
 
+.services .titleSection {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 131px 48px 155px;
+}
+
+.services .titleSection h2 {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -3.2px;
+}
+
+.services .titleSection h2 strong {
+    color: #101820;
+    font-family: "Behind The Nineties";
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+}
+
+.services .titleSection span {
+    color: #86A6C5;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.28px;
+}
+
+.services .header-sections .title h2 {
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 43.2px */
+    letter-spacing: -1.44px;
+}
+
+.services .header-sections .title h2 strong {
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Behind The Nineties";
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 90%;
+    letter-spacing: -0.96px;
+}
+
 .services .first-section {
-    padding: 70px 150px 100px 150px;
+    padding: 103px 150px 118px 150px;
     background-color: #7595B6;
     margin-bottom: -10px;
 }
@@ -25,13 +85,13 @@
 }
 
 .services .second-section {
-    padding: 70px 150px 83px 150px;
+    padding: 103px 150px 118px 150px;
     background-color: #355372;
     margin-bottom: -10px;
 }
 
 .services .third-section {
-    padding: 70px 150px 83px 150px;
+    padding: 70px 150px 118px 150px;
     background-color: #101820;
 }
 
@@ -51,6 +111,14 @@
     font-size: 21px;
     font-style: normal;
     font-weight: 400;
+    line-height: 30px;
+}
+
+.services p strong {
+    color: #FFF;
+    font-family: 'Safiro';
+    font-style: normal;
+    font-weight: 600;
     line-height: 30px;
 }
 
@@ -84,6 +152,8 @@
 
 .services .items ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
     padding-bottom: 33px;
 }
 
@@ -114,7 +184,7 @@
 
     .services .service-section {
         padding: 70px 200px 100px !important;
-        height: 650px !important;
+        /* height: 650px !important; */
         max-height: 650px !important;
     }
 
