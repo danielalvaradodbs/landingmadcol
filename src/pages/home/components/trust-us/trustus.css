@@ -1,0 +1,61 @@
+.trustUs {
+    padding: 133px 155px 200px 155px;
+}
+
+.trustUs .title {
+    padding-bottom: 48px;
+}
+
+.trustUs .title h2 {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -3.2px;
+}
+
+.trustUs .title h2 strong {
+    color: #101820;
+    font-family: "Behind The Nineties";
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+}
+
+.trustUs .columns-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.columns-grid > div {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.columns-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 17px;
+}
+
+.trustUs .columns-grid h2 {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Behind The Nineties";
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.56px;
+    padding-bottom: 8px;
+}

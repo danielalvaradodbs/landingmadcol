@@ -86,13 +86,13 @@
   width: auto;
   height: auto;
   display: inline-flex;
-  height: 36px;
+  height: 40px;
   padding: 4px 10px;
   justify-content: center;
   align-items: center;
   gap: 13px;
   flex-shrink: 0;
-  border-radius: 7px;
+  border-radius: 100px;
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(10px);
   border: none;
@@ -110,6 +110,11 @@
 
 .brandings .buttons-controls .back button img {
   transform: rotate(180deg);
+}
+
+.brandings .buttons-controls .is-disabled button,
+.brandings .buttons-controls .is-disabled button {
+  background-color: rgba(255, 255, 255, 0.20) !important;
 }
 
 .brandings .buttons-controls .is-disabled button label,

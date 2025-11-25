@@ -223,11 +223,11 @@ export const Contact = () => {
             <div className="title-contact">
                 <div className="first">
                     {/* <h2 className= { `${isVisible ? 'reveal' : ''}` }>Da el primer paso</h2> */}
-                    <h2 className= { `${isVisible ? 'reveal' : ''}` }>{ t('contacts.title.first') }</h2>
+                    <h2 className= { `${isVisible ? 'reveal' : ''}` } >{ t('contacts.title.first') }</h2>
                     {/* <img src={ FlechaRoja } alt="" className= { `flecha-roja ${isVisible ? 'reveal' : ''}` }/> */}
                 </div>
                 <div className="second">
-                    <h2 className= { `${isVisible ? 'reveal' : ''}` }>{t('contacts.title.second')}</h2>
+                    <h2 className= { `${isVisible ? 'reveal' : ''}` }><strong>{t('contacts.title.second')}</strong></h2>
                 </div>
                 <div className="third" style={{ position: 'relative' }}>
                     <h2 className= { `third ${isVisible ? 'reveal' : ''}` }>{t('contacts.title.third')}</h2>

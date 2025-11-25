@@ -10,6 +10,8 @@ import { FloatingButton } from '../../components/floatingButton/FloatingButton';
 import { BreakSchemes } from './components/break-schemes/BreakSchemes';
 import { YourBrand } from './components/your-brand/YourBrand';
 import { HowDoIt } from './components/how-do-it/HowDoIt';
+import { TrustUs } from './components/trust-us/TrustUs';
+import { ClientsMethod } from './components/clientsMethod/ClientsMethod';
 
 export const Home = () => {
 
@@ -49,7 +51,9 @@ export const Home = () => {
       <section style={{ height: '100vh', overflow: 'hidden' }}>
         <BrandingsHorizontal />
       </section>
-      <Clients />
+      <TrustUs />
+      <ClientsMethod />
+      {/* <Clients /> */}
       {/* <FullPage/> */}
       <Contact />
 

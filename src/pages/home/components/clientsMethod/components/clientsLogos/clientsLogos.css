@@ -1,0 +1,41 @@
+
+.clientLogos {
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color .8s ease;
+}
+
+.clientLogos .slider-brands {
+    display: flex;
+    gap: 20px;
+}
+
+.clientLogos .slider-brands .slider {
+    padding: 14px 0px 14px 0px;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.clientLogos .slider-brands.animation {
+    animation: scroll-horizontal 60s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+    
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 20px));
+    }
+}

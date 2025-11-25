@@ -92,13 +92,13 @@ export const Footer = () => {
           </div>
           <div className='container text' style={{ position: 'relative'}} data-animation="to-top">
             <div className='email'>
-              <a href='mailto:rafajordan@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
-              <a href='mailto:rafajordan@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >rafajordan@madcritter.com</a>
+              <a href='mailto:alejandroneira@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >alejandroneira@madcritter.com</a>
+              <a href='mailto:alejandroneira@madcritter.com' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >alejandroneira@madcritter.com</a>
             </div>
             <div className='container text' data-animation="to-top">
               <div>
-                <a href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
-                <a href='https://api.whatsapp.com/send?phone=573186954120' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 318 695 4120</a>
+                <a href='https://api.whatsapp.com/send?phone=573173760470' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 317 376 0470</a>
+                <a href='https://api.whatsapp.com/send?phone=573173760470' className={ `${visibleSections.includes('escribenos') ? 'reveal' : 'hidden'}` } >+57 317 376 0470</a>
 
               </div>
             </div>
@@ -121,8 +121,8 @@ export const Footer = () => {
           </div>
           <div className='container text' data-animation="to-top">
             <div>
-              <a href='mailto:gestionhumana@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` }>gestionhumana@madcritter.com</a>
-              <a href='mailto:gestionhumana@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` }>gestionhumana@madcritter.com</a>
+              <a href='mailto:talento@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` }>talento@madcritter.com</a>
+              <a href='mailto:talento@madcritter.com' className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` }>talento@madcritter.com</a>
             </div>
           </div>
         </div>

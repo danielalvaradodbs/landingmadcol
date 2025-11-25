@@ -7,3 +7,5 @@ export * from './clients';
 export * from './meet-the-teams';
 export * from './imagesMTT';
 export * from './ideasBrands';
+export * from './clientLogos';
+export * from './clientsMethod';

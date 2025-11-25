@@ -1,0 +1,47 @@
+
+.clientsMethod {
+    padding: 0 0 192px 155px;
+}
+
+.clientsMethod .title h2 {
+    color: #101820;
+    font-family: 'Safiro';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -3.2px;
+    padding-bottom: 72px;
+}
+
+.clientsMethod .title h2 strong {
+    color: #101820;
+    font-family: "Behind The Nineties";
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+}
+
+.clientsMethod .buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 158px;
+    padding-top: 52px;
+    gap: 10px;
+}
+
+.clientsMethod .buttons button {
+    gap: 0;
+    border-radius: 100px;
+}
+
+.clientsMethod .buttons .btn-wrapper:first-child button img {
+    transform: rotate(180deg);
+}
+
+.clientsMethod .buttons .btn-wrapper.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}

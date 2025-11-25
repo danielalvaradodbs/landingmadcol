@@ -137,6 +137,7 @@ export const BrandingsHorizontal = () => {
                         <div className={`back ${ isFirstSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
+                                backgroundColor={'#7595B6'}
                                 hoverBorderColor='#fff'
                                 hoverBackgroundColor='#fff'
                                 urlIcon={ FlechaButton }
@@ -148,6 +149,7 @@ export const BrandingsHorizontal = () => {
                         <div className={`front ${ isLastSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
+                                backgroundColor={'#7595B6'}
                                 hoverBorderColor='#fff'
                                 hoverBackgroundColor='#fff'
                                 urlIcon={ FlechaButton }
