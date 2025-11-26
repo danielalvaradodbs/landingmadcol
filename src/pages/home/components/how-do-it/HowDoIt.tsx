@@ -6,7 +6,7 @@ import './howDoIt.css';
 export const HowDoIt = () => {
   return (
     <>
-        <div className="howDoIt">
+        <div className="howDoIt" id='howDoIt'>
             <div className="title">
                 <h2>¿Cómo <br/> lo <strong>hacemos?</strong></h2>
                 <span>NUESTRA<br/>METODOLOGÍA</span>
