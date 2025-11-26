@@ -25,7 +25,6 @@
 .breakSchemes .title h2 strong {
     color: #101820;
     font-family: "Behind The Nineties";
-    font-size: 64px;
     font-style: italic;
     font-weight: 600;
     line-height: 110%;
@@ -114,4 +113,33 @@
     height: 100%;
     border: none;
     display: block;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 899px) {
+    .breakSchemes {
+        padding: 195px 80px 0 80px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+    .breakSchemes {
+        padding: 124px 38px 0 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .breakSchemes .title h2 {
+        color: #101820;
+        font-family: Safiro;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -1.7px;
+    }
+
 }
