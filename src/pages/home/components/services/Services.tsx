@@ -127,7 +127,6 @@ export const Services = () => {
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandBuilding.description') }}></p>
             </div>
             <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} />
-
           </div>
 
           <div className="footer-section mobile">
@@ -139,6 +138,9 @@ export const Services = () => {
             </ul>
           </div>
 
+        <div className="image-mobile">
+            <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} />
+        </div>
         </div>
       </section>
 
@@ -166,6 +168,9 @@ export const Services = () => {
               {animateText(itemsBrandIdentity)}
             </ul>
           </div>
+        <div className="image-mobile">
+            <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} />
+        </div>
         </div>
       </section>
 
@@ -192,6 +197,9 @@ export const Services = () => {
             {animateText(itemsbrandPositioning)}
             </ul>
           </div>
+        <div className="image-mobile">
+            <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} />
+        </div>
         </div>
       </section>
 

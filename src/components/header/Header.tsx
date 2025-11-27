@@ -256,7 +256,7 @@ export const Header = () => {
             className={`col-6 logo animate__animated animate__fadeInUp animate__slow logo-mobile`}>
               <a onClick={() => sendToLink('/') } style={{ cursor: 'pointer' }}>
                 <img 
-                  src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                  src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }
                   className={`${ scrollingDown ? 'move-logo' : ''}  ${ isDarkBackground ? 'invert' : '' }`}
                   style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
                 />

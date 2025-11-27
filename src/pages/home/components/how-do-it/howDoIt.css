@@ -23,7 +23,6 @@
 .howDoIt .title h2 strong {
     color: #101820;
     font-family: "Behind The Nineties";
-    font-size: 64px;
     font-style: italic;
     font-weight: 600;
     line-height: 100%;
@@ -92,7 +91,6 @@
 .howDoIt .humanCentered h2 strong {
     color: #101820;
     font-family: "Behind The Nineties";
-    font-size: 36px;
     font-style: italic;
     font-weight: 600;
     line-height: 130%;
@@ -119,7 +117,7 @@
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    padding: 0 155px 0 155px;
+    padding: 0 150px 0 155px;
     gap: 76px;
 }
 
@@ -169,7 +167,7 @@
 }
 
 .howDoIt .cardSection {
-    padding: 0 155px 0 155px;
+    padding: 0 150px 0 155px;
     display: flex;
     gap: 20px;
 }
@@ -178,7 +176,7 @@
     padding: 35px 63px 36px 52px;
     border-radius: 10px;
     background: #101820;
-    max-width: 440px;
+    max-width: 400px;
     max-height: 344px;
     height: 344px;
     display: flex;
@@ -215,10 +213,15 @@
 .howDoIt .cardSection .humanCentered {
     padding: 0 0 0 0;
     position: relative;
+    overflow: hidden;
 }
 
-.howDoIt .cardSection .humanCentered .content {
-    padding: 58px 75px 54px 95px;
+.howDoIt .cardSection .humanCentered img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
 }
 
 .howDoIt .cardSection .humanCentered p {
@@ -257,6 +260,164 @@
     color: #101820;
     border-radius: 50px;
 }
+
 .howDoIt .cardSection .humanCentered button:hover {
     color: white;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1200px) {
+
+    .howDoIt .cardSection .card {
+        max-width: 331px;
+        padding: 23px 20px 35px 28px;
+
+    }
+
+    .howDoIt .cardSection .humanCentered .content {
+        padding: 58px 0px 54px 0px;
+    }
+
+    .howDoIt .items {
+        margin-bottom: 56px;
+    }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1023px) {
+
+    .howDoIt .cardSection {
+        padding: 0 100px 0 100px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 899px) {
+
+    .howDoIt .title {
+        padding: 22px 80px;
+    }
+
+    .howDoIt .title h2 {
+        font-size: 34px;
+    }
+
+    .howDoIt .title span {
+        font-size: 9px;
+    }
+
+    .howDoIt .hero .content h1 {
+        font-size: 12px;
+        padding-top: 9px;
+    }
+
+    .howDoIt .humanCentered {
+        padding: 32px 80px 51px;
+    }
+
+    .howDoIt .humanCentered h2 {
+        font-size: 20px;
+    }
+
+    .howDoIt .cols {
+        flex-wrap: wrap;
+        padding: 0px;
+        gap: 20px;
+        position: relative;
+    }
+
+    .howDoIt .cols div {
+        padding: 0px 22px 51px 80px;
+    }
+
+    .howDoIt .items .cols div {
+        position: relative;
+    }
+
+    .howDoIt .items::before {
+        content: "";
+        width: 0;
+    }
+
+    .howDoIt .items .cols div::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 100dvw;
+        height: 1px;
+        background: #101820;
+        z-index: -1;
+    }
+
+    .howDoIt .items .cols img {
+        width: 48px;
+        height: 48px;
+        aspect-ratio: 1/1;
+    }
+
+    .howDoIt .cardSection {
+        padding: 0px 80px;
+    }
+
+    .howDoIt .cardSection .humanCentered .content {
+        padding: 64px 28px 61px 28px;
+    }
+
+    .howDoIt .cardSection .card .content p,
+    .howDoIt .cardSection .humanCentered .content p {
+        font-size: 16px;
+    }
+
+    .howDoIt .cardSection .humanCentered .content h3 {
+        font-size: 24px;
+    }
+
+    .howDoIt .cardSection {
+        flex-wrap: wrap;
+    }
+
+    .howDoIt .cardSection .humanCentered img:first-child {
+        min-height: 350px;
+    }
+
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+    .howDoIt {
+        padding-bottom: 99px;
+    }
+
+    .howDoIt .title {
+        padding: 22px 22px;
+    }
+
+    .howDoIt .humanCentered {
+        padding: 32px 22px 51px;
+    }
+
+    .howDoIt .humanCentered h2 {
+        font-size: 20px;
+    }
+
+    .howDoIt .cols {
+        padding: 0px 0px;
+    }
+
+    .howDoIt .cols div {
+        padding: 0px 22px 51px;
+    }
+
+    .howDoIt .cardSection {
+        flex-wrap: wrap;
+        padding: 0 22px;
+    }
+
+    .howDoIt .cardSection .card {
+        max-width: 100%;
+    }
+
+    .howDoIt .cardSection .humanCentered img:first-child {
+        min-height: 400px;
+    }
 }

@@ -22,7 +22,30 @@ export const YourBrand = () => {
         slidesToScroll: 1,
         beforeChange: (_oldIndex: number, newIndex: number) => {
             setCurrentSlide(newIndex);
-        }
+        },
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: false,
+                }
+            }
+        ]
     };
 
 

@@ -20,7 +20,6 @@
 .yourBrand .title h2 strong {
     color: #101820;
     font-family: "Behind The Nineties";
-    font-size: 64px;
     font-style: italic;
     font-weight: 600;
     line-height: 100%;
@@ -47,4 +46,38 @@
 .yourBrand .buttons .btn-wrapper.disabled {
     opacity: 0.3;
     pointer-events: none;
+}
+
+
+@media only screen and (min-width: 280px) and (max-width: 899px) {
+
+    .yourBrand {
+        padding: 195px 0 83px 80px;
+    }
+
+    .yourBrand .title {
+        padding-bottom: 34px;
+    }
+
+    .yourBrand .title h2 {
+        font-size: 34px;
+    }
+
+    .sliderCard {
+        max-width: 245px;
+        max-height: 245px;
+    }
+
+    .yourBrand .buttons {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+    .yourBrand {
+        padding: 124px 0 83px 22px;
+    }
+
 }

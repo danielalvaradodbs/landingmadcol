@@ -26,7 +26,6 @@
 .services .titleSection h2 strong {
     color: #101820;
     font-family: "Behind The Nineties";
-    font-size: 64px;
     font-style: italic;
     font-weight: 600;
     line-height: 100%;
@@ -59,7 +58,6 @@
     color: #FFF;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Behind The Nineties";
-    font-size: 48px;
     font-style: italic;
     font-weight: 600;
     line-height: 90%;
@@ -171,13 +169,10 @@
 .services .footer-section .animation-text {
     animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
-/* 
-  .header-sections {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  } */
+
+.services .header-sections .image-mobile img {
+    display: none;
+}
 
 
 @media only screen and (min-width: 2048px) {
@@ -289,6 +284,19 @@
 }
 
 @media only screen and (min-width: 280px) and (max-width: 899px) {
+
+    .services .titleSection {
+        padding: 0 22px 28px 22px;
+    }
+
+    .services .titleSection h2 {
+        font-size: 34px;
+    }
+
+    .services .titleSection span {
+        font-size: 9px;
+    }
+
     .services .first-section,
     .services .second-section,
     .services .third-section {
@@ -471,6 +479,17 @@
     .services p {
         font-size: 16px;
     }
+
+    .services .header-sections .marca img,
+    .services .header-sections .identidad img,
+    .services .header-sections .posicionamiento img {
+        display: none;
+    }
+
+    .services .header-sections .image-mobile img {
+        display: block;
+    }
+
 }
 
 @media only screen and (min-width: 525px) and (max-width: 599px) {
@@ -703,7 +722,7 @@
 @media only screen and (min-width: 280px) and (max-width: 767px) {
 
     .services p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
     }
 
@@ -725,7 +744,7 @@
     .services .header-sections .title h2 {
         color: #FFF;
         font-family: 'Safiro';
-        font-size: 44px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 500;
         line-height: 44px;

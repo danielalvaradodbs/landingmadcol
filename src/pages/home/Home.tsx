@@ -1,6 +1,3 @@
-
-// import { Brandings } from './components/brandings/Brandings';
-import { Clients } from './components/clients/Clients';
 import { Contact } from './components/contact/Contact';
 import { Services } from './components/services/Services';
 import './home.css';
