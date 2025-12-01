@@ -78,7 +78,7 @@ export const BrandingsHorizontal = () => {
 
                 <div className="brandings" id='portfolio'>
                     <div className="horizontalBranding">
-                        <div className="title">
+                        <div className="title animate__animated animate__fadeInUp">
                             <h2>Portafolio</h2>
                         </div>
                     </div>
@@ -137,7 +137,7 @@ export const BrandingsHorizontal = () => {
                         <div className={`back ${ isFirstSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
-                                backgroundColor={'#7595B6'}
+                                backgroundColor={'#101820'}
                                 hoverBorderColor='#fff'
                                 hoverBackgroundColor='#fff'
                                 urlIcon={ FlechaButton }
@@ -149,7 +149,7 @@ export const BrandingsHorizontal = () => {
                         <div className={`front ${ isLastSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
-                                backgroundColor={'#7595B6'}
+                                backgroundColor={'#101820'}
                                 hoverBorderColor='#fff'
                                 hoverBackgroundColor='#fff'
                                 urlIcon={ FlechaButton }

@@ -1,18 +1,43 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FlechaButton, ideasBrandings } from '../../../../shared';
 import { Card } from './components/card/Card';
 import Slider from "react-slick";
 
 import './yourBrand.css';
 import { Button } from '../../../../components/button/Button';
+import { useInView } from '../../../../hooks/useInView';
 
 export const YourBrand = () => {
 
     let sliderRef = useRef<Slider>(null);
-
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slidesToShow = 3;
     const totalSlides = ideasBrandings.length;
+
+    const { ref: sectionRef, isVisible } = useInView({
+        threshold: 0.1
+    });
+
+    const useSlidesToShow = () => {
+
+        const [slides, setSlides] = useState(3);
+
+        const updateSlides = () => {
+            if (window.innerWidth <= 555) setSlides(1);
+            else if (window.innerWidth <= 768) setSlides(2);
+            else if (window.innerWidth <= 1024) setSlides(2);
+            else setSlides(3);
+        };
+
+        useEffect(() => {
+            updateSlides();
+            window.addEventListener("resize", updateSlides);
+            return () => window.removeEventListener("resize", updateSlides);
+        }, []);
+
+        return slides;
+    };
+
+    const slidesToShow = useSlidesToShow();
 
     const settings = {
         dots: false,
@@ -34,15 +59,15 @@ export const YourBrand = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     infinite: false,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 555,
                 settings: {
                     slidesToShow: 1,
-                    infinite: false,
+                    infinite: true,
                 }
             }
         ]
@@ -62,7 +87,10 @@ export const YourBrand = () => {
 
   return (
     <>
-        <div className="yourBrand">
+        <div 
+            ref={ sectionRef } 
+            className={`yourBrand ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}
+        >
             <div className="title">
                 <h2>¿Qué podemos <br/><strong>hacer por tu marca?</strong></h2>
             </div>

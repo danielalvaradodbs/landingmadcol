@@ -132,7 +132,7 @@
 @media only screen and (min-width: 280px) and (max-width: 599px) {
 
     .breakSchemes {
-        padding: 124px 38px 0 22px;
+        padding: 124px 22px 0 22px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -147,11 +147,27 @@
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
+        text-align: left;
         letter-spacing: -1.7px;
+    }
+
+    .breakSchemes .description p br,
+    .breakSchemes .title h2 br {
+        display: none;
+    }
+
+    .breakSchemes .description p {
+        text-align: left;
     }
 
     .breakSchemes .buttons {
         padding-bottom: 42px;
+        width: 100%;
+    }
+
+    .breakSchemes .buttons button {
+        width: 100%;
+        max-width: 100%;
     }
 
     .breakSchemes .hero img {

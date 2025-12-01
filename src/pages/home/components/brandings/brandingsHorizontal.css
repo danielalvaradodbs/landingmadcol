@@ -21,6 +21,7 @@
   background-size: cover;
   background-attachment: local;
   width: 100%;
+  border-radius: 10px;
 }
 .brandings .horizontalBranding {
   padding-left: 120px;
@@ -93,7 +94,7 @@
   gap: 13px;
   flex-shrink: 0;
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.20);
+  /* background: rgba(255, 255, 255, 0.20); */
   backdrop-filter: blur(10px);
   border: none;
 }
@@ -292,8 +293,12 @@
 @media only screen and (min-width: 280px) and (max-width: 599px) {
 
   .brandings {
-    padding: 17px 17px;
+    padding: 79px 20px 17px;
     margin-top: 0;
+  }
+
+  .brandings .horizontalBranding {
+    padding-left: 0px;
   }
 
   .brandings .section .slide {
@@ -312,7 +317,7 @@
   .slide {
     background-size: cover;
     background-attachment: local;
-    width: 100vw;
+    width: 100%;
   }
 
   .brandings .buttons-controls {
@@ -324,29 +329,39 @@
     justify-content: center;
   }
 
-    .brandings .buttons-controls img,
-    .brandings .buttons-controls img {
-      filter: invert();
-    }
-
   .brandings .buttons-controls .is-disabled img {
     filter: invert(0);
   }
 
   .brandings .buttons-controls .front button:hover label,
   .brandings .buttons-controls .back button:hover label {
-    --flair-color: #101820 !important;
-  }
-
-  .brandings .buttons-controls .front button:hover img,
-  .brandings .buttons-controls .back button:hover img {
-    filter: none;
+    --flair-color: #fff !important;
+    border-color: #fff
   }
 
   .brandings .buttons-controls div {
-    border-radius: 7px;
+    border-radius: 100px;
     background: rgba(16, 24, 32, 0.20);
     backdrop-filter: blur(10px);
+  }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 899px) {
+
+  .brandings .horizontalBranding {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1023px) {
+
+  .brandings {
+    margin-top: 0;
+  }
+
+  .brandings .horizontalBranding {
+    padding-left: 0px;
   }
 
 }

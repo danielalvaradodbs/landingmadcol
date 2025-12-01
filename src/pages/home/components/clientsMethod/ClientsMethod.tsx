@@ -3,17 +3,43 @@ import Slider from 'react-slick';
 import { Button } from '../../../../components/button/Button';
 import { FlechaButton } from '../../../../shared';
 import './clientsMethod.css';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { clientsMethod } from '../../../../shared/clientsMethod';
 import { CardClients } from './components/cardClients/CardClients';
 import { ClientsLogos } from './components/clientsLogos/ClientsLogos';
+import { useInView } from '../../../../hooks/useInView';
 
 export const ClientsMethod = () => {
 
     let sliderRef = useRef<Slider>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slidesToShow = 3;
     const totalSlides = clientsMethod.length;
+
+    const { ref: sectionRef, isVisible } = useInView({
+        threshold: 0.1
+    });
+
+    const useSlidesToShow = () => {
+    
+        const [slides, setSlides] = useState(3);
+
+        const updateSlides = () => {
+            if (window.innerWidth <= 555) setSlides(1);
+            else if (window.innerWidth <= 768) setSlides(2);
+            else if (window.innerWidth <= 1024) setSlides(2);
+            else if (window.innerWidth <= 1440) setSlides(2);
+            else setSlides(3);
+        };
+
+        useEffect(() => {
+            updateSlides();
+            window.addEventListener("resize", updateSlides);
+            return () => window.removeEventListener("resize", updateSlides);
+        }, []);
+
+        return slides;
+    };
+    const slidesToShow = useSlidesToShow();
 
     const settings = {
         dots: false,
@@ -23,10 +49,31 @@ export const ClientsMethod = () => {
         slidesToScroll: 1,
         beforeChange: (_oldIndex: number, newIndex: number) => {
             setCurrentSlide(newIndex);
-        }
+        },
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: false,
+                }
+            }
+        ]
     };
-
-
 
     const next = () => {
         sliderRef.current?.slickNext();
@@ -40,7 +87,10 @@ export const ClientsMethod = () => {
 
   return (
     <>
-        <div className="clientsMethod">
+        <div 
+            ref={ sectionRef } 
+            className={`clientsMethod ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}
+        >
             <div className="title">
                 <h2>Clientes que ya apuestan <br/> <strong>por nuestra metodología</strong></h2>
             </div>

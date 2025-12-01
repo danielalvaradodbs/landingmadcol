@@ -1,11 +1,20 @@
 
+import { useInView } from '../../../../hooks/useInView';
 import { EquipoMultidisciplinario, ImplementacionAgil, MetodologiaMedida, ParteDeTuEquipo } from '../../../../shared/trustus';
 import './trustus.css';
 
 export const TrustUs = () => {
+
+    const { ref: sectionRef, isVisible } = useInView({
+        threshold: 0.1
+    });
+
   return (
     <>
-        <div className="trustUs">
+        <div 
+            ref={ sectionRef } 
+            className={`trustUs ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}
+        >
             <div className="title">
                 <h2>¿Por qué confiar <br/> <strong>en nosotros?</strong></h2>
             </div>

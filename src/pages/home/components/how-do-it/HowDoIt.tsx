@@ -1,18 +1,27 @@
 import { Button } from '../../../../components/button/Button';
+import { useInView } from '../../../../hooks/useInView';
 import { FlechaBlue } from '../../../../shared';
 import { Books, Diamond, FigureHero, HeroHowDoIt, HeroHuman, Settings, Spinner } from '../../../../shared/howDoIt';
 import './howDoIt.css';
 
 export const HowDoIt = () => {
+
+    const { ref: sectionRef, isVisible } = useInView({
+        threshold: 0.1
+    });
+
   return (
     <>
-        <div className="howDoIt" id='howDoIt'>
+        <div 
+            id='howDoIt' ref={ sectionRef } 
+            className={`howDoIt ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}
+        >
             <div className="title">
                 <h2>¿Cómo <br/> lo <strong>hacemos?</strong></h2>
                 <span>NUESTRA<br/>METODOLOGÍA</span>
             </div>
             <div className="hero">
-                <img src={ HeroHowDoIt } width={'100%'} alt="" />
+                <img src={ HeroHowDoIt } className='background'  width={'100%'} alt="" />
                 <div className="content">
                     <img src={ FigureHero } alt="" />
                     <h1>La marca es el todo, el <br/> humano es el centro.</h1>

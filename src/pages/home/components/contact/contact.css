@@ -29,7 +29,6 @@
 
 .contact .title-contact h2 strong {
     font-family: "Behind The Nineties";
-    font-size: 64px;
     font-style: italic;
     font-weight: 600;
     line-height: 100%;
@@ -567,7 +566,7 @@
 
 @media only screen and (min-width: 601px) and (max-width: 767px) {
     .contact {
-        padding: 0px 16px 90px 16px;
+        padding: 79px 16px 90px 16px;
     }
     .contact .title-contact {
         width: 100%;
@@ -666,14 +665,6 @@
         width: 43px;
     }
 }
-
-@media only screen and (min-width: 280px) and (max-width: 500px) {
-   .contact {
-    padding-top: 0;
-   }
-
-}
-
 
 @media only screen and (min-width: 280px) and (max-width: 319px) {
     .contact .title-contact h2 {

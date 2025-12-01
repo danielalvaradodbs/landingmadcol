@@ -1,7 +1,7 @@
 
 .sliderCard {
-    width: 324px;
-    height: 324px;
+    max-width: 324px;
+    max-height: 324px;
     flex-shrink: 0;
     border-radius: 10px;
     border: 1px solid #101820;
@@ -13,4 +13,32 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 38px 35px 37px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 899px) {
+    .sliderCard {
+        /* max-width: 245px;
+        max-height: 245px; */
+        border-radius: 12px;
+        border: 1px solid #101820;
+        display: flex;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .sliderCard {
+        max-width: 245px;
+        max-height: 245px;
+        border-radius: 12px;
+        border: 1px solid #101820;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    /* .slick-track {
+        display: flex !important;
+        gap: 12px;
+        width: 100% !important;
+    } */
 }

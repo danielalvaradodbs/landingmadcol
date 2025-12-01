@@ -110,7 +110,7 @@ export const Services = () => {
 
   return (
     <div className="services" id='services'>
-      <div className="titleSection">
+      <div className="titleSection animate__animated animate__fadeIn">
         <h2>¿Qué <br/> <strong>hacemos?</strong></h2>
         <span>NUESTROS <br/> SERVICIOS</span>
       </div>

@@ -13,7 +13,7 @@
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
     letter-spacing: -3.2px;
 }
 
@@ -24,6 +24,13 @@
     font-weight: 600;
     line-height: 100%;
     letter-spacing: -1.92px;
+}
+
+.yourBrand .sliderCard {
+    max-width: 324px;
+    max-height: 324px;
+    width: 324px;
+    height: 324px;
 }
 
 .yourBrand .buttons {
@@ -64,8 +71,20 @@
     }
 
     .sliderCard {
-        max-width: 245px;
-        max-height: 245px;
+        width: 245px;
+        height: 245px;
+        border-radius: 12px;
+        border: 1px solid #101820;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .sliderCard .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 28px 24px;
+        height: 100%;
     }
 
     .yourBrand .buttons {
@@ -77,7 +96,8 @@
 @media only screen and (min-width: 280px) and (max-width: 599px) {
 
     .yourBrand {
-        padding: 124px 0 83px 22px;
+        padding: 124px 22px 83px 22px;
+        overflow-x: hidden;
     }
 
 }

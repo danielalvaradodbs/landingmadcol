@@ -170,6 +170,11 @@
     animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
+.services .header-sections img {
+    width: 525px;
+    /* height: 291px; */
+}
+
 .services .header-sections .image-mobile img {
     display: none;
 }

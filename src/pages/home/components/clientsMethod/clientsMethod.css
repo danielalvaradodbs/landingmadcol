@@ -17,7 +17,6 @@
 .clientsMethod .title h2 strong {
     color: #101820;
     font-family: "Behind The Nineties";
-    font-size: 64px;
     font-style: italic;
     font-weight: 600;
     line-height: 100%;
@@ -44,4 +43,86 @@
 .clientsMethod .buttons .btn-wrapper.disabled {
     opacity: 0.3;
     pointer-events: none;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1023px) {
+    .clientsMethod {
+        padding: 0 33px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+    .clientsMethod {
+        padding: 0 20px;
+        overflow-x: hidden;
+    }
+
+    .clientsMethod .title br {
+        display: none;
+    }
+
+    .clientsMethod .title h2 {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -1.7px;
+        padding-bottom: 27px;
+    }
+
+    .clientsMethod .sliderCardClients {
+        max-width: 257px;
+        padding: 31px 27px 25px 26px;
+    }
+
+    .clientsMethod .sliderCardClients .content p {
+        font-size: 14px;
+    }
+
+    .clientsMethod .sliderCardClients .content .image .imageFooter p {
+        font-size: 10px;
+    }
+
+    .clientsMethod .sliderCardClients .content .image img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .clientsMethod .buttons {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 899px) {
+    .clientsMethod {
+        padding: 0 20px;
+    }
+
+    .clientsMethod .title br {
+        display: none;
+    }
+
+    .clientsMethod .title h2 {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -1.7px;
+        padding-bottom: 27px;
+    }
+
+    .clientsMethod .sliderCardClients {
+        width: 257px;
+        height: 375px;
+        padding: 31px 27px 25px 26px;
+    }
+
+    .clientsMethod .sliderCardClients .content p {
+        font-size: 14px;
+    }
+
+    .clientsMethod .buttons {
+        display: none;
+    }
 }

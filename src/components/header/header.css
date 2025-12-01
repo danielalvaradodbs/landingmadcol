@@ -66,7 +66,7 @@
     border-radius: 50px;
     /* background: rgba(255, 255, 255, 0.20); */
     border-radius: 50px;
-    background: rgba(0, 0, 0, 0.10);
+    background: #fff;
 }
 
 .header .menu-items-mobile .menu-translation:hover,
@@ -96,6 +96,7 @@
 .header .menu-items-mobile .menu-translation button.active,
 .header .menu-translation button.active {
      background: #101820;
+     color: #FFF;
 }
 
 .header .menu-items-mobile .menu-translation:hover button.active,
