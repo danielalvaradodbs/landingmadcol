@@ -1,8 +1,8 @@
 .brandings {
-  height: 100vh;
-  padding: 100px 33px;
+  /* height: 100vh; */
+  padding: 100px 33px 0;
   margin-top: 240px;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
   display: flex;
   flex-direction: column;
   position: relative !important;
@@ -43,7 +43,7 @@
   width: 100%;
   height: 100dvh;
   align-items: flex-end;
-  padding: 0 40px 180px;
+  padding: 0 40px 42px;
   justify-content: space-between;
   flex-direction: row;
 }
@@ -76,10 +76,14 @@
   display: flex;
   gap: 10px;
   position: absolute;
-  bottom: -1.7%;
+  bottom: 3.5%;
   right: 20%;
   right: 5%;
   z-index: 99;
+}
+
+.brandings .buttons-controls .texto {
+ display: none;
 }
 
 .brandings .buttons-controls .front button,
@@ -97,11 +101,6 @@
   /* background: rgba(255, 255, 255, 0.20); */
   backdrop-filter: blur(10px);
   border: none;
-}
-
-.brandings .buttons-controls .front button:hover img,
-.brandings .buttons-controls .back button:hover img {
-  filter: invert();
 }
 
 .brandings .buttons-controls .front button label:not(:first-child),

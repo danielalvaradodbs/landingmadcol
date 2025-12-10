@@ -133,8 +133,11 @@ export const Button = ({
       data-button-name={ idButton }
     >
       <label id={ idButton } ref={ flairRef } className="button__flair"></label>
-      <label id={ idButton } ref={ labelRef } className="button__label">{ texto }</label>
-      <label id={ idButton } ref={ labelRefHover } className="button__label hover-label">{ texto }</label>
+      <div className="texto">
+        <label id={ idButton } ref={ labelRef } className="button__label" dangerouslySetInnerHTML={{ __html: texto }}></label>
+        <label id={ idButton } ref={ labelRefHover } className="button__label hover-label" dangerouslySetInnerHTML={{ __html: texto }}></label>
+
+      </div>
       <img id={ idButton } src={ urlIcon } style={{ zIndex: 1 }} />
     </button>
     </>

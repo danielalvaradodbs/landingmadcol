@@ -85,16 +85,20 @@
   transition: 0.2s ease-out;
 }
 
+.button .texto {
+  display: flex;
+  flex-direction: column;
+}
 
 .button label.button__label.hover-label {
   opacity: 0;
   position: absolute;
-  transform: translate(-15%,100%);
+  transform: translate(0%, 100%);
   transition: 0.2s ease-out;
 }
 .button:hover label.button__label.hover-label {
   opacity: 1;
   position: absolute;
-  transform: translate(-11%, 0%);
+  transform: translate(0%, 0%);
   transition: 0.2s ease-out;
 }

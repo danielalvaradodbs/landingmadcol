@@ -91,7 +91,7 @@ p {
     font-family: 'Safiro';
     font-weight: 400;
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
 }
 
@@ -335,7 +335,7 @@ button:disabled {
         font-family: 'Safiro';
         font-weight: 400;
         margin: 0;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 20px;
     }
 }

@@ -116,7 +116,7 @@ export const Services = () => {
       </div>
       <section className="service-section first-section" id='first-section'>
         <div className="number">
-          <h6>01_</h6>
+          <h6>01.</h6>
         </div>
         <div className="header-sections">
           <div className="marca">
@@ -126,7 +126,7 @@ export const Services = () => {
             <div className="footer-section desktop">
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandBuilding.description') }}></p>
             </div>
-            <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} />
+            {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} /> */}
           </div>
 
           <div className="footer-section mobile">
@@ -139,14 +139,14 @@ export const Services = () => {
           </div>
 
         <div className="image-mobile">
-            <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} />
+            {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} /> */}
         </div>
         </div>
       </section>
 
       <section className="service-section second-section" id='second-section'>
         <div className="number">
-          <h6>02_</h6>
+          <h6>02.</h6>
         </div>
         <div className="header-sections">
           <div className="identidad">
@@ -156,7 +156,7 @@ export const Services = () => {
             <div className="footer-section desktop">
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandIdentity.description') }}></p>
             </div>
-            <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} />
+            {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} /> */}
           </div>
 
           <div className="footer-section mobile">
@@ -169,14 +169,14 @@ export const Services = () => {
             </ul>
           </div>
         <div className="image-mobile">
-            <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} />
+            {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} /> */}
         </div>
         </div>
       </section>
 
       <section className="service-section third-section" id='third-section'>
         <div className="number">
-          <h6>03_</h6>
+          <h6>03.</h6>
         </div>
         <div className="header-sections">
           <div className="posicionamiento">
@@ -186,7 +186,7 @@ export const Services = () => {
             <div className="footer-section desktop">
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandPositioning.description') }}></p>
             </div>
-            <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} />
+            {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} /> */}
 
           </div>
           <div className="footer-section mobile">
@@ -198,7 +198,7 @@ export const Services = () => {
             </ul>
           </div>
         <div className="image-mobile">
-            <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} />
+            {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} /> */}
         </div>
         </div>
       </section>

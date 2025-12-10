@@ -250,7 +250,7 @@
 
 .contact .form .terms-submit .terms {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 50%;
     gap: 12px;
 }
@@ -267,6 +267,10 @@
     margin: 0;
     transition: ease 0.5s;
     
+}
+
+.contact .form .terms-submit .terms label {
+    padding-top: 1px;
 }
 
 .contact.contact-hidden .form .terms-submit .terms input {
@@ -307,9 +311,6 @@
 .contact .form .terms-submit .submit button:hover label {
    color: #101820;
 }
-.contact .form .terms-submit .submit button:hover img {
-   filter: invert();
-}
 
 .contact .form .terms-submit .terms label a:hover {
     color: #7595B6;
@@ -318,9 +319,9 @@
     font-weight: 400;
 }
 
-.contact .form button .button__label.hover-label {
+/* .contact .form button .button__label.hover-label {
     left: 23% !important;
-}
+} */
 
 .contact.contact.contact-hidden {
     background-color: white !important;

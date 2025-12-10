@@ -15,6 +15,12 @@
     padding: 40px 38px 35px 37px;
 }
 
+.yourBrand .slick-track {
+    display: flex !important;
+    gap: 12px;
+    width: 100% !important;
+}
+
 @media only screen and (min-width: 280px) and (max-width: 899px) {
     .sliderCard {
         /* max-width: 245px;

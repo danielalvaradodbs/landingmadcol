@@ -47,6 +47,11 @@
   padding-bottom: 17px;
 }
 
+.trustUs .columns-grid p,
+.trustUs .columns-grid h2 {
+    padding-left: 18px;
+}
+
 .trustUs .columns-grid h2 {
     color: #101820;
     font-feature-settings: 'liga' off, 'clig' off;

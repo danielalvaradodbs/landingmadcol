@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '../../../../components/button/Button';
 import { FlechaBlue, PlusBlue } from '../../../../shared';
-import { Hero } from '../../../../shared/images';
+import { VideoMad } from '../../../../shared';
 import './breakSchemes.css';
+import { BtnPlay } from '../../../../shared/images';
 
 export const BreakSchemes = () => {
 
     const [showVideo, setShowVideo] = useState(false);
+    const videoRef = useRef(null);
+    const contentVideo = useRef(null);
+    const startTime = 4;
+
 
     const linkToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -21,6 +26,21 @@ export const BreakSchemes = () => {
         window.open(url, "_blank"); 
     };
 
+    useEffect(() => {
+        const video: any = videoRef.current;
+    
+        const handleLoadedMetadata = () => {
+          video.currentTime = startTime;
+          video.play();
+    
+        };
+        video.addEventListener("loadedmetadata", handleLoadedMetadata);
+      
+        return () => {
+          video.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      };
+      }, [startTime]);
+
 
   return (
     <>
@@ -34,7 +54,7 @@ export const BreakSchemes = () => {
             </div>
             <div className="buttons">
                 <Button
-                    texto='Conoce nuestra metodología'
+                    texto='Conoce nuestra </br>metodología'
                     urlIcon={ FlechaBlue }
                     hoverBorderColor={'#101820'}
                     backgroundColor={'#fff'}
@@ -59,13 +79,30 @@ export const BreakSchemes = () => {
             </div>
             <div className="hero">
                 { !showVideo &&(
-                    <img
-                        src={Hero}
-                        style={{ width: '100%' }}
-                        alt="Portada del video"
-                        className="video-cover"
-                        onClick={() => setShowVideo(true)}
-                    />
+                <div className="video animation-video" ref={ contentVideo }>
+                        <video 
+                            className='showVideo' 
+                            src={ VideoMad } 
+                            autoPlay={true}
+                            loop 
+                            muted
+                            width={'100%'}
+                            controls={ false }
+                            ref={ videoRef }
+                            playsInline
+                            style={{ borderRadius: '10px' }}
+                            onClick={() => setShowVideo(true)}
+                        ></video>
+                        <img
+                            src={BtnPlay}
+                            style={{ width: '100px' }}
+                            alt="Botón play del video"
+                            className="btnPlay"
+                            onClick={() => setShowVideo(true)}
+                        />
+                    </div>
+                    
+                    
                 )}
                 { showVideo &&(
                 <div className="vimeo-container">

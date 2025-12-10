@@ -39,9 +39,9 @@
       "description": "Diseño consistente que refuerza la identidad de marca en cada empaque."
     },
     "vax": {
-      "info": "IDENTIDAD DE MARCA",
+      "info": "POSICIONAMIENTO DE MARCA",
       "title": "Vax TRIALS",
-      "description": "Ciencia + estrategia: </br> Crecimiento B2B y atracción de talento científico."
+      "description": "Un sitio web renovado para reforzar su conexión y posicionamiento en el entorno digital."
     },
     "hero": {
       "info": "POSICIONAMIENTO DE MARCA",
@@ -116,9 +116,9 @@
   },
   "contacts": {
     "title": {
-      "first": "Lo diferente no se planea",
-      "second": "eternamente, se hace. ¡Hablemos!",
-      "third": ""
+      "first": "Lo diferente no se",
+      "second": "planea <strong>eternamente,</strong>",
+      "third": "<strong>se hace. ¡Hablemos!</strong>"
     },
     "form": {
       "name": {

@@ -68,38 +68,40 @@
   font-style: normal;
 }
 
+/* Behind The Nineties */
+
 @font-face {
   font-family: 'Behind The Nineties';
-  src: url('./assets/fonts/behindTheNinities/upright/Behind-The-Nineties-Rg.woff2') format('woff2');
+  src: url('./assets/fonts/behindTheNinities/italic/Behind-The-Nineties-It.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'Behind The Nineties';
-  src: url('./assets/fonts/behindTheNinities/upright/Behind-The-Nineties-Md.woff2') format('woff2');
+  src: url('./assets/fonts/behindTheNinities/italic/Behind-The-Nineties-Md-It.woff2') format('woff2');
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'Behind The Nineties';
-  src: url('./assets/fonts/behindTheNinities/upright/Behind-The-Nineties-Smbd.woff2') format('woff2');
+  src: url('./assets/fonts/behindTheNinities/italic/Behind-The-Nineties-Smbd-It.woff2') format('woff2');
   font-weight: 600;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'Behind The Nineties';
-  src: url('./assets/fonts/behindTheNinities/upright/Behind-The-Nineties-Bd.woff2') format('woff2');
+  src: url('./assets/fonts/behindTheNinities/italic/Behind-The-Nineties-Bd-It.woff2') format('woff2');
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'Behind The Nineties';
-  src: url('./assets/fonts/behindTheNinities/upright/Behind-The-Nineties-Xbd.woff2') format('woff2');
+  src: url('./assets/fonts/behindTheNinities/italic/Behind-The-Nineties-Xbd-It.woff2') format('woff2');
   font-weight: 800;
-  font-style: normal;
+  font-style: italic;
 }
 

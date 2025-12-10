@@ -94,12 +94,25 @@
     margin: 0 auto;
 }
 
-.breakSchemes .video-cover {
-    width: 100%;
+.breakSchemes .video.animation-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breakSchemes .video.animation-video video {
+    max-height: 424px;
+    height: 424px;
+    object-fit: cover;
+}
+
+.breakSchemes .btnPlay {
+    width: 100px;
     height: auto;
     cursor: pointer;
     display: block;
     border-radius: 20px;
+    position: absolute;
 }
 
 .breakSchemes .vimeo-container {

@@ -137,9 +137,9 @@ export const BrandingsHorizontal = () => {
                         <div className={`back ${ isFirstSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
-                                backgroundColor={'#101820'}
-                                hoverBorderColor='#fff'
-                                hoverBackgroundColor='#fff'
+                                backgroundColor={'#7595B6'}
+                                hoverBorderColor='#101820'
+                                hoverBackgroundColor='#101820'
                                 urlIcon={ FlechaButton }
                                 onMouseLeave={ handleMouseLeave }
                                 onClick={() =>  handleSlideLeft(fullpageApi)}
@@ -149,9 +149,9 @@ export const BrandingsHorizontal = () => {
                         <div className={`front ${ isLastSlide ? 'is-disabled' : '' } `}>
                             <Button
                                 texto={''}
-                                backgroundColor={'#101820'}
-                                hoverBorderColor='#fff'
-                                hoverBackgroundColor='#fff'
+                                backgroundColor={'#7595B6'}
+                                hoverBorderColor='#101820'
+                                hoverBackgroundColor='#101820'
                                 urlIcon={ FlechaButton }
                                 onClick={() => handleSlideRight(fullpageApi)}
                                 onMouseLeave={handleMouseLeave}
