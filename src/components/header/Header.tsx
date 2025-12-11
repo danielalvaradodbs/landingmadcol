@@ -261,7 +261,7 @@ export const Header = () => {
                   style={{ display: currentPath.pathname !== '/terms-conditions' && !isCentered ? 'inline' : 'none' }}
                 />
                 <img 
-                  src={ logosMadcritter.logoShortWhite.logo } alt={ logosMadcritter.logoMad.alt }
+                  src={ logosMadcritter.logoShortBlack.logo } alt={ logosMadcritter.logoMad.alt }
                   className={`${ scrollingDown ? '' : ''} invertible ${ isDarkBackground ? 'invert' : '' }`}
                   style={{ display: currentPath.pathname !== '/terms-conditions' && isCentered ? 'inline' : 'none' }}
                 />

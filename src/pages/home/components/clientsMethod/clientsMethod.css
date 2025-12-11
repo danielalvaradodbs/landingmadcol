@@ -31,6 +31,13 @@
     gap: 10px;
 }
 
+.clientsMethod .slick-track {
+    display: flex !important;
+    gap: 12px;
+    width: 100% !important;
+}
+
+
 .clientsMethod .buttons button {
     gap: 0;
     border-radius: 100px;
