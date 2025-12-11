@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './services.css';
 import { useTranslation } from 'react-i18next';
-import { Thumbnail } from '../../../../shared/services';
 
 gsap.registerPlugin(ScrollTrigger);
 
