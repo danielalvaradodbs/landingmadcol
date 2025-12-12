@@ -54,7 +54,7 @@ export const BreakSchemes = () => {
             </div>
             <div className="buttons">
                 <Button
-                    texto='Conoce nuestra </br>metodología'
+                    texto='Conoce nuestra metodología'
                     urlIcon={ FlechaBlue }
                     hoverBorderColor={'#101820'}
                     backgroundColor={'#fff'}

@@ -214,6 +214,10 @@
     padding: 0 0 0 0;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-height: 344px;
+    border-radius: 10px;
+
 }
 
 .howDoIt .cardSection .humanCentered .content {
@@ -248,6 +252,17 @@
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.56px;
+}
+
+.howDoIt .cardSection .humanCentered h3 strong {
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Behind The Nineties";
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
     line-height: 130%;
     letter-spacing: -0.56px;
 }

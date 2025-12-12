@@ -69,9 +69,9 @@ export const HowDoIt = () => {
                 <div className="humanCentered">
                     <img src={ HeroHuman } alt="" />
                     <div className="content">
-                        <p>Te acompañamos a cuestionar y romper esquemas en tu comunicación visual, verbal y cultural.</p>
+                        <p>Te acompañamos a cuestionar y romper esquemas <br/> en tu comunicación visual, verbal y cultural.</p>
                         <p>-</p>
-                        <h3>Conoce cómo <strong>Human Centered Branding</strong> puede transformar tu marca.</h3> <br/>
+                        <h3>Conoce cómo <strong>Human Centered <br/> Branding</strong> puede transformar tu marca.</h3> <br/>
                          <Button
                             texto='Agenda una reunión'
                             urlIcon={ FlechaBlue }
