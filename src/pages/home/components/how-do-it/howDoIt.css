@@ -420,8 +420,21 @@
         padding: 32px 22px 51px;
     }
 
+    .howDoIt .cardSection .humanCentered {
+        
+    }
+
     .howDoIt .humanCentered h2 {
         font-size: 20px;
+    }
+
+    .howDoIt .cardSection .humanCentered {
+        max-height: 100%;
+    }
+
+    .howDoIt .cardSection .humanCentered h3 strong br,
+    .howDoIt .cardSection .humanCentered p br {
+        display: none;
     }
 
     .howDoIt .cols {
