@@ -49,7 +49,28 @@
 
 .trustUs .columns-grid p,
 .trustUs .columns-grid h2 {
-    padding-left: 18px;
+    padding-left: 31px;
+}
+
+.trustUs .columns-grid p {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.36px;
+}
+
+.trustUs .columns-grid p strong {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.36px;
 }
 
 .trustUs .columns-grid h2 {

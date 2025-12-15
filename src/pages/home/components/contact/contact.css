@@ -40,7 +40,7 @@
 .contact .title-contact .third {
     overflow: hidden;
     position: relative;
-    width: fit-content;
+    width: auto;
 }
 
 .contact .title-contact .first h2.reveal {
@@ -297,6 +297,7 @@
     width: 127px;
     height: 48px;
     max-height: 48px;
+    border-radius: 100px;
 }
 
 .contact .form .terms-submit .submit label {
@@ -304,12 +305,8 @@
     font-family: 'Safiro';
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
-}
-
-.contact .form .terms-submit .submit button:hover label {
-   color: #101820;
+    font-weight: 500;
 }
 
 .contact .form .terms-submit .terms label a:hover {
