@@ -1,6 +1,6 @@
 
 .yourBrand {
-    padding: 156px 0 135px 151px
+    padding: 0 0 135px 151px
 }
 
 .yourBrand .title {
@@ -31,6 +31,27 @@
     max-height: 324px;
     width: 324px;
     height: 324px;
+}
+
+.yourBrand .sliderCard p {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.36px;
+}
+
+.yourBrand .sliderCard p strong {
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.36px;
 }
 
 .yourBrand .buttons {

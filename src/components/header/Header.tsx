@@ -60,7 +60,7 @@ export const Header = () => {
           setIsCentered(false);
         }
       });
-    }, { threshold: [0.8] });
+    }, { threshold: [0.7] });
 
     const conceptSection = document.querySelector('.breakSchemes');
 
