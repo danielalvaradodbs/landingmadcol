@@ -1,22 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useInView<T extends HTMLElement = HTMLDivElement>(options = {}) {
-    
-    const ref = useRef<T | null>(null);
-    const [isVisible, setIsVisible] = useState(false);
+export function useInView<T extends HTMLElement = HTMLDivElement>(
+  options: IntersectionObserverInit = {}
+) {
+  const ref = useRef<T | null>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true);
-                observer.disconnect();
-            }
-        }, options);
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || isVisible) return;
 
-        if (ref.current) observer.observe(ref.current);
+    observerRef.current = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observerRef.current?.disconnect();
+      }
+    }, options);
 
-        return () => observer.disconnect();
-    }, [ref, options]);
+    observerRef.current.observe(element);
 
-    return { ref, isVisible };
+    return () => observerRef.current?.disconnect();
+  }, [isVisible]); // ⬅️ clave
+
+  return { ref, isVisible };
 }

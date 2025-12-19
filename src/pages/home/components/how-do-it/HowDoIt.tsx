@@ -7,7 +7,7 @@ import './howDoIt.css';
 export const HowDoIt = () => {
 
     const { ref: sectionRef, isVisible } = useInView({
-        threshold: 0.1
+        threshold: 0.0
     });
 
   return (

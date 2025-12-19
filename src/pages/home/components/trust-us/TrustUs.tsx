@@ -6,7 +6,7 @@ import './trustus.css';
 export const TrustUs = () => {
 
     const { ref: sectionRef, isVisible } = useInView({
-        threshold: 0.1
+        threshold: 0.0
     });
 
   return (

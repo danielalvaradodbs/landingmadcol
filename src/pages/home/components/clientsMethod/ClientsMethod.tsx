@@ -16,7 +16,7 @@ export const ClientsMethod = () => {
     const totalSlides = clientsMethod.length;
 
     const { ref: sectionRef, isVisible } = useInView({
-        threshold: 0.1
+        threshold: 0.0
     });
 
     const useSlidesToShow = () => {
