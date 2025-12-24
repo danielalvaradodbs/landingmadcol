@@ -288,7 +288,7 @@ export const Header = () => {
                 <span style={{ display: isCentered ? 'inline' : 'none' }}></span>
             </div>
             <div className='menu-nosotros' onMouseEnter={handleServicesMouseLeave}>
-              <a onClick={() => sendToSectionId('#concept')}>
+              <a onClick={() => sendToSectionId('#howDoIt')}>
                 <label>{t('header.aboutUs')}</label>
                 <label>{t('header.aboutUs')}</label>
               </a>
@@ -371,7 +371,7 @@ export const Header = () => {
               <span className={`line-span animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`} style={{ paddingBottom: '20px', paddingTop: '10px' }}>-</span>
               <div className="items">
                 <ul>
-                  <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#concept')}>{t('header.aboutUs')}</a></li>
+                  <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' }`}><a onClick={() => sendToSectionId('#howDoIt')}>{t('header.aboutUs')}</a></li>
                   <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#services')}>{t('header.services.title')}</a></li>
                   <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slow`}><a onClick={() => sendToSectionId('#portfolio')}>{t('header.portfolio')}</a></li>
                   <li className={`animate__animated ${ menuOpen ? 'animate__fadeInUp' : '' } animate__slower`}><a onClick={() => sendToSectionId('#contact')}>{t('header.contact')}</a></li>

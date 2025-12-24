@@ -34,7 +34,7 @@
 .clientsMethod .slick-track {
     display: flex !important;
     gap: 12px;
-    width: 100% !important;
+    /* width: 100% !important; */
 }
 
 

@@ -41,38 +41,16 @@ export const ClientsMethod = () => {
     };
     const slidesToShow = useSlidesToShow();
 
-    const settings = {
+   const settings = {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow,
+        // slidesToShow,
         slidesToScroll: 1,
+        variableWidth: true,
         beforeChange: (_oldIndex: number, newIndex: number) => {
             setCurrentSlide(newIndex);
         },
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    infinite: false,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: false,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: false,
-                }
-            }
-        ]
     };
 
     const next = () => {

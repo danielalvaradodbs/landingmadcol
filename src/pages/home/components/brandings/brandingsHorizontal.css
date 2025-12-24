@@ -347,12 +347,6 @@
     filter: invert(0);
   }
 
-  .brandings .buttons-controls .front button:hover label,
-  .brandings .buttons-controls .back button:hover label {
-    --flair-color: #fff !important;
-    border-color: #fff
-  }
-
   .brandings .buttons-controls div {
     border-radius: 100px;
     background: rgba(16, 24, 32, 0.20);

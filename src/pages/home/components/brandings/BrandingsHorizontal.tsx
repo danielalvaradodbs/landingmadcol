@@ -62,7 +62,7 @@ export const BrandingsHorizontal = () => {
             navigation={ false }
             autoScrolling={false}
             scrollOverflow={ false }
-            scrollBar={false}
+            scrollBar={true}
             slidesNavigation={false}
             css3={ false }
             onSlideLeave={(_section, _origin, destination, _direction) => {

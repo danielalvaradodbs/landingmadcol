@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './services.css';
 import { useTranslation } from 'react-i18next';
+import { ConstruccionDeMarca, IdentidadDeMarca, PosicionamientoDeMarca } from '../../../../shared';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,6 +127,16 @@ export const Services = () => {
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandBuilding.description') }}></p>
             </div>
             {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} /> */}
+            <video 
+              src={ ConstruccionDeMarca } 
+              style={{ marginTop: '24px', borderRadius: '10px'}}
+              autoPlay={true}
+              loop 
+              muted
+              width={'100%'}
+              controls={ false }
+              playsInline
+            ></video>
           </div>
 
           <div className="footer-section mobile">
@@ -139,6 +150,16 @@ export const Services = () => {
 
         <div className="image-mobile">
             {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} /> */}
+            <video 
+              src={ ConstruccionDeMarca } 
+              style={{ marginTop: '24px', borderRadius: '10px', width: '100%'}}
+              autoPlay={true}
+              loop 
+              muted
+              width={'100%'}
+              controls={ false }
+              playsInline
+            ></video>
         </div>
         </div>
       </section>
@@ -156,6 +177,16 @@ export const Services = () => {
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandIdentity.description') }}></p>
             </div>
             {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} /> */}
+            <video 
+              src={ IdentidadDeMarca } 
+              style={{ marginTop: '24px', borderRadius: '10px'}}
+              autoPlay={true}
+              loop 
+              muted
+              width={'100%'}
+              controls={ false }
+              playsInline
+            ></video>
           </div>
 
           <div className="footer-section mobile">
@@ -169,6 +200,16 @@ export const Services = () => {
           </div>
         <div className="image-mobile">
             {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} /> */}
+            <video 
+              src={ IdentidadDeMarca } 
+              style={{ marginTop: '24px', borderRadius: '10px', width: '100%'}}
+              autoPlay={true}
+              loop 
+              muted
+              width={'100%'}
+              controls={ false }
+              playsInline
+            ></video>
         </div>
         </div>
       </section>
@@ -186,6 +227,16 @@ export const Services = () => {
               <p className='animation-text' style={{ marginTop: '20px' }} dangerouslySetInnerHTML={{ __html: t('services.brandPositioning.description') }}></p>
             </div>
             {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px' }} /> */}
+            <video 
+              src={ PosicionamientoDeMarca } 
+              style={{ marginTop: '24px', borderRadius: '10px'}}
+              autoPlay={true}
+              loop 
+              muted
+              width={'100%'}
+              controls={ false }
+              playsInline
+            ></video>
 
           </div>
           <div className="footer-section mobile">
@@ -198,6 +249,16 @@ export const Services = () => {
           </div>
         <div className="image-mobile">
             {/* <img src={ Thumbnail } alt="" style={{ marginTop: '24px', width: '100%' }} /> */}
+            <video 
+              src={ PosicionamientoDeMarca } 
+              style={{ marginTop: '24px', borderRadius: '10px', width: '100%'}}
+              autoPlay={true}
+              loop 
+              muted
+              width={'100%'}
+              controls={ false }
+              playsInline
+            ></video>
         </div>
         </div>
       </section>

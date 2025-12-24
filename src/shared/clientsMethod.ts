@@ -1,10 +1,9 @@
 
-import Client1 from '../assets/images/clientsMethod/Client1.png';
 import NoImage from '../assets/images/clientsMethod/noImage.png';
 
 export const clientsMethod = [
     {
-        image: Client1,
+        image: NoImage,
         description: '“Me ha gustado mucho trabajar con el equipo, porque es proactivo y responsable. Cumplen con lo que prometen y ante todo son honestos.”',
         profileInfo: `LINA MARÍA BARRAGÁN <br/> Regional Marketing <br/>ManagerHero MotoCorp`,
         backgroundColor: "#2A00FF",

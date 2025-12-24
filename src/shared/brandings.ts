@@ -1,5 +1,3 @@
-import RemoLab from '../assets/images/brandings/Remo1.avif';
-import RemoLabHover from '../assets/images/brandings/Remo2.avif';
 import Pluxee from '../assets/images/brandings/Proyecto_Sodexo_Pluxee.avif';
 import VaxTrial from '../assets/images/brandings/Proyectos-Portafolio-Vax.avif';
 import VaxTrialHover from '../assets/images/brandings/Proyectos-Portafolio-Vax-hover.avif';
@@ -19,26 +17,6 @@ export const brandings = [
         isDark: true,
     },
     {
-        image: Pluxee,
-        altImage: 'Pluxee',
-        info: 'brandings.pluxee.info',
-        title: 'brandings.pluxee.title',
-        description: 'brandings.pluxee.description',
-        linkButton: 'https://www.behance.net/gallery/193368341/Sodexo-now-Pluxee',
-        imageHover: PluxeeHover,
-        isDark: true,
-    },
-    {
-        image: RemoLab,
-        altImage: 'RemoLab',
-        info: 'brandings.remo.info',
-        title: 'brandings.remo.title',
-        description: 'brandings.remo.description',
-        linkButton: 'https://www.behance.net/gallery/210736629/Remo-Lab-Packaging-Design',
-        imageHover: RemoLabHover,
-        isDark: true,
-    },
-    {
         image: HeroMotoCorp,
         altImage: 'Hero Motocorp',
         info: 'brandings.hero.info',
@@ -48,4 +26,15 @@ export const brandings = [
         imageHover: HeroMotoCorpHover,
         isDark: true,
     },
+    {
+        image: Pluxee,
+        altImage: 'Pluxee',
+        info: 'brandings.pluxee.info',
+        title: 'brandings.pluxee.title',
+        description: 'brandings.pluxee.description',
+        linkButton: 'https://www.behance.net/gallery/193368341/Sodexo-now-Pluxee',
+        imageHover: PluxeeHover,
+        isDark: true,
+    },
+    
 ]

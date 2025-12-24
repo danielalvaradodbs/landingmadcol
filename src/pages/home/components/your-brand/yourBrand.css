@@ -33,26 +33,37 @@
     height: 324px;
 }
 
+.yourBrand .sliderCard p strong{
+    color: #101820;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-style: normal;
+    font-weight: 600;
+}
+
 .yourBrand .sliderCard p {
     color: #101820;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: 'Safiro';
     font-size: 18px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    letter-spacing: -0.36px;
-}
-
-.yourBrand .sliderCard p strong {
-    color: #101820;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: 'Safiro';
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: -0.36px;
 }
+
+.slick-track {
+    display: flex;
+    gap: 12px;
+}
+
+.brand-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 
 .yourBrand .buttons {
     display: flex;

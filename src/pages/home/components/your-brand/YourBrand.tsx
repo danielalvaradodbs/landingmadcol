@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { FlechaButton, ideasBrandings } from '../../../../shared';
 import { Card } from './components/card/Card';
 import Slider from "react-slick";
@@ -11,69 +11,24 @@ export const YourBrand = () => {
 
     let sliderRef = useRef<Slider>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+    
     const totalSlides = ideasBrandings.length;
 
     const { ref: sectionRef, isVisible } = useInView({
         threshold: 0.0
     });
 
-    const useSlidesToShow = () => {
-
-        const [slides, setSlides] = useState(3);
-
-        const updateSlides = () => {
-            if (window.innerWidth <= 555) setSlides(1);
-            else if (window.innerWidth <= 768) setSlides(2);
-            else if (window.innerWidth <= 1024) setSlides(2);
-            else setSlides(3);
-        };
-
-        useEffect(() => {
-            updateSlides();
-            window.addEventListener("resize", updateSlides);
-            return () => window.removeEventListener("resize", updateSlides);
-        }, []);
-
-        return slides;
-    };
-
-    const slidesToShow = useSlidesToShow();
-
     const settings = {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow,
+        // slidesToShow,
         slidesToScroll: 1,
+        variableWidth: true,
         beforeChange: (_oldIndex: number, newIndex: number) => {
             setCurrentSlide(newIndex);
         },
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    infinite: false,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: false,
-                }
-            },
-            {
-                breakpoint: 555,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: true,
-                }
-            }
-        ]
     };
-
-
 
     const next = () => {
         sliderRef.current?.slickNext();
@@ -83,7 +38,7 @@ export const YourBrand = () => {
     };
 
     const isFirst = currentSlide === 0;
-    const isLast = currentSlide >= totalSlides - slidesToShow;
+    const isLast = currentSlide >= totalSlides - 1;
 
   return (
     <>
