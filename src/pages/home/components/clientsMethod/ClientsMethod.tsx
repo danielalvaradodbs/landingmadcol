@@ -78,7 +78,7 @@ export const ClientsMethod = () => {
                         <div key={ index }>
                             <CardClients 
                                 profileInfo={ item.profileInfo }  
-                                image={ item.image } 
+                                // image={ item.image } 
                                 description={ item.description } 
                                 backgroundColor={ item.backgroundColor }
                                 colorFooter={ item.colorFooter }

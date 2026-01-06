@@ -1,7 +1,7 @@
 
 import './cardClients.css';
 
-export const CardClients = ({image, description, profileInfo, backgroundColor, colorFooter}: any) => {
+export const CardClients = ({description, profileInfo, backgroundColor, colorFooter}: any) => {
   return (
     <>
         <div className="sliderCardClients" style={{ backgroundColor }}>
@@ -12,7 +12,7 @@ export const CardClients = ({image, description, profileInfo, backgroundColor, c
                 <div className="image">
                     <div className="line"></div>
                     <div className="imageFooter">
-                        <img src={ image } alt="" />
+                        {/* <img src={ image } alt="" /> */}
                         <p dangerouslySetInnerHTML={{ __html: profileInfo }} style={{ color: colorFooter }}></p>
                     </div>
                 </div>
