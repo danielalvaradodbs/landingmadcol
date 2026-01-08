@@ -8,12 +8,15 @@ import { clientsMethod } from '../../../../shared/clientsMethod';
 import { CardClients } from './components/cardClients/CardClients';
 import { ClientsLogos } from './components/clientsLogos/ClientsLogos';
 import { useInView } from '../../../../hooks/useInView';
+import { useTranslation } from 'react-i18next';
 
 export const ClientsMethod = () => {
 
     let sliderRef = useRef<Slider>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = clientsMethod.length;
+
+    const { t } = useTranslation();
 
     const { ref: sectionRef, isVisible } = useInView({
         threshold: 0.0
@@ -79,7 +82,7 @@ export const ClientsMethod = () => {
                             <CardClients 
                                 profileInfo={ item.profileInfo }  
                                 // image={ item.image } 
-                                description={ item.description } 
+                                description={ t(item.description) } 
                                 backgroundColor={ item.backgroundColor }
                                 colorFooter={ item.colorFooter }
                             />

@@ -16,6 +16,53 @@
     },
     "contact": "Contacto"
   },
+  "schemes": {
+    "title": "Romper esquemas es <strong>lo que necesita<br/> una marca</strong> para diferenciarse.",
+    "challenge": "La tuya está lista para hacerlo: <strong>desafiemos lo establecido y hagámoslo diferente.</strong>",
+    "agency": "Como agencia de <strong>branding, digital y de diseño,</strong> te acompañamos a transformar lo que tu <br /> marca <strong>comunica, transmite y despierta</strong> en las personas.",
+    "buttonMethod": "Conoce nuestra metodología",
+    "buttonMeeting": "Agenda una reunión"
+  },
+  "yourBrand": {
+    "title": "¿Qué podemos <br/><strong>hacer por tu marca?</strong>",
+    "cards": {
+      "strategies": "<strong>Estrategias claras</strong> y a la medida, para que tu marca <strong>crezca y se diferencie.</strong>",
+      "design": "<strong>Diseño gráfico y usabilidad </strong> coherente, que tu usuario <strong>entienda, conecte y recuerde.</strong>",
+      "copy": "<strong>Copy y storytelling</strong> en mensajes con propósito, que hablan en el <strong>tono correcto y generan conexión real.</strong>",
+      "results": "<strong>Resultados medibles,</strong> para que veas <strong>el impacto de tu inversión.</strong>",
+      "optimization": "<strong>Optimización de recursos, </strong> logrando <strong>mayor alcance</strong> con lo que ya tienes.",
+      "accompaniment": "<strong>Acompañamiento</strong> en cada etapa,<strong> trabajando a tu lado </strong> como parte de tu equipo."
+    }
+  },
+  "howDoIt": {
+    "title": "¿Cómo <br/> lo <strong>hacemos?",
+    "method": "NUESTRA<br/>METODOLOGÍA",
+    "brandCenter": "La marca es el todo, el <br/> humano es el centro.",
+    "humanCenteredBranding": "Esto es <strong>Human Centered Branding,</strong> la metodología de <strong>Mad Critter®</strong> que ve tu marca como un sistema vivo, poniendo <strong>al usuario en el centro de cada acción</strong> para transformar resultados.",
+    "cols": {
+      "one": {
+        "title": "Inmersión",
+        "description": "Talleres prácticos y análisis profundo de tu marca y usuarios, para <strong>detectar lo que otros no ven y definir objetivos claros.</strong>"
+      },
+      "two": {
+        "title": "Co-creación",
+        "description": "Diseñamos conceptos, contenidos e identidades basados en <strong>insights que realmente diferencian y conectan.</strong>"
+      },
+      "third": {
+        "title": "Implementación",
+        "description": "Ejecutamos las ideas de <strong>manera coherente en cada punto de contacto,</strong> medimos impacto y ajustamos para <strong>maximizar resultados y aportar al aumento</strong> de tu participación en el mercado."
+      }
+    },
+    "resultsCard": {
+      "title": "El resultado",
+      "description": "Una marca que <strong>conecta, genera valor real y crece</strong> de forma sostenible."
+    },
+    "cardHumanCenteredBranding": {
+      "accompaniment": "Te acompañamos a cuestionar y romper esquemas <br/> en tu comunicación visual, verbal y cultural.",
+      "title": "Conoce cómo <strong>Human Centered <br/> Branding</strong> puede transformar tu marca.</h3>",
+      "buttonMeeting": "Agenda una reunión"
+    }
+  },
   "brandy": {
     "noBrandy": "No hacemos Brandy, pero si",
     "butYes": "<strong>branding</strong> y <strong>¡del bueno!</strong>",
@@ -28,6 +75,7 @@
     "guide": "Guiamos la evolución de marcas con <strong>estrategias efectivas y una propuesta de valor centrada en lo humano.</strong> Redefinimos el branding para que tu marca <strong>inspire, crezca y deje huella.</strong>"
   },
   "brandings": {
+    "title": "Portafolio",
     "pluxee": {
       "info": "POSICIONAMIENTO DE MARCA ",
       "title": "Pluxee",
@@ -53,6 +101,8 @@
     "brand": "// La marca es el todo, el humano es el centro."
   },
   "services": {
+    "title": "¿Qué <br/> <strong>hacemos?</strong>",
+    "ourServices": "NUESTROS <br/> SERVICIOS",
     "brandBuilding": {
       "title": "Construcción </br> <strong>de marca</strong>",
       "description": "La base sólida para <strong>crecer y destacar</strong> en tu mercado.",
@@ -95,6 +145,44 @@
         "Endomarketing",
         "Acciones estratégicas"
       ]
+    }
+  },
+  "whyTrustUs": {
+    "title": "¿Por qué confiar <br/> <strong>en nosotros?</strong>",
+    "cols": {
+      "first": {
+        "title": "Equipo multidisciplinario",
+        "description": "Contamos con un equipo multidisciplinario que une <strong>estrategia, creatividad, gestión y ejecución.</strong> Diferentes mesas, un solo objetivo: <strong>resultados reales.</strong>"
+      },
+      "two": {
+        "title": "Somos parte de tu equipo",
+        "description": "Co-creamos contigo, <strong>como parte de tu equipo,</strong> no como consultores externos lejanos."
+      },
+      "third": {
+        "title": "Implementación ágil",
+        "description": "Nos integramos a tus procesos, para que <strong>la implementación sea ágil y sin fricciones.</strong>"
+      },
+      "four": {
+        "title": "Metodología a tu medida",
+        "description": "Trabajamos con una <strong>metodología probada,</strong> que se adapta a lo que <strong>tu marca necesita.</strong>"
+      }
+    }
+  },
+  "clientsMethod": {
+    "title": "Clientes que ya apuestan <br/> <strong>por nuestra metodología</strong>",
+    "cardsClients": {
+      "one": {
+        "description": "“Me ha gustado mucho trabajar con el equipo, porque es proactivo y responsable. Cumplen con lo que prometen y ante todo son honestos.”"
+      },
+      "two": {
+        "description": "“Agradecemos al equipo por su arduo trabajo, ¡nos ayudan a brillar!”"
+      },
+      "third": {
+        "description": "“Su contribución fue invaluable y nos ayudó enormemente a movilizar nuestra estrategia de marca empleadora y posicionamiento en LinkedIn. Gracias a ustedes logramos contenido diferenciado y muy atractivo para el público externo. Son un equipo muy profesional y muy humano.”"
+      },
+      "four": {
+        "description": "“Gracias a todo el equipo de Mad Critter® lograron hacer posible un deseo que teníamos hace varios años, y era mostrar nuestros proyectos y nuestra capacidad técnica con claridad y propósito, poniendo a Colombia como un claro referente internacional.”"
+      }
     }
   },
   "clients": {

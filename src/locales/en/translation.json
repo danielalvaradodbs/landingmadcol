@@ -16,6 +16,53 @@
     },
     "contact": "Contact"
   },
+  "schemes": {
+    "title": "Breaking the mold is <strong>what a brand<br/> needs</strong> to stand out.",
+    "challenge": "Yours is ready to do it: <strong>let’s challenge the status quo and do things differently.</strong>",
+    "agency": "As a branding, <strong>branding, digital, and design</strong> agency, we help you transform what your <br /> brand  <strong>communicates, conveys, and evokes</strong> in people.",
+    "buttonMethod": "Learn about our methodology",
+    "buttonMeeting": "Schedule a meeting"
+  },
+  "yourBrand": {
+    "title": "What can <br/><strong>we do for your brand?</strong>",
+     "cards": {
+      "strategies": "<strong>Tailored strategies</strong> that help your brand grow <strong>and stand out.</strong>",
+      "design": "<strong>Coherent graphic design and usability </strong> that your audience <strong>understands, connects with, and remembers.</strong>",
+      "copy": "<strong>Copywriting and storytelling</strong> with purpose-driven messages that speak in the right <strong>tone and create real connections.</strong>",
+      "results": "<strong>Measurable results,</strong> so you can see <strong>the impact of your investment.</strong>",
+      "optimization": "<strong>Resource optimization, </strong> achieving <strong>greater reach</strong> with what you already have.",
+      "accompaniment": "<strong>Support</strong> at every stage,<strong> working alongside </strong> you as part of your team."
+    }
+  },
+   "howDoIt": {
+    "title": "How do <br/> we <strong>do it?",
+    "method": "OUR<br/>METHODOLOGY",
+    "brandCenter": "The brand is everything, the <br/> human is at the center.",
+    "humanCenteredBranding": "This is <strong>Human-Centered Branding,</strong> <strong>Mad Critter®’s</strong> methodology that views your brand as a living system, placing  <strong>the user at the heart of every action</strong> to transform results.",
+    "cols": {
+      "one": {
+        "title": "Immersion",
+        "description": "Hands-on workshops and in-depth analysis of your brand and users, <strong>to uncover what others don’t see and define clear objectives.</strong>"
+      },
+      "two": {
+        "title": "Co-creation",
+        "description": "We design concepts, content, and identities based on <strong>insights that truly differentiate and connect.</strong>"
+      },
+      "third": {
+        "title": "Implementation",
+        "description": "We execute ideas <strong>consistently at every touchpoint, measure impact,</strong> and adjust to <strong>maximize results and contribute to increasing</strong> your market share."
+      }
+    },
+    "resultsCard": {
+      "title": "The outcome",
+      "description": "A brand that <strong>connects, generates real value,</strong> and grows sustainably."
+    },
+    "cardHumanCenteredBranding": {
+      "accompaniment": "We help you question and break patterns <br/> in your visual, verbal, and cultural communication.",
+      "title": "Discover how <strong>Human-Centered <br/> Branding</strong> can transform your brand.</h3>",
+      "buttonMeeting": "Schedule a meeting"
+    }
+  },
   "brandy": {
     "noBrandy": "We don’t make Brandy, but we",
     "butYes": "do <strong>branding</strong> and we do <strong>it well!</strong>",
@@ -28,6 +75,7 @@
     "guide": "We guide brand evolution through <strong>effective strategies and a human-centered value proposition.</strong> We redefine branding so your brand <strong>can inspire, grow, and make a lasting impression.</strong>"
   },
   "brandings": {
+    "title": "Portfolio",
     "pluxee": {
       "info": "BRAND POSITIONING",
       "title": "Pluxee",
@@ -41,7 +89,7 @@
     "vax": {
       "info": "BRAND POSITIONING",
       "title": "Vax TRIALS",
-      "description": "Science + Strategy: </br> B2B growth and scientific talent attraction."
+      "description": "A renewed website to strengthen its connection and positioning in the digital environment."
     },
     "hero": {
       "info": "BRAND POSITIONING",
@@ -53,47 +101,88 @@
     "brand": "// The brand is everything, the human is the core_"
   },
   "services": {
+    "title": "What <br/> <strong>do we do?</strong>",
+    "ourServices": "OUR <br/> SERVICES",
     "brandBuilding": {
-      "title": "Brand Building",
-      "description": "// We develop your brand with authenticity and a user-centered approach, achieving relevance and differentiation in the market.",
+      "title": "Brand </br> <strong>Building</strong>",
+      "description": "The solid foundation for <strong>growing and standing</strong> out in your market.",
       "items": [
-        "Brand Audit",
-        "Brand Architecture",
+        "Brand workshops",
+        "Brand audit and diagnosis",
+        "Brand architecture",
         "Naming",
-        "Brand Image",
-        "Brand Purpose & Personality",
+        "Brand image",
+        "Purpose and personality",
         "Brand Manifesto",
-        "Character Design",
-        "Brand Culture",
-        "Trademark Registration Guidance"
+        "Character design",
+        "Brand culture",
+        "Registration guidance"
       ]
     },
     "brandIdentity": {
-      "title": "Brand Identity",
-      "description": "// Stand out from the competition with a strong identity, creating memorable impressions and lasting connections with your clients.",
+      "title": "Brand </br> <strong>identity</strong>",
+      "description": "The way your business <strong>looks, feels, and connects</strong> with people <strong>what sets you apart. </strong>",
       "items": [
-        "Visual Identity Guidelines",
+        "Visual Identity Manual",
         "Design System",
         "Packaging",
-        "Key Visuals",
-        "Social Identity",
+        "Key Visual",
+        "Social identity",
         "Communications Guide"
       ]
     },
     "brandPositioning": {
-      "title": "Brand Positioning",
-      "description": "// We implement internal and external positioning strategies, aligning your brand's purpose with your business goals.",
+      "title": "Brand </br> <strong>positioning</strong>",
+      "description": "Strategies that make your brand <strong>a reference point and impossible to ignore.</strong>",
       "items": [
-        "Brand Strategy",
-        "Social Storytelling",
-        "Digital Campaigns",
-        "Audiovisual Content",
-        "Social Listening",
-        "Web",
-        "Corporate Communications",
-        "Internal Marketing",
+        "Brand strategy",
+        "Social storytelling",
+        "Digital campaigns",
+        "Audiovisual content",
+        "Social listening",
+        "Web development",
+        "Corporate communications",
+        "Endomarketing",
         "Strategic Actions"
       ]
+    }
+  },
+  "whyTrustUs": {
+    "title": "Why  <br/> trust <strong>us?</strong>",
+    "cols": {
+      "first": {
+        "title": "Multidisciplinary team",
+        "description": "We have a team that brings together <strong>strategy, creativity, management, and execution.</strong> Different teams, one goal: <strong>real results.</strong>"
+      },
+      "two": {
+        "title": "We’re part of your team",
+        "description": "We co-create with you, <strong>working as part of your team,</strong> not as distant external consultants."
+      },
+      "third": {
+        "title": "Agile implementation",
+        "description": "We integrate with your processes so that <strong>implementation is agile and frictionless.</strong>"
+      },
+      "four": {
+        "title": "Tailored methodology",
+        "description": "We use a <strong>proven methodology</strong>that adapts to what <strong>your brand needs.</strong>"
+      }
+    }
+  },
+  "clientsMethod": {
+    "title": "Clients who are already <br/> <strong>betting on our methodology</strong>",
+    "cardsClients": {
+      "one": {
+        "description": "“I’ve really enjoyed working with the team because they are proactive and responsible. They deliver on their promises and, above all, they’re honest.”"
+      },
+      "two": {
+        "description": "“We thank the team for their hard work; they help us shine!”"
+      },
+      "third": {
+        "description": "“Your contribution was invaluable and greatly helped us drive our employer branding strategy and positioning on LinkedIn. Thanks to you, we created differentiated and highly engaging content for external audiences. You are a very professional and very human team.”"
+      },
+      "four": {
+        "description": "“Thanks to the entire Mad Critter team, they made possible a long-held wish: to showcase our projects and technical capabilities with clarity and purpose, positioning Colombia as a clear international benchmark.”"
+      }
     }
   },
   "clients": {
@@ -115,9 +204,9 @@
   },
   "contacts": {
     "title": {
-      "first": "Take the first step",
-      "second": "to increase your",
-      "third": "brand's value"
+      "first": "Being different isn’t",
+      "second": "planned <strong>forever,</strong>",
+      "third": "<strong>it’s made. Let’s talk! <br/></strong>"
     },
     "form": {
       "name": {
@@ -129,7 +218,7 @@
         "placeholder": "Enter your corporate email"
       },
       "phone": {
-        "title": "Phone*"
+        "title": "Phone number*"
       },
       "message": {
         "title": "Message (Optional)",
@@ -137,7 +226,7 @@
       },
       "terms": {
         "start": "By submitting this information, I confirm that I have read and accepted the ",
-        "legal": "legal terms",
+        "legal": "legal consent",
         "final": " of this website."
       },
       "btnSubmit": "Submit"

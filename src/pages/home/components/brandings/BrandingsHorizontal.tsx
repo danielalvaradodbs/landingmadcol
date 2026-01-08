@@ -79,7 +79,7 @@ export const BrandingsHorizontal = () => {
                 <div className="brandings" id='portfolio'>
                     <div className="horizontalBranding">
                         <div className="title animate__animated animate__fadeInUp">
-                            <h2>Portafolio</h2>
+                            <h2>{ t('brandings.title') }</h2>
                         </div>
                     </div>
                     <div className="section">

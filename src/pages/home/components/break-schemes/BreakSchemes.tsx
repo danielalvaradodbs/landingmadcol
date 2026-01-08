@@ -4,6 +4,7 @@ import { FlechaBlue, PlusBlue } from '../../../../shared';
 import { VideoMad } from '../../../../shared';
 import './breakSchemes.css';
 import { BtnPlay } from '../../../../shared/images';
+import { useTranslation } from 'react-i18next';
 
 export const BreakSchemes = () => {
 
@@ -12,6 +13,7 @@ export const BreakSchemes = () => {
     const contentVideo = useRef(null);
     const startTime = 4;
 
+    const { t } = useTranslation();
 
     const linkToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -46,15 +48,15 @@ export const BreakSchemes = () => {
     <>
         <div className="breakSchemes">
             <div className="title">
-                <h2>Romper esquemas es <strong>lo que necesita<br/> una marca</strong> para diferenciarse.</h2>
+                <h2 dangerouslySetInnerHTML={{ __html: t('schemes.title') }}></h2>
             </div>
             <div className="description">
-                <p>La tuya está lista para hacerlo: <strong>desafiemos lo establecido y hagámoslo diferente.</strong></p><br/>
-                <p>Como agencia de <strong>branding, digital y de diseño,</strong> te acompañamos a transformar lo que tu <br /> marca <strong>comunica, transmite y despierta</strong> en las personas.</p>
+                <p dangerouslySetInnerHTML={{ __html: t('schemes.challenge')}}></p><br/>
+                <p dangerouslySetInnerHTML={{ __html: t('schemes.agency')}}></p>
             </div>
             <div className="buttons">
                 <Button
-                    texto='Conoce nuestra metodología'
+                    texto={ t('schemes.buttonMethod') }
                     urlIcon={ FlechaBlue }
                     hoverBorderColor={'#101820'}
                     backgroundColor={'#fff'}
@@ -64,7 +66,7 @@ export const BreakSchemes = () => {
                     // border={'#101820'}
                 />
                 <Button
-                    texto='Agenda una reunión'
+                    texto={ t('schemes.buttonMeeting') }
                     urlIcon={ PlusBlue }
                     hoverBorderColor={'#101820'}
                     backgroundColor={'#101820'}

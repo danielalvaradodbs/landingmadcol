@@ -111,8 +111,8 @@ export const Services = () => {
   return (
     <div className="services" id='services'>
       <div className="titleSection animate__animated animate__fadeIn">
-        <h2>¿Qué <br/> <strong>hacemos?</strong></h2>
-        <span>NUESTROS <br/> SERVICIOS</span>
+        <h2 dangerouslySetInnerHTML={{ __html: t('services.title') }}></h2>
+        <span dangerouslySetInnerHTML={{ __html: t('services.ourServices') }}></span>
       </div>
       <section className="service-section first-section" id='first-section'>
         <div className="number">

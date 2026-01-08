@@ -6,11 +6,14 @@ import Slider from "react-slick";
 import './yourBrand.css';
 import { Button } from '../../../../components/button/Button';
 import { useInView } from '../../../../hooks/useInView';
+import { useTranslation } from 'react-i18next';
 
 export const YourBrand = () => {
 
     let sliderRef = useRef<Slider>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    const { t } = useTranslation();
     
     const totalSlides = ideasBrandings.length;
 
@@ -47,13 +50,13 @@ export const YourBrand = () => {
             className={`yourBrand ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}
         >
             <div className="title">
-                <h2>¿Qué podemos <br/><strong>hacer por tu marca?</strong></h2>
+                <h2 dangerouslySetInnerHTML={{ __html: t('yourBrand.title') }}></h2>
             </div>
             <div className="slider-container">
                 <Slider ref={ sliderRef } {...settings}>
                     { ideasBrandings.map((item: any, index: number) => (
                         <div key={ index }>
-                            <Card  image={ item.image } description={ item.description } />
+                            <Card  image={ item.image } description={ t(item.description) } />
                         </div>
                     ))}
                 </Slider>
