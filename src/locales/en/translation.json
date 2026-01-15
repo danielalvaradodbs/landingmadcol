@@ -17,7 +17,7 @@
     "contact": "Contact"
   },
   "schemes": {
-    "title": "Breaking the mold is <strong>what a brand<br/> needs</strong> to stand out.",
+    "title": "Breaking the mold is <strong>what a brand<br/> needs</strong> to do to stand out.",
     "challenge": "Yours is ready to do it: <strong>let’s challenge the status quo and do things differently.</strong>",
     "agency": "As a branding, <strong>branding, digital, and design</strong> agency, we help you transform what your <br /> brand  <strong>communicates, conveys, and evokes</strong> in people.",
     "buttonMethod": "Learn about our methodology",
@@ -26,19 +26,19 @@
   "yourBrand": {
     "title": "What can <br/><strong>we do for your brand?</strong>",
      "cards": {
-      "strategies": "<strong>Tailored strategies</strong> that help your brand grow <strong>and stand out.</strong>",
+      "strategies": "<strong>Tailored made strategies</strong> that help your brand grow <strong>and stand out.</strong>",
       "design": "<strong>Coherent graphic design and usability </strong> that your audience <strong>understands, connects with, and remembers.</strong>",
       "copy": "<strong>Copywriting and storytelling</strong> with purpose-driven messages that speak in the right <strong>tone and create real connections.</strong>",
       "results": "<strong>Measurable results,</strong> so you can see <strong>the impact of your investment.</strong>",
       "optimization": "<strong>Resource optimization, </strong> achieving <strong>greater reach</strong> with what you already have.",
-      "accompaniment": "<strong>Support</strong> at every stage,<strong> working alongside </strong> you as part of your team."
+      "accompaniment": "<strong>Support</strong> at every stage,<strong> working along with </strong> you as part of your team."
     }
   },
    "howDoIt": {
     "title": "How do <br/> we <strong>do it?",
     "method": "OUR<br/>METHODOLOGY",
     "brandCenter": "The brand is everything, the <br/> human is at the center.",
-    "humanCenteredBranding": "This is <strong>Human-Centered Branding,</strong> <strong>Mad Critter®’s</strong> methodology that views your brand as a living system, placing  <strong>the user at the heart of every action</strong> to transform results.",
+    "humanCenteredBranding": "This is <strong>Human-Centered Branding,</strong> <strong>Mad Critter®’s</strong> methodology understands your brand as a living system, placing  <strong>the user at the heart of every action</strong> to transform results.",
     "cols": {
       "one": {
         "title": "Immersion",
@@ -46,11 +46,11 @@
       },
       "two": {
         "title": "Co-creation",
-        "description": "We design concepts, content, and identities based on <strong>insights that truly differentiate and connect.</strong>"
+        "description": "We design concepts, content, and identities based on <strong>insights that truly differentiates and connects.</strong>"
       },
       "third": {
         "title": "Implementation",
-        "description": "We execute ideas <strong>consistently at every touchpoint, measure impact,</strong> and adjust to <strong>maximize results and contribute to increasing</strong> your market share."
+        "description": "We execute ideas <strong>consistently at every touchpoint, measuring impact,</strong> and adjusting to <strong>maximize results and contribute to increase</strong> your market share."
       }
     },
     "resultsCard": {
@@ -160,10 +160,10 @@
       },
       "third": {
         "title": "Agile implementation",
-        "description": "We integrate with your processes so that <strong>implementation is agile and frictionless.</strong>"
+        "description": "We integrate with your processes so <strong>implementation is agile and frictionless.</strong>"
       },
       "four": {
-        "title": "Tailored methodology",
+        "title": "Tailored made methodology",
         "description": "We use a <strong>proven methodology</strong>that adapts to what <strong>your brand needs.</strong>"
       }
     }
@@ -172,16 +172,16 @@
     "title": "Clients who are already <br/> <strong>betting on our methodology</strong>",
     "cardsClients": {
       "one": {
-        "description": "“I’ve really enjoyed working with the team because they are proactive and responsible. They deliver on their promises and, above all, they’re honest.”"
+        "description": "“I’ve really enjoyed working with the agency's team because they are proactive and responsible. They deliver on their promises and, above all, they’re honest.”"
       },
       "two": {
         "description": "“We thank the team for their hard work; they help us shine!”"
       },
       "third": {
-        "description": "“Your contribution was invaluable and greatly helped us drive our employer branding strategy and positioning on LinkedIn. Thanks to you, we created differentiated and highly engaging content for external audiences. You are a very professional and very human team.”"
+        "description": "“Your contribution was invaluable and greatly helped us drive our employer branding strategy and positioning on initiative LinkedIn. Thanks to Mad Critter, we created differentiated and highly engaging content for external audiences. Mad Critter’s team is very professional and very human team.”"
       },
       "four": {
-        "description": "“Thanks to the entire Mad Critter team, they made possible a long-held wish: to showcase our projects and technical capabilities with clarity and purpose, positioning Colombia as a clear international benchmark.”"
+        "description": "“Thanks to the entire Mad Critter team!, They made possible a long-held wish: to showcase our projects and technical capabilities with clarity and purpose, positioning Colombia as a clear international benchmark.”"
       }
     }
   },
