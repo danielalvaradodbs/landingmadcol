@@ -13,6 +13,10 @@ export const HowDoIt = () => {
 
     const { t } = useTranslation();
 
+    const goToExternalLink = (url: string) => {
+        window.open(url, "_blank"); 
+    };
+
   return (
     <>
         <div 
@@ -82,6 +86,11 @@ export const HowDoIt = () => {
                             hoverBorderColor={'#101820'}
                             backgroundColor={'#fff'}
                             hoverBackgroundColor={'#101820'}
+                            onClick={ ( ) => 
+                                goToExternalLink(
+                                    "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ12euwb2Uy1UvzhRF_SQdolpkv5jfrBY0_NtP-CMtacwbBKrYClgozZjtZrnPtdbYXLzfZmrI0F"
+                                )
+                            }
                             // border={'#101820'}
                         />
                     </div>
