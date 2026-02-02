@@ -3,7 +3,7 @@ import './brandingsHorizontal.css';
 import { brandings, FlechaBlue, FlechaButton, IconPlus, PlusBlue } from '../../../../shared';
 import { Button } from '../../../../components/button/Button';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const BrandingsHorizontal = () => {
 
@@ -53,6 +53,14 @@ export const BrandingsHorizontal = () => {
         }
     };
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'auto',
+        });
+    }, []);
+
   return (
     <>
         <ReactFullpage
@@ -73,6 +81,7 @@ export const BrandingsHorizontal = () => {
                 }, 500);
             }}
             fitToSection={ false }
+            normalScrollElements='.brandings-wrapper'
             render={( { fullpageApi }) => (
             <ReactFullpage.Wrapper>
 

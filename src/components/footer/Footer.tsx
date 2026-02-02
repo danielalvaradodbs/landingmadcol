@@ -212,6 +212,14 @@ export const Footer = () => {
                 className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
                 href="https://www.tiktok.com/@madcritterco" target='_blank'>TIKTOK</a>
             </div>
+            <div>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://open.spotify.com/user/31dlsorv65q5seyflm3hjwlwrdum" target='_blank'>SPOTIFY</a>
+              <a 
+                className={`${visibleSections.includes('siguenos') ? 'reveal' : 'hidden'}`} 
+                href="https://open.spotify.com/user/31dlsorv65q5seyflm3hjwlwrdum" target='_blank'>SPOTIFY</a>
+            </div>
           </div>
         </div>
 

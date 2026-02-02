@@ -19,7 +19,7 @@ export const Home = () => {
       <YourBrand />
       <HowDoIt />
       <Services />
-      <section style={{ height: '100vh', overflow: 'hidden' }}>
+      <section style={{ height: '100vh', overflow: 'hidden' }} className='brandings-wrapper'>
         <BrandingsHorizontal />
       </section>
       <TrustUs />

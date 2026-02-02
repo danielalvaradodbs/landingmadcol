@@ -1,0 +1,5 @@
+.brandings-wrapper {
+  position: relative;
+  padding-top: 240px; /* tu espacio real */
+  overflow: hidden;
+}
