@@ -95,6 +95,10 @@
       "info": "BRAND POSITIONING",
       "title": "Hero Motocorp",
       "description": "Digital optimization, driven by an intuitive and functional web experience."
+    },
+    "buttons": {
+      "viewAllPortfolio": "Ver todo el portafolio",
+      "seeMoreProjects": "Ver más casos de éxito"
     }
   },
   "humanCentered": {

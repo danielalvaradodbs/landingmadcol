@@ -11,15 +11,16 @@ import { useTranslation } from 'react-i18next';
 export const YourBrand = () => {
 
     let sliderRef = useRef<Slider>(null);
-    const [currentSlide, setCurrentSlide] = useState(0);
 
     const { t } = useTranslation();
-    
-    const totalSlides = ideasBrandings.length;
 
     const { ref: sectionRef, isVisible } = useInView({
         threshold: 0.0
     });
+
+    const [isFirst, setIsFirst] = useState(true);
+    const [isLast, setIsLast] = useState(false);
+
 
     const settings = {
         dots: false,
@@ -28,8 +29,8 @@ export const YourBrand = () => {
         // slidesToShow,
         slidesToScroll: 1,
         variableWidth: true,
-        beforeChange: (_oldIndex: number, newIndex: number) => {
-            setCurrentSlide(newIndex);
+        afterChange: () => {
+            requestAnimationFrame(checkEdges);
         },
     };
 
@@ -40,8 +41,28 @@ export const YourBrand = () => {
         sliderRef.current?.slickPrev();
     };
 
-    const isFirst = currentSlide === 0;
-    const isLast = currentSlide >= totalSlides - 1;
+    const checkEdges = () => {
+        const list = document.querySelector(
+            '.yourBrand .slick-list'
+        ) as HTMLElement;
+
+        const cards = document.querySelectorAll(
+            '.yourBrand .sliderCard'
+        );
+
+        if (!list || cards.length === 0) return;
+
+        const firstCard = cards[0] as HTMLElement;
+        const lastCard = cards[cards.length - 1] as HTMLElement;
+
+        const listRect = list.getBoundingClientRect();
+        const firstRect = firstCard.getBoundingClientRect();
+        const lastRect = lastCard.getBoundingClientRect();
+
+        setIsFirst(firstRect.left >= listRect.left - 1);
+
+        setIsLast(lastRect.right <= listRect.right + 1);
+    };
 
   return (
     <>

@@ -20,6 +20,8 @@ export const Header = () => {
 
   const { t, i18n } = useTranslation();
 
+  const hasCenteredOnceRef = useRef(false);
+
   const toggleMenu = () => {
     setBlueScreen(!blueScreen);
     if( !menuOpen ) {
@@ -47,33 +49,59 @@ export const Header = () => {
   let visibleSection = true;
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
 
-        visibleSection = entry.isIntersecting;
-        if (!entry.isIntersecting) {
-          setScrollingDown(true);
-          setIsCentered(true);  
+      // 🔼 Volvió arriba → estado inicial
+      if (scrollY === 0) {
+        setScrollingDown(false);
+        setIsCentered(false);
+        hasCenteredOnceRef.current = false;
+        return;
+      }
 
-        } else {
-          setScrollingDown(false);
-          setIsCentered(false);
-        }
-      });
-    }, { threshold: [0.7] });
-
-    const conceptSection = document.querySelector('.breakSchemes');
-
-    if (conceptSection) {
-      observer.observe(conceptSection);
-    }
-
-    return () => {
-      if (conceptSection) {
-        observer.unobserve(conceptSection);
+      // 🔽 Primer scroll
+      if (!hasCenteredOnceRef.current && scrollY > 0) {
+        setScrollingDown(true);
+        setIsCentered(true);
+        hasCenteredOnceRef.current = true;
       }
     };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+  // useEffect(() => {
+  
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+
+  //       visibleSection = entry.isIntersecting;
+  //       if (!entry.isIntersecting) {
+  //         setScrollingDown(true);
+  //         setIsCentered(true);  
+
+  //       } else {
+  //         setScrollingDown(false);
+  //         setIsCentered(false);
+  //       }
+  //     });
+  //   }, { threshold: [0.7] });
+
+  //   const conceptSection = document.querySelector('.breakSchemes');
+
+  //   if (conceptSection) {
+  //     observer.observe(conceptSection);
+  //   }
+
+  //   return () => {
+  //     if (conceptSection) {
+  //       observer.unobserve(conceptSection);
+  //     }
+  //   };
+  // }, []);
 
   const handleResize = useCallback(() => {
     if(imgTablet.current) {

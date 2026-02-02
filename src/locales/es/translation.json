@@ -5,7 +5,7 @@
   "header": {
     "menu": "Menú",
     "aboutUs": "Metodología",
-    "portfolio": "Portafolio",
+    "portfolio": "Proyectos destacados",
     "services": {
       "title": "Servicios",
       "subItems": {
@@ -21,7 +21,7 @@
     "challenge": "La tuya está lista para hacerlo: <strong>desafiemos lo establecido y hagámoslo diferente.</strong>",
     "agency": "Como agencia de <strong>branding, digital y de diseño,</strong> te acompañamos a transformar lo que tu <br /> marca <strong>comunica, transmite y despierta</strong> en las personas.",
     "buttonMethod": "Conoce nuestra metodología",
-    "buttonMeeting": "Agenda una reunión"
+    "buttonMeeting": "Hablemos de tu marca"
   },
   "yourBrand": {
     "title": "¿Qué podemos <br/><strong>hacer por tu marca?</strong>",
@@ -75,7 +75,7 @@
     "guide": "Guiamos la evolución de marcas con <strong>estrategias efectivas y una propuesta de valor centrada en lo humano.</strong> Redefinimos el branding para que tu marca <strong>inspire, crezca y deje huella.</strong>"
   },
   "brandings": {
-    "title": "Portafolio",
+    "title": "Proyectos </br><strong>destacados</strong>",
     "pluxee": {
       "info": "POSICIONAMIENTO DE MARCA ",
       "title": "Pluxee",
@@ -95,6 +95,10 @@
       "info": "POSICIONAMIENTO DE MARCA",
       "title": "Hero Motocorp",
       "description": "Optimización digital, impulsada por una experiencia web intuitiva y funcional."
+    },
+    "buttons": {
+      "viewAllPortfolio": "Ver todo el portafolio",
+      "seeMoreProjects": "Ver más casos de éxito"
     }
   },
   "humanCentered": {
@@ -105,18 +109,13 @@
     "ourServices": "NUESTROS <br/> SERVICIOS",
     "brandBuilding": {
       "title": "Construcción </br> <strong>de marca</strong>",
-      "description": "La base sólida para <strong>crecer y destacar</strong> en tu mercado.",
+      "description": "Ordenamos ideas y <strong>definimos la dirección real</strong> de tu marca.",
       "items": [
-        "Workshops de marca",
-        "Auditoría y diagnóstico de marca",
-        "Arquitectura de marca",
+        "Estrategia de marca",
         "Naming",
         "Imagen de marca",
-        "Propósito y personalidad",
-        "Manifiesto de marca",
-        "Diseño de personajes",
         "Cultura de marca",
-        "Orientación en registro"
+        "Diseño de personajes"
       ]
     },
     "brandIdentity": {
@@ -124,9 +123,8 @@
       "description": "La forma en que tu negocio <strong>se ve, se siente y conecta</strong> con la gente, <strong>lo que te saca del montón.</strong>",
       "items": [
         "Manual de identidad visual",
-        "Sistema de diseño",
-        "Empaques",
         "Key Visual",
+        "Empaques",
         "Identidad social",
         "Guía de comunicaciones"
       ]
@@ -135,15 +133,14 @@
       "title": "Posicionamiento </br> <strong>de marca</strong>",
       "description": "Estrategias que hacen que tu marca se <strong>convierta en referente y sea imposible ignorar.</strong>",
       "items": [
-        "Estrategia de marca",
         "Social storytelling",
-        "Campañas digitales",
+        "Performance",
+        "Mailing",
         "Contenido audiovisual",
+        "Podcast",
         "Social listening",
-        "Desarrollo web",
-        "Comunicaciones corporativas",
-        "Endomarketing",
-        "Acciones estratégicas"
+        "Web",
+        "Comunicaciones corporativas"
       ]
     }
   },

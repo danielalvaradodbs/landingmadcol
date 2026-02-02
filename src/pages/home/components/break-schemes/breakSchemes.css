@@ -83,6 +83,8 @@
 
 .breakSchemes .buttons button:last-child {
     color: #fff;
+    max-width: 248px;
+    min-width: 248px;
 }
 
 .breakSchemes .buttons button:last-child:hover {
@@ -107,13 +109,23 @@
     object-fit: cover;
 }
 
-.breakSchemes .btnPlay {
+.breakSchemes .btnPlay-container {
     width: 100px;
-    height: auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    display: block;
-    border-radius: 20px;
+    border-radius: 100px;
     position: absolute;
+
+    fill: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(10px);
+}
+
+.breakSchemes img.btnPlay {
+    width: 81px;
+    height: 80px;
 }
 
 .breakSchemes .vimeo-container {
@@ -221,7 +233,7 @@
 
     .breakSchemes .buttons button {
         width: 100%;
-        max-width: 100%;
+        max-width: 100% !important;
     }
 
     .breakSchemes .hero img {

@@ -1,6 +1,6 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 import './brandingsHorizontal.css';
-import { brandings, FlechaButton, IconPlus } from '../../../../shared';
+import { brandings, FlechaBlue, FlechaButton, IconPlus, PlusBlue } from '../../../../shared';
 import { Button } from '../../../../components/button/Button';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
@@ -79,7 +79,7 @@ export const BrandingsHorizontal = () => {
                 <div className="brandings" id='portfolio'>
                     <div className="horizontalBranding">
                         <div className="title animate__animated animate__fadeInUp">
-                            <h2>{ t('brandings.title') }</h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: t('brandings.title')}}></h2>
                         </div>
                     </div>
                     <div className="section">
@@ -163,6 +163,27 @@ export const BrandingsHorizontal = () => {
             </ReactFullpage.Wrapper>
             )}
         />
+
+        <div className="buttonsPortfolio">
+            <Button
+                    texto={ t('brandings.buttons.viewAllPortfolio') }
+                    urlIcon={ FlechaBlue }
+                    hoverBorderColor={'#101820'}
+                    hoverBackgroundColor={'#101820'}
+                    backgroundColor={'transparent'}
+                    onClick={() => sendToLink('https://www.behance.net/madcritter')}
+                    // border={'#101820'}
+                />
+                <Button
+                    texto={ t('brandings.buttons.seeMoreProjects') }
+                    urlIcon={ PlusBlue }
+                    hoverBorderColor={'#101820'}
+                    backgroundColor={'#101820'}
+                    hoverBackgroundColor={'#fff'}
+                    onClick={() => sendToLink('https://dribbble.com/madcritter1122') }
+                    // border={'#101820'}
+                />
+        </div>
     </>
   )
 }

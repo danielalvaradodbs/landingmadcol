@@ -113,7 +113,7 @@ export const Footer = () => {
               </div>
             </div>
             <div className='container'>
-              <a className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >talento@madcritter.com</a>
+              <a className={ `${visibleSections.includes('talento') ? 'reveal' : 'hidden'}` } >gestionhumana@madcritter.com</a>
             </div>
           </div>
 

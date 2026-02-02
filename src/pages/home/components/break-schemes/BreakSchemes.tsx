@@ -95,13 +95,14 @@ export const BreakSchemes = () => {
                             style={{ borderRadius: '10px' }}
                             onClick={() => setShowVideo(true)}
                         ></video>
-                        <img
-                            src={BtnPlay}
-                            style={{ width: '100px' }}
-                            alt="Botón play del video"
-                            className="btnPlay"
-                            onClick={() => setShowVideo(true)}
-                        />
+                        <div className="btnPlay-container">
+                            <img
+                                src={ BtnPlay }
+                                alt="Botón play del video"
+                                className="btnPlay"
+                                onClick={() => setShowVideo(true)}
+                            />
+                        </div>
                     </div>
                     
                     
@@ -111,7 +112,7 @@ export const BreakSchemes = () => {
                         <div className="video-modal-content">
                             <button className="video-close" onClick={() => setShowVideo(false)}>✕</button>
                             <iframe
-                                src="https://player.vimeo.com/video/1058048282?h=3c3e34c78c&autoplay=1&title=0&byline=0&portrait=0"
+                                src="https://player.vimeo.com/video/1158545630?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                                 style={{ width: "100%", height: "100%", border: "none" }}
                                 allow="autoplay; fullscreen; picture-in-picture"
                                 title="Mad Critter Video"

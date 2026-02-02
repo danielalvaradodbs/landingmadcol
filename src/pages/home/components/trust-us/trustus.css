@@ -1,5 +1,5 @@
 .trustUs {
-    padding: 133px 155px 200px 155px;
+    padding: 133px 155px 112px 155px;
 }
 
 .trustUs .title {
@@ -38,6 +38,7 @@
   flex-direction: column; 
   align-items: flex-start;
   overflow: hidden;
+  margin-bottom: 67px;
 }
 
 .columns-grid img {

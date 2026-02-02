@@ -103,10 +103,25 @@
     color: white;
 }
 
+.services h6 {
+    color: #86A6C5;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Safiro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.28px;
+}
+
+.services #second-section h6 {
+    color: #101820;
+}
+
 .services p {
     color: #FFF;
     font-family: 'Safiro';
-    font-size: 21px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;

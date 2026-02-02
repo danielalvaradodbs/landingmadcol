@@ -45,7 +45,7 @@
     padding: 8px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    /* gap: 8px; */
     margin: 0 13px;
 }
 
@@ -66,6 +66,10 @@
     border-radius: 50px;
     background: rgba(0, 0, 0, 0.10);
     border-radius: 50px;
+}
+
+.header .menu-items-mobile .menu-translation {
+    background: #FFF;
 }
 
 .header .menu-items-mobile .menu-translation:hover,
@@ -117,6 +121,16 @@
     color: #101820;
     transition: ease-in .3s;
 }
+
+.header.dark .logo-centered .menu-translation button {
+    color: #fff;
+    transition: ease-in .3s;
+}
+
+.header.dark .menu-translation button:hover {
+    color: #101820;
+}
+
 
 .header .menu-items .menu-translation button.active {
     color: #fff;
@@ -270,16 +284,15 @@
     display: none;
     flex-direction: column;
 
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 8px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
 
-    border-radius: 10px;
-    background: rgba(16, 24, 32, 0.30);
-    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    background: #101820;
     backdrop-filter: blur(20px);
     transition: all 1s ease;
 }
@@ -287,8 +300,8 @@
 .menu-toggle .bar-1,
 .menu-toggle .bar-2,
 .menu-toggle .bar-3 {
-    height: 3px;
-    width: 25px;
+    height: 2px;
+    width: 18px;
     background-color: #fff;
     margin: 2px 0;
     transition: all 1s ease;
@@ -589,6 +602,13 @@
 
     .isCenterMenu {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .header {
+        background: white;
+        padding: 26px 22px 26px 22px;
     }
 }
 

@@ -30,6 +30,11 @@
     animation: scroll-horizontal 60s linear infinite;
 }
 
+.clientLogos .slider-brands:hover {
+  animation-play-state: paused;
+}
+
+
 @keyframes scroll-horizontal {
     
     0% {
