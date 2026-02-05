@@ -75,7 +75,8 @@
     "guide": "We guide brand evolution through <strong>effective strategies and a human-centered value proposition.</strong> We redefine branding so your brand <strong>can inspire, grow, and make a lasting impression.</strong>"
   },
   "brandings": {
-    "title": "Portfolio",
+    "title": "Featured </br><strong>projects</strong>",
+    "subTitle": "Check the </br>full portfolio",
     "pluxee": {
       "info": "BRAND POSITIONING",
       "title": "Pluxee",
@@ -109,28 +110,22 @@
     "ourServices": "OUR <br/> SERVICES",
     "brandBuilding": {
       "title": "Brand </br> <strong>Building</strong>",
-      "description": "The solid foundation for <strong>growing and standing</strong> out in your market.",
+      "description": "We organize ideas and define the true direction of your brand.",
       "items": [
-        "Brand workshops",
-        "Brand audit and diagnosis",
-        "Brand architecture",
+        "Brand strategy",
         "Naming",
-        "Brand image",
-        "Purpose and personality",
-        "Brand Manifesto",
-        "Character design",
+        "Brand identity",
         "Brand culture",
-        "Registration guidance"
+        "Character design"
       ]
     },
     "brandIdentity": {
       "title": "Brand </br> <strong>identity</strong>",
-      "description": "The way your business <strong>looks, feels, and connects</strong> with people <strong>what sets you apart. </strong>",
+      "description": "The way your business looks, feels, and connects with people— what sets you apart.",
       "items": [
         "Visual Identity Manual",
-        "Design System",
-        "Packaging",
         "Key Visual",
+        "Packaging",
         "Social identity",
         "Communications Guide"
       ]
@@ -139,15 +134,14 @@
       "title": "Brand </br> <strong>positioning</strong>",
       "description": "Strategies that make your brand <strong>a reference point and impossible to ignore.</strong>",
       "items": [
-        "Brand strategy",
         "Social storytelling",
-        "Digital campaigns",
+        "Performance",
+        "Email marketing",
         "Audiovisual content",
+        "Podcast",
         "Social listening",
-        "Web development",
-        "Corporate communications",
-        "Endomarketing",
-        "Strategic Actions"
+        "Web",
+        "Corporate communications"
       ]
     }
   },

@@ -89,6 +89,7 @@ export const BrandingsHorizontal = () => {
                     <div className="horizontalBranding">
                         <div className="title animate__animated animate__fadeInUp">
                             <h2 dangerouslySetInnerHTML={{ __html: t('brandings.title')}}></h2>
+                            <span dangerouslySetInnerHTML={{ __html: t('brandings.subTitle') }}></span>
                         </div>
                     </div>
                     <div className="section">
