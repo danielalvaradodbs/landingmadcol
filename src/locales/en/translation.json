@@ -21,7 +21,7 @@
     "challenge": "Yours is ready to do it: <strong>let’s challenge the status quo and do things differently.</strong>",
     "agency": "As a branding, <strong>branding, digital, and design</strong> agency, we help you transform what your <br /> brand  <strong>communicates, conveys, and evokes</strong> in people.",
     "buttonMethod": "Learn about our methodology",
-    "buttonMeeting": "Schedule a meeting"
+    "buttonMeeting": "Let’s talk about your brand."
   },
   "yourBrand": {
     "title": "What can <br/><strong>we do for your brand?</strong>",
@@ -98,8 +98,8 @@
       "description": "Digital optimization, driven by an intuitive and functional web experience."
     },
     "buttons": {
-      "viewAllPortfolio": "Ver todo el portafolio",
-      "seeMoreProjects": "Ver más casos de éxito"
+      "viewAllPortfolio": "Check the full portfolio",
+      "seeMoreProjects": "See more success stories"
     }
   },
   "humanCentered": {
