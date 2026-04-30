@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { logosMadcritter } from '../../shared';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { DarkDribble } from '../../shared/images';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -142,6 +143,14 @@ export const Footer = () => {
             </div>
           </div>
           <div className='container stalk' data-animation="to-top">
+            <div>
+              <a 
+                className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}
+                href="https://dribbble.com/branding-agency"target='_blank'><img src={ DarkDribble } alt="Logo Dark Dribble" /></a>
+              <a 
+                className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}
+                href="https://dribbble.com/branding-agency"target='_blank'><img src={ DarkDribble } alt="Logo Dark Dribble" /></a>
+            </div>
             <div>
               <a 
                 className={`${visibleSections.includes('stalkeanos') ? 'reveal' : 'hidden'}`}

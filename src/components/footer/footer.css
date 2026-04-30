@@ -345,6 +345,11 @@
     gap: 5px;
 }
 
+.pre-footer .stalkeanos .container.stalk {
+    display: flex;
+    align-items: center;
+}
+
 .pre-footer .siguenos .container.stalk div,
 .pre-footer .stalkeanos .container.stalk div,
 .pre-footer .talento .container.text div,
